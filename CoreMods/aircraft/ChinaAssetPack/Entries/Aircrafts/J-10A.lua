@@ -306,6 +306,8 @@ declare_loadout({
         },
     }, -- end of Elements
 })]]
+
+
 -- WIP
 local function add_aircraft_prop()
     acprop = {
@@ -685,7 +687,7 @@ JF_17 = {
 
     Pylons = {
         -- LEFT WING
-        pylon(1, 0, -1.056, -0.125, -4.40,
+        pylon(1, 0, -1.865, -0.776, 3.737,
             {
                 use_full_connector_position = true, connector = "str_pnt_001", arg = 308, arg_value = 0
             },
@@ -702,7 +704,7 @@ JF_17 = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O'},
             }
         ),
-        pylon(2, 0, -0.300, -0.336, -2.85,
+        pylon(2, 0, -1.865, -0.74, 2.585,
             {
                 use_full_connector_position = true, connector = "str_pnt_002", arg = 309, arg_value = 0
             },
@@ -757,7 +759,7 @@ JF_17 = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 0.1},
             }
         ),
-        pylon(3, 0, 0.000, -0.450, -1.70,
+        pylon(3, 0, -0.883, -0.74, 1.86,
             {
                 use_full_connector_position = true, connector = "str_pnt_003", arg = 310, arg_value = 0
             },
@@ -795,7 +797,7 @@ JF_17 = {
 
             }
         ),
-        pylon(4, 0, 0.286, -0.886, 0.00,
+        pylon(4, 0, -0.329, -0.634, 0,
             {
                 use_full_connector_position = true, connector = "str_pnt_004", arg = 311, arg_value = 0
             },
@@ -822,7 +824,7 @@ JF_17 = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 0.3},
             }
         ),
-        pylon(5, 0, 0.000, -0.450, 1.70,
+        pylon(5, 0, -0.883, -0.7, -1.834,
             {
                 use_full_connector_position = true, connector = "str_pnt_005", arg = 312, arg_value = 0
             },
@@ -860,7 +862,7 @@ JF_17 = {
 
             }
         ),
-        pylon(6, 0, -0.300, -0.336, 2.85,
+        pylon(6, 0, -1.865, -0.74, -2.585,
             {
                 use_full_connector_position = true, connector = "str_pnt_006", arg = 313, arg_value = 0
             },
@@ -915,7 +917,7 @@ JF_17 = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 0.1},
             }
         ),
-        pylon(7, 0, -1.056, -0.125, 4.40,
+        pylon(7, 0,  -1.865, -0.776, -3.729,
             {
                 use_full_connector_position = true, connector = "str_pnt_007", arg = 314, arg_value = 0
             },
