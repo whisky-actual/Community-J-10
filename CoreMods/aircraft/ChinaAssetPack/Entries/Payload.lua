@@ -8,6 +8,7 @@ dofile(current_mod_path .. '/Entries/Loadouts/tools.lua')
 
 -- bomb
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_type200.lua')
+dofile(current_mod_path .. '/Entries/Loadouts/bomb_JG500.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_misc.lua')
 
 -- jsow
