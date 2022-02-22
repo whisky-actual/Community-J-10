@@ -1,5 +1,3 @@
-
-
 local AIM_7E =
 {
 	category		= CAT_AIR_TO_AIR,
@@ -496,19 +494,19 @@ JF_17 = {
     tand_gear_max                            = 0.57, --2.1445, -- tangent on maximum yaw angle of front wheel, 65 degrees tan(64deg)
     
 	--nose_gear_pos                            = {3.752,	-1.9+wheel_touch_comp, 0.0},    -- nosegear coord==前轮
-    nose_gear_pos                            = {3.752,	-2.3+wheel_touch_comp, 0.0},    -- nosegear coord==前轮
-    nose_gear_wheel_diameter                 = 0.65,            -- in m
-    nose_gear_amortizer_direct_stroke        = 1.602075 - 1.49228,              -- down from nose_gear_pos !!!
-    nose_gear_amortizer_reversal_stroke      = 1.382485 - 1.49228,                -- up
-    nose_gear_amortizer_normal_weight_stroke = 0.00003571,                -- down from nose_gear_pos
+    nose_gear_pos                            = {4.074,   -1.95, -0.000},    -- nosegear coord==前轮
+    nose_gear_wheel_diameter                 = 0.754,            -- in m
+    nose_gear_amortizer_direct_stroke        = 0,              -- down from nose_gear_pos !!!
+    nose_gear_amortizer_reversal_stroke      = -0.150293,                -- up
+    nose_gear_amortizer_normal_weight_stroke = -0.14,                -- down from nose_gear_pos
 
     --main_gear_pos                            = {-0.53039, -1.345957-0.33+wheel_touch_comp, 1.14},    -- main gear coords==后轮
     --main_gear_pos                            = {-0.423,	-2.115+wheel_touch_comp, -1.387},    -- main gear coords==后轮
-    main_gear_pos                            = {-0.423,	-1.95+wheel_touch_comp, -1.387},    -- main gear coords==后轮
-    main_gear_wheel_diameter                 = 0.75,            -- in m
-    main_gear_amortizer_direct_stroke        = 1.465957 - 1.345957,        -- down from main_gear_pos !!!
-    main_gear_amortizer_reversal_stroke      = 1.225957 - 1.345957,     -- up
-    main_gear_amortizer_normal_weight_stroke = 0.00003571,                -- down from main_gear_pos
+    main_gear_pos                            = {-0.423,  -1.96, -1.387},    -- main gear coords==后轮
+    main_gear_wheel_diameter                 = 0.972,            -- in m
+    main_gear_amortizer_direct_stroke        = 0,        -- down from main_gear_pos !!!
+    main_gear_amortizer_reversal_stroke      = -0.164258,     -- up
+    main_gear_amortizer_normal_weight_stroke = -0.150,                -- down from main_gear_pos
     -----------------------------------------------------------------------
     ----------------- SUSPENSION CODE ENDS
     -----------------------------------------------------------------------
