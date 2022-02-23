@@ -339,9 +339,9 @@ mech_anime["CrewLadder"] = {
 
 -----------------------------------------
 -----------------------------------------
-mount_vfs_model_path (current_mod_path .. '/Shapes/JF-17')
-mount_vfs_texture_path (current_mod_path .. '/Textures/JF-17')
+mount_vfs_model_path (current_mod_path .. '/Shapes/J-10A')
 mount_vfs_texture_path (current_mod_path .. '/Textures/J-10A')
+mount_vfs_texture_path (current_mod_path .. '/Liveries/J-10A')
 
 local wheel_touch_comp = 0.02
 
@@ -366,7 +366,7 @@ local WOLALIGHT_CUSTOM_ANTI   = WOLALIGHT_CUSTOM_NAV + 1
 JF_17 = {
     Name             = 'JF-17',
     DisplayName      = _('J-10A'),
-    Picture          = 'JF-17.png',
+    Picture          = 'J-10A.png',
     Rate             = 50, -- RewardPoint in Multiplayer
     Shape            = 'J-10A',
     shape_table_data = {
