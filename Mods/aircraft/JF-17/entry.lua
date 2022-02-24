@@ -1,4 +1,3 @@
-
 local self_ID  = 'JF-17 by Deka Ironwork Simulations'
 local ac_name  = 'JF-17'
 local bin_name = 'JF-17_ASM'
@@ -19,9 +18,13 @@ declare_plugin(self_ID, {
     update_id     = 'DEKA_JF-17',
     InputProfiles = {
         [ac_name] = current_mod_path .. '/Input/JF-17',
+		--J-10A
+		["J-10A"] = current_mod_path .. '/Input/J-10A',
     },
     Skins = {
-        { name = ac_name, dir = 'Skins/2' },
+        { name = ac_name, dir = 'Skins/1' },
+	--J-10A
+		{ name = _("J-10A"), dir = 'Skins/2' },
     },
     Missions = {
         { name = _(ac_name), dir = 'Missions', CLSID = '{JF-17 missions}', },
@@ -50,6 +53,10 @@ mount_vfs_texture_path (current_mod_path .. '/Cockpit/Textures/IndicationTexture
 mount_vfs_liveries_path(current_mod_path .. '/Liveries')
 mount_vfs_texture_path (current_mod_path .. '/Skins/1/ME')
 
+--J-10A
+--mount_vfs_model_path   (current_mod_path.."/Shapes/J-10A")
+mount_vfs_texture_path (current_mod_path.."/Skins/2/ME")--for simulator loading window
+
 
 local cfg_path = current_mod_path .. '/FM/config.lua'
 dofile(cfg_path)
@@ -66,5 +73,10 @@ dofile(current_mod_path .. '/Views.lua')
 make_view_settings(ac_name, ViewSettings, SnapViews)
 ---------------------------------------------------------------------------------------
 make_flyable(ac_name, current_mod_path .. '/Cockpit/Scripts/', JF17_FM, current_mod_path .. '/Comm/comm.lua')
+
+--J-10A
+dofile(current_mod_path.."/Views.lua")
+make_view_settings('J-10A', ViewSettings, SnapViews)
+make_flyable('J-10A', current_mod_path .. '/Cockpit/Scripts/', JF17_FM, current_mod_path .. '/Comm/comm.lua')
 
 plugin_done()

@@ -336,12 +336,11 @@ mech_anime["CrewLadder"] = {
 
 -----------------------------------------
 -----------------------------------------
-mount_vfs_model_path (current_mod_path .. '/Shapes/J-10A')
---mount_vfs_model_path (current_mod_path .. '/Shapes/JF-17')
+mount_vfs_model_path (current_mod_path .. '/Shapes/J-10A')													
 mount_vfs_texture_path (current_mod_path .. '/Textures/J-10A')
---mount_vfs_texture_path (current_mod_path .. '/Textures/JF-17')
-mount_vfs_texture_path (current_mod_path .. '/Liveries/J-10A')
-
+mount_vfs_liveries_path (current_mod_path..'/Liveries/J-10A')
+--mount_vfs_sound_path   (current_mod_path..'/Sounds')	
+												
 local wheel_touch_comp = 0.02
 
 -- WOLALIGHT_STROBES          = 1
@@ -362,7 +361,7 @@ local wheel_touch_comp = 0.02
 local WOLALIGHT_CUSTOM_NAV    = WOLALIGHT_IR_FORMATION + 1
 local WOLALIGHT_CUSTOM_ANTI   = WOLALIGHT_CUSTOM_NAV + 1
 
-JF_17 = {
+J_10A = {
     Name             = 'JF-17',
     DisplayName      = _('J-10A'),
     Picture          = 'J-10A.png',
@@ -375,7 +374,7 @@ JF_17 = {
             vis         = 3, -- visibility gain.
             desrt       = 'JF-17-oblomok', -- Name of destroyed object file name
             fire        = {300, 2}, -- Fire on the ground after destoyed: 300sec 2m
-            username    = 'JF-17',
+            username    = 'J-10A',
             index       = WSTYPE_PLACEHOLDER,
             classname   = "lLandPlane",
             positioning = "BYNORMAL",
@@ -2236,4 +2235,4 @@ JF_17 = {
     }, -- end lights_data
 }
 
-add_aircraft(JF_17)
+add_aircraft(J_10A)
