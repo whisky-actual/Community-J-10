@@ -1,6 +1,6 @@
 dofile('Scripts/Database/Weapons/warheads.lua')
 
-local pl5eii_name = 'PL-5EII'
+local pl5eii_name = 'PL-8B'
 pl8b_name  = 'PL-8B'
 pl8b_model = 'pl8b'
 pl8b_mass  = 115.0
@@ -140,7 +140,7 @@ declare_loadout({
         },
     }, -- end of Elements
 })
-
+--[[
 
 declare_loadout({
     category     = CAT_AIR_TO_AIR,
@@ -163,7 +163,7 @@ declare_loadout({
             ShapeName = pl8b_model,
         },
     }, -- end of Elements
-})
+})]]
 
 -- PL-8A
 pl8a_name  = 'PL-8A'

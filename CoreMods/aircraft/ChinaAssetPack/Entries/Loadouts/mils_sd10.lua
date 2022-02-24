@@ -1,5 +1,5 @@
 
-local sd10_name  = 'PL-12'
+local sd10_name  = 'SD-10'
 local sd10_mass  = 199.0
 local sd10_model = 'pl12'
 local pylon_mass = 90.0
@@ -7,11 +7,11 @@ local pylon_dual_mass = 160.0
 
 local sd10_warhead = enhanced_a2a_warhead(24, 203)
 
-PL_12_AA = {
+SD_10_AA = {
     category        = CAT_AIR_TO_AIR,
     name            = sd10_name,
     model           = sd10_model,
-    user_name       = _("PL-12"),
+    user_name       = _(sd10_name),
     wsTypeOfWeapon  = {4,4,7,WSTYPE_PLACEHOLDER},
     mass            = sd10_mass,
 
@@ -73,8 +73,8 @@ PL_12_AA = {
     nozzle_exit_area       = 0.025, -- the nozzle exit area
 
     class_name      = 'wAmmunitionSelfHoming',
-    scheme          = 'aa_missile_amraam2',
-   -- scheme          = 'aa_missile_amraam',
+    --scheme          = 'aa_missile_amraam2',
+    scheme          = 'aa_missile_amraam',
 
     controller = {
         boost_start = 0.5,
@@ -148,27 +148,27 @@ PL_12_AA = {
         fins_stall = 1,
     },
 
-    sensor = {
+    seeker = {
         delay                       = 1.5,
         op_time                     = 100,
-        FOV                         = math.rad(30),
-        max_w_LOS                   = math.rad(90),
-        --sens_near_dist              = 100,
-        --sens_far_dist               = 30000,
-        ccm_k0                      = 0.11,
+        FOV                         = math.rad(120),
+        max_w_LOS                   = math.rad(30),
+        sens_near_dist              = 100,
+        sens_far_dist               = 30000,
+        ccm_k0                      = 0.12,
         aim_sigma                   = 7,
         height_error_k              = 20,
         height_error_max_vel        = 50,
         height_error_max_h          = 300,
         hoj                         = 1,
-        --rad_correction              = 1,
+        rad_correction              = 1,
         active_radar_lock_dist      = 18000.0,
         active_dist_trig_by_default = 1,
     },
     
     gimbal = {
         delay                = 0,
-        op_time              = 105,
+        op_time              = 95,
         pitch_max            = math.rad(60),
         yaw_max              = math.rad(60),
         max_tracking_rate    = math.rad(30),
@@ -278,18 +278,40 @@ PL_12_AA = {
     },
 }
 
+declare_weapon(SD_10_AA)
+SD_10_AA.shape_table_data.index = SD_10_AA.wsTypeOfWeapon[4]
 
-declare_weapon(PL_12_AA)
-PL_12_AA.shape_table_data.index = PL_12_AA.wsTypeOfWeapon[4]
+declare_loadout({
+    category    = CAT_AIR_TO_AIR,
+    CLSID       = 'DIS_SD-10',
+    Picture     = 'pl12.png',
+    attribute   = SD_10_AA.wsTypeOfWeapon,
+    displayName = _(sd10_name),
+    Cx_pil      = 0.000859765625,
+    Count       = 1,
+    Weight      = sd10_mass + pylon_mass,
+    Elements    = {
+        [1] =
+        {
+            DrawArgs =
+            {
+                [1] = {1, 1},
+                [2] = {2, 1},
+            }, -- end of DrawArgs
+            Position  = {0, 0, 0},
+            ShapeName = sd10_model,
+        },
+    }, -- end of Elements
+})
 
 
 declare_loadout({
     category       = CAT_AIR_TO_AIR,
-    CLSID          = 'DIS_PL-12_DUAL',
+    CLSID          = 'DIS_SD-10_DUAL_L',
     Picture        = 'pl12.png',
-    wsTypeOfWeapon = PL_12_AA.wsTypeOfWeapon,
+    wsTypeOfWeapon = SD_10_AA.wsTypeOfWeapon,
     attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
-    displayName    = _('PL-12' .. ' x 2'),
+    displayName    = _(sd10_name .. ' x 2'),
     Cx_pil         = 0.000859765625 * 1.31,
     Count          = 2,
     Weight         = 2 * sd10_mass + pylon_dual_mass,
@@ -300,14 +322,14 @@ declare_loadout({
     }, -- end of Elements
     JettisonSubmunitionOnly = true,
 })
---[[
+
 declare_loadout({
     category       = CAT_AIR_TO_AIR,
-    CLSID          = 'DIS_PL-12_DUAL_R',
+    CLSID          = 'DIS_SD-10_DUAL_R',
     Picture        = 'pl12.png',
     wsTypeOfWeapon = SD_10_AA.wsTypeOfWeapon,
     attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
-    displayName    = _('PL-12' .. ' x 2'),
+    displayName    = _(sd10_name .. ' x 2'),
     Cx_pil         = 0.000859765625 * 1.31,
     Count          = 2,
     Weight         = 2 * sd10_mass + pylon_dual_mass,
@@ -317,27 +339,19 @@ declare_loadout({
         { ShapeName = sd10_model,        connector_name = 'dual_PF12L', },
     }, -- end of Elements
     JettisonSubmunitionOnly = true,
-})]]
+})
 
+
+
+--[[
 -- PL-12
 local pl12_name  = 'PL-12'
 local pl12_mass  = 199.0
 local pl12_model = 'pl12'
 
---[[
-
-
 PL_12_AA = {}
 copyTable(PL_12_AA, SD_10_AA)
-PL_12_AA.model          = pl12_model
-PL_12_AA.mass           = pl12_mass
-PL_12_AA.user_name      = _(pl12_name)
-PL_12_AA.wsTypeOfWeapon = {4,4,7,WSTYPE_PLACEHOLDER}
-PL_12_AA.shape_table_data[1].name     = pl12_name
-PL_12_AA.shape_table_data[1].file     = pl12_model
-PL_12_AA.shape_table_data[1].username = pl12_name
-PL_12_AA.shape_table_data[1].index    = WSTYPE_PLACEHOLDER
-
+PL_12_AA.name           = pl12_name
 PL_12_AA.model          = pl12_model
 PL_12_AA.mass           = pl12_mass
 PL_12_AA.user_name      = _(pl12_name)
@@ -349,7 +363,7 @@ PL_12_AA.shape_table_data[1].index    = WSTYPE_PLACEHOLDER
 PL_12_AA.seeker.ccm_k0  = 0.11
 
 declare_weapon(PL_12_AA)
-]]
+
 
 declare_loadout({
     category     = CAT_AIR_TO_AIR,
@@ -373,3 +387,4 @@ declare_loadout({
         },
     }, -- end of Elements
 })
+]]

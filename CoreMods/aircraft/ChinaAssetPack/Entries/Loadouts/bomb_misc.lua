@@ -329,7 +329,7 @@ declare_loadout(JF17_MK_20)
 
 
 -- customized GBU-10/12/16
---[[
+
 JF17_GBU_10 = {
     category    = CAT_BOMBS,
     CLSID       = "DIS_GBU_10",
@@ -380,7 +380,7 @@ JF17_GBU_16 = {
     attribute = {4, 5, 36, 39},
     Required  = {"DIS_WMD7"},
 }
-declare_loadout(JF17_GBU_16)]]
+declare_loadout(JF17_GBU_16)
 
 JF17_GBU_12 = {
     category    = CAT_BOMBS,

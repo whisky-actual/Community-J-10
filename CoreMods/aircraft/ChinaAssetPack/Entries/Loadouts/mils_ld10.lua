@@ -1,15 +1,15 @@
 
-local ld10_name = 'YJ-91'
-local ld10_mass = 600.0
+local ld10_name = 'LD-10'
+local ld10_mass = 199.0
 local pylon_mass = 90.0
 local pylon_dual_mass = 160.0
 
 local LD_10_warhead =
 {
-    mass                 = 87,
-    caliber              = 360,
-    expl_mass            = 87,
-    piercing_mass        = 7.2,
+    mass                 = 20,
+    caliber              = 90,
+    expl_mass            = 20,
+    piercing_mass        = 0.0,
     other_factors        = { 1.0, 1.0, 1.0 },
     concrete_factors     = { 1.0, 1.0, 1.0 },
     concrete_obj_factor  = 1.0,
@@ -23,7 +23,7 @@ local use_agm88_scheme_sead = false
 LD_10_ARM = {
     category        = CAT_MISSILES,
     name            = ld10_name,
-    model           = 'x-31',
+    model           = 'ld10',
     user_name       = _(ld10_name),
     wsTypeOfWeapon  = {4,4,8,WSTYPE_PLACEHOLDER},
     mass            = ld10_mass,
@@ -58,14 +58,14 @@ LD_10_ARM = {
     X_back          = -1.74,
     Y_back          = -0.11,
     Z_back          = 0.0,
-    Reflection      = 0.27,
+    Reflection      = 0.07,
     KillDistance    = 7.0,
 
     shape_table_data = {
         {
             name     = ld10_name,
-            file     = 'x-31',
-            life     = 1,
+            file     = 'ld10',
+            life     = 0.3,
             fire     = {0, 1},
             username = ld10_name,
             index    = WSTYPE_PLACEHOLDER,
@@ -75,33 +75,22 @@ LD_10_ARM = {
     warhead     = LD_10_warhead,
     warhead_air = LD_10_warhead,
 
-	LaunchDistData = 
-	{ 
-		19, 	8, 
-						200, 		250, 			300, 			350, 			400, 			450, 			500, 			550, 
-		100, 	51220 * 1.1, 		53740 * 1.1, 	55680 * 1.1, 	57240 * 1.1, 	58580 * 1.1, 	59960 * 1.1, 	61340 * 1.1, 	62620 * 1.1, 
-		300, 	52500 * 1.1, 		55100 * 1.1, 	57140 * 1.1, 	58780 * 1.1, 	60180 * 1.1, 	61580 * 1.1, 	63020 * 1.1, 	64300 * 1.1, 
-		500, 	53790 * 1.1, 		56490 * 1.1, 	58560 * 1.1, 	60270 * 1.1, 	61740 * 1.1, 	63240 * 1.1, 	64710 * 1.1, 	66090 * 1.1, 
-		700, 	55050 * 1.1, 		57900 * 1.1, 	60030 * 1.1, 	61830 * 1.1, 	63360 * 1.1, 	64890 * 1.1, 	66450 * 1.1, 	67860 * 1.1, 
-		1000, 	56950 * 1.1, 		60000 * 1.1, 	62250 * 1.1, 	64150 * 1.1, 	65800 * 1.1, 	67400 * 1.1, 	69050 * 1.1, 	70600 * 1.1, 
-		2000, 	61950 * 1.1, 		65600 * 1.1, 	68300 * 1.1, 	72200 * 1.1, 	74250 * 1.1, 	76350 * 1.1, 	78350 * 1.1, 	80100 * 1.1, 
-		3000, 	68400 * 1.1, 		72900 * 1.1, 	76275 * 1.1,	79050 * 1.1, 	81450 * 1.1, 	85800 * 1.1, 	88350 * 1.1, 	90375 * 1.1, 
-		4000, 	74475 * 1.1, 		80175 * 1.1, 	84450 * 1.1, 	87900 * 1.1, 	91125 * 1.1, 	94350 * 1.1, 	97275 * 1.1, 	101475 * 1.1, 
-		5000, 	79950 * 1.1, 		87300 * 1.1, 	92700 * 1.1, 	97200 * 1.1, 	101400 * 1.1, 	105600 * 1.1, 	109200 * 1.1, 	112200 * 1.1, 
-		6000, 	84600 * 1.1, 		94350 * 1.1, 	101400 * 1.1, 	107400 * 1.1, 	112950 * 1.1, 	118500 * 1.1, 	123000 * 1.1, 	126600 * 1.1, 
-		7000,	88050 * 1.1, 		100950 * 1.1, 	110250 * 1.1, 	117900 * 1.1, 	125100 * 1.1, 	132000 * 1.1, 	137400 * 1.1, 	141750 * 1.1, 
-		8000, 	88250 * 1.1, 		105750 * 1.1, 	117750 * 1.1, 	127750 * 1.1, 	137000 * 1.1, 	145250 * 1.1, 	151250 * 1.1, 	156500 * 1.1, 
-		9000, 	83750 * 1.1, 		107500 * 1.1, 	123500 * 1.1, 	136000 * 1.1, 	147500 * 1.1, 	156750 * 1.1, 	163750 * 1.1, 	169250* 1.1, 
-		10000 , 72000 * 1.1, 		103500 * 1.1, 	125000 * 1.1, 	141250 * 1.1, 	155500 * 1.1, 	166250 * 1.1, 	169250 * 1.1, 	170000 * 1.1, 
-		11000, 	48000 * 1.1, 		91000 * 1.1, 	121500 * 1.1,	142500 * 1.1, 	160000 * 1.1, 	169500 * 1.1, 	170000 * 1.1, 	170000 * 1.1, 
-		12000, 	45500 * 1.1, 		74500 * 1.1, 	111500 * 1.1, 	139000 * 1.1, 	160500 * 1.1, 	169500 * 1.1, 	170000 * 1.1, 	170000 * 1.1, 
-		13000, 	46000 * 1.1, 		57500 * 1.1, 	97000 * 1.1, 	132000 * 1.1, 	157000 * 1.1, 	169500 * 1.1, 	170000 * 1.1, 	170000 * 1.1, 
-		14000, 	47000 * 1.1, 		57500 * 1.1, 	84500 * 1.1, 	122000 * 1.1, 	151500 * 1.1, 	168500 * 1.1, 	170000 * 1.1, 	170000 * 1.1, 
-		15000, 	52500 * 1.1, 		58000 * 1.1, 	66500 * 1.1, 	113500 * 1.1, 	146500 * 1.1, 	164000 * 1.1, 	170000 * 1.1, 	170000 * 1.1, },
-		
-		MinLaunchDistData = { 19, 8, 200, 250, 300, 350, 400, 450, 500, 550, 100, 26460, 27940, 29100, 30100, 30980, 31920, 32840, 33760, 300, 26680, 28180, 29400, 30420, 31360, 32260, 33240, 34160, 500, 26880, 28440, 29640, 30720, 31680, 32670, 33630, 34590, 700, 27090, 28710, 29940, 31050, 32040, 33030, 34080, 35040, 1000, 27350, 29050, 30400, 31550, 32600, 33550, 34650, 35700, 2000, 7350, 7750, 8000, 33000, 34350, 35600, 36800, 37900, 3000, 9075, 9825, 10200, 10500, 10725, 37050, 38850, 40200, 4000, 10575, 11550, 12225, 12600, 12975, 13350, 13575, 41175, 5000, 11700, 13200, 14100, 14850, 15150, 15600, 16050, 16350, 6000, 12900, 14550, 15900, 16800, 17550, 18000, 18450, 18900, 7000, 13650, 15900, 17400, 18600, 19650, 20400, 21000, 21450, 8000, 14250, 16750, 19000, 20500, 21750, 22750, 23500, 24000, 9000, 14500, 17500, 20000, 22000, 23750, 25000, 25750, 26500, 10000, 14250, 18000, 20750, 23250, 25500, 27000, 27750, 28000, 11000, 12500, 18000, 21000, 24000, 26500, 28500, 29000, 29500, 12000, 13000, 16500, 21000, 24500, 27500, 29500, 30500, 31000, 13000, 13000, 16000, 21000, 24500, 28000, 30500, 32000, 32500, 14000, 13500, 16500, 20000, 25000, 29000, 31500, 32500, 33500, 15000, 14000, 16500, 19500, 25000, 29000, 32000, 33500, 35000 },
+    LaunchDistData =
+    {
+        9,        6,
+                   100,      150,      200,      250,      300,      350,
+        1000,    22000,    23000,    26000,    26000,    27000,    30000,
+        2000,    27000,    29000,    32000,    35000,    37000,    40000,
+        4000,    32000,    35000,    37000,    40000,    42000,    45000,
+        6000,    37000,    40000,    43000,    45000,    47000,    50000,
+        7000,    43000,    45000,    47000,    50000,    55000,    60000,
+        8000,    45000,    47000,    50000,    55000,    60000,    65000,
+        9000,    50000,    52500,    55000,    58000,    65000,    70000,
+       10000,    60000,    62500,    65000,    68000,    70000,    75000,
+       12000,    65000,    66000,    67000,    70000,    75000,    80000,
+    },
 
-	}
+}
 
 if use_agm88_scheme_sead then
 
@@ -244,94 +233,66 @@ if use_agm88_scheme_sead then
 else
 
     LD_10_ARM.class_name      = "wAmmunitionSelfHoming"
-    LD_10_ARM.scheme          = "anti_radiation_missile_ramjet"
+    LD_10_ARM.scheme          = "anti_radiation_missile2"
 
     LD_10_ARM.controller = {
-		boost_start = 0.5,
-        march_start = 2.5,
-    }
-
-    LD_10_ARM.boost = {
-		
-		impulse 							= 250,
-		fuel_mass 							= 93, -- 93
-		work_time 							= 2,
-		boost_factor 						= 0,
-		boost_time							= 0,
-		nozzle_position 					= { { -2.2, -0.21, 0 } },
-		nozzle_orientationXYZ 				= { { 1, 0, 0 } },
-		tail_width 							= 0.9,
-		smoke_color 						= { 0.8, 0.8, 0.8 },
-		smoke_transparency					= 0.8,
-		custom_smoke_dissipation_factor 	= 0.2,
-		effect_type 						= 0,
+        march_start = 0.021,
     }
 
     LD_10_ARM.march = {
-		
-		impulse 							= 0,
-		fuel_mass 							= 167,--55
-		work_time 							= 0,
-		AEC 								= 1.18,
-		AFR_stoich 							= 14.9,
-		LHVof_fuel							= 43000000,
-		Tchamb_max 							= 2770,
-		boost_factor 						= 0,
-		boost_time							= 0,
-		inlet_area 							= 0.044,
-		custom_smoke_dissipation_factor 	= 0.45,
-		effect_type 						= 1,
-		min_start_speed 					= 400,
-		nozzle_position						= { { -2.15, -0.21, 0 } },
-		nozzle_orientationXYZ 				= { { 0, 0, 0 } },
-		smoke_color 						= { 0.9, 0.9, 0.9 },
-		smoke_transparency 					= 0.05,
-		tail_width 							= 0.1,
+        impulse                             = 205,
+        fuel_mass                           = 70,
+        work_time                           = 10,
+        boost_time                          = 0,
+        boost_factor                        = 0,
+        nozzle_position                     = {{-1.74, -0.11, 0}},
+        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
+        tail_width                          = 0.3,
+        smoke_color                         = {0.6, 0.6, 0.6},
+        smoke_transparency                  = 0.8,
+        custom_smoke_dissipation_factor     = 0.2,
     }
 
     LD_10_ARM.fm = {
-		mass 		= 600,
-		caliber		= 0.36,
-		cx_coeff 	= { 1, 1, 0.85, 0.5, 1.5 },
-		L 			= 4.7,
-		I 			= 1104.5,
-		Ma 			= 0.4,
-		Mw 			= 1.2,
-		wind_sigma 	= 0,
-		wind_time 	= 0,
-		Sw 			= 0.7,
-		dCydA 		= { 0.07, 0.036 },
-		A 			= 0.36,
+        mass        = ld10_mass,
+        caliber     = 0.203,
+        cx_coeff    = {1, 0.4, 1.1, 0.5, 1.4},
+        L           = 3.8,
+        I           = 1 / 12 * ld10_mass * 3.8 * 3.8,
+        Ma          = 0.3,
+        Mw          = 1.116,
+        wind_sigma  = 0.0,
+        wind_time   = 0.0,
+        Sw          = 0.85,
+        dCydA       = {0.07, 0.036},
+        A           = 0.36,
         maxAoa      = 0.28,
-		finsTau 	= 0.1,
+        finsTau     = 0.1,
 
-		Ma_x 		= 0.001,
-		Mw_x 		= 0.15,
-		I_x 		= 60,
-		
-		lockRoll 	= 1,
-		maxAoa 		= 0.28,
+        Ma_x        = 0.001,
+        Kw_x        = 0.001,
+        --I_x         = 50,
     }
 
-    LD_10_ARM.seeker  = {
-			
-        delay               = 1.5,
-        op_time             = 240,
-        FOV                 = math.rad(70),
-        max_w_LOS           = math.rad(30),
-        sens_near_dist      = 100,
-        sens_far_dist       = 120000,
-
-        keep_aim_time       = 250,
-        pos_memory_time     = 250,
+    LD_10_ARM.radio_seeker = {
+        FOV                 = math.rad(5),
+        op_time             = 150,
+        keep_aim_time       = 8,
+        pos_memory_time     = 60,
+        sens_near_dist      = 200.0,
+        sens_far_dist       = 60000.0,
         err_correct_time    = 1.0,
+        err_val             = 0.001,
+        lock_err_val        = 0.01,
         calc_aim_dist       = 500000,
-        blind_rad_val       = 0.1,
+        blind_rad_val       = 0.2,
+        blind_ctrl_dist     = 1000,
         aim_y_offset        = 2.0,
+        min_sens_rad_val    = 0.00025,
+    }
 
-        ang_err_val         = math.rad(0.0008),
-        abs_err_val         = 1,
-		lock_manual_target_types_only = 0,
+    LD_10_ARM.simple_gyrostab_seeker = {
+        omega_max = math.rad(8)
     }
 
     LD_10_ARM.fuze_proximity = {
@@ -341,46 +302,34 @@ else
     }
 
     LD_10_ARM.autopilot = {
-     --   K                = 100.0,
-       -- Kg               = 6.0,
-      --  Ki               = 0.0,
-      --  finsLimit        = 0.22,
-      --  useJumpByDefault = 1,
-     --   J_Power_K        = 1.2,
-     --   J_Diff_K         = 0.4,
-     --   J_Int_K          = 0.0,
-     --   J_Angle_K        = math.rad(12),
-      --  J_FinAngle_K     = math.rad(18),
-     --   J_Angle_W        = 3.5,
-     --   delay            = 1.0,
-		
-			K = 50,
-			K_loft_err = 1,
-			Kd = 0.1,
-			Ki = 0,
-			Kix = 0,
-			Ks = 10,
-			Kw = 1.5,
-			Kx = 0,
-			PN_dist_data = { 3000, 0.9, 2000, 1 },
-			add_err_val = 0.025,
-			conv_input = 0,
-			delay = 1,
-			fins_limit = 0.61086523819802,
-			fins_q_div = 1,
-			loft_active_by_default = 1,
-			loft_angle = math.rad(15),
-			loft_trig_angle = 0.47123889803847,
-			op_time = 200,
-			rotated_WLOS_input = 0,
-			w_limit = 0.17453292519943
+        K                = 100.0,
+        Kg               = 6.0,
+        Ki               = 0.0,
+        finsLimit        = 0.22,
+        useJumpByDefault = 1,
+        J_Power_K        = 1.2,
+        J_Diff_K         = 0.4,
+        J_Int_K          = 0.0,
+        J_Angle_K        = math.rad(12),
+        J_FinAngle_K     = math.rad(18),
+        J_Angle_W        = 3.5,
+        delay            = 1.0,
     }
 
+    LD_10_ARM.start_helper = {
+        delay               = 0.2,
+        power               = 0.02,
+        time                = 2,
+        use_local_coord     = 0,
+        max_vel             = 200,
+        max_height          = 400,
+        vh_logic_or         = 1,
+    }
 end
 
 declare_weapon(LD_10_ARM)
 --LD_10_ARM.shape_table_data.index = LD_10_ARM.wsTypeOfWeapon[4]
-
+--[[
 declare_loadout({
     category    = CAT_MISSILES,
     CLSID       = 'DIS_LD-10',
@@ -394,12 +343,12 @@ declare_loadout({
         [1] =
         {
             Position  = {0, 0, 0},
-            ShapeName = 'x-31',
+            ShapeName = 'ld10',
         },
     }, -- end of Elements
 })
+]]
 
---[[
 declare_loadout({
     category       = CAT_MISSILES,
     CLSID          = 'DIS_LD-10_DUAL_L',
@@ -421,18 +370,17 @@ declare_loadout({
 declare_loadout({
     category       = CAT_MISSILES,
     CLSID          = 'DIS_LD-10_DUAL_R',
-    Picture     = 'pl12.png',
-    attribute   = LD_10_ARM.wsTypeOfWeapon,
-    displayName = _(ld10_name),
-    Cx_pil      = 0.000859765625,
-    Count       = 1,
-    Weight      = ld10_mass + pylon_mass,
-    Elements    = {
-        [1] =
-        {
-            Position  = {0, 0, 0},
-            ShapeName = 'x-31',
-        },
+    Picture        = 'pl12.png',
+    wsTypeOfWeapon = LD_10_ARM.wsTypeOfWeapon,
+    attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
+    displayName    = _(ld10_name .. ' x 2'),
+    Cx_pil         = 0.000859765625 * 1.31,
+    Count          = 2,
+    Weight         = 2 * ld10_mass + pylon_dual_mass,
+    Elements       = {
+        { ShapeName = 'JF-17_PF12_twin', IsAdapter = true, },
+        { ShapeName = 'ld10',            connector_name = 'dual_PF12R', },
+        { ShapeName = 'ld10',            connector_name = 'dual_PF12L', },
     }, -- end of Elements
+    JettisonSubmunitionOnly = true,
 })
-]]
