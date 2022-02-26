@@ -244,63 +244,34 @@ declare_loadout({
 	Elements  		= {{ShapeName = "aim-7"}},
 })
 
---[[
-declare_loadout({
-    category       = CAT_AIR_TO_AIR,
-    CLSID          = 'DIS_PL-12_DUAL_L',
-    Picture        = 'pl12.png',
-    wsTypeOfWeapon = PL12_AA.wsTypeOfWeapon,
-    attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
-    displayName    = _('PL-12' .. ' x 2'),
-    Cx_pil         = 0.000859765625 * 1.31,
-    Count          = 2,
-    Weight         = 2 * 199 + 160,
-    Elements       = {
-        { ShapeName = 'JF-17_PF12_twin', IsAdapter = true, },
-        { ShapeName = 'pl12',        connector_name = 'dual_PF12L', },
-        { ShapeName = 'pl12',        connector_name = 'dual_PF12R', },
-    }, -- end of Elements
-    JettisonSubmunitionOnly = true,
-})
-declare_loadout({
-    category       = CAT_AIR_TO_AIR,
-    CLSID          = 'DIS_PL-12_DUAL_R',
-    Picture        = 'pl12.png',
-    wsTypeOfWeapon = PL12_AA.wsTypeOfWeapon,
-    attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
-    displayName    = _('PL-12' .. ' x 2'),
-    Cx_pil         = 0.000859765625 * 1.31,
-    Count          = 2,
-    Weight         = 2 * 199 + 160,
-    Elements       = {
-        { ShapeName = 'JF-17_PF12_twin', IsAdapter = true, },
-        { ShapeName = 'pl12',        connector_name = 'dual_PF12R', },
-        { ShapeName = 'pl12',        connector_name = 'dual_PF12L', },
-    }, -- end of Elements
-    JettisonSubmunitionOnly = true,
-})
-declare_loadout({
-    category     = CAT_AIR_TO_AIR,
-    CLSID        = 'DIS_PL-12+',
-    Picture      = 'pl12.png',
-    attribute    = PL12_AA.wsTypeOfWeapon,
-    displayName  = _("PL-12"),
-    Cx_pil       = 0.001959765625,
-    Count        = 1,
-    Weight       = sd10_mass,
-    Elements     = {
-        [1] =
+declare_loadout(
+    {
+        category = CAT_PODS,
+        CLSID = "{Jeff}",
+        attribute = {wsType_Weapon, wsType_GContainer, 47, WSTYPE_PLACEHOLDER},
+        Picture = "L005.png",
+        displayName = _("Remove Drag"),
+        Weight = 0,
+        Cx_pil = -0.00348,
+        shape_table_data =
         {
-            DrawArgs =
             {
-                [1] = {1, 1},
-                [2] = {2, 1},
-            }, -- end of DrawArgs
-            Position  = {0, 0, 0},
-            ShapeName = sd10_mass,
+                file = "",
+                life = 1,
+                fire = { 0, 1},
+                username = "Blank",
+                index = WSTYPE_PLACEHOLDER,
+            },
         },
-    }, -- end of Elements
-})]]
+        Elements =
+        {
+            {
+                Position = {0, 0, 0},
+                ShapeName = "",
+            },
+        },
+    }
+)
 
 
 -- WIP
@@ -336,11 +307,11 @@ mech_anime["CrewLadder"] = {
 
 -----------------------------------------
 -----------------------------------------
-mount_vfs_model_path (current_mod_path .. '/Shapes/J-10A')													
+mount_vfs_model_path (current_mod_path .. '/Shapes/J-10A')
 mount_vfs_texture_path (current_mod_path .. '/Textures/J-10A')
-mount_vfs_liveries_path (current_mod_path..'/Liveries/J-10A')
+mount_vfs_texture_path (current_mod_path .. '/Liveries/J-10A')
 --mount_vfs_sound_path   (current_mod_path..'/Sounds')	
-												
+
 local wheel_touch_comp = 0.02
 
 -- WOLALIGHT_STROBES          = 1
@@ -393,7 +364,7 @@ J_10A = {
     Categories  = {"{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Interceptor",},
     -- Countries   = {'China', 'Pakistan'},
     country_of_origin = 'CHN',
-    date_of_introduction = 1998.8, --
+    date_of_introduction = 1998.3, --
     -------------------------
     -- add model draw args for network transmitting to this draw_args table (32 limit)
     net_animation =
@@ -816,6 +787,7 @@ J_10A = {
                 { CLSID = "DIS_WMD7",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_WMD7"}},     {station = 6, loadout = {"DIS_WMD7"}}} },
                 { CLSID = "DIS_AKG_DLPOD", arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_AKG_DLPOD"}},{station = 6, loadout = {"DIS_AKG_DLPOD"}}} },
                 { CLSID = "DIS_SPJ_POD",   arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_SPJ_POD"}},  {station = 6, loadout = {"DIS_SPJ_POD"}}} },
+                { CLSID = "ALQ_184_Long",   arg_value = 1.0, forbidden = {{station = 2, loadout = {"ALQ_184_Long"}},  {station = 6, loadout = {"ALQ_184_Long"}}} },
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R', arg_value = 1.0},
@@ -938,6 +910,17 @@ J_10A = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_W'},
                 { CLSID = 'DIS_SMOKE_GENERATOR_Y'},
                 { CLSID = 'DIS_SMOKE_GENERATOR_O'},
+            }
+        ),
+        pylon(8, 0,0, 0, 0,
+            {
+               
+            },
+            {
+
+                -- Smoke Generator pods
+                { CLSID = '{Jeff}'},
+               -- { CLSID = 'DIS_SMOKE_GENERATOR_G'},
             }
         ),
     },
