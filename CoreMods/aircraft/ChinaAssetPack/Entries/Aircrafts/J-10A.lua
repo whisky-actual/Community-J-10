@@ -787,7 +787,6 @@ J_10A = {
                 { CLSID = "DIS_WMD7",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_WMD7"}},     {station = 6, loadout = {"DIS_WMD7"}}} },
                 { CLSID = "DIS_AKG_DLPOD", arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_AKG_DLPOD"}},{station = 6, loadout = {"DIS_AKG_DLPOD"}}} },
                 { CLSID = "DIS_SPJ_POD",   arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_SPJ_POD"}},  {station = 6, loadout = {"DIS_SPJ_POD"}}} },
-                { CLSID = "ALQ_184_Long",   arg_value = 1.0, forbidden = {{station = 2, loadout = {"ALQ_184_Long"}},  {station = 6, loadout = {"ALQ_184_Long"}}} },
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R', arg_value = 1.0},
