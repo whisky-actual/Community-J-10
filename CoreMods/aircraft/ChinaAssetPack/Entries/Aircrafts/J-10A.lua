@@ -623,7 +623,7 @@ J_10A = {
         RADAR = "KLJ-7",
         RWR   = "Abstract RWR",
     },
-    detection_range_max   = 300000.0,
+    detection_range_max   = 300000.0, --300000.00
     radar_can_see_ground  = true,
     EPLRS                 = true,
 
@@ -661,6 +661,7 @@ J_10A = {
             {
                 { CLSID = "DIS_PL-8B", arg_value = 0.1, Cx_gain = 0.5, required = {{station = 7, loadout = {"DIS_PL-8B"}}} }, -- wing tip gain
                 { CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5, required = {{station = 7, loadout = {"DIS_PL-8A"}}} }, -- wing tip gain
+                { CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5, required = {{station = 7, loadout = {"DIS_PL-10"}}} }, -- wing tip gain
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
@@ -678,9 +679,12 @@ J_10A = {
             {
                 { CLSID = "DIS_PL-8B", arg_value = 0.1, required = {{station = 6, loadout = {"DIS_PL-8B"}}} },
                 { CLSID = "DIS_PL-8A", arg_value = 0.1, required = {{station = 6, loadout = {"DIS_PL-8A"}}} },
+                { CLSID = "DIS_PL-10", arg_value = 0.1, required = {{station = 6, loadout = {"DIS_PL-10"}}} },
                 { CLSID = "DIS_PL-12", arg_value = 0.1, required = {{station = 6, loadout = {"DIS_PL-12"}}} },
                 { CLSID = "DIS_PL-11", arg_value = 0.1, required = {{station = 6, loadout = {"DIS_PL-11"}}} },
                 { CLSID = "DIS_PL-12_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}, required = {{station = 6, loadout = {"DIS_PL-12_DUAL"}}}}, --attach_point_position = {0, 0.525, -0.2}
+                { CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}, required = {{station = 6, loadout = {"J10_PL-15_DUAL"}}}},
+                { CLSID = "DIS_PL-15", arg_value = 0.1, required = {{station = 6, loadout = {"DIS_PL-12"}}} },
 
                 { CLSID = "DIS_LD-10", arg_value = 0.2 },
                 --{ CLSID = "DIS_LD-10_DUAL_L", arg_value = 0,  attach_point_position = {0, 0.525, 0.2} },
@@ -841,9 +845,12 @@ J_10A = {
             {
                 { CLSID = "DIS_PL-8B", arg_value = 0.1, required = {{station = 2, loadout = {"DIS_PL-8B"}}} },
                 { CLSID = "DIS_PL-8A", arg_value = 0.1, required = {{station = 2, loadout = {"DIS_PL-8A"}}} },
+                { CLSID = "DIS_PL-10", arg_value = 0.1, required = {{station = 2, loadout = {"DIS_PL-10"}}} },
                 { CLSID = "DIS_PL-12", arg_value = 0.1, required = {{station = 2, loadout = {"DIS_PL-12"}}} },
                 { CLSID = "DIS_PL-11", arg_value = 0.1, required = {{station = 2, loadout = {"DIS_PL-11"}}} },
                 { CLSID = "DIS_PL-12_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}, required = {{station = 2, loadout = {"DIS_PL-12_DUAL"}}} }, --attach_point_position = {0, 0.525, 0.2}
+                { CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}, required = {{station = 6, loadout = {"J10_PL-15_DUAL"}}}},
+                { CLSID = "DIS_PL-15", arg_value = 0.1, required = {{station = 6, loadout = {"DIS_PL-12"}}} },
 
                 { CLSID = "DIS_LD-10", arg_value = 0.2 },
                -- { CLSID = "DIS_LD-10_DUAL_R", arg_value = 0,  attach_point_position = {0, 0.525, -0.2} },
@@ -901,6 +908,7 @@ J_10A = {
             {
                 { CLSID = "DIS_PL-8B", arg_value = 0.1, Cx_gain = 0.5, required = {{station = 1, loadout = {"DIS_PL-8B"}}} }, -- no drag
                 { CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5, required = {{station = 1, loadout = {"DIS_PL-8A"}}} }, -- no drag
+                { CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5, required = {{station = 1, loadout = {"DIS_PL-10"}}} }, -- no drag
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
