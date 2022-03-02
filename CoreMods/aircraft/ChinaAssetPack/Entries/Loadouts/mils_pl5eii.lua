@@ -121,7 +121,7 @@ PL_5EII_AA.shape_table_data.index = PL_5EII_AA.wsTypeOfWeapon[4]
 
 declare_loadout({
     category     = CAT_AIR_TO_AIR,
-    CLSID        = 'DIS_PL-5EII',
+    CLSID        = 'Jeff_PL-5EII',
     Picture      = 'pl5eii.png',
     attribute    = PL_5EII_AA.wsTypeOfWeapon,
     displayName  = _(pl5eii_name),

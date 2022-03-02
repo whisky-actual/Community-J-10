@@ -140,7 +140,7 @@ declare_loadout({
         },
     }, -- end of Elements
 })
---[[
+
 
 declare_loadout({
     category     = CAT_AIR_TO_AIR,
@@ -163,7 +163,7 @@ declare_loadout({
             ShapeName = pl8b_model,
         },
     }, -- end of Elements
-})]]
+})
 
 -- PL-8A
 pl8a_name  = 'PL-8A'

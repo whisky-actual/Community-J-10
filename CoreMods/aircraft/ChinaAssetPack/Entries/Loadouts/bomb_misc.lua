@@ -329,7 +329,7 @@ declare_loadout(JF17_MK_20)
 
 
 -- customized GBU-10/12/16
-
+--[[
 JF17_GBU_10 = {
     category    = CAT_BOMBS,
     CLSID       = "DIS_GBU_10",
@@ -359,6 +359,58 @@ declare_loadout(JF17_GBU_10)
 JF17_GBU_16 = {
     category    = CAT_BOMBS,
     CLSID       = "DIS_GBU_16",
+    Picture     = "GBU16.png",
+    displayName = _("GBU-16"),
+    Count       = 1,
+    Weight      = 564,
+    Cx_pil      = 0.000413,
+
+    Elements =
+    {
+        {
+            DrawArgs =
+            {
+                [1] = {1, 1},
+                [2] = {2, 1},
+            }, -- end of DrawArgs
+            Position  = {0, 0, 0},
+            ShapeName = "GBU-16",
+        },
+    },
+    attribute = {4, 5, 36, 39},
+    Required  = {"DIS_WMD7"},
+}
+declare_loadout(JF17_GBU_16)]]
+
+JF17_GBU_10 = {
+    category    = CAT_BOMBS,
+    CLSID       = "Jeff_GBU_10",
+    Picture     = "GBU10.png",
+    displayName = _("GBU-10"),
+    Count       = 1,
+    Weight      = 1162,
+    Cx_pil      = 0.000793,
+
+    Elements =
+    {
+        {
+            DrawArgs =
+            {
+                [1] = {1, 1},
+                [2] = {2, 1},
+            }, -- end of DrawArgs
+            Position  = {0, 0, 0},
+            ShapeName = "GBU-10",
+        },
+    },
+    attribute = {4, 5, 36, 36},
+    Required  = {"DIS_WMD7"},
+}
+declare_loadout(JF17_GBU_10)
+
+JF17_GBU_16 = {
+    category    = CAT_BOMBS,
+    CLSID       = "Jeff_GBU_16",
     Picture     = "GBU16.png",
     displayName = _("GBU-16"),
     Count       = 1,

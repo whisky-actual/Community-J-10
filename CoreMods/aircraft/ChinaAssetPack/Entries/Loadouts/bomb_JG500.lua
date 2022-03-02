@@ -211,11 +211,11 @@ declare_weapon(JG500B)
 --
 declare_loadout({
     category         = CAT_BOMBS,
-    CLSID            = 'DIS_JG500',
+    CLSID            = 'DIS_GBU_10', -- DIS_JG500
     attribute        = JG500.wsTypeOfWeapon,
     Count            = 1,
     Cx_pil           = JG500.Cx,
-    Picture          = "gbu10.png", -- TODO
+    Picture          = "gbu16.png", -- TODO
     displayName      = _(jg500_name),
     Weight           = jg500_mass + pylon_mass,
     Elements         = {
@@ -229,7 +229,7 @@ declare_loadout({
 })
 declare_loadout({
     category         = CAT_BOMBS,
-    CLSID            = 'DIS_JG500B',
+    CLSID            = 'DIS_GBU_16', -- DIS_JG500B
     attribute        = JG500B.wsTypeOfWeapon,
     Count            = 1,
     Cx_pil           = JG500B.Cx,
