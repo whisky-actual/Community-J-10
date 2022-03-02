@@ -762,8 +762,8 @@ J_10A = {
 
                 { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
 				
-                { CLSID = "DIS_JG500", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_JG500B", arg_value = 1.0 }, -- GBU-16
+                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
                 { CLSID = "DIS_TYPE200", arg_value = 0.5 },
                 { CLSID = "DIS_TYPE200_DUAL_L", arg_value = 0.5 },
@@ -815,8 +815,8 @@ J_10A = {
 
                 { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- Mk-20 Rockeye
 
-                { CLSID = "DIS_JG500", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_JG500B", arg_value = 1.0 }, -- GBU-16
+                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
 
@@ -837,8 +837,8 @@ J_10A = {
                 { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
                 { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
 
-                { CLSID = "DIS_JG500", arg_value =1.0 }, -- GBU-10
-                { CLSID = "DIS_JG500B", arg_value = 1.0 }, -- GBU-16 
+                { CLSID = "DIS_GBU_10", arg_value =1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16 
 
                 { CLSID = "DIS_WMD7",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_WMD7"}},     {station = 6, loadout = {"DIS_WMD7"}}} },
                 { CLSID = "DIS_AKG_DLPOD", arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_AKG_DLPOD"}},{station = 6, loadout = {"DIS_AKG_DLPOD"}}} },
@@ -880,8 +880,8 @@ J_10A = {
 
                 { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- Mk-20 Rockeye
 
-                { CLSID = "DIS_JG500", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_JG500B", arg_value = 1.0 }, -- GBU-16
+                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
 
@@ -972,8 +972,8 @@ J_10A = {
 
                 { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
 			   
-                { CLSID = "DIS_JG500", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_JG500B", arg_value = 1.0 }, -- GBU-16
+                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
                 { CLSID = "DIS_TYPE200", arg_value = 0.5 },
                 { CLSID = "DIS_TYPE200_DUAL_R", arg_value = 0.5 },
