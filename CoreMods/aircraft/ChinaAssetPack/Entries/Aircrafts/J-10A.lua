@@ -657,18 +657,19 @@ J_10A = {
         -- LEFT WING
         pylon(1, 0, -1.865, -0.776, 3.737,
             {
-                use_full_connector_position = true, connector = "str_pnt_001", arg = 308, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_001", arg = 314, arg_value = 0
             },
             {
+			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1, Cx_gain = 0.5}, -- wing tip gain
-                { CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
-                    forbidden = {
-                        {station = 7,	loadout = {"DIS_PL-10"}},
-                    }  }, -- wing tip gain
-                { CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
-                    forbidden = {
-                        {station = 7,	loadout = {"DIS_PL-8A"}},
-                    }  }, -- wing tip gain
+					{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
+						forbidden = {
+							{station = 7,	loadout = {"DIS_PL-10"}},
+						}  }, -- wing tip gain
+					{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
+						forbidden = {
+							{station = 7,	loadout = {"DIS_PL-8A"}},
+						}  }, -- wing tip gain
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
@@ -684,63 +685,64 @@ J_10A = {
                 use_full_connector_position = true, connector = "str_pnt_002", arg = 313, arg_value = 0
             },
             {
+			-- IR AAM 
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1 },
-                { CLSID = "DIS_PL-8A", arg_value = 0.1, 
-                    forbidden = {
-                        {station = 6,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 6,	loadout = {"DIS_PL-11"}},
-                        {station = 6,	loadout = {"DIS_PL-10"}},
-                        {station = 6,	loadout = {"DIS_PL-15"}},
-                        {station = 6,	loadout = {"DIS_SD-10"}},
-                        {station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-                    }  },
-                { CLSID = "DIS_PL-10", arg_value = 0.1, 
-                    forbidden = {
-                        {station = 6,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 6,	loadout = {"DIS_PL-11"}},
-                        {station = 6,	loadout = {"DIS_PL-8A"}},
-                        {station = 6,	loadout = {"DIS_PL-15"}},
-                        {station = 6,	loadout = {"DIS_SD-10"}},
-                        {station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-                    } 
-					  },
-                { CLSID = "DIS_PL-11", arg_value = 0.1,
-                    forbidden = {
-                        {station = 6,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 6,	loadout = {"DIS_PL-10"}},
-                        {station = 6,	loadout = {"DIS_PL-8A"}},
-                        {station = 6,	loadout = {"DIS_PL-15"}},
-                        {station = 6,	loadout = {"DIS_SD-10"}},
-                        {station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-                    } 
-					 },
-                { CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2},
-                    forbidden = {
-                        {station = 6,	loadout = {"DIS_PL-11"}},
-                        {station = 6,	loadout = {"DIS_PL-10"}},
-                        {station = 6,	loadout = {"DIS_PL-8A"}},
-                        {station = 6,	loadout = {"DIS_PL-15"}},
-                        {station = 6,	loadout = {"DIS_SD-10"}},
-                        {station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-                    } 
-					},
-                { CLSID = "DIS_PL-15", arg_value = 0.1, 
-                    forbidden = {
-                        {station = 6,	loadout = {"DIS_PL-11"}},
-                        {station = 6,	loadout = {"DIS_PL-10"}},
-                        {station = 6,	loadout = {"DIS_PL-8A"}},
-                        {station = 6,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 6,	loadout = {"DIS_SD-10"}},
-                        {station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-                    } 
-					},
-					
+					{ CLSID = "DIS_PL-8A", arg_value = 0.1, 
+						forbidden = {
+							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 6,	loadout = {"DIS_PL-11"}},
+							{station = 6,	loadout = {"DIS_PL-10"}},
+							{station = 6,	loadout = {"DIS_PL-15"}},
+							{station = 6,	loadout = {"DIS_SD-10"}},
+							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
+						}  },
+					{ CLSID = "DIS_PL-10", arg_value = 0.1, 
+						forbidden = {
+							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 6,	loadout = {"DIS_PL-11"}},
+							{station = 6,	loadout = {"DIS_PL-8A"}},
+							{station = 6,	loadout = {"DIS_PL-15"}},
+							{station = 6,	loadout = {"DIS_SD-10"}},
+							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
+						} 
+						  },
+						  
+		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
                 { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, --attach_point_position = {0, 0.525, -0.2}
-
+					{ CLSID = "DIS_PL-11", arg_value = 0.1,
+						forbidden = {
+							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 6,	loadout = {"DIS_PL-10"}},
+							{station = 6,	loadout = {"DIS_PL-8A"}},
+							{station = 6,	loadout = {"DIS_PL-15"}},
+							{station = 6,	loadout = {"DIS_SD-10"}},
+							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
+						} 
+						 },
+					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2},
+						forbidden = {
+							{station = 6,	loadout = {"DIS_PL-11"}},
+							{station = 6,	loadout = {"DIS_PL-10"}},
+							{station = 6,	loadout = {"DIS_PL-8A"}},
+							{station = 6,	loadout = {"DIS_PL-15"}},
+							{station = 6,	loadout = {"DIS_SD-10"}},
+							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
+						} 
+						},
+					{ CLSID = "DIS_PL-15", arg_value = 0.1, 
+						forbidden = {
+							{station = 6,	loadout = {"DIS_PL-11"}},
+							{station = 6,	loadout = {"DIS_PL-10"}},
+							{station = 6,	loadout = {"DIS_PL-8A"}},
+							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 6,	loadout = {"DIS_SD-10"}},
+							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
+						} 
+						},
+					
+			-- AGM
                 { CLSID = "DIS_LD-10", arg_value = 0.2 },
-                --{ CLSID = "DIS_LD-10_DUAL_L", arg_value = 0,  attach_point_position = {0, 0.525, 0.2} },
-				
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
@@ -748,22 +750,21 @@ J_10A = {
                 { CLSID = "DIS_C-701T", arg_value = 0.1 },
                 { CLSID = "DIS_C-701IR", arg_value = 0.1 },
 
+			-- Guide Bombs
                 { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
-                -- { CLSID = "DIS_GB6", arg_value = 0.1, Type = 1 },
-                -- { CLSID = "DIS_Type200", arg_value = 0.2 },
-                { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 },  --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
+                { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 },  
+                { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, 
+                { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, 
+				
+                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
-                { CLSID = "{Mk82SNAKEYE}", arg_value = 0.3 }, -- Mk-82 Snakeye
-                { CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.3 }, -- Mk-82
-                { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
+			-- Unguided Bombs
+               -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
                 { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
 
                 { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
 				
-                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
                 { CLSID = "DIS_TYPE200", arg_value = 0.5 },
                 { CLSID = "DIS_TYPE200_DUAL_L", arg_value = 0.5 },
@@ -791,27 +792,26 @@ J_10A = {
         ),
         pylon(3, 0, -0.883, -0.74, 1.86,
             {
-                use_full_connector_position = true, connector = "str_pnt_003", arg = 310, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_003", arg = 312, arg_value = 0
             },
             {
-              --  { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
-             --   { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
-			--    { CLSID = "DIS_LD-10", arg_value = 1.0 },
-
+				-- Guided Bombs
                 { CLSID = "DIS_LS_6_500", arg_value = 1.0, Type = 1 },
                 { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
 
-                { CLSID = "DIS_TANK800", arg_value = 1.0, --[[required = {{station = 5,loadout = {"DIS_TANK800"}}}]] }, --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_TANK1100", arg_value = 1.0, --[[required = {{station = 5,loadout = {"DIS_TANK1100"}}}]] }, --, attach_point_position = {0, 0.325, 0}
+				-- Tanks
+                { CLSID = "DIS_TANK800", arg_value = 1.0, --[[required = {{station = 5,loadout = {"DIS_TANK800"}}}]] }, 
+                { CLSID = "DIS_TANK1100", arg_value = 1.0, --[[required = {{station = 5,loadout = {"DIS_TANK1100"}}}]] }, 
                 { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0,}, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK1100_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
 
-                { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
-                { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
+				-- Unguided Bombs
+                --{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
+                --{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
                 { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
-                { CLSID = "DIS_MER2_250_3_L",  arg_value = 0.3 }, -- 250-3 x2 
+                { CLSID = "DIS_MER2_250_3_L",  arg_value = 1.0 }, -- 250-3 x2 
 
                 { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- Mk-20 Rockeye
 
@@ -831,12 +831,14 @@ J_10A = {
                 use_full_connector_position = true, connector = "str_pnt_004", arg = 311, arg_value = 0
             },
             {
+				-- Tanks
                 { CLSID = "DIS_TANK800", arg_value =1.0, },
                 { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0, },
 
-                { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
-                { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
+               -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
+             --   { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
 
+				-- Guided Bombs
                 { CLSID = "DIS_GBU_10", arg_value =1.0 }, -- GBU-10
                 { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16 
 
@@ -855,33 +857,32 @@ J_10A = {
         ),
         pylon(5, 0, -0.883, -0.7, -1.834,
             {
-                use_full_connector_position = true, connector = "str_pnt_005", arg = 312, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_005", arg = 310, arg_value = 0
             },
             {
-              --  { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
-             --   { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
-				
-              --  { CLSID = "DIS_LD-10", arg_value = 1.0 },
-				
+				-- Guided Bombs
                 { CLSID = "DIS_LS_6_500", arg_value = 1.0, Type = 1 },
                 { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 },  --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
+				
+                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
+				-- Tanks
                 { CLSID = "DIS_TANK800", arg_value = 1.0, --[[required = {{station = 3,loadout = {"DIS_TANK800"}}}]]},  --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK1100", arg_value = 1.0, --[[required = {{station = 3,loadout = {"DIS_TANK1100"}}}]]},  --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK1100_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
 
-                { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
-                { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
+			-- Unguided Bombs
+                --{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
+                --{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
                 { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
-                { CLSID = "DIS_MER2_250_3_L",  arg_value = 0.3 }, -- 250-3 x2 
+                { CLSID = "DIS_MER2_250_3_L",  arg_value = 1.0 }, -- 250-3 x2 
 
                 { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- Mk-20 Rockeye
 
-                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
 
@@ -895,85 +896,86 @@ J_10A = {
                 use_full_connector_position = true, connector = "str_pnt_006", arg = 309, arg_value = 0
             },
             {
+			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1 },
 				
-                { CLSID = "DIS_PL-8A", arg_value = 0.1, 
-                    forbidden = {
-                        {station = 2,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 2,	loadout = {"DIS_PL-11"}},
-                        {station = 2,	loadout = {"DIS_PL-10"}},
-                        {station = 2,	loadout = {"DIS_PL-15"}},
-                        {station = 2,	loadout = {"DIS_SD-10"}},
-                        {station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-                    }  },
-                { CLSID = "DIS_PL-10", arg_value = 0.1, 
-                    forbidden = {
-                        {station = 2,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 2,	loadout = {"DIS_PL-11"}},
-                        {station = 2,	loadout = {"DIS_PL-8A"}},
-                        {station = 2,	loadout = {"DIS_PL-15"}},
-                        {station = 2,	loadout = {"DIS_SD-10"}},
-                        {station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-                    } 
-					  },
-                { CLSID = "DIS_PL-11", arg_value = 0.1,
-                    forbidden = {
-                        {station = 2,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 2,	loadout = {"DIS_PL-10"}},
-                        {station = 2,	loadout = {"DIS_PL-8A"}},
-                        {station = 2,	loadout = {"DIS_PL-15"}},
-                        {station = 2,	loadout = {"DIS_SD-10"}},
-                        {station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-                    } 
-					 },
-                { CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2},
-                    forbidden = {
-                        {station = 2,	loadout = {"DIS_PL-11"}},
-                        {station = 2,	loadout = {"DIS_PL-10"}},
-                        {station = 2,	loadout = {"DIS_PL-8A"}},
-                        {station = 2,	loadout = {"DIS_PL-15"}},
-                        {station = 2,	loadout = {"DIS_SD-10"}},
-                        {station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-                    } 
-					},
-                { CLSID = "DIS_PL-15", arg_value = 0.1, 
-                    forbidden = {
-                        {station = 2,	loadout = {"DIS_PL-11"}},
-                        {station = 2,	loadout = {"DIS_PL-10"}},
-                        {station = 2,	loadout = {"DIS_PL-8A"}},
-                        {station = 2,	loadout = {"J10_PL-15_DUAL"}},
-                        {station = 2,	loadout = {"DIS_SD-10"}},
-                        {station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-                    } 
-					},
-					
+					{ CLSID = "DIS_PL-8A", arg_value = 0.1, 
+						forbidden = {
+							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 2,	loadout = {"DIS_PL-11"}},
+							{station = 2,	loadout = {"DIS_PL-10"}},
+							{station = 2,	loadout = {"DIS_PL-15"}},
+							{station = 2,	loadout = {"DIS_SD-10"}},
+							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
+						}  },
+					{ CLSID = "DIS_PL-10", arg_value = 0.1, 
+						forbidden = {
+							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 2,	loadout = {"DIS_PL-11"}},
+							{station = 2,	loadout = {"DIS_PL-8A"}},
+							{station = 2,	loadout = {"DIS_PL-15"}},
+							{station = 2,	loadout = {"DIS_SD-10"}},
+							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
+						} 
+						  },
+				
+		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
-                { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
+                { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, 
+					{ CLSID = "DIS_PL-11", arg_value = 0.1,
+						forbidden = {
+							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 2,	loadout = {"DIS_PL-10"}},
+							{station = 2,	loadout = {"DIS_PL-8A"}},
+							{station = 2,	loadout = {"DIS_PL-15"}},
+							{station = 2,	loadout = {"DIS_SD-10"}},
+							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
+						} 
+						},
+					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2},
+						forbidden = {
+							{station = 2,	loadout = {"DIS_PL-11"}},
+							{station = 2,	loadout = {"DIS_PL-10"}},
+							{station = 2,	loadout = {"DIS_PL-8A"}},
+							{station = 2,	loadout = {"DIS_PL-15"}},
+							{station = 2,	loadout = {"DIS_SD-10"}},
+							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
+						} 
+						},
+					{ CLSID = "DIS_PL-15", arg_value = 0.1, 
+						forbidden = {
+							{station = 2,	loadout = {"DIS_PL-11"}},
+							{station = 2,	loadout = {"DIS_PL-10"}},
+							{station = 2,	loadout = {"DIS_PL-8A"}},
+							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
+							{station = 2,	loadout = {"DIS_SD-10"}},
+							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
+						} 
+						},
+					
 
+			-- AGM
                 { CLSID = "DIS_LD-10", arg_value = 0.2 },
-               -- { CLSID = "DIS_LD-10_DUAL_R", arg_value = 0,  attach_point_position = {0, 0.525, -0.2} },
 				
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
 
-               -- { CLSID = "DIS_C-701T", arg_value = 0.1 },
-               -- { CLSID = "DIS_C-701IR", arg_value = 0.1 },
-
+				-- Guided Bombs
                 { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
-                -- { CLSID = "DIS_GB6", arg_value = 0.1, Type = 1 },
-                -- { CLSID = "DIS_Type200", arg_value = 0.2 },
                 { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 },  --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
+				
+                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
-                { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
+			-- Unguided Bombs
+               -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
                 { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
 
                 { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
 			   
-                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
 
                 { CLSID = "DIS_TYPE200", arg_value = 0.5 },
                 { CLSID = "DIS_TYPE200_DUAL_R", arg_value = 0.5 },
@@ -1001,18 +1003,19 @@ J_10A = {
         ),
         pylon(7, 0,  -1.865, -0.776, -3.729,
             {
-                use_full_connector_position = true, connector = "str_pnt_007", arg = 314, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_007", arg = 308, arg_value = 0
             },
             {
+			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1, Cx_gain = 0.5 }, -- no drag
-                { CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
-                    forbidden = {
-                        {station = 1,	loadout = {"DIS_PL-10"}},
-                    }  }, -- wing tip gain
-                { CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
-                    forbidden = {
-                        {station = 1,	loadout = {"DIS_PL-8A"}},
-                    }  }, -- wing tip gain
+					{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
+						forbidden = {
+							{station = 1,	loadout = {"DIS_PL-10"}},
+						}  }, -- wing tip gain
+					{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
+						forbidden = {
+							{station = 1,	loadout = {"DIS_PL-8A"}},
+						}  }, -- wing tip gain
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
