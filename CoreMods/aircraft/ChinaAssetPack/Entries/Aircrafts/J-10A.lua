@@ -663,13 +663,14 @@ J_10A = {
 			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1, Cx_gain = 0.5}, -- wing tip gain
 					{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
-						forbidden = {
+					--[[	forbidden = {
 							{station = 7,	loadout = {"DIS_PL-10"}},
-						}  }, -- wing tip gain
+						}  ]]
+						}, -- wing tip gain
 					{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
-						forbidden = {
+					--[[	forbidden = {
 							{station = 7,	loadout = {"DIS_PL-8A"}},
-						}  }, -- wing tip gain
+						} ]] }, -- wing tip gain
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
@@ -688,57 +689,57 @@ J_10A = {
 			-- IR AAM 
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1 },
 					{ CLSID = "DIS_PL-8A", arg_value = 0.1, 
-						forbidden = {
+						--[[forbidden = {
 							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 6,	loadout = {"DIS_PL-11"}},
 							{station = 6,	loadout = {"DIS_PL-10"}},
 							{station = 6,	loadout = {"DIS_PL-15"}},
 							{station = 6,	loadout = {"DIS_SD-10"}},
 							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						}  },
+						} ]] },
 					{ CLSID = "DIS_PL-10", arg_value = 0.1, 
-						forbidden = {
+					--[[	forbidden = {
 							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 6,	loadout = {"DIS_PL-11"}},
 							{station = 6,	loadout = {"DIS_PL-8A"}},
 							{station = 6,	loadout = {"DIS_PL-15"}},
 							{station = 6,	loadout = {"DIS_SD-10"}},
 							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} 
+						}]] 
 						  },
 						  
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
                 { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, --attach_point_position = {0, 0.525, -0.2}
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
-						forbidden = {
+					--[[	forbidden = {
 							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 6,	loadout = {"DIS_PL-10"}},
 							{station = 6,	loadout = {"DIS_PL-8A"}},
 							{station = 6,	loadout = {"DIS_PL-15"}},
 							{station = 6,	loadout = {"DIS_SD-10"}},
 							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} 
+						} ]]
 						 },
 					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2},
-						forbidden = {
+					--[[	forbidden = {
 							{station = 6,	loadout = {"DIS_PL-11"}},
 							{station = 6,	loadout = {"DIS_PL-10"}},
 							{station = 6,	loadout = {"DIS_PL-8A"}},
 							{station = 6,	loadout = {"DIS_PL-15"}},
 							{station = 6,	loadout = {"DIS_SD-10"}},
 							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} 
+						} ]]
 						},
 					{ CLSID = "DIS_PL-15", arg_value = 0.1, 
-						forbidden = {
+				--[[		forbidden = {
 							{station = 6,	loadout = {"DIS_PL-11"}},
 							{station = 6,	loadout = {"DIS_PL-10"}},
 							{station = 6,	loadout = {"DIS_PL-8A"}},
 							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 6,	loadout = {"DIS_SD-10"}},
 							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} 
+						} ]]
 						},
 					
 			-- AGM
@@ -900,57 +901,57 @@ J_10A = {
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1 },
 				
 					{ CLSID = "DIS_PL-8A", arg_value = 0.1, 
-						forbidden = {
+					--[[	forbidden = {
 							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 2,	loadout = {"DIS_PL-11"}},
 							{station = 2,	loadout = {"DIS_PL-10"}},
 							{station = 2,	loadout = {"DIS_PL-15"}},
 							{station = 2,	loadout = {"DIS_SD-10"}},
 							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						}  },
+						}  ]]},
 					{ CLSID = "DIS_PL-10", arg_value = 0.1, 
-						forbidden = {
+					--[[	forbidden = {
 							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 2,	loadout = {"DIS_PL-11"}},
 							{station = 2,	loadout = {"DIS_PL-8A"}},
 							{station = 2,	loadout = {"DIS_PL-15"}},
 							{station = 2,	loadout = {"DIS_SD-10"}},
 							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} 
+						} ]]
 						  },
 				
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
                 { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, 
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
-						forbidden = {
+					--[[	forbidden = {
 							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 2,	loadout = {"DIS_PL-10"}},
 							{station = 2,	loadout = {"DIS_PL-8A"}},
 							{station = 2,	loadout = {"DIS_PL-15"}},
 							{station = 2,	loadout = {"DIS_SD-10"}},
 							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} 
+						} ]]
 						},
 					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2},
-						forbidden = {
+					--[[	forbidden = {
 							{station = 2,	loadout = {"DIS_PL-11"}},
 							{station = 2,	loadout = {"DIS_PL-10"}},
 							{station = 2,	loadout = {"DIS_PL-8A"}},
 							{station = 2,	loadout = {"DIS_PL-15"}},
 							{station = 2,	loadout = {"DIS_SD-10"}},
 							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} 
+						} ]]
 						},
 					{ CLSID = "DIS_PL-15", arg_value = 0.1, 
-						forbidden = {
+					--[[	forbidden = {
 							{station = 2,	loadout = {"DIS_PL-11"}},
 							{station = 2,	loadout = {"DIS_PL-10"}},
 							{station = 2,	loadout = {"DIS_PL-8A"}},
 							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
 							{station = 2,	loadout = {"DIS_SD-10"}},
 							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} 
+						} ]]
 						},
 					
 
@@ -1009,13 +1010,13 @@ J_10A = {
 			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1, Cx_gain = 0.5 }, -- no drag
 					{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
-						forbidden = {
+				--[[		forbidden = {
 							{station = 1,	loadout = {"DIS_PL-10"}},
-						}  }, -- wing tip gain
+						} ]] }, -- wing tip gain
 					{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
-						forbidden = {
+						--[[forbidden = {
 							{station = 1,	loadout = {"DIS_PL-8A"}},
-						}  }, -- wing tip gain
+						} ]] }, -- wing tip gain
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
