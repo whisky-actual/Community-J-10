@@ -655,9 +655,9 @@ J_10A = {
 
     Pylons = {
         -- LEFT WING
-        pylon(1, 0, -1.865, -0.776, 3.737,
+        pylon(1, 0, -1.865, -0.776, -3.737,
             {
-                use_full_connector_position = true, connector = "str_pnt_001", arg = 314, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_001", arg = 308, arg_value = 0
             },
             {
 			-- IR AAM
@@ -681,9 +681,9 @@ J_10A = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O'},
             }
         ),
-        pylon(2, 0, -1.865, -0.74, 2.585,
+        pylon(2, 0, -1.865, -0.74, -2.585,
             {
-                use_full_connector_position = true, connector = "str_pnt_002", arg = 313, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_002", arg = 309, arg_value = 0
             },
             {
 			-- IR AAM 
@@ -791,9 +791,9 @@ J_10A = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 0.1},
             }
         ),
-        pylon(3, 0, -0.883, -0.74, 1.86,
+        pylon(3, 0, -0.883, -0.74, -1.834,
             {
-                use_full_connector_position = true, connector = "str_pnt_003", arg = 312, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_003", arg = 310, arg_value = 0
             },
             {
 				-- Guided Bombs
@@ -856,9 +856,9 @@ J_10A = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 1.0},
             }
         ),
-        pylon(5, 0, -0.883, -0.7, -1.834,
+        pylon(5, 0, -0.883, -0.7, 1.834,
             {
-                use_full_connector_position = true, connector = "str_pnt_005", arg = 310, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_005", arg = 312, arg_value = 0
             },
             {
 				-- Guided Bombs
@@ -892,9 +892,9 @@ J_10A = {
                  { CLSID = "DIS_RKT_90_UG", arg_value = 1.0 },
             }
         ),
-        pylon(6, 0, -1.865, -0.74, -2.585,
+        pylon(6, 0, -1.865, -0.74, 2.585,
             {
-                use_full_connector_position = true, connector = "str_pnt_006", arg = 309, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_006", arg = 313, arg_value = 0
             },
             {
 			-- IR AAM
@@ -1002,9 +1002,9 @@ J_10A = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 0.1},
             }
         ),
-        pylon(7, 0,  -1.865, -0.776, -3.729,
+        pylon(7, 0,  -1.865, -0.776, 3.737,
             {
-                use_full_connector_position = true, connector = "str_pnt_007", arg = 308, arg_value = 0
+                use_full_connector_position = true, connector = "str_pnt_007", arg = 314, arg_value = 0
             },
             {
 			-- IR AAM
