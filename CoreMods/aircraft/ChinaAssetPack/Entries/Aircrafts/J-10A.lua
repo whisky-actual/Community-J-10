@@ -710,7 +710,7 @@ J_10A = {
 						  
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
-                { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, --attach_point_position = {0, 0.525, -0.2}
+                { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
 					--[[	forbidden = {
 							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
@@ -721,7 +721,7 @@ J_10A = {
 							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
 						} ]]
 						 },
-					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2},
+					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2},
 					--[[	forbidden = {
 							{station = 6,	loadout = {"DIS_PL-11"}},
 							{station = 6,	loadout = {"DIS_PL-10"}},
@@ -922,7 +922,7 @@ J_10A = {
 				
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
-                { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, 
+                { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
 					--[[	forbidden = {
 							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
@@ -933,7 +933,7 @@ J_10A = {
 							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
 						} ]]
 						},
-					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2},
+					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}, --J10_PL-15_DUAL
 					--[[	forbidden = {
 							{station = 2,	loadout = {"DIS_PL-11"}},
 							{station = 2,	loadout = {"DIS_PL-10"}},
