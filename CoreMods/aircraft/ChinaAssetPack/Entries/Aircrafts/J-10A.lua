@@ -502,7 +502,7 @@ J_10A = {
     length                    = 14.25,    -- JF-17 full lenght in m
     height                    = 4.70,        -- JF-17 height in m
     range                     = 1550,        -- Max range in km (for AI)
-    RCS                       = 3.0,        -- Radar Cross Section m2
+    RCS                       = 4.0,        -- Radar Cross Section m2
     IR_emission_coeff         = 0.6,        -- Normal engine -- IR_emission_coeff = 1 is Su-27 without afterburner. It is reference.
     IR_emission_coeff_ab      = 2.0,        -- With afterburner
     --sound_name = "aircraft\JF-17\Sounds",
@@ -607,9 +607,9 @@ J_10A = {
 
     passivCounterm = {
         CMDS_Edit         = true,
-        SingleChargeTotal = 80,
-        chaff = { default = 40, increment = 4, chargeSz = 1 },
-        flare = { default = 40, increment = 4, chargeSz = 1 },
+        SingleChargeTotal = 120,
+        chaff = { default = 60, increment = 4, chargeSz = 1 },
+        flare = { default = 60, increment = 4, chargeSz = 1 },
     },
 
     chaff_flare_dispenser = {
@@ -636,7 +636,7 @@ J_10A = {
     Guns = {
         gun_mount("GSh_23_2",
         {
-            count = 180
+            count = 250
         },
         {
 			muzzle_pos = { 2.901,	-0.583,	-0.371},
