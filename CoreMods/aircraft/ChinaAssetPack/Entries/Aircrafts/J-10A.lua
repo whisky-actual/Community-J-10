@@ -436,9 +436,9 @@ J_10A = {
     mechanimations = mech_anime,
 
     -------------------------
-    M_empty                    = 3840.0,    -- JF-17 with pilot and nose load, kg
-    M_nominal                  = 8339.0,    -- JF-17 kg (Empty Plus Full Internal Fuel)
-    M_max                      = 14939.0,   -- JF-17 kg (Maximum Take Off Weight)
+    M_empty                    = 4740.0,    -- JF-17 with pilot and nose load, kg --3840
+    M_nominal                  = 4740+4500,    -- JF-17 kg (Empty Plus Full Internal Fuel) --8339.0
+    M_max                      = 4740+4500+6600,   -- JF-17 kg (Maximum Take Off Weight)
     M_fuel_max                 = 4500.0,    -- JF-17 kg (Internal Fuel Only)
     H_max                      = 18000,     -- JF-17 m  (Maximum Operational Ceiling)
     average_fuel_consumption   = 0.065,     --
@@ -446,7 +446,7 @@ J_10A = {
     V_opt                      = 220,       --
     V_take_off                 = 65.0,    -- Take off speed in m/s (for AI)
     V_land                     = 60,      -- Land speed in m/s (for AI)
-    V_max_sea_level            = 400,     -- Max speed at sea level in m/s (for AI)
+    V_max_sea_level            = 412,     -- Max speed at sea level in m/s (for AI)
     V_max_h                    = 700,     -- Max speed at max altitude in m/s (for AI)
     Vy_max                     = 304,     -- Max climb speed in m/s (for AI)
     Mach_max                   = 1.8,     -- Max speed in Mach (for AI)
@@ -492,16 +492,16 @@ J_10A = {
     --wing_tip_pos              = {-2.9, -0.08, 4.48}, -- wingtip coords for visual effects
     wing_tip_pos              = {-4.132,	-0.307,	 4.859}, -- wingtip coords for visual effects
     wing_area                 = 37,        -- JF-17 wing area in m2
-    wing_span                 = 8.5,        -- JF-17 wing spain in m,
+    wing_span                 = 9.8,        -- JF-17 wing spain in m,
     wing_type                 = 0,        -- Fixed wing
     flaps_maneuver            = 1.0,        -- Max flaps in take-off and maneuver (0.5 = 1st stage, 1.0 = 2nd stage) (for AI)
 
-    thrust_sum_max            = 5000,
-    thrust_sum_ab             = 8300,
+    thrust_sum_max            = 4449,
+    thrust_sum_ab             = 7339,
 
-    length                    = 14.25,    -- JF-17 full lenght in m
-    height                    = 4.70,        -- JF-17 height in m
-    range                     = 1550,        -- Max range in km (for AI)
+    length                    = 16.9,    -- JF-17 full lenght in m
+    height                    = 5.70,        -- JF-17 height in m
+    range                     = 2480,        -- Max range in km (for AI)
     RCS                       = 4.0,        -- Radar Cross Section m2
     IR_emission_coeff         = 0.6,        -- Normal engine -- IR_emission_coeff = 1 is Su-27 without afterburner. It is reference.
     IR_emission_coeff_ab      = 2.0,        -- With afterburner
@@ -662,15 +662,8 @@ J_10A = {
             {
 			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1, Cx_gain = 0.5}, -- wing tip gain
-					{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
-					--[[	forbidden = {
-							{station = 7,	loadout = {"DIS_PL-10"}},
-						}  ]]
-						}, -- wing tip gain
-					{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
-					--[[	forbidden = {
-							{station = 7,	loadout = {"DIS_PL-8A"}},
-						} ]] }, -- wing tip gain
+					---{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,}, -- wing tip gain
+					--{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,}, -- wing tip gain
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
@@ -688,68 +681,26 @@ J_10A = {
             {
 			-- IR AAM 
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1 },
-					{ CLSID = "DIS_PL-8A", arg_value = 0.1, 
-						--[[forbidden = {
-							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 6,	loadout = {"DIS_PL-11"}},
-							{station = 6,	loadout = {"DIS_PL-10"}},
-							{station = 6,	loadout = {"DIS_PL-15"}},
-							{station = 6,	loadout = {"DIS_SD-10"}},
-							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} ]] },
-					{ CLSID = "DIS_PL-10", arg_value = 0.1, 
-					--[[	forbidden = {
-							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 6,	loadout = {"DIS_PL-11"}},
-							{station = 6,	loadout = {"DIS_PL-8A"}},
-							{station = 6,	loadout = {"DIS_PL-15"}},
-							{station = 6,	loadout = {"DIS_SD-10"}},
-							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						}]] 
-						  },
+					--{ CLSID = "DIS_PL-8A", arg_value = 0.1, },
+					--{ CLSID = "DIS_PL-10", arg_value = 0.1, },
 						  
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
                 { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
+               -- { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
+			   --[[
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
-					--[[	forbidden = {
-							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 6,	loadout = {"DIS_PL-10"}},
-							{station = 6,	loadout = {"DIS_PL-8A"}},
-							{station = 6,	loadout = {"DIS_PL-15"}},
-							{station = 6,	loadout = {"DIS_SD-10"}},
-							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} ]]
 						 },
 					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, -0.2},
-					--[[	forbidden = {
-							{station = 6,	loadout = {"DIS_PL-11"}},
-							{station = 6,	loadout = {"DIS_PL-10"}},
-							{station = 6,	loadout = {"DIS_PL-8A"}},
-							{station = 6,	loadout = {"DIS_PL-15"}},
-							{station = 6,	loadout = {"DIS_SD-10"}},
-							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} ]]
 						},
 					{ CLSID = "DIS_PL-15", arg_value = 0.1, 
-				--[[		forbidden = {
-							{station = 6,	loadout = {"DIS_PL-11"}},
-							{station = 6,	loadout = {"DIS_PL-10"}},
-							{station = 6,	loadout = {"DIS_PL-8A"}},
-							{station = 6,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 6,	loadout = {"DIS_SD-10"}},
-							{station = 6,	loadout = {"DIS_SD-10_DUAL_R"}},
-						} ]]
-						},
+						},]]
 					
 			-- AGM
                 { CLSID = "DIS_LD-10", arg_value = 0.2 },
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
-
-                { CLSID = "DIS_C-701T", arg_value = 0.1 },
-                { CLSID = "DIS_C-701IR", arg_value = 0.1 },
 
 			-- Guide Bombs
                 { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
@@ -762,7 +713,7 @@ J_10A = {
 
 			-- Unguided Bombs
                -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
-                { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
+                { CLSID = "J10_BOMB_250_3", arg_value = 1.0 }, -- 250-3
 
                 { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
 				
@@ -811,7 +762,7 @@ J_10A = {
 				-- Unguided Bombs
                 --{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
                 --{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
-                { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
+                { CLSID = "J10_BOMB_250_3", arg_value = 1.0 }, -- 250-3
                 { CLSID = "DIS_MER2_250_3_L",  arg_value = 1.0 }, -- 250-3 x2 
 
                 { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- Mk-20 Rockeye
@@ -879,7 +830,7 @@ J_10A = {
 			-- Unguided Bombs
                 --{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
                 --{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
-                { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
+                { CLSID = "J10_BOMB_250_3", arg_value = 1.0 }, -- 250-3
                 { CLSID = "DIS_MER2_250_3_L",  arg_value = 1.0 }, -- 250-3 x2 
 
                 { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- Mk-20 Rockeye
@@ -899,60 +850,20 @@ J_10A = {
             {
 			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1 },
-				
-					{ CLSID = "DIS_PL-8A", arg_value = 0.1, 
-					--[[	forbidden = {
-							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 2,	loadout = {"DIS_PL-11"}},
-							{station = 2,	loadout = {"DIS_PL-10"}},
-							{station = 2,	loadout = {"DIS_PL-15"}},
-							{station = 2,	loadout = {"DIS_SD-10"}},
-							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						}  ]]},
+				--[[
+					{ CLSID = "DIS_PL-8A", arg_value = 0.1, },
 					{ CLSID = "DIS_PL-10", arg_value = 0.1, 
-					--[[	forbidden = {
-							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 2,	loadout = {"DIS_PL-11"}},
-							{station = 2,	loadout = {"DIS_PL-8A"}},
-							{station = 2,	loadout = {"DIS_PL-15"}},
-							{station = 2,	loadout = {"DIS_SD-10"}},
-							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} ]]
-						  },
+						  },]]
 				
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
                 { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
+               -- { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
+			   --[[
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
-					--[[	forbidden = {
-							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 2,	loadout = {"DIS_PL-10"}},
-							{station = 2,	loadout = {"DIS_PL-8A"}},
-							{station = 2,	loadout = {"DIS_PL-15"}},
-							{station = 2,	loadout = {"DIS_SD-10"}},
-							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} ]]
 						},
-					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}, --J10_PL-15_DUAL
-					--[[	forbidden = {
-							{station = 2,	loadout = {"DIS_PL-11"}},
-							{station = 2,	loadout = {"DIS_PL-10"}},
-							{station = 2,	loadout = {"DIS_PL-8A"}},
-							{station = 2,	loadout = {"DIS_PL-15"}},
-							{station = 2,	loadout = {"DIS_SD-10"}},
-							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} ]]
-						},
-					{ CLSID = "DIS_PL-15", arg_value = 0.1, 
-					--[[	forbidden = {
-							{station = 2,	loadout = {"DIS_PL-11"}},
-							{station = 2,	loadout = {"DIS_PL-10"}},
-							{station = 2,	loadout = {"DIS_PL-8A"}},
-							{station = 2,	loadout = {"J10_PL-15_DUAL"}},
-							{station = 2,	loadout = {"DIS_SD-10"}},
-							{station = 2,	loadout = {"DIS_SD-10_DUAL_L"}},
-						} ]]
-						},
+					{ CLSID = "J10_PL-15_DUAL", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}, --J10_PL-15_DUAL},
+					{ CLSID = "DIS_PL-15", arg_value = 0.1, },]]
 					
 
 			-- AGM
@@ -973,7 +884,7 @@ J_10A = {
 
 			-- Unguided Bombs
                -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
-                { CLSID = "DIS_BOMB_250_3", arg_value = 1.0 }, -- 250-3
+                { CLSID = "J10_BOMB_250_3", arg_value = 1.0 }, -- 250-3
 
                 { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
 			   
@@ -1009,14 +920,8 @@ J_10A = {
             {
 			-- IR AAM
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1, Cx_gain = 0.5 }, -- no drag
-					{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,
-				--[[		forbidden = {
-							{station = 1,	loadout = {"DIS_PL-10"}},
-						} ]] }, -- wing tip gain
-					{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,
-						--[[forbidden = {
-							{station = 1,	loadout = {"DIS_PL-8A"}},
-						} ]] }, -- wing tip gain
+				--	{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,}, -- wing tip gain
+				--	{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,}, -- wing tip gain
 
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
@@ -1060,17 +965,18 @@ J_10A = {
     SFM_Data = {
         aerodynamics = { -- Cx = Cx_0 + Cy^2*B2 +Cy^4*B4
             Cy0        = 0,      -- zero AoA lift coefficient
-            Mzalfa     = 4.54,  -- coefficients for pitch agility
+            Mzalfa     = 5.5,  -- coefficients for pitch agility
             Mzalfadt   = 0.8,    -- coefficients for pitch agility
-            kjx        = 2.75,
+            kjx        = 4.20,
             kjz        = 0.00125,
             Czbe       = -0.016, -- coefficient, along Z axis (perpendicular), affects yaw, negative value means force orientation in FC coordinate system
-            cx_gear    = 0.03,    -- coefficient, drag, gear
+            cx_gear    = 0.08,    -- coefficient, drag, gear
             cx_flap    = 0.05,   -- coefficient, drag, full flaps
-            cy_flap    = 0.47,    -- coefficient, normal force, lift, flaps
-            cx_brk     = 0.08,   -- coefficient, drag, breaks
+            cy_flap    = 0.56,    -- coefficient, normal force, lift, flaps
+            cx_brk     = 0.12,   -- coefficient, drag, breaks
             table_data = {
                 --          M       Cx0      Cya    B      B4  Omxmax  Aldop   Cymax
+				--[[
                 [1]  = { 0.000, 0.025, 0.070, 0.132, 0.032, 0.48, 27.000, 1.6 },
                 [2]  = { 0.200, 0.025, 0.070, 0.132, 0.032, 1.47, 26.500, 1.6 },
                 [3]  = { 0.400, 0.025, 0.071, 0.133, 0.032, 2.4, 25.500, 1.5 },
@@ -1086,7 +992,63 @@ J_10A = {
                 [13] = { 1.500, 0.0525, 0.067, 0.25, 0.20, 1.609, 10.000, 0.740 },
                 [14] = { 1.650, 0.052, 0.06, 0.24, 2.50, 1.469, 10.000, 0.700 },
                 [15] = { 1.850, 0.051, 0.05, 0.23, 2.98, 1.401, 10.000, 0.600 },
-                [16] = { 2.000, 0.05, 0.03, 0.22, 3.20, 1.269, 10.000, 0.500 },
+                [16] = { 2.000, 0.05, 0.03, 0.22, 3.20, 1.269, 10.000, 0.500 },]]
+				
+                --    M       	 Cx0        Cya     B            B4      Omxmax  Aldop       Cymax
+					{ 0.000,	 0.0165,	0.078,	0.0310*5.0,		 0.19,	 0.68,	 25.000,	 1.14 },
+					{ 0.050, 	 0.0165, 	0.078, 	0.0310*5.0, 	 0.19, 	 0.95, 	 25.000, 	 1.15 }, 
+					{ 0.100, 	 0.0165, 	0.078, 	0.0310*5.0, 	 0.19, 	 1.20, 	 25.000, 	 1.16 },
+					{ 0.200,	 0.0165,	0.078,	0.0295*5.0,		 0.19,	 2.15,	 25.000,	 1.170 },
+					{ 0.300,	 0.0165,	0.076,	0.0295*5.0,		 0.19,	 2.80,	 25.000,	 1.177 },
+					{ 0.400,	 0.0181,	0.075,	0.0280*5.0,		 0.15,	 3.70, 	 25.000,	 1.184 },
+					{ 0.500,	 0.0181,	0.074,	0.0250*5.0,		 0.11,	 4.45, 	 25.000,	 1.192 },
+					{ 0.600,	 0.0181,	0.073,	0.0250*5.0,		 0.11,	 4.55,	 25.000,	 1.200 },
+					{ 0.700,	 0.0198,	0.070,	0.0290*5.0,		 0.11,	 4.55,	 25.000,	 1.200 },
+					{ 0.800,	 0.0214,	0.068,	0.0318*5.0,		 0.13,	 4.50,	 25.000,	 1.200 },
+					{ 0.850,	 0.0214,	0.065,	0.0348*5.0,		 0.16,	 4.47,	 25.000,	 1.210 },
+					{ 0.900,	 0.0231,	0.055,	0.0370*5.0,		 0.16,	 4.45,	 25.000,	 1.220 },
+																							
+					{ 1.000,	 0.0247,	0.053,	0.0400*5.0, 	 0.16,	 4.10, 	 25.000,	 1.192 },
+					{ 1.050,	 0.0264,	0.052,	0.0428*5.0,		 0.16,	 4.07,	 25.000,	 1.177 },
+					{ 1.100,	 0.0264,	0.050, 	0.0459*5.0, 	 0.16,	 4.05,	 25.000,	 1.500 },
+					{ 1.200,	 0.0272,	0.049, 	0.0500*5.0, 	 0.15,	 4.00, 	 25.000,	 1.300 },
+					{ 1.300,	 0.0280,	0.049, 	0.0529*5.0, 	 0.15,	 3.97,	 25.000,	 1.100 },
+					{ 1.500,	 0.0297,	0.049, 	0.0569*5.0, 	 0.14,	 3.84,	 25.000,	 0.900 },
+					{ 1.700,	 0.0330,	0.048, 	0.0600*5.0, 	 0.13,	 3.76,	 25.000,	 0.800 },
+					{ 1.850,	 0.0346,	0.048, 	0.0629*5.0, 	 0.12,	 3.69,	 25.000,	 0.600 },
+					{ 2.000,	 0.0384,	0.048, 	0.0659*5.0, 	 0.12,	 3.56,	 25.000,	 0.500 },
+					{ 2.200,	 0.0390,	0.048, 	0.0689*5.0, 	 0.12, 	 3.45,	 25.000,	 0.400 }, 
+																								
+					{ 2.400,	 0.3300,	0.090, 	1.149*5.0, 		 1.69,	 0.70,	 25.000,	 0.400 },
+					{ 2.500,	 0.6900,	0.040, 	1.35*5.0,		 1.10,	 0.70,	 25.000,	 0.400 },
+					{ 3.900,	 0.6900,	0.040, 	1.35*5.0,		6.380,	 0.70,	 25.000, 	 0.400 },
+					
+					
+					
+			--	M		Cx0			Cya		B		B4		Omxmax	Aldop		Cymax
+			--[[	{0,	 	0.0165,		0.078,	0.1320,	0.1100,	0.500,	24.0,	1.280},
+				{0.05, 	0.0165,		0.078,	0.1320,	0.1000,	1.000,	29.0,	1.140},
+				{0.1,	0.0165,		0.078,	0.1320,	0.0900,	2.800,	17.0,	1.070},
+				{0.2,	0.0165,		0.078,	0.1320,	0.0750,	3.280,	17.0,	0.980},
+				{0.3,	0.0165,		0.076,	0.1268,	0.3897,	3.400,	17.0,	0.950},
+				{0.4,	0.0181,		0.075,	0.1217,	0.7044,	4.363,	17.0,	0.950},
+				{0.6,	0.0181,		0.073,	0.1113,	1.3339,	4.854,	17.0,	0.950},
+				{0.7,	0.0198,		0.070,	0.1061,	1.6486,	4.829,	17.0,	0.930},
+				{0.8,	0.0214,		0.068,	0.1010,	1.9633,	4.803,	17.0,	0.925},
+				{0.85,	0.0214,		0.065,	0.0983,	2.1206,	4.778,	17.0,	0.920},
+				{0.9,	0.0231,		0.075,	0.0958,	2.2780,	4.752,	17.0,	0.915},
+				{1,		0.0247,		0.082,	0.0906,	2.5927,	4.726,	17.0,	0.910},
+				{1.05,	0.0264,		0.085,	0.0880,	2.7500,	4.713,	17.0,	0.905},
+				{1.1,	0.0264,		0.086,	0.0910,	2.7586,	4.701,	17.0,	0.900},
+				{1.2,	0.0272,		0.083,	0.0971,	2.7759,	4.675,	17.0,	0.900},
+				{1.3,	0.0280,		0.077,	0.1032,	2.7931,	4.650,	16.0,	0.900},
+				{1.5,	0.0297,		0.062,	0.1153,	2.8276,	4.598,	13.0,	0.900},
+				{1.7,	0.0330,		0.051,  0.1275,	2.8621,	4.547,	12.0,	0.700},
+				{1.8,	0.0346,		0.046,	0.1335,	2.8793,	4.522,	11.4,	0.640},
+				{2,		0.0379,		0.039,	0.1457,	2.9138,	4.470,	10.2,	0.520},
+				{2.1,	0.0396,		0.034,	0.1518,	2.9310,	4.445,	 9.0,	0.400},
+				{2.2,	0.0404,		0.034,	0.1578,	2.9483,	4.419,	 9.0,	0.400},
+				{2.5,	0.0495,		0.033,	0.2000,	3.0000,	3.500,	 9.0,	0.400},]]
             }, -- end of table_data
             -- M    - Mach number
             -- Cx0    - Coefficient, drag, profile, of the airplane
@@ -1099,12 +1061,12 @@ J_10A = {
         }, -- end of aerodynamics
 
         engine = {
-            Nmg        = 70.5,    -- RPM at idle
+            Nmg        = 67.5,    -- RPM at idle
             MinRUD     = 0,    -- Min state of the throttle
             MaxRUD     = 1,    -- Max state of the throttle
             MaksRUD    = 0.85,    -- Military power state of the throttle
             ForsRUD    = 0.91,    -- Afterburner state of the throttle
-            typeng     = 1,
+            typeng     = 4,
                 --[[
                     E_TURBOJET = 0
                     E_TURBOJET_AB = 1
@@ -1113,14 +1075,15 @@ J_10A = {
                     E_TURBOFAN    = 4
                     E_TURBOSHAFT = 5
                 --]]
-            hMaxEng    = 17,        -- Max altitude for safe engine operation in km
-            dcx_eng    = 0.0124,    -- Engine drag coeficient
+            hMaxEng    = 19,        -- Max altitude for safe engine operation in km
+            dcx_eng    = 0.0144,    -- Engine drag coeficient
             cemax      = 1.24,      -- not used for fuel calulation , only for AI routines to check flight time ( fuel calculation algorithm is built in )
             cefor      = 2.56,      -- not used for fuel calulation , only for AI routines to check flight time ( fuel calculation algorithm is built in )
-            dpdh_m     = 2000,      --  altitude coefficient for max thrust
-            dpdh_f     = 4200,      --  altitude coefficient for AB thrust
+            dpdh_m     = 6200,      --  altitude coefficient for max thrust
+            dpdh_f     = 9500,      --  altitude coefficient for AB thrust
             table_data = {
             --            M     Pmax     Pfor
+			--[[
                 [1]  =  { 0.00, 44453 * 0.87,  75008 * 0.87 },
                 [2]  =  { 0.20, 43262 * 0.93,  74957 * 0.93 },
                 [3]  =  { 0.30, 44896 * 0.94,  75608 * 0.94 },
@@ -1142,7 +1105,24 @@ J_10A = {
                 [19] =  { 1.70, 26791,  97549 },
                 [20] =  { 1.85, 25003,  77117 },
                 [21] =  { 1.90, 23220,  63387 },
-                [22] =  { 3.50, 19649,  31279 },
+                [22] =  { 3.50, 19649,  31279 },]]
+				[1] =	{0,		50020,	70362.3  * 1.00}, -- 1.05
+				[2] =	{0.2,	48071,	71360.3  * 1.00},-- 1.05
+				[3] =	{0.4,	48071,	74853.5  * 1.00},-- 1.13
+				[4] =	{0.6,	55217,	82338.8  * 1.00},-- 1.19
+				[5] =	{0.7,	55217,	94194.3	 * 1.05},-- 1.37
+				[6] =	{0.8,	58465,	101989.7 * 1.13},-- 1.32
+				[7] =	{0.9,	61063,	107836.3 * 1.23},-- 1.34
+				[8] =	{1,		64961,	110434.7 * 1.31},-- 1.35
+				[9] =	{1.096,	62363,	111084.3 * 1.37},-- 1.50
+				[10] =	{1.2,	55866,	111084.3 * 1.38},-- 1.54
+				[11] =	{1.3,	44173,	112383.6 * 1.39},-- 1.56
+				[12] =	{1.4,	35728,	114332.4 * 1.40},-- 1.50
+				[13] =	{1.6,	36378,	114332.4 * 1.43},-- 1.45
+				[14] =	{1.8,	36378,	119529.4 * 1.47},-- 1.54
+				[15] =	{2.2,	33780,	112383.6 * 1.50},-- 1.70
+				[16] =	{2.35,	27933,	101989.7 * 1.49},-- 1.70
+				[17] =	{3.9,	16240,	78367.3 * 1.46},
             }, -- end of table_data
             -- M    - Mach number
             -- Pmax    - Engine thrust at military power
