@@ -216,7 +216,7 @@ declare_loadout({
     Count            = 1,
     Cx_pil           = JG500.Cx,
     Picture          = "gbu16.png", -- TODO
-    displayName      = _(jg500_name),
+    displayName      = _('JG-500 500 kg Laser-guided Bomb'),
     Weight           = jg500_mass + pylon_mass,
     Elements         = {
         {
@@ -234,7 +234,7 @@ declare_loadout({
     Count            = 1,
     Cx_pil           = JG500B.Cx,
     Picture          = "gbu24.png", -- TODO
-    displayName      = _(JG500B_name),
+    displayName      = _('JG-500B 500 kg Laser-guided Bomb'),
     Weight           = JG500B_mass + pylon_mass,
     Elements         = {
         {

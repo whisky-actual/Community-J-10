@@ -20,7 +20,7 @@ local C802AK_warhead =
 C_802AK_AS = {
     category       = CAT_MISSILES,
     name           = c802ak_name,
-    user_name      = _(c802ak_name),
+    user_name      = _('YJ-83K'),
     model          = 'yj83k',
     mass           = c802ak_mass,
     wsTypeOfWeapon = {wsType_Weapon,wsType_Missile,wsType_AS_Missile,WSTYPE_PLACEHOLDER},
@@ -299,7 +299,7 @@ declare_loadout({
     CLSID        = 'DIS_C-802AK',
     Picture      = 'c802.png',
     attribute    = C_802AK_AS.wsTypeOfWeapon,
-    displayName  = _("YJ-83"),
+    displayName  = _("YJ-83K Anti-ship Missile"),
     Cx_pil       = 0.0023,
     Count        = 1,
     Weight       = c802ak_mass + pylon_mass,

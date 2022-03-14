@@ -780,11 +780,29 @@ declare_loadout(
 }
 )
 
+declare_loadout(
+{
+    category        = CAT_BOMBS,
+    CLSID           = "J10_BOMB_250_3",
+    attribute       = BOMB_250_3.wsTypeOfWeapon,
+    Count           = 1,
+    Cx_pil          = BOMB_250_3.Cx,
+    Picture         = "rus_FAB-250n-1.png",
+    displayName     = BOMB_250_3.user_name .. ' 250 kg GP Bomb',
+    Weight          = BOMB_250_3.mass,
+    Elements  = {
+        {
+            ShapeName = bomb_250_3_model,
+        }, 
+    },
+}
+)
+
 MER6_250_3_N6 = {
     category    = CAT_BOMBS,
     CLSID       = "DIS_MER6_250_3_N6",
     Picture     = "rus_FAB-250n-1.png",
-    displayName = _("MER6 - 6 x " .. bomb_250_3_disp),
+    displayName = _("MER6 - 6 x " .. bomb_250_3_disp .. ' 250 kg GP Bomb'),
     Count       = 6,
     Weight      = 1500 + 50,
     Cx_pil      = 6.5 * BOMB_250_3.Cx,

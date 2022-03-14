@@ -142,28 +142,6 @@ declare_loadout({
 })
 
 
-declare_loadout({
-    category     = CAT_AIR_TO_AIR,
-    CLSID        = 'DIS_PL-5EII',
-    Picture      = 'pl5eii.png',
-    attribute    = PL_8B_AA.wsTypeOfWeapon,
-    displayName  = _(pl8b_name),
-    Cx_pil       = 0.001959765625,
-    Count        = 1,
-    Weight       = pl8b_mass + 70,
-    Elements     = {
-        [1] =
-        {
-            DrawArgs =
-            {
-                [1] = {1, 1},
-                [2] = {2, 1},
-            }, -- end of DrawArgs
-            Position  = {0, 0, 0},
-            ShapeName = pl8b_model,
-        },
-    }, -- end of Elements
-})
 
 -- PL-8A
 pl8a_name  = 'PL-8A'

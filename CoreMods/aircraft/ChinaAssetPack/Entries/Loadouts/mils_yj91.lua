@@ -384,9 +384,9 @@ declare_weapon(LD_10_ARM)
 declare_loadout({
     category    = CAT_MISSILES,
     CLSID       = 'DIS_LD-10',
-    Picture     = 'pl12.png',
+    Picture     = 'kh31p.png',
     attribute   = LD_10_ARM.wsTypeOfWeapon,
-    displayName = _(ld10_name),
+    displayName = _('YJ-91 High Speed Anti-Radiation Missile'),
     Cx_pil      = 0.000859765625,
     Count       = 1,
     Weight      = ld10_mass + pylon_mass,

@@ -284,69 +284,10 @@ PL_12_AA.shape_table_data.index = PL_12_AA.wsTypeOfWeapon[4]
 
 
 
-declare_loadout({
-    category    = CAT_AIR_TO_AIR,
-    CLSID       = 'DIS_SD-10',
-    Picture     = 'pl12.png',
-    attribute   = PL_12_AA.wsTypeOfWeapon,
-    displayName = _(sd10_name),
-    Cx_pil      = 0.000859765625,
-    Count       = 1,
-    Weight      = sd10_mass + pylon_mass,
-    Elements    = {
-        [1] =
-        {
-            DrawArgs =
-            {
-                [1] = {1, 1},
-                [2] = {2, 1},
-            }, -- end of DrawArgs
-            Position  = {0, 0, 0},
-            ShapeName = sd10_model,
-        },
-    }, -- end of Elements
-})
-
 
 declare_loadout({
     category       = CAT_AIR_TO_AIR,
-    CLSID          = 'DIS_SD-10_DUAL_L',
-    Picture        = 'pl12.png',
-    wsTypeOfWeapon = PL_12_AA.wsTypeOfWeapon,
-    attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
-    displayName    = _(sd10_name .. ' x 2'),
-    Cx_pil         = 0.000859765625 * 1.31,
-    Count          = 2,
-    Weight         = 2 * sd10_mass + pylon_dual_mass,
-    Elements       = {
-        { ShapeName = 'JF-17_PF12_twin', IsAdapter = true, },
-        { ShapeName = sd10_model,        connector_name = 'dual_PF12L', },
-        { ShapeName = sd10_model,        connector_name = 'dual_PF12R', },
-    }, -- end of Elements
-    JettisonSubmunitionOnly = true,
-})
-
-declare_loadout({
-    category       = CAT_AIR_TO_AIR,
-    CLSID          = 'DIS_SD-10_DUAL_R',
-    Picture        = 'pl12.png',
-    wsTypeOfWeapon = PL_12_AA.wsTypeOfWeapon,
-    attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
-    displayName    = _(sd10_name .. ' x 2'),
-    Cx_pil         = 0.000859765625 * 1.31,
-    Count          = 2,
-    Weight         = 2 * sd10_mass + pylon_dual_mass,
-    Elements       = {
-        { ShapeName = 'JF-17_PF12_twin', IsAdapter = true, },
-        { ShapeName = sd10_model,        connector_name = 'dual_PF12R', },
-        { ShapeName = sd10_model,        connector_name = 'dual_PF12L', },
-    }, -- end of Elements
-    JettisonSubmunitionOnly = true,
-})
---[[
-declare_loadout({
-    category       = CAT_AIR_TO_AIR,
-    CLSID          = 'DIS_PL-12_DUAL',
+    CLSID          = 'DIS_PL-12_DUAL_L',
     Picture        = 'pl12.png',
     wsTypeOfWeapon = PL_12_AA.wsTypeOfWeapon,
     attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
@@ -360,8 +301,8 @@ declare_loadout({
         { ShapeName = sd10_model,        connector_name = 'dual_PF12R', },
     }, -- end of Elements
     JettisonSubmunitionOnly = true,
-})]]
---[[
+})
+
 declare_loadout({
     category       = CAT_AIR_TO_AIR,
     CLSID          = 'DIS_PL-12_DUAL_R',
@@ -378,7 +319,7 @@ declare_loadout({
         { ShapeName = sd10_model,        connector_name = 'dual_PF12L', },
     }, -- end of Elements
     JettisonSubmunitionOnly = true,
-})]]
+})
 
 -- PL-12
 local pl12_name  = 'PL-12'
