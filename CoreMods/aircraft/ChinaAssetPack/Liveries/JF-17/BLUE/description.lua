@@ -20,8 +20,6 @@ livery = {
 	
 
 }
-
-
-name = "BLUE - LIGHT"     
-name_cn = "BLUE - LIGHT"     
+name = "05 Chinese Display Team"     
+name_cn = "中国空军八一飞行表演队"     
 --countries = {""}    

@@ -22,8 +22,6 @@ livery = {
 	
 
 }
-
-
-name = "GRAY 3"     
-name_cn = "GRAY 3"     
+name = "01 Chinese Air Force Gray"     
+name_cn = "中国海军航空兵 白色"    
 --countries = {""}    

@@ -246,7 +246,7 @@ color_sensitive_materials      = {
 is_colored         = true
 
 color_green_day    = {0.05, 0.75, 0.05}
-color_green_night  = {1, 1, 1}
+color_green_night  = {0.0025, 0.25, 0.5}
 
 color_blue_day     = {0, 1.0, 0}
 color_blue_night   = {0, 1.0, 0}
@@ -267,10 +267,12 @@ color_white_day    = {1.0, 1.0, 1.0}
 color_white_night  = {0.5, 0.5, 0.5}
 
 color_sky_day      = {47/255, 135/255, 1.0}
-color_sky_night    = {23.5/255, 67.5/255, 0.5}
+color_sky_night    = {2.35/255, 6.75/255, 0.05}
+--color_sky_night    = {23.5/255, 67.5/255, 0.5}
 
 color_gnd_day      = {49/255, 5/255, 1/255}
-color_gnd_night    = {24.5/255, 2.5/255, 0.5/255}
+color_gnd_night    = {2.45/255, 0.25/255, 0.05/255}
+--color_gnd_night    = {24.5/255, 2.5/255, 0.5/255}
 
 -- HUD only view diplacement
 function MFCD_set_screenspace_displacement(aspect, left_center_right, zoom_value)

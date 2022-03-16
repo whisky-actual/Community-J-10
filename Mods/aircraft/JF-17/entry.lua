@@ -10,10 +10,10 @@ declare_plugin(self_ID, {
     displayName   = _(ac_name),
     shortName     = ac_name,
     fileMenuName  = _(ac_name),
-    version       = "EA",
+    version       = "1.1.2",
     state         = 'installed',
-    developerName = _('Deka Ironwork Simulations'),
-    info          = _("JF-17 is a single seat, single engine, multirole light fighter that joint developed by AVIC Chengdu and Pakistan Aeronautical Complex (PAC). The design phase of JF-17 'Thunder' finished on May 31st, 2002, and the maiden flight was made on August 25th, 2003. 'Thunder' has a bubble canopy of great view, pretty strake-wing layout and advanced avionics. KLJ-7 radar provides excellent air to ground capability. WMD-7 targeting pod can help 'Thunder' searching for targets in combat. Although 'Thunder' has small size, remember that: she is one of the most advanced fighter jets in the DCS World."),
+    developerName = _('https://github.com/whisky-actual/Community-J-10-A'),
+    info          = _("THIS MATERIAL IS NOT MADE OR SUPPORTED BY EAGLE DYNAMICS SA"),
     binaries      = { bin_name, },
     update_id     = 'DEKA_JF-17',
     InputProfiles = {
@@ -43,7 +43,7 @@ declare_plugin(self_ID, {
         },
     },
     preload_resources = preload_files,
-    infoWaitScreen = _('DCS: JF-17 by Deka Ironwork Simulations.'),
+    infoWaitScreen = _('DCS : J10-A Community MOD'),
 })
 
 ---------------------------------------------------------------------------------------

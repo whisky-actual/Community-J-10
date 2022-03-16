@@ -607,9 +607,9 @@ J_10A = {
 
     passivCounterm = {
         CMDS_Edit         = true,
-        SingleChargeTotal = 120,
-        chaff = { default = 60, increment = 4, chargeSz = 1 },
-        flare = { default = 60, increment = 4, chargeSz = 1 },
+		SingleChargeTotal = 120,
+		chaff = {default = 60, increment = 30, chargeSz = 1},
+		flare = {default = 60, increment = 30, chargeSz = 1},
     },
 
     chaff_flare_dispenser = {
@@ -778,7 +778,7 @@ J_10A = {
 
             }
         ),
-        pylon(4, 0, -0.329, -0.634, 0,
+        pylon(4, 0, -0.765, -0.765, 0,
             {
                 use_full_connector_position = true, connector = "str_pnt_004", arg = 311, arg_value = 0
             },
