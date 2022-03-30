@@ -47,6 +47,7 @@ PL_12_AA = {
     Z_back          = 0.0,
     Reflection      = 0.045,
     KillDistance    = 11.0,
+    ccm_k0          = 0.11,
 
     warhead         = sd10_warhead,
     warhead_air     = sd10_warhead,

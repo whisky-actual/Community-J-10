@@ -9,21 +9,23 @@ pl10_mass  = 105.0
 PL_10_AA = {
     category        = CAT_AIR_TO_AIR,
     name            = pl10_name,
+    model           = pl10_model,
     user_name       = _(pl10_name),
     wsTypeOfWeapon  = {4,4,7,WSTYPE_PLACEHOLDER},
+    mass            = pl10_mass,
     Escort          = 0,
     Head_Type       = 1,
     sigma           = {3, 3, 3},
     M               = pl10_mass,
-    H_max           = 16000.0,
+    H_max           = 20000.0,
     H_min           = -1.0,
     Diam            = 160.0,
     Cx_pil          = 2.5,
-    D_max           = 20000.0,
+    D_max           = 20000.0, --20km
     D_min           = -500.0,
     Head_Form       = 0,
     Life_Time       = 240.0,
-    Nr_max          = 40,
+    Nr_max          = 60,
     v_min           = 140.0,
     v_mid           = 400.0,
     Mach_max        = 3.5,
@@ -35,9 +37,10 @@ PL_10_AA = {
     Fi_start        = 3.14152,
     Fi_rak          = 3.14152,
     Fi_excort       = 3.14152,
-    Fi_search       = 0.09,
+    Fi_search       = 0.09, --0.09
     OmViz_max       = 3.14152,
-    warhead         = enhanced_a2a_warhead(11.0);
+    warhead         = enhanced_a2a_warhead(11.0, 160);
+    warhead_air     = enhanced_a2a_warhead(11.0, 160);
     exhaust         = { 0.7, 0.7, 0.7, 0.08 };
     X_back          = -1.61,
     Y_back          = -0.089,
@@ -45,8 +48,8 @@ PL_10_AA = {
     Reflection      = 0.0329,
     KillDistance    = 7.0,
     --seeker sensivity params
-    SeekerSensivityDistance = 25000, -- The range of target with IR value = 1. In meters.
-    ccm_k0          = 0.13, -- Counter Countermeasures Probability Factor. Value = 0 - missile has absolutely resistance to countermeasures. Default = 1 (medium probability)
+    SeekerSensivityDistance = 25000, -- The range of target with IR value = 1. In meters. --25km
+    ccm_k0          = 0.10, -- Counter Countermeasures Probability Factor. Value = 0 - missile has absolutely resistance to countermeasures. Default = 1 (medium probability)
     SeekerCooled    = true, -- True is cooled seeker and false is not cooled seeker.
 
     shape_table_data = {
@@ -60,9 +63,15 @@ PL_10_AA = {
         },
     },
 
+    PN_coeffs = { 3,                 -- Number of Entries
+                  15000.0, 1.00,
+                 -- 18000.0, 0.75,
+                  25000.0, 0.50,     -- Less 5 km to target Pn = 1
+                  40000.0, 0.25,     -- Between 15 and 5 km  to target, Pn smoothly changes from 0.4 to 1.0. Longer then 15 km Pn = 0.4.
+                },
     ModelData = {
         58 ,  -- model params count
-        0.5 ,   -- characteristic square (характеристическая площадь)
+        0.45 ,   -- characteristic square (характеристическая площадь)
         
         -- параметры зависимости Сx
         0.029 , -- Cx_k0 планка Сx0 на дозвуке ( M << 1)

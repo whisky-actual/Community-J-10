@@ -14,6 +14,7 @@ PL_15_AA = {
     user_name       = _("PL-15"),
     wsTypeOfWeapon  = {4,4,7,WSTYPE_PLACEHOLDER},
     mass            = pl15_mass,
+	add_attributes = { "Datalink", "Link16" },
 
     Escort          = 0,
     Head_Type       = 2,
@@ -47,6 +48,7 @@ PL_15_AA = {
     Z_back          = 0.0,
     Reflection      = 0.045,
     KillDistance    = 11.0,
+	ccm_k0 = 0.0005,
 
     warhead         = pl15_warhead,
     warhead_air     = pl15_warhead,
@@ -62,12 +64,19 @@ PL_15_AA = {
         },
     },
 
-    PN_coeffs = { 4,                 -- Number of Entries
-                  12000.0, 1.00,
-                  18000.0, 0.75,
-                  30000.0, 0.50,     -- Less 5 km to target Pn = 1
-                  48000.0, 0.20,     -- Between 15 and 5 km  to target, Pn smoothly changes from 0.4 to 1.0. Longer then 15 km Pn = 0.4.
+    PN_coeffs = { 3,                 -- Number of Entries
+                  15000.0, 1.00,
+                 -- 18000.0, 0.75,
+                  25000.0, 0.50,     -- Less 5 km to target Pn = 1
+                  40000.0, 0.25,     -- Between 15 and 5 km  to target, Pn smoothly changes from 0.4 to 1.0. Longer then 15 km Pn = 0.4.
                 },
+				
+   --[[ PN_coeffs = { 4,                 -- Number of Entries
+                  15000.0, 1.00,
+                  25000.0, 0.95,
+                  50000.0, 0.70,     -- Less 5 km to target Pn = 1
+                  98000.0, 0.55,     -- Between 15 and 5 km  to target, Pn smoothly changes from 0.4 to 1.0. Longer then 15 km Pn = 0.4.
+                },]]
 
     supersonic_A_coef_skew = 0.1, -- slope of the direct polarity factor of the polar on supersonic
     nozzle_exit_area       = 0.025, -- the nozzle exit area
@@ -82,10 +91,10 @@ PL_15_AA = {
     },
 		gimbal = {
 			delay = 0,
-			max_tracking_rate = math.rad(45),
+			max_tracking_rate = math.rad(450),
 			op_time = 245,
 			pitch_max = math.rad(360),
-			tracking_gain = 400, -- 50
+			tracking_gain = 0, -- 50 --400
 			yaw_max = math.rad(360)
 		},
 
@@ -180,12 +189,12 @@ PL_15_AA = {
     },
 	
 	WCSE = {
-	uplink_delay = 0.5,
-	update_period = 0.5, 
+	uplink_delay = 0.5,--0.5
+	update_period = 0.5, --0.5
 	delta_pos_max = 2532, --512
 	delta_vel_max = 1266, --256
 	ecm_burn_thru_rng = 35000,
-	quant_steps  = 240,
+	quant_steps  = 240, --240
 	},
 	
 	INS = {
@@ -196,11 +205,11 @@ PL_15_AA = {
 	sensor = {
         delay                       = 1.5,
         op_time                     = 220,
-        FOV                         = math.rad(40),
-        max_w_LOS                   = math.rad(120),
+        FOV                         = math.rad(60), --40
+        max_w_LOS                   = math.rad(90), --120
         sens_near_dist              = 5,
         sens_far_dist               = 350000,
-        ccm_k0                      = 0.0005,--0.0005
+        ccm_k0                      = 0.025,--0.0005
         aim_sigma                   = 3,
         height_error_k              = 7,
         height_error_max_vel        = 7,
@@ -209,11 +218,12 @@ PL_15_AA = {
         --rad_correction              = 1,
         active_radar_lock_dist      = 16000.0,
         active_dist_trig_by_default = 1,
-		vel_srch_max_rng			= 16000.0,
-		max_range 					= 70000.0,
+		vel_srh_max_rng				= 16000.0,
+		--max_rcange 					= 70000.0,
 		lock_range_5sqm				= 30000.0,
-        lock_range_passive          = 75000,
-        max_range                   = 75000,
+        lock_range_passive          = 275000,
+        max_range                   = 275000,
+        --doppler_bandwith            = 1000000,
 		
 	},
 
@@ -335,7 +345,7 @@ declare_loadout({
 
 declare_loadout({
     category     = CAT_AIR_TO_AIR,
-    CLSID        = 'DIS_PL-15',
+    CLSID        = 'DIS_PL-15', -- DIS_PL-15
     Picture      = 'pl12.png',
     attribute    = PL_15_AA.wsTypeOfWeapon,
     displayName  = _(pl15_name),
