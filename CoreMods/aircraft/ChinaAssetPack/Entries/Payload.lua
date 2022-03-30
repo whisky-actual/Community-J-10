@@ -10,10 +10,12 @@ dofile(current_mod_path .. '/Entries/Loadouts/tools.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_type200.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_JG500.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_misc.lua')
+--dofile(current_mod_path .. '/Entries/Loadouts/bomb_FT1.lua')
 
 -- jsow
 dofile(current_mod_path .. '/Entries/Loadouts/jsow_ls6.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/jsow_gb6.lua')
+dofile(current_mod_path .. '/Entries/Loadouts/mils_gb6a.lua')
 
 -- rock
 dofile(current_mod_path .. '/Entries/Loadouts/rkt_brm1.lua')
