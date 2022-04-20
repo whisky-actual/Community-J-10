@@ -64,7 +64,7 @@ GB6A_HE =
 	X_back = -3.392,
 	Y_back = 0.064,
 	Z_back = 0.0,
-    Reflection      = 0.1,
+    Reflection      = 0.05,
     KillDistance    = 0.0,
 	
 	add_attributes = {"Cruise missiles"},
@@ -186,11 +186,11 @@ GB6A_HE =
 	},]]
     
     control_block = {
-        seeker_activation_dist       = 20000,
-        default_cruise_height        = 65,
+        seeker_activation_dist       = 15500,
+        default_cruise_height        = 55,
         obj_sensor                   = 0,
-        can_update_target_pos        = 1,
-        turn_before_point_reach      = 0,
+        can_update_target_pos        = 0,
+        turn_before_point_reach      = 1,
         turn_hor_N               = 0.8,
         turn_max_calc_angle_deg  = 90,
         turn_point_trigger_dist  = 100,
@@ -198,7 +198,7 @@ GB6A_HE =
     },
 	
 	final_autopilot = {
-		delay = 0,
+	--[[	delay = 0,
 		K					= 60,
 		Ki					= 0,
 		Kg					= 4,
@@ -206,6 +206,24 @@ GB6A_HE =
 		useJumpByDefault	= 1,
 		J_Power_K			= 1.5,
 		J_Diff_K			= 0.4,
+		J_Int_K				= 0,
+		J_Angle_K			= 0.18,
+		J_FinAngle_K		= 0.32,
+		J_Angle_W			= 0.8,
+		J_Trigger_Vert		= 1,
+		hKp_err				= 120,
+		hKp_err_croll		= 0.04,
+		hKd					= 0.005,
+		max_roll			= 0.8,]]
+		
+		delay				= 0,
+		K					= 40,
+		Ki					= 0,
+		Kg					= 4,
+		finsLimit			= 0.8,
+		useJumpByDefault	= 1,
+		J_Power_K			= 1.2,
+		J_Diff_K			= 0.2,
 		J_Int_K				= 0,
 		J_Angle_K			= 0.18,
 		J_FinAngle_K		= 0.32,
@@ -234,7 +252,7 @@ GB6A_HE =
         Kd_ver_st2            = 0.00005,
         
         auto_terrain_following           = 1,
-        auto_terrain_following_height    = 65,
+        auto_terrain_following_height    = 1,
         
         alg_points_num           = 7,
         alg_calc_time            = 1.5,
@@ -252,6 +270,78 @@ GB6A_HE =
         estimated_N_max          = 6,
         eng_min_thrust           = -100,
         eng_max_thrust           = 3000,
+		--[[
+		
+		
+		Kp_hor_err			= 240,
+		Kp_hor_err_croll	= 0.06,
+		Kd_hor				= 0,
+		Kp_ver				= 9,
+		Kii_ver				= 0.2,
+		Kd_ver				= 0,
+		Kp_eng				= 265,
+		Ki_eng				= 0.003,
+		Kd_eng				= 0,
+		Kp_ver_st1			= 0.009,
+		Kd_ver_st1			= 0.015,
+		Kp_ver_st2			= 0.00018,
+		Kd_ver_st2			= 0.00005,
+		
+		auto_terrain_following			= 1,
+		auto_terrain_following_height	= 50,
+		
+		alg_points_num			= 7,
+		alg_calc_time			= 1.5,
+		alg_vel_k				= 6,
+		alg_div_k				= 2,
+		alg_max_sin_climb		= 0.8,
+		alg_section_temp_points	= 3,
+		alg_tmp_point_vel_k		= 1.5,
+		no_alg_vel_k			= 10,
+		
+		max_roll			= 0.8,
+		max_start_y_vel		= 35,
+		stab_vel			= 237.5,
+		finsLimit			= 0.8,
+		estimated_N_max		= 6,
+		eng_min_thrust		= -100,
+		eng_max_thrust		= 3000,	
+		
+		
+		
+		Kp_hor_err			= 240,
+		Kp_hor_err_croll	= 0.06,
+		Kd_hor				= 0,
+		Kp_ver				= 9,
+		Kii_ver				= 0.2,
+		Kd_ver				= 0,
+		Kp_eng				= 265,
+		Ki_eng				= 0.003,
+		Kd_eng				= 0,
+		Kp_ver_st1			= 0.009,
+		Kd_ver_st1			= 0.015,
+		Kp_ver_st2			= 0.00018,
+		Kd_ver_st2			= 0.00005,
+		
+		auto_terrain_following			= 1,
+		auto_terrain_following_height	= 75,
+		
+		alg_points_num			= 7,
+		alg_calc_time			= 1.5,
+		alg_vel_k				= 6,
+		alg_div_k				= 2,
+		alg_max_sin_climb		= 0.8,
+		alg_section_temp_points	= 3,
+		alg_tmp_point_vel_k		= 1.5,
+		no_alg_vel_k			= 10,
+		
+		max_roll			= 0.8,
+		max_start_y_vel		= 35,
+		stab_vel			= 220,
+		finsLimit			= 0.8,
+		estimated_N_max		= 6,
+		eng_min_thrust		= -120,
+		eng_max_thrust		= 3923,		]]
     },
 	
 	final_ap_trigger = {
@@ -312,10 +402,10 @@ GB6A_HE =
 }
 
 declare_weapon(GB6A_HE)
---[[
+
 declare_loadout({
     category         = CAT_MISSILES,
-    CLSID            = 'DIS_GB6_HE',
+    CLSID            = 'DIS_LS_6_500',
     attribute        = GB6A_HE.wsTypeOfWeapon,
     Count            = 1,
     Cx_pil           = 0.0024,
@@ -325,4 +415,4 @@ declare_loadout({
     Elements         = {{ShapeName = "jas39_stormshadow"}},
     ejectImpulse     = 140,
 })
-]]
+

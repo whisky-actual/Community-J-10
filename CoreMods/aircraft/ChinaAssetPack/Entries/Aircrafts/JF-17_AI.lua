@@ -401,7 +401,7 @@ JF_17_AI = {
                 { CLSID = "DIS_C-701T", arg_value = 0.1 },
                 { CLSID = "DIS_C-701IR", arg_value = 0.1 },
 
-                { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
+                { CLSID = "Jeff_LS_6_500", arg_value = 0.5, Type = 1 },
                 -- { CLSID = "DIS_GB6", arg_value = 0.1, Type = 1 },
                 -- { CLSID = "DIS_Type200", arg_value = 0.2 },
 
@@ -409,7 +409,7 @@ JF_17_AI = {
                 { CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.3 }, -- Mk-82
                 { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
 
-                { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
+                { CLSID = "Jeff_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
                 { CLSID = "DIS_GBU_12", arg_value = 0.5 }, -- GBU-12
 
                 { CLSID = "DIS_TYPE200", arg_value = 0.5 },
@@ -447,7 +447,7 @@ JF_17_AI = {
                 { CLSID = "Jeff_C-802AK", arg_value = 0.9, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 0.9, Type = 1 },
 
-                { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
+                { CLSID = "Jeff_LS_6_500", arg_value = 0.5, Type = 1 },
                 { CLSID = "DIS_GB6", arg_value = 0.1, Type = 1 },
                 { CLSID = "DIS_GB6_TSP", arg_value = 0.1, Type = 1 },
                 { CLSID = "DIS_GB6_HE", arg_value = 0.1, Type = 1 },
@@ -462,7 +462,7 @@ JF_17_AI = {
                 { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.9 }, -- Mk-83
                 { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 0.2 }, -- Mk-84
 
-                { CLSID = "DIS_MK_20", arg_value = 0.9 }, -- Mk-20 Rockeye
+                { CLSID = "Jeff_MK_20", arg_value = 0.9 }, -- Mk-20 Rockeye
 
                 { CLSID = "Jeff_GBU_10", arg_value = 0.2 }, -- GBU-10
                 { CLSID = "Jeff_GBU_16", arg_value = 0.3 }, -- GBU-16
@@ -512,7 +512,7 @@ JF_17_AI = {
                 { CLSID = "Jeff_C-802AK", arg_value = 0.9, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 0.9, Type = 1 },
 
-                { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
+                { CLSID = "Jeff_LS_6_500", arg_value = 0.5, Type = 1 },
                 { CLSID = "DIS_GB6", arg_value = 0.1, Type = 1 },
                 { CLSID = "DIS_GB6_TSP", arg_value = 0.1, Type = 1 },
                 { CLSID = "DIS_GB6_HE", arg_value = 0.1, Type = 1 },
@@ -527,7 +527,7 @@ JF_17_AI = {
                 { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.9 }, -- Mk-83
                 { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 0.2 }, -- Mk-84
 
-                { CLSID = "DIS_MK_20", arg_value = 0.9 }, -- Mk-20 Rockeye
+                { CLSID = "Jeff_MK_20", arg_value = 0.9 }, -- Mk-20 Rockeye
 
                 { CLSID = "Jeff_GBU_10", arg_value = 0.2 }, -- GBU-10
                 { CLSID = "Jeff_GBU_16", arg_value = 0.3 }, -- GBU-16
@@ -557,7 +557,7 @@ JF_17_AI = {
                 { CLSID = "DIS_C-701T", arg_value = 0.1 },
                 { CLSID = "DIS_C-701IR", arg_value = 0.1 },
 
-                { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
+                { CLSID = "Jeff_LS_6_500", arg_value = 0.5, Type = 1 },
                 -- { CLSID = "DIS_GB6", arg_value = 0.1, Type = 1 },
                 -- { CLSID = "DIS_Type200", arg_value = 0.2 },
 
@@ -565,7 +565,7 @@ JF_17_AI = {
                 { CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.3 }, -- Mk-82
                 { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
 
-                { CLSID = "DIS_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
+                { CLSID = "Jeff_MK_20", arg_value = 0.5 }, -- Mk-20 Rockeye
                 { CLSID = "DIS_GBU_12", arg_value = 0.5 }, -- GBU-12
 
                 { CLSID = "DIS_TYPE200", arg_value = 0.5 },

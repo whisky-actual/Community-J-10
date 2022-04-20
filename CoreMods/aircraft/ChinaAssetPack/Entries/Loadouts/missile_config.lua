@@ -6,8 +6,6 @@ local missile_type = {
 	["8A"]  		= {display_name = _("PL-8A IR AAM"), wstype = "weapons.missiles.PL-8A", mass = 115, shape = 'pl8a'	},
 	["8B"]  		= {display_name = _("PL-8B IR AAM"), wstype = "weapons.missiles.PL-8B", mass = 115, shape = 'pl8b'	},
 	["10"]  		= {display_name = _("PL-10E IR AAM"), wstype = "weapons.missiles.PL-10E", mass = 105, shape = 'Su30_PL10E'	},
-	["6"]  		= {display_name = _("GB-6-HE  Glide-Bomb"), wstype = "weapons.missiles.GB-6-HE", mass = 620, shape = 'gb6'	},
-	["6A"]  		= {display_name = _("GB-6A-HE cruise-missile"), wstype = "weapons.missiles.GB-6A-HE", mass = 972, shape = 'jas39_stormshadow'	},
 	}
 
 
@@ -119,27 +117,3 @@ end
 
 J10_PL_5EII(missile['IRAAM'])
 
-
--- DIS_GB6_HE
-
-
-local function J10_GB6(variant)
-	local var = missile_type[variant]
-	local var_mass = var.mass
-		
-	
-	declare_loadout({
-		category         = CAT_MISSILES,
-		CLSID            = 'DIS_GB6_HE',
-		attribute    	= var.wstype,
-		Count            = 1,
-		Cx_pil           = 0.0024,
-		Picture          = "gb6.png",
-		displayName      = var.display_name,
-		Weight           = var_mass + 52,
-		Elements         = {{ShapeName = var.shape}},
-		ejectImpulse     = 140,
-	})
-end
-
-J10_GB6(missile['GuidedBomb'])

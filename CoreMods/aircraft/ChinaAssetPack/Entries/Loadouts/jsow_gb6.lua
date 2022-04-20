@@ -895,7 +895,7 @@ GB6_HE =
 }
 
 declare_weapon(GB6_HE)
---[[
+
 declare_loadout({
     category         = CAT_MISSILES,
     CLSID            = 'DIS_GB6_HE',
@@ -909,4 +909,3 @@ declare_loadout({
     ejectImpulse     = 140,
 })
 
-]]

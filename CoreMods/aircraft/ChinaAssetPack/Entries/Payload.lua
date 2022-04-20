@@ -10,7 +10,7 @@ dofile(current_mod_path .. '/Entries/Loadouts/tools.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_type200.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_JG500.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/bomb_misc.lua')
---dofile(current_mod_path .. '/Entries/Loadouts/bomb_FT1.lua')
+dofile(current_mod_path .. '/Entries/Loadouts/bomb_250WCMD.lua')
 
 -- jsow
 dofile(current_mod_path .. '/Entries/Loadouts/jsow_ls6.lua')
@@ -47,3 +47,4 @@ dofile(current_mod_path .. '/Entries/Loadouts/pod_misc.lua')
 -- fuel
 dofile(current_mod_path .. '/Entries/Loadouts/fuel_800.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/fuel_1100.lua')
+dofile(current_mod_path .. '/Entries/Loadouts/fuel_triple.lua')

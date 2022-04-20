@@ -177,7 +177,7 @@ declare_weapon(LS_6_500)
 
 declare_loadout({
     category         = CAT_MISSILES,
-    CLSID            = 'DIS_LS_6_500',
+    CLSID            = 'Jeff_LS_6_500',
     attribute        = LS_6_500.wsTypeOfWeapon,
     Count            = 1,
     Cx_pil           = 0.001,

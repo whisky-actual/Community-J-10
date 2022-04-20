@@ -301,9 +301,10 @@ declare_loadout(RBK_500_PTAB105_DUAL_R)
 
 
 -- customized MK-20
+
 JF17_MK_20 = {
     category    = CAT_BOMBS,
-    CLSID       = "DIS_MK_20",
+    CLSID       = "Jeff_MK_20",
     Picture     = "Mk20.png",
     displayName = _("Mk-20"),
     Count       = 1,
@@ -326,6 +327,7 @@ JF17_MK_20 = {
     attribute = {4, 5, 38, 45},
 }
 declare_loadout(JF17_MK_20)
+
 
 
 -- customized GBU-10/12/16
@@ -529,9 +531,10 @@ declare_loadout(JF17_MK_82S_DUAL_R)
 
 
 -- gdj-ii19 dual mk20 left/right
+
 JF17_MK_20_DUAL_L = {
     category    = CAT_BOMBS,
-    CLSID       = "DIS_MK_20_DUAL_GDJ_II19_L",
+    CLSID       = "Jeff_MK_20_DUAL_GDJ_II19_L",
     Picture     = "Mk20.png",
     displayName = _("GDJ-II19 - 2 x Mk-20"),
     Count       = 2,
@@ -553,7 +556,7 @@ declare_loadout(JF17_MK_20_DUAL_L)
 
 JF17_MK_20_DUAL_R = {}
 copyTable(JF17_MK_20_DUAL_R, JF17_MK_20_DUAL_L)
-JF17_MK_20_DUAL_R.CLSID = "DIS_MK_20_DUAL_GDJ_II19_R"
+JF17_MK_20_DUAL_R.CLSID = "Jeff_MK_20_DUAL_GDJ_II19_R"
 JF17_MK_20_DUAL_R.Elements[1].ShapeName = "JF-17_GDJ-II19R"
 JF17_MK_20_DUAL_R.Elements[2].connector_name = "Pylon_GDJ-II19R_R"
 JF17_MK_20_DUAL_R.Elements[3].connector_name = "Pylon_GDJ-II19R_L"
@@ -867,3 +870,25 @@ MER2_250_3_R = {
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
 }
 declare_loadout(MER2_250_3_R)
+
+
+MER4_250_3 = {
+    category    = CAT_BOMBS,
+    CLSID       = "DIS_MER4_250_3",
+    Picture     = "mk82.png",
+    displayName = _("4 x " .. bomb_250_3_disp .. ' 250 kg GP Bomb'),
+    Count       = 4,
+    Weight      = 4 * 250+ 0,
+    Cx_pil      = 4 * BOMB_250_3.Cx,
+
+    Elements    = {
+        {ShapeName = bomb_250_3_model, Position  = {0, 0, 0.620},}, -- left front
+        {ShapeName = bomb_250_3_model, Position  = {0, 0, -0.620},}, -- right front
+        {ShapeName = bomb_250_3_model, Position  = {-4.280, 0, 0.620},}, -- left back
+        {ShapeName = bomb_250_3_model, Position  = {-4.280, 0, -0.620},}, -- right back
+    },
+
+    wsTypeOfWeapon = BOMB_250_3.wsTypeOfWeapon,
+    attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+}
+declare_loadout(MER4_250_3)
