@@ -20,7 +20,7 @@ local LD_10_warhead =
 
 local use_agm88_scheme_sead = false
 
-LD_10_ARM = {
+YJ_91_ARM = {
     category        = CAT_MISSILES,
     name            = ld10_name,
     model           = 'x-31',
@@ -105,15 +105,15 @@ LD_10_ARM = {
 
 if use_agm88_scheme_sead then
 
-    LD_10_ARM.class_name      = "wAmmunitionSelfHoming"
-    LD_10_ARM.scheme          = "anti_rad_missile"
+    YJ_91_ARM.class_name      = "wAmmunitionSelfHoming"
+    YJ_91_ARM.scheme          = "anti_rad_missile"
 
-    LD_10_ARM.controller = {
+    YJ_91_ARM.controller = {
         boost_start = 0.5,
         march_start = 1.5,
     }
 
-    LD_10_ARM.boost = {
+    YJ_91_ARM.boost = {
         impulse                              = 242,
         fuel_mass                            = 57.6,
         work_time                            = 6.0,
@@ -125,7 +125,7 @@ if use_agm88_scheme_sead then
         custom_smoke_dissipation_factor      = 0.3,
     }
 
-    LD_10_ARM.march = {
+    YJ_91_ARM.march = {
         impulse                              = 236,
         fuel_mass                            = 11.6,
         work_time                            = 4.0,
@@ -137,7 +137,7 @@ if use_agm88_scheme_sead then
         custom_smoke_dissipation_factor      = 0.2,
     }
 
-    LD_10_ARM.fm = {
+    YJ_91_ARM.fm = {
         mass                = ld10_mass,
         caliber             = 0.203,
         wind_sigma          = 0.0,
@@ -175,12 +175,12 @@ if use_agm88_scheme_sead then
         fins_stall = 1,
     }
 
-    LD_10_ARM.proximity_fuze = {
+    YJ_91_ARM.proximity_fuze = {
         radius       = 8,
         arm_delay    = 1.6,
     }
 
-    LD_10_ARM.seeker = {
+    YJ_91_ARM.seeker = {
         delay               = 2.4,
         op_time             = 240,
         FOV                 = math.rad(60),
@@ -199,7 +199,7 @@ if use_agm88_scheme_sead then
         abs_err_val         = 2,
     }
 
-    LD_10_ARM.autopilot = {
+    YJ_91_ARM.autopilot = {
         delay                = 1.0,
         x_channel_delay      = 1.0,
         op_time              = 240,
@@ -243,17 +243,17 @@ if use_agm88_scheme_sead then
 
 else
 
-    LD_10_ARM.class_name      = "wAmmunitionSelfHoming"
-    LD_10_ARM.scheme          = "anti_radiation_missile_ramjet"
+    YJ_91_ARM.class_name      = "wAmmunitionSelfHoming"
+    YJ_91_ARM.scheme          = "anti_radiation_missile_ramjet"
 
-    LD_10_ARM.controller = {
+    YJ_91_ARM.controller = {
 		boost_start = 0.5,
         march_start = 2.5,
     }
 
-    LD_10_ARM.boost = {
+    YJ_91_ARM.boost = {
 		
-		impulse 							= 250,
+		impulse 							= 260,
 		fuel_mass 							= 93, -- 93
 		work_time 							= 2,
 		boost_factor 						= 0,
@@ -267,10 +267,10 @@ else
 		effect_type 						= 0,
     }
 
-    LD_10_ARM.march = {
+    YJ_91_ARM.march = {
 		
 		impulse 							= 0,
-		fuel_mass 							= 167,--55
+		fuel_mass 							= 95,--55
 		work_time 							= 0,
 		AEC 								= 1.18,
 		AFR_stoich 							= 14.9,
@@ -289,7 +289,7 @@ else
 		tail_width 							= 0.1,
     }
 
-    LD_10_ARM.fm = {
+    YJ_91_ARM.fm = {
 		mass 		= 600,
 		caliber		= 0.36,
 		cx_coeff 	= { 1, 1, 0.85, 0.5, 1.5 },
@@ -313,7 +313,7 @@ else
 		maxAoa 		= 0.28,
     }
 
-    LD_10_ARM.seeker  = {
+    YJ_91_ARM.seeker  = {
 			
         delay               = 1.5,
         op_time             = 240,
@@ -334,13 +334,13 @@ else
 		lock_manual_target_types_only = 0,
     }
 
-    LD_10_ARM.fuze_proximity = {
+    YJ_91_ARM.fuze_proximity = {
         ignore_inp_armed    = 1,
         arm_delay           = 10,
         radius              = 10,
     }
 
-    LD_10_ARM.autopilot = {
+    YJ_91_ARM.autopilot = {
      --   K                = 100.0,
        -- Kg               = 6.0,
       --  Ki               = 0.0,
@@ -378,14 +378,14 @@ else
 
 end
 
-declare_weapon(LD_10_ARM)
---LD_10_ARM.shape_table_data.index = LD_10_ARM.wsTypeOfWeapon[4]
+declare_weapon(YJ_91_ARM)
+--YJ_91_ARM.shape_table_data.index = YJ_91_ARM.wsTypeOfWeapon[4]
 
 declare_loadout({
     category    = CAT_MISSILES,
     CLSID       = 'DIS_LD-10',
     Picture     = 'kh31p.png',
-    attribute   = LD_10_ARM.wsTypeOfWeapon,
+    attribute   = YJ_91_ARM.wsTypeOfWeapon,
     displayName = _('YJ-91 High Speed Anti-Radiation Missile'),
     Cx_pil      = 0.000859765625,
     Count       = 1,
@@ -404,7 +404,7 @@ declare_loadout({
     category       = CAT_MISSILES,
     CLSID          = 'DIS_LD-10_DUAL_L',
     Picture        = 'pl12.png',
-    wsTypeOfWeapon = LD_10_ARM.wsTypeOfWeapon,
+    wsTypeOfWeapon = YJ_91_ARM.wsTypeOfWeapon,
     attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
     displayName    = _(ld10_name .. ' x 2'),
     Cx_pil         = 0.000859765625 * 1.31,
@@ -422,7 +422,7 @@ declare_loadout({
     category       = CAT_MISSILES,
     CLSID          = 'DIS_LD-10_DUAL_R',
     Picture     = 'pl12.png',
-    attribute   = LD_10_ARM.wsTypeOfWeapon,
+    attribute   = YJ_91_ARM.wsTypeOfWeapon,
     displayName = _(ld10_name),
     Cx_pil      = 0.000859765625,
     Count       = 1,

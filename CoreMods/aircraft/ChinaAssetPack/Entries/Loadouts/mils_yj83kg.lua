@@ -1,9 +1,9 @@
 
-local c802ak_name = 'C-802AK'
-local c802ak_mass = 715
+local yj83kg_name = 'YJ-83KG'
+local yj83kg_mass = 715
 local pylon_mass  = 50.0
 
-local C802AK_warhead =
+local YJ83KG_warhead =
 {
     mass                 = 165,
     caliber              = 360,
@@ -17,34 +17,34 @@ local C802AK_warhead =
     cumulative_thickness = 0.0,
 }
 
-C_802AK_AS = {
+YJ_83KG_AS = {
     category       = CAT_MISSILES,
-    name           = c802ak_name,
-    user_name      = _(c802ak_name),
-    model          = 'c802ak',
-    mass           = c802ak_mass,
+    name           = yj83kg_name,
+    user_name      = _(yj83kg_name),
+    model          = 'yj83k',
+    mass           = yj83kg_mass,
     wsTypeOfWeapon = {wsType_Weapon,wsType_Missile,wsType_AS_Missile,WSTYPE_PLACEHOLDER},
 
     Escort         = 0,
     Head_Type      = 5, -- 5,
     sigma          = {8, 8, 8},
-    M              = c802ak_mass,
+    M              = yj83kg_mass,
     H_max          = 15000.0,
     H_min          = -1,
     Diam           = 360.0,
     Cx_pil         = 8,
-    D_max          = 220000.0,
+    D_max          = 290000.0,
     D_min          = 2000.0,
     Head_Form      = 1,
     Life_Time      = 1850.0,
     Nr_max         = 15,
-    v_min          = 170.0,
+    v_min          = 270.0,
     v_mid          = 372.0,
     Mach_max       = 1.3,
     t_b            = 5.0,
     t_acc          = 0.0,
     t_marsh        = 1800.0,
-    Range_max      = 220000.0,
+    Range_max      = 290000.0,
     H_min_t        = 0.0,
     Fi_start       = 0.25,
     Fi_rak         = 3.14152,
@@ -54,47 +54,47 @@ C_802AK_AS = {
     Stage_         = 1,
     Engine_Type    = 5,
     X_back         = -2.566,
-    Y_back         = -0.19,
+    Y_back         = 0.0,
     Z_back         = 0.0,
     Reflection     = 0.09,
     KillDistance   = 0.0,
 
     manualWeaponFlag = 2,
-    
+
     LaunchDistData =
     {
         -- launch altitude: 500m - 7500m
         -- http://www.sinaimg.cn/dy/slidenews/8_img/2011_45/22159_89924_239722.jpg
           12,        7,
                    100,      125,      150,      175,       200,       250,       300,
-         500,    150000,      155000,    160000,      165000,     170000,    175000,       180000,
-         600,    152000,      157000,    162000,      167000,     172000,    177000,       182000,
-         700,    154000,      159000,    164000,      169000,     174000,    179000,       184000,
-         800,    156000,      161000,    166000,      171000,     176000,    181000,       186000,
-         900,    158000,      163000,    168000,      173000,     178000,    183000,       188000,
-        1000,    160000,      165000,    170000,      175000,     180000,    185000,       190000,
-        1200,    163000,      168000,    173000,      178000,     183000,    188000,       193000,
-        2200,    170000,      175000,    180000,      185000,     189000,    194000,       199000,
-        3200,    176000,      181000,    186000,      191000,     194000,    199000,       204000,
-        4200,    181000,      186000,    191000,      196000,     199000,    203000,       208000,
-        5200,    185000,      190000,    195000,      199000,     203000,    207000,       212000,
-        7500,    190000,      195000,    200000,      204000,     208000,    212000,       217000,
+         500,    241000,      250000,    258000,      265000,     274000,    281000,       290000,
+         600,    244000,      252000,    261000,      269000,     277000,    285000,       293000,
+         700,    248000,      256000,    264000,      272000,     280000,    288000,       296000,
+         800,    251000,      259000,    267000,      275000,     283000,    291000,       300000,
+         900,    254000,      263000,    270000,      278000,     286000,    294000,       302000,
+        1000,    258000,      265000,    274000,      281000,     290000,    298000,       306000,
+        1200,    263000,      270000,    278000,      286000,     294000,    302000,       311000,
+        2200,    274000,      281000,    290000,      298000,     304000,    312000,       320000,
+        3200,    283000,      291000,    300000,      307000,     312000,    320000,       328000,
+        4200,    291000,      300000,    307000,      315000,     320000,    327000,       335000,
+        5200,    298000,      306000,    314000,      320000,     327000,    333000,       341000,
+        7500,    306000,      314000,    322000,      328000,     335000,    341000,       350000,
 
     },
 
-    warhead     = C802AK_warhead,
-    warhead_air = C802AK_warhead,
+    warhead     = YJ83KG_warhead,
+    warhead_air = YJ83KG_warhead,
 
     --add_attributes = {"Anti-Ship missiles"},
     add_attributes = {"Cruise missiles"},
 
     shape_table_data = {
         {
-            name     = c802ak_name,
-            file     = 'c802ak',
-            life     = 0.6,
+            name     = yj83kg_name,
+            file     = 'yj83k',
+            life     = 1.0,
             fire     = {0, 1},
-            username = c802ak_name,
+            username = yj83kg_name,
             index    = WSTYPE_PLACEHOLDER,
         },
     },
@@ -105,11 +105,11 @@ C_802AK_AS = {
     class_name        = "wAmmunitionAntiShip",
 
     fm = {
-        mass        = c802ak_mass,
+        mass        = yj83kg_mass,
         caliber     = 0.36,
         cx_coeff    = {1, 0.3, 0.65, 0.018, 1.6},
         L           = 5.145,
-        I           = 1 / 12 * c802ak_mass * 5.145 * 5.145,
+        I           = 1 / 12 * yj83kg_mass * 5.145 * 5.145,
         Ma          = 0.6,
         Mw          = 1.116,
         wind_sigma  = 0.0,
@@ -127,36 +127,37 @@ C_802AK_AS = {
     seeker = {
         delay                       = 0.0,
         op_time                     = 9999.0,
-        FOV                         = math.rad(60.0),
-        max_w_LOS                   = 0.06,
+        FOV                         = math.rad(70.0),
+        max_w_LOS                   = 0.12,
         max_target_speed            = 33.0,
         max_target_speed_rnd_coeff  = 10.0,
         ship_track_by_default       = 1,
-        flag_dist                   = 5000.0,
+        flag_dist                   = 10000.0,
         sens_near_dist              = 10.0,
-        sens_far_dist               = 16000.0,
+        sens_far_dist               = 90000.0,
         primary_target_filter       = 1,
-        add_y                       = 3.0,
+        add_y                       = 1.0,
         sens_ref_rcs                = 10000.0,
-        sens_ref_dist               = 16000.0,
+        sens_ref_dist               = 70000.0,
         --aim_sigma                   = 5.5, -- TODO
     },
 
     autopilot =    --inertial autopilot + horiz correction when seeker is on
     {
-        glide_height                = 20.0,
+        glide_height                = 15.0,
         dont_climb_on_cruise_height = 1,
         vel_proj_div                = 6.0,
-        default_glide_height        = 1524,
-        pre_maneuver_glide_height   = 12,
-        skim_glide_height           = 8,
+        default_glide_height        = 15,
+        pre_maneuver_glide_height   = 5,
+        skim_glide_height           = 5,
         use_start_bar_height        = 1,    
         altim_vel_k                 = 4,
-        min_glide_height            = 15,
+        min_glide_height            = 5,
         
         delay                  = 1.0,
         op_time                = 9999,
-        Kw                     = 3.5,
+        --Kw                     = 3.5,
+        Kw                     = 2.0,
         Ks                     = 0.9,
         K                      = 1.6,
         Kd                     = 0.0,
@@ -222,18 +223,18 @@ C_802AK_AS = {
     },
 
     triggers_control = {
-        sensor_tg_dist           = 8000, -- turn on seeker and start horiz. correction if target is locked
+        sensor_tg_dist           = 25000, -- turn on seeker and start horiz. correction if target is locked
         final_maneuver_tg_dist   = 4000,
         straight_nav_tg_dist     = 2000,
         self_destruct_tg_dist    = 4000,    -- if seeker still can not find a target explode warhead after reaching pred. target point + n. km
-        target_upd_jump_dist     = 20000,
-        update_pos_from_input    = 0,
+        target_upd_jump_dist     = 80000,
+        update_pos_from_input    = 1,
         can_increase_tg_dist     = 1,
         
         send_final_maneuver_by_default  = 0,
         final_maneuver_trig_v_lim       = 3,
         use_horiz_dist                  = 1,
-        pre_maneuver_glide_height       = 20,
+        pre_maneuver_glide_height       = 5,
     },
 
     controller = {
@@ -257,7 +258,7 @@ C_802AK_AS = {
 
     march = {
         impulse          = 700,
-        fuel_mass        = 200,
+        fuel_mass        = 220,
         work_time        = 9999,
         min_fuel_rate    = 0.005,
         min_thrust       = 0,
@@ -282,27 +283,28 @@ C_802AK_AS = {
     },
 
     engine_control = {
-        default_speed    = 300,
+        default_speed    = 311.5,
         K                = 265,
         Kd               = 0.01,
         Ki               = 0.001,
-        speed_delta      = 5,
+        speed_delta      = 2.5,
         --burst_signal     = 9999, -- used in 'anti_ship_missile_tb' scheme
     },
+
 }
 
-declare_weapon(C_802AK_AS)
---C_802AK_AS.shape_table_data.index = C_802AK_AS.wsTypeOfWeapon[4]
+declare_weapon(YJ_83KG_AS)
+--YJ_83KG_AS.shape_table_data.index = YJ_83KG_AS.wsTypeOfWeapon[4]
 --[[
 declare_loadout({
     category     = CAT_MISSILES,
     CLSID        = 'DIS_C-802AK',
     Picture      = 'c802.png',
-    attribute    = C_802AK_AS.wsTypeOfWeapon,
-    displayName  = _("YJ-83K Anti-ship Missile"),
+    attribute    = YJ_83KG_AS.wsTypeOfWeapon,
+    displayName  = _(yj83kg_name),
     Cx_pil       = 0.0023,
     Count        = 1,
-    Weight       = c802ak_mass + pylon_mass,
+    Weight       = yj83kg_mass + pylon_mass,
     Elements     = {
         [1] =
         {
@@ -317,100 +319,5 @@ declare_loadout({
     ejectImpulse = 2000,
 })
 ]]
-
-declare_loadout({
-    category     = CAT_MISSILES,
-    CLSID        = 'Jeff_C-802AK',
-    Picture      = 'c802.png',
-    attribute    = C_802AK_AS.wsTypeOfWeapon,
-    displayName  = _("YJ-83"),
-    Cx_pil       = 0.0023,
-    Count        = 1,
-    Weight       = c802ak_mass + pylon_mass,
-    Elements     = {
-        [1] =
-        {
-            Position  = {0, 0, 0},
-            ShapeName = 'c802ak',
-            DrawArgs  = {
-                [1] = {1, 1.0},
-            }
-        },
-    }, -- end of Elements
-    --attribute = {4, 4, 8, WSTYPE_PLACEHOLDER, "Anti-Ship missiles"},
-    ejectImpulse = 2000,
-})
-
-
-
-
--- YJ-83K
-local yj83k_name  = 'YJ-83K'
-local yj83k_model = 'yj83k'
-local yj83k_mass  = 715
-
-YJ83K_AS = {}
-copyTable(YJ83K_AS, C_802AK_AS)
-YJ83K_AS.name           = yj83k_name
-YJ83K_AS.model          = yj83k_model
-YJ83K_AS.mass           = yj83k_mass
-YJ83K_AS.user_name      = _(yj83k_name)
-YJ83K_AS.wsTypeOfWeapon = {wsType_Weapon,wsType_Missile,wsType_AS_Missile,WSTYPE_PLACEHOLDER}
-YJ83K_AS.shape_table_data[1].name     = yj83k_name
-YJ83K_AS.shape_table_data[1].file     = yj83k_model
-YJ83K_AS.shape_table_data[1].username = yj83k_name
-YJ83K_AS.shape_table_data[1].index    = WSTYPE_PLACEHOLDER
-declare_weapon(YJ83K_AS)
-
-
-
-declare_loadout({
-    category     = CAT_MISSILES,
-    CLSID        = 'DIS_YJ83K',
-    Picture      = 'yj83.png',
-    attribute    = YJ83K_AS.wsTypeOfWeapon,
-    displayName  = _(yj83k_name),
-    Cx_pil       = 0.0023,
-    Count        = 1,
-    Weight       = yj83k_mass,
-    Elements     = {
-        {
-            ShapeName = yj83k_model,
-            DrawArgs  = {
-                [1] = {1, 1.0},
-            }
-        },
-    }, -- end of Elements
-    ejectImpulse = 140,
-})
-
-declare_loadout({
-    category       = CAT_MISSILES,
-    CLSID          = 'DIS_GDJ_YJ83K',
-    Picture        = 'yj83.png',
-    wsTypeOfWeapon = YJ83K_AS.wsTypeOfWeapon,
-    attribute      = {4, 4, 32, WSTYPE_PLACEHOLDER},
-    displayName    = _(yj83k_name),
-    Cx_pil         = 0.0023,
-    Count          = 1,
-    Weight         = yj83k_mass + pylon_mass,
-    Elements       = {
-        {
-            ShapeName = "adapter_gdj_yj83k",
-            IsAdapter = true,
-        },
-        {
-            ShapeName = yj83k_model,
-            connector_name = "adapter_cnt",
-            DrawArgs  = {
-                [1] = {1, 1.0},
-            }
-        },
-    }, -- end of Elements
-    JettisonSubmunitionOnly = true,
-    ejectImpulse = 2000,
-})
-
-
 
 

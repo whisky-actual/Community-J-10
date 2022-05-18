@@ -35,6 +35,8 @@ dofile(current_mod_path .. '/Entries/Loadouts/mils_pl15.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/mils_akd.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/mils_yj12.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/mils_yj91.lua')
+dofile(current_mod_path .. '/Entries/Loadouts/mils_yj91a.lua')
+dofile(current_mod_path .. '/Entries/Loadouts/mils_yj83kg.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/mils_kd63.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/mils_kd20.lua')
 
