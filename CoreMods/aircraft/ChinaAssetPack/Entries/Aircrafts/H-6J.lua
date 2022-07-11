@@ -257,6 +257,7 @@ H_6J_AI = {
                 { CLSID = "DIS_GDJ_YJ83K", arg_value = 1.0, Type = 1 }, --
                 { CLSID = "DIS_DF4A_KD20", arg_value = 1.0, Type = 1 }, --
 
+                { CLSID = "DIS_MER6_250_2_N6", arg_value = 1.0, },
                 { CLSID = "DIS_MER6_250_3_N6", arg_value = 1.0, },
             }
         ),
@@ -271,6 +272,7 @@ H_6J_AI = {
                 { CLSID = "DIS_DF4A_KD20", arg_value = 1.0, Type = 1, }, --
                 { CLSID = "DIS_GDJ_YJ83K", arg_value = 1.0, Type = 1, }, --
 
+                { CLSID = "DIS_MER6_250_2_N6", arg_value = 1.0, },
                 { CLSID = "DIS_MER6_250_3_N6", arg_value = 1.0, },
             }
         ),
@@ -285,6 +287,7 @@ H_6J_AI = {
                 { CLSID = "DIS_DF4A_KD20", arg_value = 1.0, Type = 1 }, --
                 { CLSID = "DIS_GDJ_YJ83K", arg_value = 1.0, Type = 1 }, --
 
+                { CLSID = "DIS_MER6_250_2_N6", arg_value = 1.0, },
                 { CLSID = "DIS_MER6_250_3_N6", arg_value = 1.0, },
             }
         ),
@@ -299,6 +302,7 @@ H_6J_AI = {
                 { CLSID = "DIS_DF4A_KD20", arg_value = 1.0, Type = 1 }, --
                 { CLSID = "DIS_GDJ_YJ83K", arg_value = 1.0, Type = 1 }, --
 
+                { CLSID = "DIS_MER6_250_2_N6", arg_value = 1.0, },
                 { CLSID = "DIS_MER6_250_3_N6", arg_value = 1.0, },
             }
         ),
@@ -313,6 +317,7 @@ H_6J_AI = {
                 { CLSID = "DIS_DF4A_KD20", arg_value = 1.0, Type = 1 }, --
                 { CLSID = "DIS_GDJ_YJ83K", arg_value = 1.0, Type = 1 }, --
 
+                { CLSID = "DIS_MER6_250_2_N6", arg_value = 1.0, },
                 { CLSID = "DIS_MER6_250_3_N6", arg_value = 1.0, },
             }
         ),
@@ -324,6 +329,7 @@ H_6J_AI = {
                 { CLSID = "DIS_GDJ_YJ83K", arg_value = 1.0, Type = 1 }, --
                 { CLSID = "DIS_DF4A_KD20", arg_value = 1.0, Type = 1 }, --
 
+                { CLSID = "DIS_MER6_250_2_N6", arg_value = 1.0, },
                 { CLSID = "DIS_MER6_250_3_N6", arg_value = 1.0, },
             }
         ),

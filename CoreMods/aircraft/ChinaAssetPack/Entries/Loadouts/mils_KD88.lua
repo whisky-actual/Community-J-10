@@ -1,7 +1,7 @@
 
 local cm802akg_use_scheme = 0
 
-local cm802akg_name  = 'CM-802AKG'
+local cm802akg_name  = 'KD-88'
 local cm802akg_model = 'cm802akg'
 local cm802akg_mass  = 715
 local pylon_mass     = 50.0
@@ -490,7 +490,7 @@ end
 
 declare_weapon(CM_802AKG_AS)
 --C_802AK_AS.shape_table_data.index = C_802AK_AS.wsTypeOfWeapon[4]
---[[
+
 declare_loadout({
     category     = CAT_MISSILES,
     CLSID        = 'DIS_CM-802AKG',
@@ -512,13 +512,13 @@ declare_loadout({
     }, -- end of Elements
     --Required     = {"DIS_AKG_DLPOD"},
     ejectImpulse = 2000,
-})]]
+})
 
 
 ------- CM802AKG for AI only -------
 
-local cm802akg_ai_name  = 'CM-802AKG_AI'
-local cm802akg_ai_disp  = 'CM-802AKG for AI'
+local cm802akg_ai_name  = 'KD-88_AI'
+local cm802akg_ai_disp  = 'KD-88 for AI'
 
 CM802AKG_AI = {}
 copyTable(CM802AKG_AI, CM_802AKG_AS)
@@ -730,7 +730,7 @@ declare_weapon(CM802AKG_AI)
 
 declare_loadout({
     category     = CAT_MISSILES,
-    CLSID        = 'DIS_CM-802AKG_AI',
+    CLSID        = 'DIS_KD-88_AI',
     Picture      = 'c802akg.png',
     attribute    = CM802AKG_AI.wsTypeOfWeapon,
     displayName  = _(cm802akg_ai_disp),
