@@ -20,8 +20,8 @@ local C802AK_warhead =
 C_802AK_AS = {
     category       = CAT_MISSILES,
     name           = c802ak_name,
-    user_name      = _(c802ak_name),
-    model          = 'c802ak',
+    user_name      = _('YJ-83K'),
+    model          = 'yj83k',
     mass           = c802ak_mass,
     wsTypeOfWeapon = {wsType_Weapon,wsType_Missile,wsType_AS_Missile,WSTYPE_PLACEHOLDER},
 
@@ -91,7 +91,7 @@ C_802AK_AS = {
     shape_table_data = {
         {
             name     = c802ak_name,
-            file     = 'c802ak',
+            file     = 'yj83k',
             life     = 0.6,
             fire     = {0, 1},
             username = c802ak_name,
@@ -134,25 +134,24 @@ C_802AK_AS = {
         ship_track_by_default       = 1,
         flag_dist                   = 5000.0,
         sens_near_dist              = 10.0,
-        sens_far_dist               = 16000.0,
+        sens_far_dist               = 40000.0,
         primary_target_filter       = 1,
         add_y                       = 3.0,
         sens_ref_rcs                = 10000.0,
-        sens_ref_dist               = 16000.0,
+        sens_ref_dist               = 40000.0,
         --aim_sigma                   = 5.5, -- TODO
     },
 
     autopilot =    --inertial autopilot + horiz correction when seeker is on
     {
         glide_height                = 20.0,
-        dont_climb_on_cruise_height = 1,
+        dont_climb_on_cruise_height = 0,
         vel_proj_div                = 6.0,
-        default_glide_height        = 1524,
-        pre_maneuver_glide_height   = 12,
-        skim_glide_height           = 8,
+        default_glide_height        = 15,
+        pre_maneuver_glide_height   = 20,
+        skim_glide_height           = 5,
         use_start_bar_height        = 1,    
-        altim_vel_k                 = 4,
-        min_glide_height            = 15,
+        altim_vel_k                 = 4,    
         
         delay                  = 1.0,
         op_time                = 9999,
@@ -187,9 +186,9 @@ C_802AK_AS = {
         min_climb_h            = 10000,
         min_climb_h_factor     = 0.5,
         
-        inertial_km_error      = 0.15,
-        glide_height_eq_error  = 0.02, -- percent
-        glide_height_abs_error = 1.5,
+        inertial_km_error      = 0.1,
+        glide_height_eq_error  = 2.0,        -- percent
+        
     },
 
     final_autopilot =        -- final stage guidance with terminal maneuver
@@ -224,10 +223,10 @@ C_802AK_AS = {
     triggers_control = {
         sensor_tg_dist           = 8000, -- turn on seeker and start horiz. correction if target is locked
         final_maneuver_tg_dist   = 4000,
-        straight_nav_tg_dist     = 2000,
-        self_destruct_tg_dist    = 4000,    -- if seeker still can not find a target explode warhead after reaching pred. target point + n. km
-        target_upd_jump_dist     = 20000,
-        update_pos_from_input    = 0,
+        straight_nav_tg_dist     = 1000,
+        self_destruct_tg_dist    = 1000,    -- if seeker still can not find a target explode warhead after reaching pred. target point + n. km
+        target_upd_jump_dist     = 40000,
+        update_pos_from_input    = 1,
         can_increase_tg_dist     = 1,
         
         send_final_maneuver_by_default  = 0,
@@ -289,11 +288,12 @@ C_802AK_AS = {
         speed_delta      = 5,
         --burst_signal     = 9999, -- used in 'anti_ship_missile_tb' scheme
     },
+
 }
 
 declare_weapon(C_802AK_AS)
 --C_802AK_AS.shape_table_data.index = C_802AK_AS.wsTypeOfWeapon[4]
---[[
+
 declare_loadout({
     category     = CAT_MISSILES,
     CLSID        = 'DIS_C-802AK',
@@ -316,30 +316,7 @@ declare_loadout({
     --attribute = {4, 4, 8, WSTYPE_PLACEHOLDER, "Anti-Ship missiles"},
     ejectImpulse = 2000,
 })
-]]
 
-declare_loadout({
-    category     = CAT_MISSILES,
-    CLSID        = 'Jeff_C-802AK',
-    Picture      = 'c802.png',
-    attribute    = C_802AK_AS.wsTypeOfWeapon,
-    displayName  = _("YJ-83"),
-    Cx_pil       = 0.0023,
-    Count        = 1,
-    Weight       = c802ak_mass + pylon_mass,
-    Elements     = {
-        [1] =
-        {
-            Position  = {0, 0, 0},
-            ShapeName = 'c802ak',
-            DrawArgs  = {
-                [1] = {1, 1.0},
-            }
-        },
-    }, -- end of Elements
-    --attribute = {4, 4, 8, WSTYPE_PLACEHOLDER, "Anti-Ship missiles"},
-    ejectImpulse = 2000,
-})
 
 
 
@@ -412,5 +389,44 @@ declare_loadout({
 })
 
 
+-- C-802AK Jeff
+local yj83k_name  = 'C-802AK Jeff'
+local yj83k_model = 'yj83k'
+local yj83k_mass  = 715
+
+C_802AK_AS_Jeff = {}
+copyTable(C_802AK_AS_Jeff, C_802AK_AS)
+C_802AK_AS_Jeff.name           = yj83k_name
+C_802AK_AS_Jeff.model          = yj83k_model
+C_802AK_AS_Jeff.mass           = yj83k_mass
+C_802AK_AS_Jeff.user_name      = _("C-802AK")
+C_802AK_AS_Jeff.wsTypeOfWeapon = {wsType_Weapon,wsType_Missile,wsType_AS_Missile,WSTYPE_PLACEHOLDER}
+C_802AK_AS_Jeff.shape_table_data[1].name     = yj83k_name
+C_802AK_AS_Jeff.shape_table_data[1].file     = yj83k_model
+C_802AK_AS_Jeff.shape_table_data[1].username = yj83k_name
+C_802AK_AS_Jeff.shape_table_data[1].index    = WSTYPE_PLACEHOLDER
+declare_weapon(C_802AK_AS_Jeff)
 
 
+declare_loadout({
+    category     = CAT_MISSILES,
+    CLSID        = 'Jeff_C-802AK',
+    Picture      = 'c802.png',
+    attribute    = C_802AK_AS_Jeff.wsTypeOfWeapon,
+    displayName  = _("YJ-83"),
+    Cx_pil       = 0.0023,
+    Count        = 1,
+    Weight       = c802ak_mass + pylon_mass,
+    Elements     = {
+        [1] =
+        {
+            Position  = {0, 0, 0},
+            ShapeName = 'yj83k',
+            DrawArgs  = {
+                [1] = {1, 1.0},
+            }
+        },
+    }, -- end of Elements
+    --attribute = {4, 4, 8, WSTYPE_PLACEHOLDER, "Anti-Ship missiles"},
+    ejectImpulse = 2000,
+})

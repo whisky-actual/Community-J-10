@@ -3,6 +3,11 @@ dofile(LockOn_Options.script_path.."args_def.lua")
 --------------------------------------------------------------------------------
 -- Variables
 --------------------------------------------------------------------------------
+function post_initialize()	-- Sets the AAR lights off
+set_aircraft_draw_argument_value( 21, -1)
+set_aircraft_draw_argument_value( 22, -1)
+end
+
 shape_name = "JF-17-CPT"
 
 is_EDM           = true
