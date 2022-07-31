@@ -602,7 +602,7 @@ declare_loadout(JF17_GBU_12_DUAL_R)
 ------------------------------------------------------------------
 
 local bomb_250_2_name  = "250-2"
-local bomb_250_2_model = "fab-250-m54"
+local bomb_250_2_model = "250-2"
 local bomb_250_2_disp  = "250-2 - 250kg GP Bombs HD"
 local bomb_250_2_mass  = 250.0
 
