@@ -2,8 +2,8 @@
 JF17_FM = 
 {
     disable_built_in_oxygen_system = true,
-    center_of_mass    = { 0.475, 0.0, 0.0},
-    moment_of_inertia = {12793.0, 12531.8, 75190, 1081.0}, --{12793.0, 82531.8, 75190, 1081.0}
+    center_of_mass    = { 0.375, 0.0, 0.0},
+    moment_of_inertia = {14793.0, 82531.8, 75190, 1381.0}, --{12793.0, 82531.8, 75190, 1081.0}
     suspension = {
         {
             wheel_radius = 0.25,

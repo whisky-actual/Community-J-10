@@ -436,9 +436,9 @@ J_10A = {
     mechanimations = mech_anime,
 
     -------------------------
-    M_empty                    = 5390.0,    -- JF-17 with pilot and nose load, kg --6586 --4840
-    M_nominal                  = 5390+4500,    -- JF-17 kg (Empty Plus Full Internal Fuel) --8339.0
-    M_max                      = 5390+4500+6600,   -- JF-17 kg (Maximum Take Off Weight)
+    M_empty                    = 5090.0,    -- JF-17 with pilot and nose load, kg --6586 --4840
+    M_nominal                  = 5090+4500,    -- JF-17 kg (Empty Plus Full Internal Fuel) --8339.0
+    M_max                      = 5190+4500+6600,   -- JF-17 kg (Maximum Take Off Weight)
     M_fuel_max                 = 4500.0,    -- JF-17 kg (Internal Fuel Only)
     H_max                      = 18000,     -- JF-17 m  (Maximum Operational Ceiling)
     average_fuel_consumption   = 0.065,     --
@@ -713,6 +713,7 @@ J_10A = {
 				
                 { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
                 { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
+              --  { CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
 			-- Unguided Bombs
                -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
@@ -774,6 +775,7 @@ J_10A = {
 
                 { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
                 { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
+              --  { CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
 
@@ -830,6 +832,7 @@ J_10A = {
 				
                 { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
                 { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
+               -- { CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
 				-- Tanks
                 { CLSID = "DIS_TANK800", arg_value = 1.0, --[[required = {{station = 3,loadout = {"DIS_TANK800"}}}]]},  --, attach_point_position = {0, 0.325, 0}
@@ -894,6 +897,7 @@ J_10A = {
 				
                 { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
                 { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
+                --{ CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
 			-- Unguided Bombs
                -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 0.6 }, -- Mk-83
