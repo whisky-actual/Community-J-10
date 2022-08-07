@@ -785,7 +785,37 @@ J_10A = {
 
             }
         ),
-        pylon(4, 0,   2.700000, -0.650000, 0.620000,
+        pylon(4, 0, -0.765, -0.765, 0,
+            {
+                use_full_connector_position = true, connector = "str_pnt_004", arg = 311, arg_value = 0
+            },
+            {
+				-- Tanks
+                { CLSID = "DIS_TANK800", arg_value =1.0, },
+                { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0, },
+
+               -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
+             --   { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
+
+				-- Guided Bombs
+                { CLSID = "DIS_GBU_10", arg_value =1.0 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16 
+
+                { CLSID = "DIS_WMD7",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_WMD7"}},     {station = 6, loadout = {"DIS_WMD7"}}} },
+                { CLSID = "DIS_AKG_DLPOD", arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_AKG_DLPOD"}},{station = 6, loadout = {"DIS_AKG_DLPOD"}}} },
+                { CLSID = "DIS_SPJ_POD",   arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_SPJ_POD"}},  {station = 6, loadout = {"DIS_SPJ_POD"}}} },
+
+                -- Smoke Generator pods
+                { CLSID = 'DIS_SMOKE_GENERATOR_R', arg_value = 1.0},
+                { CLSID = 'DIS_SMOKE_GENERATOR_G', arg_value = 1.0},
+                { CLSID = 'DIS_SMOKE_GENERATOR_B', arg_value = 1.0},
+                { CLSID = 'DIS_SMOKE_GENERATOR_W', arg_value = 1.0},
+                { CLSID = 'DIS_SMOKE_GENERATOR_Y', arg_value = 1.0},
+                { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 1.0},
+            }
+        ),
+		--[[
+		        pylon(4, 0,   2.700000, -0.650000, 0.620000,
             {
                 --use_full_connector_position = true, connector = "str_pnt_004", arg = 311, arg_value = 0
             },
@@ -809,16 +839,17 @@ J_10A = {
                 { CLSID = "DIS_AKG_DLPOD", arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_AKG_DLPOD"}},{station = 6, loadout = {"DIS_AKG_DLPOD"}}} },
                 { CLSID = "DIS_SPJ_POD",   arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_SPJ_POD"}},  {station = 6, loadout = {"DIS_SPJ_POD"}}} },
 
---[[
+
                 -- Smoke Generator pods
                 { CLSID = 'DIS_SMOKE_GENERATOR_R', arg_value = 1.0},
                 { CLSID = 'DIS_SMOKE_GENERATOR_G', arg_value = 1.0},
                 { CLSID = 'DIS_SMOKE_GENERATOR_B', arg_value = 1.0},
                 { CLSID = 'DIS_SMOKE_GENERATOR_W', arg_value = 1.0},
                 { CLSID = 'DIS_SMOKE_GENERATOR_Y', arg_value = 1.0},
-                { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 1.0},]]
+                { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 1.0},
             }
         ),
+	--]]			
         pylon(5, 0, -0.883, -0.7, 1.834,
             {
                 use_full_connector_position = true, connector = "str_pnt_005", arg = 312, arg_value = 0
@@ -951,14 +982,14 @@ J_10A = {
         ),
         pylon(8, 0,0, 0, 0,
             {
-               
+            DisplayName = "DRAG"   
             },
             {
-
                 { CLSID = '{Jeff}'},
-               -- { CLSID = 'DIS_SMOKE_GENERATOR_G'},
             }
         ),
+	},
+	--[[
         pylon(9, 0, -0.765, -0.765, 0, -- this is the center line tank position
             {
                 DisplayName = "Center Line", use_full_connector_position = true, connector = "str_pnt_004", arg = 311, arg_value = 0
@@ -978,7 +1009,7 @@ J_10A = {
             }
         ),
     },
-
+	]]--
     Tasks = {
         aircraft_task(Intercept), -- 10
         aircraft_task(CAP), -- 11

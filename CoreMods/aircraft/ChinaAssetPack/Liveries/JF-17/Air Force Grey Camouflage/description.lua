@@ -20,6 +20,6 @@ livery = {
 
 }
 
-name = "Air Force Grey Camouflage"     
+name = "Chinese Air Force Grey Camouflage"     
 name_cn = "中国空军航空兵 灰色迷彩"      
 --countries = {""}    

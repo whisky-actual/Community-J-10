@@ -1,44 +1,46 @@
-
 JF17_FM = 
 {
     disable_built_in_oxygen_system = true,
-    center_of_mass    = { 0.375, 0.0, 0.0},
-    moment_of_inertia = {14793.0, 82531.8, 75190, 1381.0}, --{12793.0, 82531.8, 75190, 1081.0}
+    center_of_mass    = { 0.25, 0.0, 0.0},
+	moment_of_inertia	= {  12875.0, 85552.0, 75674.0, -1331.0},--Ix,Iy,Iz,Ixy			-- Ix(roll) = 9496, Iy(pitch) Ix(roll) = 9496, Iy(pitch) 
     suspension = {
         {
-            wheel_radius = 0.25,
-            damper_coeff = 300.0,
-            filter_yaw   = true,
-            yaw_limit    = math.rad(32.0),
-            moment_limit = 750.0,
-            
-            allowable_hard_contact_length = 0.15,
-            
-            anti_skid_installed = false,
-            wheel_brake_moment_max               = 10000.0,
-            amortizer_min_length                 = 0.0,
-            amortizer_max_length                 = 0.43, --0.43
-            amortizer_basic_length               = 0.43, --0.43
-            amortizer_spring_force_factor        = 1190000.0, --990000
-            amortizer_spring_force_factor_rate   = 2.0,
-            amortizer_static_force               = 275000.0,--47500
-            amortizer_reduce_length              = 0.2,
-            amortizer_direct_damper_force_factor = 50000.0,
-            amortizer_back_damper_force_factor   = 60000.0,
-            
-            wheel_static_friction_factor = 0.75,
-            wheel_side_friction_factor   = 0.35 ,
-            wheel_roll_friction_factor   = 0.12 ,
-            wheel_glide_friction_factor  = 0.35 ,
-            wheel_damage_force_factor    = 450.0,
-            wheel_damage_speed           = 112,
-            wheel_damage_speedX          = 112,
+			damage_element					= 83,
+			wheel_axle_offset				= 0.0,
+			self_attitude					= false,
+			yaw_limit						= math.rad(32.0),
+			moment_limit					= 750.0,
+			damper_coeff					= 300.0,
+			allowable_hard_contact_length	= 0.25,
+			filter_yaw						= false,
 
-            arg_post             = 0,
-            arg_amortizer        = 1,
-            arg_wheel_rotation   = 76,
-            arg_wheel_yaw        = 2,
-            collision_shell_name = 'WHEEL_F',
+			amortizer_min_length						= 0.0,
+			amortizer_max_length						= 0.244,	-- (0.254 (strut stroke) * sin(70 deg)) = 0.239 + 0.0381 (wheel static axle)
+			amortizer_basic_length						= 0.244,	-- (0.254 (strut stroke) * sin(70 deg)) = 0.239 + 0.0381 (wheel static axle)
+			amortizer_spring_force_factor				= 5200000,	-- force = spring_force_factor * pow(reduce_length, amortizer_spring_force_factor_rate
+			amortizer_spring_force_factor_rate			= 3,
+			amortizer_static_force						= 1000,
+			amortizer_reduce_length						= 0.05,
+			amortizer_direct_damper_force_factor		= 35000,
+			amortizer_back_damper_force_factor			= 15000,
+
+			anti_skid_installed							= false,
+
+			wheel_radius								= 0.2286,	-- 18 / 2 (inch)
+			wheel_static_friction_factor				= 0.65,
+			wheel_side_friction_factor					= 0.45,
+			wheel_roll_friction_factor					= 0.05,
+			wheel_glide_friction_factor					= 0.30,
+			wheel_damage_force_factor					= 450.0,
+			wheel_kz_factor								= 0.3,
+			noise_k										= 1.0,
+			wheel_damage_speedX							= 115,
+			wheel_damage_delta_speedX					= 11.5,
+
+			arg_post			= 0,
+			arg_amortizer		= 1,
+			arg_wheel_rotation	= 76,
+			arg_wheel_damage	= 134
         },
         {
             mass         = 200,
@@ -54,17 +56,17 @@ JF17_FM =
             amortizer_min_length                 = 0.0,
             amortizer_max_length                 = 0.22,
             amortizer_basic_length               = 0.23,
-            amortizer_spring_force_factor        = 20000000, --10000000
+            amortizer_spring_force_factor        = 10000000,
             amortizer_spring_force_factor_rate   = 3.0,
-            amortizer_static_force               = 35000.0, --65000
+            amortizer_static_force               = 65000.0,
             amortizer_reduce_length              = 0.22,
             amortizer_direct_damper_force_factor = 40000.0,
             amortizer_back_damper_force_factor   = 20000.0,
             
             wheel_brake_moment_max               = 8200.0, 
             wheel_damage_force_factor            = 450.0,
-            wheel_damage_speed                   = 112,
-            wheel_damage_speedX                  = 112,
+            wheel_damage_speed                   = 115,
+            wheel_damage_speedX                  = 115,
 
 
             arg_post             = 5,
@@ -87,17 +89,17 @@ JF17_FM =
             amortizer_min_length                 = 0.0,
             amortizer_max_length                 = 0.22,
             amortizer_basic_length               = 0.23,
-            amortizer_spring_force_factor        = 15000000, --10000000
+            amortizer_spring_force_factor        = 10000000,
             amortizer_spring_force_factor_rate   = 3.0,
-            amortizer_static_force               = 35000.0, --65000
+            amortizer_static_force               = 65000.0,
             amortizer_reduce_length              = 0.22,
             amortizer_direct_damper_force_factor = 40000.0,
             amortizer_back_damper_force_factor   = 20000.0,
             
             wheel_brake_moment_max               = 8200.0, 
             wheel_damage_force_factor            = 450.0,
-            wheel_damage_speed                   = 112,
-            wheel_damage_speedX                  = 112,
+            wheel_damage_speed                   = 115,
+            wheel_damage_speedX                  = 115,
 
             arg_post             = 3,
             arg_amortizer        = 4,

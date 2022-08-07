@@ -10,7 +10,7 @@ declare_plugin(self_ID, {
     displayName   = _(ac_name),
     shortName     = ac_name,
     fileMenuName  = _(ac_name),
-    version       = "1.1.2",
+    version       = "1.2.0",
     state         = 'installed',
     developerName = _('https://github.com/whisky-actual/Community-J-10-A'),
     info          = _("THIS MATERIAL IS NOT MADE OR SUPPORTED BY EAGLE DYNAMICS SA"),
@@ -35,10 +35,10 @@ declare_plugin(self_ID, {
     Options =
     {
         {
-            name   = _(ac_name),
-            nameId = ac_name,
-            dir    = 'Options',
-            CLSID  = '{JF-17 options}',
+            name   = _("J-10A"),
+            nameId = "J-10A",
+            dir    = "Options",
+            CLSID  = '{J-10A options}',
             --AircraftSettingsFile = 'AircraftSettings.lua'
         },
     },
