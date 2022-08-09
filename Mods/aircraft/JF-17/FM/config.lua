@@ -1,4 +1,4 @@
-JF17_FM = 
+J10A_FM = 
 {
     disable_built_in_oxygen_system = true,
     center_of_mass    = { 0.25, 0.0, 0.0},
