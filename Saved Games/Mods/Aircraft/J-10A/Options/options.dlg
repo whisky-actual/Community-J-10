@@ -1,0 +1,278 @@
+local leftMargin = 56
+local width = 850
+
+-- Skins
+
+local EditBoxSkin = {
+	["params"] = {
+		["name"] = "editBoxSkin_login",
+	}
+}
+
+local CheckBoxSkin = {
+	["params"] = {
+		["name"] = "checkBoxSkin_options",
+	}
+}
+
+local TitleSkin = {
+	["params"] = {
+		["name"] = "staticOptionsTitleSkin",
+	},
+	["states"] = {
+		["released"] = {
+			[1] = {
+				["text"] = {
+					["horzAlign"] = {
+						["type"] = "min"
+					}
+				}
+			}
+		}
+	}
+}
+
+local LabelSkin = {
+	["params"] = {
+		["name"] = "staticOptionsCaptionSkin",
+	}
+}
+
+local HelpSkin = {
+	["params"] = {
+		["name"] = "staticSkin2",
+	},
+	["states"] = {
+		["released"] = {
+			[1] = {
+				["text"] = {
+					["fontSize"] = 10,
+					["horzAlign"] = {
+						["type"] = "min"
+					}
+				}
+			}
+		}
+	}
+}
+
+local ComboListSkin = {
+	["params"] = {
+		["name"] = "comboListSkin_options",
+	}
+}
+
+-- Content
+
+dialog = {
+	["children"] = {
+			["containerPlugin"] = {
+				["children"] =  {
+
+					----------------------------------------
+					-- Title
+					----------------------------------------
+					["srsTitleLabel"] = {
+						["params"] = {
+							["enabled"] = true,
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 30,
+								["w"] = width,
+								["h"] = 24,
+							},
+							["visible"] = true,
+							["tooltip"] = "",
+							["zindex"] = 0,
+							["text"] = "JAS-39-C Community Mod",
+						},
+						["skin"] = TitleSkin,
+						["type"] = "Static",
+					},
+
+					-----------------------------------------------
+					-- JAS39GripenAG_enabled
+					-----------------------------------------------
+				
+					["JAS39GripenAG_enabledCheckbox"] = {
+						["params"] = {
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 90,
+								["w"] = width,
+								["h"] = 20,
+							},
+							["enabled"] = true,
+							["state"] = false,
+							["text"] = "JAS-39-C Air to Ground",
+							["tooltip"] = "",
+							["visible"] = true,
+							["zindex"] = 0,
+							["tabOrder"] = 0,
+						},
+						["skin"] = CheckBoxSkin,
+						["type"] = "CheckBox",
+					},
+
+					["JAS39GripenAG_enabledHelpLabel"] = {
+						["params"] = {
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 110,
+								["w"] = width,
+								["h"] = 40,
+							},
+							["enabled"] = true,
+							["text"] = "Checked this box if you don't intend to use the Air to Ground variant based on the SU25-T",
+							["tooltip"] = "",
+							["visible"] = true,
+							["zindex"] = 0,
+						},
+						["skin"] = HelpSkin,
+						["type"] = "Static",
+					},
+					-----------------------------------------------
+					-- JAS39GripenBVR_enabled
+					-----------------------------------------------
+					["JAS39GripenBVR_enabledCheckbox"] = {
+						["params"] = {
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 185,
+								["w"] = width,
+								["h"] = 20,
+							},
+							["enabled"] = true,
+							["state"] = false,
+							["text"] = "JAS-39-C Air to Air Behond Visual Range",
+							["tooltip"] = "",
+							["visible"] = true,
+							["zindex"] = 0,
+							["tabOrder"] = 0,
+						},
+						["skin"] = CheckBoxSkin,
+						["type"] = "CheckBox",
+					},
+
+					["JAS39GripenBVR_enabledLabel"] = {
+						["params"] = {
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 205,
+								["w"] = width,
+								["h"] = 90,
+							},
+							["enabled"] = true,
+							["text"] = "Checked this box if you don't intend to use the Air to Air variant based on the F15-C",
+							["tooltip"] = "",
+							["visible"] = true,
+							["zindex"] = 0,
+						},
+						["skin"] = HelpSkin,
+						["type"] = "Static",
+					},
+
+					-----------------------------------------------
+
+					-----------------------------------------------
+					-- JAS39GripenWVR_enabled
+					-----------------------------------------------
+					["JAS39GripenWVR_enabledCheckbox"] = {
+						["params"] = {
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 300,
+								["w"] = width,
+								["h"] = 20,
+							},
+							["enabled"] = true,
+							["state"] = false,
+							["text"] = "JAS-39-C Air to Air Within Visual Range",
+							["tooltip"] = "",
+							["visible"] = true,
+							["zindex"] = 0,
+							["tabOrder"] = 0,
+						},
+						["skin"] = CheckBoxSkin,
+						["type"] = "CheckBox",
+					},
+
+					["JAS39GripenWVR_enabledLabel"] = {
+						["params"] = {
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 320,
+								["w"] = width,
+								["h"] = 90,
+							},
+							["enabled"] = true,
+							["text"] = "Checked this box if you don't intend to use the Air to Air variant based on the SU-33",
+							["tooltip"] = "",
+							["visible"] = true,
+							["zindex"] = 0,
+						},
+						["skin"] = HelpSkin,
+						["type"] = "Static",
+					},
+					["WarningHelpLabe"] = {
+						["params"] = {
+							["bounds"] = {
+								["x"] = leftMargin,
+								["y"] = 45,
+								["w"] = width,
+								["h"] = 40,
+							},
+							["enabled"] = true,
+							["text"] = "**ONLY TWO AIRFRAMES CAN BE SELECTED AT THE SAME TIME**",
+							["tooltip"] = "",
+							["visible"] = true,
+							["zindex"] = 0,
+						},
+						["skin"] = HelpSkin,
+						["type"] = "Static",
+					},
+					-----------------------------------------------
+				},
+			["type"] = "Panel",
+			["skin"] = {
+				["params"] = {
+					["name"] = "panelSkin",
+				},
+			},
+			["params"] = {
+				["enabled"] = true,
+				["bounds"] = {
+					["x"] = 0,
+					["y"] = 0,
+					["w"] = 974,
+					["h"] = 600,
+				},
+				["visible"] = true,
+				["tooltip"] = "",
+				["zindex"] = 2,
+				["text"] = "",
+			},
+		},
+	},
+	["type"] = "Window",
+	["skin"] = {
+		["params"] = {
+			["name"] = "windowSkin",
+		},
+	},
+	["params"] = {
+		["bounds"] = {
+			["h"] = 851,
+			["w"] = 1135,
+			["x"] = 0,
+			["y"] = 0,
+		},
+		["draggable"] = true,
+		["enabled"] =  true,
+		["hasCursor"] =  true,
+		["lockFlow"] = false,
+		["modal"] = false,
+		["text"] = "dialog",
+		["zOrder"] = 1,
+	},
+}
