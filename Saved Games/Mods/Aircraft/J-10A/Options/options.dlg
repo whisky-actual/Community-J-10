@@ -84,17 +84,17 @@ dialog = {
 							["visible"] = true,
 							["tooltip"] = "",
 							["zindex"] = 0,
-							["text"] = "JAS-39-C Community Mod",
+							["text"] = "J-10A Community Mod",
 						},
 						["skin"] = TitleSkin,
 						["type"] = "Static",
 					},
 
 					-----------------------------------------------
-					-- JAS39GripenAG_enabled
+					-- J10A_LOAOUT_enabled
 					-----------------------------------------------
 				
-					["JAS39GripenAG_enabledCheckbox"] = {
+					["J10A_LOAOUT_enabledCheckbox"] = {
 						["params"] = {
 							["bounds"] = {
 								["x"] = leftMargin,
@@ -104,7 +104,7 @@ dialog = {
 							},
 							["enabled"] = true,
 							["state"] = false,
-							["text"] = "JAS-39-C Air to Ground",
+							["text"] = "Custom Loadout",
 							["tooltip"] = "",
 							["visible"] = true,
 							["zindex"] = 0,
@@ -114,7 +114,7 @@ dialog = {
 						["type"] = "CheckBox",
 					},
 
-					["JAS39GripenAG_enabledHelpLabel"] = {
+					["J10A_LOAOUT_enabledHelpLabel"] = {
 						["params"] = {
 							["bounds"] = {
 								["x"] = leftMargin,
@@ -123,7 +123,7 @@ dialog = {
 								["h"] = 40,
 							},
 							["enabled"] = true,
-							["text"] = "Checked this box if you don't intend to use the Air to Ground variant based on the SU25-T",
+							["text"] = "Checked this box if you want to have the J-10 Custom Loadout",
 							["tooltip"] = "",
 							["visible"] = true,
 							["zindex"] = 0,
@@ -132,9 +132,9 @@ dialog = {
 						["type"] = "Static",
 					},
 					-----------------------------------------------
-					-- JAS39GripenBVR_enabled
+					-- PL11_enabled
 					-----------------------------------------------
-					["JAS39GripenBVR_enabledCheckbox"] = {
+					["PL11_enabledCheckbox"] = {
 						["params"] = {
 							["bounds"] = {
 								["x"] = leftMargin,
@@ -144,7 +144,7 @@ dialog = {
 							},
 							["enabled"] = true,
 							["state"] = false,
-							["text"] = "JAS-39-C Air to Air Behond Visual Range",
+							["text"] = "PL11",
 							["tooltip"] = "",
 							["visible"] = true,
 							["zindex"] = 0,
@@ -163,7 +163,7 @@ dialog = {
 								["h"] = 90,
 							},
 							["enabled"] = true,
-							["text"] = "Checked this box if you don't intend to use the Air to Air variant based on the F15-C",
+							["text"] = "Checked this box if you want to use the custom PL11",
 							["tooltip"] = "",
 							["visible"] = true,
 							["zindex"] = 0,
@@ -175,9 +175,9 @@ dialog = {
 					-----------------------------------------------
 
 					-----------------------------------------------
-					-- JAS39GripenWVR_enabled
+					-- PL15_enabled
 					-----------------------------------------------
-					["JAS39GripenWVR_enabledCheckbox"] = {
+					["PL15_enabledCheckbox"] = {
 						["params"] = {
 							["bounds"] = {
 								["x"] = leftMargin,
@@ -187,7 +187,7 @@ dialog = {
 							},
 							["enabled"] = true,
 							["state"] = false,
-							["text"] = "JAS-39-C Air to Air Within Visual Range",
+							["text"] = "PL15",
 							["tooltip"] = "",
 							["visible"] = true,
 							["zindex"] = 0,
@@ -197,7 +197,7 @@ dialog = {
 						["type"] = "CheckBox",
 					},
 
-					["JAS39GripenWVR_enabledLabel"] = {
+					["PL15_enabledLabel"] = {
 						["params"] = {
 							["bounds"] = {
 								["x"] = leftMargin,
@@ -206,7 +206,7 @@ dialog = {
 								["h"] = 90,
 							},
 							["enabled"] = true,
-							["text"] = "Checked this box if you don't intend to use the Air to Air variant based on the SU-33",
+							["text"] = "Checked this box if you want to use the custom PL15",
 							["tooltip"] = "",
 							["visible"] = true,
 							["zindex"] = 0,
@@ -223,7 +223,7 @@ dialog = {
 								["h"] = 40,
 							},
 							["enabled"] = true,
-							["text"] = "**ONLY TWO AIRFRAMES CAN BE SELECTED AT THE SAME TIME**",
+							["text"] = "**ONLY SELECT THE CUSTOM LOADOUT IF YOU PLAN TO USE THE WHOLE MOD**",
 							["tooltip"] = "",
 							["visible"] = true,
 							["zindex"] = 0,

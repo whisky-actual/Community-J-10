@@ -1,8 +1,12 @@
 local DbOption  = require('Options.DbOption')
+local Range 	= DbOption.Range
+local i18n	    = require('i18n')
 local oms       = require('optionsModsScripts')
 
+local _ = i18n.ptranslate
 
 
+-- find the relative location of optionsDb.lua
 function script_path() 
     -- remember to strip off the starting @ 
 	local luafileloc = debug.getinfo(2, "S").source:sub(2)
@@ -17,13 +21,8 @@ modulelocation = lfs.currentdir().."\\"..relativeloc
 
 local tblCPLocalList = oms.getTblCPLocalList(modulelocation)
 
-
-
-
 return {
-		useit	 				= DbOption.new():setValue(true),
-		dontuseit 				= DbOption.new():setValue(false),
-		JAS39GripenAG_enabled 	= DbOption.new():setValue(true):checkbox(),
-		JAS39GripenBVR_enabled 	= DbOption.new():setValue(true):checkbox(),
-		JAS39GripenWVR_enabled 	= DbOption.new():setValue(true):checkbox(),
+		J10A_LOAOUT_enabled 	= DbOption.new():setValue(true):checkbox(),
+		PL11_enabled 			= DbOption.new():setValue(true):checkbox(),
+		PL15_enabled 			= DbOption.new():setValue(true):checkbox(),
 		}

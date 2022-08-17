@@ -5,6 +5,6 @@ missile = {}
 -- ASM 		= 83K for YJ-83K ASM, 91A for YJ-91A ASM, 83KG for YJ-83KG ASM
 missile['BVRAAM'] 	= '12'
 missile['IRAAM'] 	= '8B'
-missile['ASM'] 		= '83K'
+missile['ASM'] 		= '91A'
 
-dofile(current_mod_path .. '/Entries/Loadouts/missile_config.lua')
+dofile(current_mod_path .. '/Loadouts/missile_config.lua')
