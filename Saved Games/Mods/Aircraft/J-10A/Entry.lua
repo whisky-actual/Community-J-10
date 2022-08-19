@@ -1,4 +1,5 @@
 self_ID = "J-10A"
+J10A_LOAOUT_enabled = true
 declare_plugin(self_ID,
 {
 installed 	 = true, -- if false that will be place holder , or advertising
@@ -47,13 +48,14 @@ mount_vfs_liveries_path (current_mod_path .. "/Liveries")
 -------------------------------------------------------------------------------------
 --Options
 -------------------------------------------------------------------------------------
-if J10A_LOAOUT_enabled == true then	
-	dofile(current_mod_path..'/Payload.lua')
-	dofile(current_mod_path..'/Config.lua')
+if J10A_LOAOUT_enabled == false then	
 	dofile(current_mod_path..'/J-10A.lua')
 else
-	dofile(current_mod_path..'/J-10A.lua')
+	dofile(current_mod_path..'/Payload.lua')
+	dofile(current_mod_path..'/Config.lua')
 end
+
+
 -------------------------------------------------------------------------------------
 --J-10A lua
 -------------------------------------------------------------------------------------
