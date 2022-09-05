@@ -1,7 +1,7 @@
 
 local pl15_name  = 'PL-15'
 local pl15_mass  = 210.0
-local pl15_model = 'Su30_PL-15'
+local pl15_model = 'J-10A_PL-15'
 local pylon_mass = 90.0
 local pylon_dual_mass = 160.0
 
@@ -86,7 +86,8 @@ PL_15_AA = {
 
     controller = {
         boost_start = 0.5,
-        march_start = 12,
+        march_start = 7.8 + 17.5, --14.8
+        --march_start = 18.01,
 		
     },
 		gimbal = {
@@ -97,35 +98,63 @@ PL_15_AA = {
 			tracking_gain = 0, -- 50 --400
 			yaw_max = math.rad(360)
 		},
-
+--[[   
     boost = {
-        impulse                             = 275,
-        fuel_mass                           = 39.2,
-        work_time                           = 4.6,
+        impulse                             = 261, --270
+        fuel_mass                           = 66.10, --57.6
+        work_time                           = 10.51,
         nozzle_position                     = {{-1.74, -0.11, 0}},
         nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.025,
+        nozzle_exit_area                    = 0.02835,
         tail_width                          = 0.4,
         smoke_color                         = {1.0, 1.0, 1.0},
-        smoke_transparency                  = 0.05,
+        smoke_transparency                  = 0.5,
         custom_smoke_dissipation_factor     = 0.2,
     },
 
     march = {
-        impulse                             = 269,
-        fuel_mass                           = 60,
-        work_time                           = 23.6,
+        impulse                             = 251, -- 260
+        fuel_mass                           = 33.10, --41.4
+        work_time                           = 31.52,
       --  impulse                             = 269,
         nozzle_position                     = {{-1.74, -0.11, 0}},
         nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.025,
+        nozzle_exit_area                    = 0.02835,
         tail_width                          = 0.4,
-        smoke_color                         = {0.8, 0.8, 0.8},
-        smoke_transparency                  = 0.01,
-        custom_smoke_dissipation_factor     = 0.1,
+        smoke_color                         = {1.0, 1.0, 1.0},
+        smoke_transparency                  = 0.5,
+        custom_smoke_dissipation_factor     = 0.2,
 
+    },]]
+	
+ --69.2
+    boost = {
+        impulse                             = 261,
+        fuel_mass                           = 46.1,
+        work_time                           = 7.3,
+        nozzle_position                     = {{-1.72, -0.11, 0}},
+        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
+        nozzle_exit_area                    = 0.02535,
+        tail_width                          = 0.4,
+        smoke_color                         = {1.0, 1.0, 1.0},
+        smoke_transparency                  = 0.5,
+        custom_smoke_dissipation_factor     = 0.2,
     },
 
+    march = {
+        impulse                             = 251,
+        fuel_mass                           = 23.1,
+        work_time                           = 22.0,
+        nozzle_position                     = {{-1.72, -0.11, 0}},
+        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
+        nozzle_exit_area                    = 0.02535,
+        tail_width                          = 0.4,
+        smoke_color                         = {1.0, 1.0, 1.0},
+        smoke_transparency                  = 0.5,
+        custom_smoke_dissipation_factor     = 0.2,
+
+    },
+	
     fm = {
         mass                = pl15_mass,
        caliber				= 0.203,  
@@ -201,30 +230,25 @@ PL_15_AA = {
 	op_time = 220,
 	},
 
-
 	sensor = {
         delay                       = 1.5,
         op_time                     = 220,
-        FOV                         = math.rad(60), --40
-        max_w_LOS                   = math.rad(90), --120
-        sens_near_dist              = 5,
-        sens_far_dist               = 350000,
-        ccm_k0                      = 0.025,--0.0005
+        FOV                         = math.rad(40), --40
+        max_w_LOS                   = math.rad(80), --120
+        --sens_near_dist              = 5,
+        --sens_far_dist               = 100000,
+        ccm_k0                      = 0.005,--0.0005
         aim_sigma                   = 3,
-        height_error_k              = 7,
-        height_error_max_vel        = 7,
-        height_error_max_h          = 7,
+        height_error_k              = 20,
+        height_error_max_vel        = 50,
+        height_error_max_h          = 300,
         hoj                         = 1,
         --rad_correction              = 1,
-        active_radar_lock_dist      = 16000.0,
+        active_radar_lock_dist      = 18000.0,
         active_dist_trig_by_default = 1,
-		vel_srh_max_rng				= 16000.0,
-		--max_rcange 					= 70000.0,
-		lock_range_5sqm				= 30000.0,
-        lock_range_passive          = 275000,
-        max_range                   = 275000,
-        --doppler_bandwith            = 1000000,
-		
+		lock_range_5sqm				= 25000.0,
+		unit_gate_size				= 1880;
+		 
 	},
 
     autopilot = {
@@ -306,12 +330,20 @@ PL_15_AA = {
         21.0, -- производная дальности по скорости носителя на высоте 1км, ППС
         -23.0, -- производная дальности по скорости цели на высоте 1км, ЗПС
         -3.0, -- производная по высоте производной дальности по скорости цели, ЗПС
+		--[[
         85000.0, -- дальность ракурс 180 град (навстречу), Н=5000м, V=900км/ч, м
         34000.0, -- дальность ракурс 0(в догон) град, Н=5000м, V=900км/ч, м
         194000.0, -- дальность ракурс 0(в догон) град, Н=10000м, V=900км/ч, м
         60000.0, -- дальность ракурс 180 град (навстречу), Н=1000м, V=900км/ч, м
         60000.0, -- дальность ракурс 180 град (навстречу), Н=1000м, V=900км/ч, м
         20600.0, -- дальность ракурс 0(в догон) град, Н=1000м, V=900км/ч, м 
+		]]
+        76600.0, -- дальность ракурс 180 град (навстречу), Н=5000м, V=900км/ч, м
+        29000.0, -- дальность ракурс 0(в догон) град, Н=5000м, V=900км/ч, м
+        165000.0, -- дальность ракурс 180(навстречу) град, Н=10000м, V=900км/ч, м 69km
+        51800.0, -- дальность ракурс 0(в догон) град, Н=10000м, V=900км/ч, м
+        51800.0, -- дальность ракурс 180 град (навстречу), Н=1000м, V=900км/ч, м
+        17600.0, -- дальность ракурс 0(в догон) град, Н=1000м, V=900км/ч, м 
         4000.0,
         0.4,
         -0.015,

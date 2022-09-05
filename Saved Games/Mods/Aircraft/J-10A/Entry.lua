@@ -2,7 +2,7 @@ self_ID = "J-10A"
 J10A_LOAOUT_enabled = true
 declare_plugin(self_ID,
 {
-installed 	 = true, -- if false that will be place holder , or advertising
+installed 	 = true,
 dirName	  	 = current_mod_path,
 displayName  = _("J-10A"),
 developerName = _("J-10A Community Mod: https://github.com/whisky-actual/Community-J-10-A"),
@@ -33,8 +33,6 @@ Options =
 		},
 	},
 })
-
-
 -------------------------------------------------------------------------------------
 --Mounting 3d model paths and texture paths
 -------------------------------------------------------------------------------------
@@ -46,21 +44,10 @@ mount_vfs_texture_path  (current_mod_path .. "/Textures/WeaponsTextures")
 mount_vfs_texture_path  (current_mod_path .. "/Textures/Liveries/")
 mount_vfs_liveries_path (current_mod_path .. "/Liveries")
 -------------------------------------------------------------------------------------
---Options
--------------------------------------------------------------------------------------
-if J10A_LOAOUT_enabled == false then	
-	dofile(current_mod_path..'/J-10A.lua')
-else
-	dofile(current_mod_path..'/Payload.lua')
-	dofile(current_mod_path..'/Config.lua')
-end
-
-
--------------------------------------------------------------------------------------
 --J-10A lua
 -------------------------------------------------------------------------------------
---dofile(current_mod_path..'/Payload.lua')
---dofile(current_mod_path..'/Config.lua')
+dofile(current_mod_path..'/Payload.lua')
+dofile(current_mod_path..'/Config.lua')
 --dofile(current_mod_path..'/J-10A.lua')
 -------------------------------------------------------------------------------------
 plugin_done()

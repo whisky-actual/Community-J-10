@@ -1,6 +1,5 @@
 tail_solid  = { 1, 1, 1, 1 };
 tail_liquid = { 0.9, 0.9, 0.9, 0.05 };
-dofile(current_mod_path .. '/Entries/Loadouts/tools.lua')
 --[[ 
 		**FILES WILL BE LOADED IN J-10A Saved Games**
 -- utility
@@ -53,19 +52,3 @@ dofile(current_mod_path .. '/Entries/Loadouts/j-10a_fuel_triple.lua')
 dofile('Scripts/Database/Weapons/warheads.lua')
 dofile(current_mod_path .. '/Entries/Config.lua')
 ]]
-dofile(current_mod_path .. '/Entries/Loadouts/rkt_misc.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/mils_c701.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/mils_akd.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/mils_yj12.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/mils_kd63.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/mils_kd20.lua')
-
--- pod
-dofile(current_mod_path .. '/Entries/Loadouts/pod_dlink.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/pod_spj.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/pod_wmd7.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/pod_misc.lua')
-
--- fuel
-dofile(current_mod_path .. '/Entries/Loadouts/fuel_800.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/fuel_1100.lua')

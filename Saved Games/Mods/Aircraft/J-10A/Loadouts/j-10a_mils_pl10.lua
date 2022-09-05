@@ -3,7 +3,7 @@ dofile('Scripts/Database/Weapons/warheads.lua')
 mount_vfs_texture_path (current_mod_path .. '/Textures/Weapons J-10')
 
 pl10_name  = 'PL-10E'
-pl10_model = 'Su30_PL10E'
+pl10_model = 'J-10A_PL-10E'
 pl10_mass  = 105.0
 
 PL_10_AA = {
