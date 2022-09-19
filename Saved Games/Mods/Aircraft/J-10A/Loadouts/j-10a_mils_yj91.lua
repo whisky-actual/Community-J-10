@@ -270,7 +270,7 @@ else
     LD_10_ARM.march = {
 		
 		impulse 							= 0,
-		fuel_mass 							= 167,--55
+		fuel_mass 							= 60,--167
 		work_time 							= 0,
 		AEC 								= 1.18,
 		AFR_stoich 							= 14.9,

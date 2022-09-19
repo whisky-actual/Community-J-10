@@ -140,6 +140,7 @@ YJ_83KG_AS = {
         sens_ref_rcs                = 10000.0,
         sens_ref_dist               = 70000.0,
         --aim_sigma                   = 5.5, -- TODO
+        ship_l_error_k              = 0.33,
         
         min_detectable_rcs          = 1.0,
         max_small_target_rcs        = 29999.999,

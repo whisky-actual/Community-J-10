@@ -113,7 +113,7 @@ if use_ramjet_scheme then
     YJ_91A_ASM.march = {
 		
 		impulse 							= 0,
-		fuel_mass 							= 95,--55
+		fuel_mass 							= 60,--55
 		work_time 							= 0,
 		AEC 								= 1.38, ---1.18
 		AFR_stoich 							= 14.9,

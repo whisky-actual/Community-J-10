@@ -59,10 +59,8 @@ mech_anime["CrewLadder"] = {
 
 -----------------------------------------
 -----------------------------------------
-mount_vfs_model_path 	(current_mod_path .. "/Shapes/")
-mount_vfs_texture_path  (current_mod_path .. "/Textures/ExteriorTextures")
-mount_vfs_texture_path  (current_mod_path .. "/Textures/WeaponsTextures")
-mount_vfs_liveries_path (current_mod_path .. "/Liveries")
+mount_vfs_model_path (current_mod_path .. '/Shapes/JF-17')
+mount_vfs_texture_path (current_mod_path .. '/Textures/JF-17')
 
 local wheel_touch_comp = 0.02
 
@@ -84,10 +82,10 @@ local wheel_touch_comp = 0.02
 local WOLALIGHT_CUSTOM_NAV    = WOLALIGHT_IR_FORMATION + 1
 local WOLALIGHT_CUSTOM_ANTI   = WOLALIGHT_CUSTOM_NAV + 1
 
-J_10A = {
-    Name             = 'J-10A',
+JF_17 = {
+    Name             = 'JF-17',
     DisplayName      = _('J-10A'),
-    Picture          = 'J-10A.png',
+    Picture          = 'JF-17.png',
     Rate             = 50, -- RewardPoint in Multiplayer
     Shape            = 'J-10A',
     shape_table_data = {
@@ -97,7 +95,7 @@ J_10A = {
             vis         = 3, -- visibility gain.
             desrt       = 'JF-17-oblomok', -- Name of destroyed object file name
             fire        = {300, 2}, -- Fire on the ground after destoyed: 300sec 2m
-            username    = 'J-10A',
+            username    = 'JF-17',
             index       = WSTYPE_PLACEHOLDER,
             classname   = "lLandPlane",
             positioning = "BYNORMAL",
@@ -208,13 +206,14 @@ J_10A = {
     bank_angle_max             = 90,      -- Max bank angle (for AI)
     has_afteburner             = true,    -- AFB yes/no
     has_speedbrake             = true,    -- Speedbrake yes/no
+
     -----------------------------------------------------------------------
     ----------------- SUSPENSION CODE BEGINS
     -----------------------------------------------------------------------
     tand_gear_max                            = 0.57, --2.1445, -- tangent on maximum yaw angle of front wheel, 65 degrees tan(64deg)
-    
+
 	--nose_gear_pos                            = {3.752,	-1.9+wheel_touch_comp, 0.0},    -- nosegear coord==前轮
-    nose_gear_pos                            = {4.074,   -1.95, -0.000},    -- nosegear coord==前轮
+	nose_gear_pos                            = {4.074,   -1.95, -0.000},    -- nosegear coord==前轮
     nose_gear_wheel_diameter                 = 0.754,            -- in m
     nose_gear_amortizer_direct_stroke        = 0,              -- down from nose_gear_pos !!!
     nose_gear_amortizer_reversal_stroke      = -0.150293,                -- up
@@ -236,13 +235,11 @@ J_10A = {
 
     tanker_type               = 4,        -- Tanker type if the plane is airrefuel capable (same type as F-14, aka drogue basket)
     is_tanker                 = false,    -- Tanker yes/no
-    --air_refuel_receptacle_pos = {5.561657, 0.769126, 1.084903}, -- refuel coords
-    air_refuel_receptacle_pos = {7.19,	1.145,	0.957}, -- refuel coords
+    air_refuel_receptacle_pos = {5.561657, 0.769126, 1.084903}, -- refuel coords
 
-    --wing_tip_pos              = {-2.9, -0.08, 4.48}, -- wingtip coords for visual effects
     wing_tip_pos              = {-4.132,	-0.307,	 4.859}, -- wingtip coords for visual effects
-    wing_area                 = 37,        -- JF-17 wing area in m2
-    wing_span                 = 9.8,        -- JF-17 wing spain in m,
+    wing_area                 = 24.4,        -- JF-17 wing area in m2
+    wing_span                 = 8.5,        -- JF-17 wing spain in m,
     wing_type                 = 0,        -- Fixed wing
     flaps_maneuver            = 1.0,        -- Max flaps in take-off and maneuver (0.5 = 1st stage, 1.0 = 2nd stage) (for AI)
 
@@ -364,6 +361,7 @@ J_10A = {
 		preferred_flare_kind = 2,
 	},
 
+
     chaff_flare_dispenser = {
         [1] = { dir = {0, -1.0, 0.1}, pos = {-3.703, -0.302, 0.639}, }, -- Flares L
         [2] = { dir = {0, -1.0, -0.1}, pos = {-3.703, -0.302, -0.639}, }, -- Flares R
@@ -391,8 +389,7 @@ J_10A = {
             count = 250
         },
         {
-			muzzle_pos = { 2.901,	-0.583,	-0.371},
-            --muzzle_pos_connector   = "GUN_POINT",
+			muzzle_pos = { 2.901,	-0.883,	-0.371},
             supply_position        = {2.6, -0.4, 0.0},
             drop_cartridge         = 204,
             ejector_pos_connector  = "GUN_EJECTOR_01",
@@ -776,49 +773,54 @@ J_10A = {
         aircraft_task(RunwayAttack), -- 34
     },
 
+    Tasks = {
+        aircraft_task(Intercept), -- 10
+        aircraft_task(CAP), -- 11
+        --aircraft_task(Nothing), -- 15
+        aircraft_task(AFAC), -- 16
+        aircraft_task(Reconnaissance), -- 17
+        aircraft_task(Escort), -- 18
+        aircraft_task(FighterSweep), -- 19
+        aircraft_task(SEAD), -- 29
+        aircraft_task(AntishipStrike), -- 30
+        aircraft_task(CAS), -- 31
+        aircraft_task(GroundAttack), -- 32
+        aircraft_task(PinpointStrike), -- 33
+        aircraft_task(RunwayAttack), -- 34
+    },
+
     DefaultTask = aircraft_task(CAP),
 
     SFM_Data = {
         aerodynamics = { -- Cx = Cx_0 + Cy^2*B2 +Cy^4*B4
             Cy0        = 0,      -- zero AoA lift coefficient
-            Mzalfa     = 5.5,  -- coefficients for pitch agility
+            Mzalfa     = 4.54,  -- coefficients for pitch agility
             Mzalfadt   = 0.8,    -- coefficients for pitch agility
-            kjx        = 4.20,
+            kjx        = 2.75,
             kjz        = 0.00125,
             Czbe       = -0.016, -- coefficient, along Z axis (perpendicular), affects yaw, negative value means force orientation in FC coordinate system
-            cx_gear    = 0.08,    -- coefficient, drag, gear
+            cx_gear    = 0.03,    -- coefficient, drag, gear
             cx_flap    = 0.05,   -- coefficient, drag, full flaps
-            cy_flap    = 0.56,    -- coefficient, normal force, lift, flaps
-            cx_brk     = 0.12,   -- coefficient, drag, breaks
+            cy_flap    = 0.47,    -- coefficient, normal force, lift, flaps
+            cx_brk     = 0.08,   -- coefficient, drag, breaks
             table_data = {
                 --          M       Cx0      Cya    B      B4  Omxmax  Aldop   Cymax
-					{ 0.000,	 0.0165,	0.065,	0.0310*3.3,		 0.19*0.16,	 0.68,	 25.000,	 1.907 },
-					{ 0.050, 	 0.0165, 	0.063, 	0.0310*3.3, 	 0.19*0.17,	 0.95, 	 25.000, 	 1.907}, 
-					{ 0.100, 	 0.0165, 	0.058, 	0.0310*3.3, 	 0.19*0.18,	 1.20, 	 25.000, 	 1.907 },
-					{ 0.200,	 0.0165,	0.057,	0.0295*3.3,		 0.19*0.19,	 2.15,	 25.000,	 1.907 },
-					{ 0.300,	 0.0165,	0.056,	0.0295*3.3,		 0.19*0.20,	 2.80,	 25.000,	 1.715 },
-					{ 0.400,	 0.0181,	0.055,	0.0280*3.3,		 0.15*0.20,	 3.70, 	 25.000,	 1.524},
-					{ 0.500,	 0.0181,	0.055,	0.0250*3.3,		 0.11*0.20,	 4.45, 	 25.000,	 1.524 },
-					{ 0.600,	 0.0181,	0.055,	0.0250*3.3,		 0.11*0.20,	 4.55,	 25.000,	 1.426 },
-					{ 0.700,	 0.0198,	0.055,	0.0290*3.3,		 0.11*0.20,	 4.55,	 25.000,	 1.377 },
-					{ 0.800,	 0.0214,	0.055,	0.0318*3.3,		 0.13*0.20,	 4.50,	 25.000,	 1.410},
-					{ 0.850,	 0.0214,	0.055,	0.0348*3.3,		 0.16*0.20,	 4.47,	 25.000,	 1.508 },
-					{ 0.900,	 0.0231,	0.055,	0.0370*3.3,		 0.16*0.20,	 4.45,	 25.000,	 1.605 },
-																							
-					{ 1.000,	 0.0247,	0.053,	0.0400*3.3, 	 0.16*0.20,	 4.10, 	 25.000,	 1.931 },
-					{ 1.050,	 0.0264,	0.052,	0.0428*3.3,		 0.16*0.20,	 4.07,	 25.000,	 1.931 },
-					{ 1.100,	 0.0264,	0.050, 	0.0459*3.3, 	 0.16*0.20,	 4.05,	 25.000,	 1.931 },
-					{ 1.200,	 0.0272,	0.049, 	0.0500*3.3, 	 0.15*0.20,	 4.00, 	 25.000,	 1.630 },
-					{ 1.300,	 0.0280,	0.049, 	0.0529*3.3, 	 0.15*0.20,	 3.97,	 25.000,	 1.630 },
-					{ 1.500,	 0.0297,	0.049, 	0.0569*3.3, 	 0.14*0.20,	 3.84,	 25.000,	 1.630 },
-					{ 1.700,	 0.0330,	0.048, 	0.0600*3.3, 	 0.13*0.20,	 3.76,	 25.000,	 1.304 },
-					{ 1.850,	 0.0346,	0.048, 	0.0629*3.3, 	 0.12*0.20,	 3.69,	 25.000,	 1.141 },
-					{ 2.000,	 0.0384,	0.048, 	0.0659*3.3, 	 0.12*0.20,	 3.56,	 25.000,	 0.978 },
-					{ 2.200,	 0.0390,	0.048, 	0.0689*3.3, 	 0.12*0.20,	 3.45,	 25.000,	 0.978 }, 
-																								
-					{ 2.400,	 0.3300,	0.090, 	1.149*3.3, 		 1.69*0.20,	 0.70,	 25.000,	 0.400 },
-					{ 2.500,	 0.6900,	0.040, 	1.35*3.3,		 1.10*0.20,	 0.70,	 25.000,	 0.400 },
-					{ 3.900,	 0.6900,	0.040, 	1.35*3.3,		6.380*0.20,	 0.70,	 25.000, 	 0.400 },
+                [1]  = { 0.000, 0.025, 0.070, 0.132, 0.032, 0.48, 27.000, 1.6 },
+                [2]  = { 0.200, 0.025, 0.070, 0.132, 0.032, 1.47, 26.500, 1.6 },
+                [3]  = { 0.400, 0.025, 0.071, 0.133, 0.032, 2.4, 25.500, 1.5 },
+                [4]  = { 0.600, 0.025, 0.073, 0.133, 0.043, 3.5, 25.000, 1.4 },
+                [5]  = { 0.700, 0.025, 0.076, 0.134, 0.045, 3.5, 24.000, 1.3 },
+                [6]  = { 0.800, 0.025, 0.079, 0.137, 0.052, 3.5, 23.000, 1.2 },
+                [7]  = { 0.900, 0.032, 0.083, 0.143, 0.058, 3.5, 22.000, 1.15 },
+                [8]  = { 1.000, 0.0425, 0.086, 0.18, 0.10, 3.5, 21.250, 1.12 },
+                [9]  = { 1.050, 0.056, 0.0875, 0.1975, 0.095, 3.5, 19.375, 1.1 },
+                [10] = { 1.100, 0.055, 0.087, 0.215, 0.09, 3.15, 17.500, 1.05 },
+                [11] = { 1.200, 0.055, 0.086, 0.228, 0.12, 2.45, 15.625, 1.00 },
+                [12] = { 1.300, 0.054, 0.08, 0.237, 0.17, 1.979, 13.750, 0.912 },
+                [13] = { 1.500, 0.0525, 0.067, 0.25, 0.20, 1.609, 10.000, 0.740 },
+                [14] = { 1.650, 0.052, 0.06, 0.24, 2.50, 1.469, 10.000, 0.700 },
+                [15] = { 1.850, 0.051, 0.05, 0.23, 2.98, 1.401, 10.000, 0.600 },
+                [16] = { 2.000, 0.05, 0.03, 0.22, 3.20, 1.269, 10.000, 0.500 },
             }, -- end of table_data
             -- M    - Mach number
             -- Cx0    - Coefficient, drag, profile, of the airplane
@@ -831,12 +833,12 @@ J_10A = {
         }, -- end of aerodynamics
 
         engine = {
-            Nmg        = 67.5,    -- RPM at idle
+            Nmg        = 70.5,    -- RPM at idle
             MinRUD     = 0,    -- Min state of the throttle
             MaxRUD     = 1,    -- Max state of the throttle
             MaksRUD    = 0.85,    -- Military power state of the throttle
             ForsRUD    = 0.91,    -- Afterburner state of the throttle
-            typeng     = 4,
+            typeng     = 1,
                 --[[
                     E_TURBOJET = 0
                     E_TURBOJET_AB = 1
@@ -845,31 +847,36 @@ J_10A = {
                     E_TURBOFAN    = 4
                     E_TURBOSHAFT = 5
                 --]]
-            hMaxEng    = 19,        -- Max altitude for safe engine operation in km
-            dcx_eng    = 0.0144,    -- Engine drag coeficient
+            hMaxEng    = 17,        -- Max altitude for safe engine operation in km
+            dcx_eng    = 0.0124,    -- Engine drag coeficient
             cemax      = 1.24,      -- not used for fuel calulation , only for AI routines to check flight time ( fuel calculation algorithm is built in )
             cefor      = 2.56,      -- not used for fuel calulation , only for AI routines to check flight time ( fuel calculation algorithm is built in )
-            dpdh_m     = 6200,      --  altitude coefficient for max thrust
-            dpdh_f     = 9500,      --  altitude coefficient for AB thrust
+            dpdh_m     = 2000,      --  altitude coefficient for max thrust
+            dpdh_f     = 4200,      --  altitude coefficient for AB thrust
             table_data = {
             --            M     Pmax     Pfor
-				[1] =	{0,		50020,	70362.3  * 1.00}, -- 1.05
-				[2] =	{0.2,	48071,	71360.3  * 1.00},-- 1.05
-				[3] =	{0.4,	48071,	74853.5  * 1.00},-- 1.13
-				[4] =	{0.6,	55217,	82338.8  * 1.00},-- 1.19
-				[5] =	{0.7,	55217,	94194.3	 * 1.05},-- 1.37
-				[6] =	{0.8,	58465,	101989.7 * 1.13},-- 1.32
-				[7] =	{0.9,	61063,	107836.3 * 1.23},-- 1.34
-				[8] =	{1,		64961,	110434.7 * 1.31},-- 1.35
-				[9] =	{1.096,	62363,	111084.3 * 1.37},-- 1.50
-				[10] =	{1.2,	55866,	111084.3 * 1.38},-- 1.54
-				[11] =	{1.3,	44173,	112383.6 * 1.39},-- 1.56
-				[12] =	{1.4,	35728,	114332.4 * 1.40},-- 1.50
-				[13] =	{1.6,	36378,	114332.4 * 1.43},-- 1.45
-				[14] =	{1.8,	36378,	119529.4 * 1.47},-- 1.54
-				[15] =	{2.2,	33780,	112383.6 * 1.50},-- 1.70
-				[16] =	{2.35,	27933,	101989.7 * 1.49},-- 1.70
-				[17] =	{3.9,	16240,	78367.3 * 1.46},
+                [1]  =  { 0.00, 44453 * 0.87,  75008 * 0.87 },
+                [2]  =  { 0.20, 43262 * 0.93,  74957 * 0.93 },
+                [3]  =  { 0.30, 44896 * 0.94,  75608 * 0.94 },
+                [4]  =  { 0.40, 45535 * 0.95,  80328 * 0.95 },
+                [5]  =  { 0.50, 47803 * 0.96,  82429 * 0.96 },
+                [6]  =  { 0.60, 49979 * 0.97,  85230 * 0.97 },
+                [7]  =  { 0.70, 51133 * 0.98,  88896 * 0.98 },
+                [8]  =  { 0.80, 52093 * 0.99,  97547 * 0.99 },
+                [9]  =  { 0.90, 49117, 104027 },
+                [10] =  { 1.00, 44651, 110000 },
+                [11] =  { 1.05, 42569, 112500 },
+                [12] =  { 1.10, 40486, 115021 },
+                [13] =  { 1.15, 38698, 117576 },
+                [14] =  { 1.20, 36910, 120103 },
+                [15] =  { 1.30, 33933, 121449 },
+                [16] =  { 1.40, 32150, 120915 },
+                [17] =  { 1.50, 30362, 113733 },
+                [18] =  { 1.60, 28579, 111436 },
+                [19] =  { 1.70, 26791,  97549 },
+                [20] =  { 1.85, 25003,  77117 },
+                [21] =  { 1.90, 23220,  63387 },
+                [22] =  { 3.50, 19649,  31279 },
             }, -- end of table_data
             -- M    - Mach number
             -- Pmax    - Engine thrust at military power
@@ -2059,4 +2066,4 @@ J_10A = {
     }, -- end lights_data
 }
 
-add_aircraft(J_10A)
+add_aircraft(JF_17)

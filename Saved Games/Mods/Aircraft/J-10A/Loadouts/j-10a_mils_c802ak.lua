@@ -1,7 +1,9 @@
 
-local c802ak_name = 'C-802AK'
-local c802ak_mass = 715
-local pylon_mass  = 50.0
+local c802ak_name  = 'C-802AK'
+local c802ak_disp  = 'C802AK'
+local c802ak_model = 'c802ak'
+local c802ak_mass  = 715
+local pylon_mass   = 50.0
 
 local C802AK_warhead =
 {
@@ -20,8 +22,8 @@ local C802AK_warhead =
 C_802AK_AS = {
     category       = CAT_MISSILES,
     name           = c802ak_name,
-    user_name      = _(c802ak_name),
-    model          = 'c802ak',
+    user_name      = _(c802ak_disp),
+    model          = c802ak_model,
     mass           = c802ak_mass,
     wsTypeOfWeapon = {wsType_Weapon,wsType_Missile,wsType_AS_Missile,WSTYPE_PLACEHOLDER},
 
@@ -91,7 +93,7 @@ C_802AK_AS = {
     shape_table_data = {
         {
             name     = c802ak_name,
-            file     = 'c802ak',
+            file     = c802ak_model,
             life     = 0.6,
             fire     = {0, 1},
             username = c802ak_name,
@@ -139,6 +141,7 @@ C_802AK_AS = {
         add_y                       = 3.0,
         sens_ref_rcs                = 10000.0,
         sens_ref_dist               = 32000.0,
+        ship_l_error_k              = 0.33,
         
         min_detectable_rcs          = 1.0,
         max_small_target_rcs        = 29999.999,
@@ -292,6 +295,7 @@ C_802AK_AS = {
         speed_delta      = 5,
         --burst_signal     = 9999, -- used in 'anti_ship_missile_tb' scheme
     },
+
 }
 
 declare_weapon(C_802AK_AS)

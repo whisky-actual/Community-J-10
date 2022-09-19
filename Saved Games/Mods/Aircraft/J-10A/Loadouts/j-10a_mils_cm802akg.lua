@@ -2,6 +2,7 @@
 local cm802akg_use_scheme = 0
 
 local cm802akg_name  = 'CM-802AKG'
+local cm802akg_disp  = 'CM802AKG'
 local cm802akg_model = 'cm802akg'
 local cm802akg_mass  = 715
 local pylon_mass     = 50.0
@@ -25,7 +26,7 @@ CM_802AKG_AS = {
     category        = CAT_MISSILES,
     name            = cm802akg_name,
     model           = cm802akg_model,
-    user_name       = _(cm802akg_name),
+    user_name       = _(cm802akg_disp),
     mass            = cm802akg_mass,
     wsTypeOfWeapon  = {wsType_Weapon,wsType_Missile,wsType_AS_Missile,WSTYPE_PLACEHOLDER},
     add_attributes  = {"Cruise missiles"},

@@ -1,7 +1,7 @@
 
 local pl15_name  = 'PL-15'
 local pl15_mass  = 210.0
-local pl15_model = 'J-10A_PL-15'
+local pl15_model = 'Su30_PL-15'
 local pylon_mass = 90.0
 local pylon_dual_mass = 160.0
 
@@ -86,8 +86,10 @@ PL_15_AA = {
 
     controller = {
         boost_start = 0.5,
-        march_start = 7.8 + 17.5, --14.8
-        --march_start = 18.01,
+        --march_start = 7.8 + 17.3, --14.8
+        --march_start = 7.8, 
+        march_start = 7.3 + 14.3, 
+       -- march_start = 7.3, 
 		
     },
 		gimbal = {
@@ -98,43 +100,16 @@ PL_15_AA = {
 			tracking_gain = 0, -- 50 --400
 			yaw_max = math.rad(360)
 		},
---[[   
-    boost = {
-        impulse                             = 261, --270
-        fuel_mass                           = 66.10, --57.6
-        work_time                           = 10.51,
-        nozzle_position                     = {{-1.74, -0.11, 0}},
-        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.02835,
-        tail_width                          = 0.4,
-        smoke_color                         = {1.0, 1.0, 1.0},
-        smoke_transparency                  = 0.5,
-        custom_smoke_dissipation_factor     = 0.2,
-    },
-
-    march = {
-        impulse                             = 251, -- 260
-        fuel_mass                           = 33.10, --41.4
-        work_time                           = 31.52,
-      --  impulse                             = 269,
-        nozzle_position                     = {{-1.74, -0.11, 0}},
-        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.02835,
-        tail_width                          = 0.4,
-        smoke_color                         = {1.0, 1.0, 1.0},
-        smoke_transparency                  = 0.5,
-        custom_smoke_dissipation_factor     = 0.2,
-
-    },]]
 	
  --69.2
+ --[[
     boost = {
         impulse                             = 261,
         fuel_mass                           = 46.1,
         work_time                           = 7.3,
         nozzle_position                     = {{-1.72, -0.11, 0}},
         nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.02535,
+        nozzle_exit_area                    = 0.01535,
         tail_width                          = 0.4,
         smoke_color                         = {1.0, 1.0, 1.0},
         smoke_transparency                  = 0.5,
@@ -147,7 +122,34 @@ PL_15_AA = {
         work_time                           = 22.0,
         nozzle_position                     = {{-1.72, -0.11, 0}},
         nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.02535,
+        nozzle_exit_area                    = 0.01535,
+        tail_width                          = 0.4,
+        smoke_color                         = {1.0, 1.0, 1.0},
+        smoke_transparency                  = 0.5,
+        custom_smoke_dissipation_factor     = 0.2,
+
+    },
+	]]
+    boost = {
+        impulse                             = 242,
+        fuel_mass                           = 46.3+27.4,
+        work_time                           = 6.8 + 2.9,
+        nozzle_position                     = {{-1.72, -0.11, 0}},
+        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
+        nozzle_exit_area                    = 0.01535,
+        tail_width                          = 0.4,
+        smoke_color                         = {1.0, 1.0, 1.0},
+        smoke_transparency                  = 0.5,
+        custom_smoke_dissipation_factor     = 0.2,
+    },
+
+    march = {
+        impulse                             = 236,
+        fuel_mass                           = 22.9+9.6, --22.9
+        work_time                           = 20.4+8.6, --20.4
+        nozzle_position                     = {{-1.72, -0.11, 0}},
+        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
+        nozzle_exit_area                    = 0.01535,
         tail_width                          = 0.4,
         smoke_color                         = {1.0, 1.0, 1.0},
         smoke_transparency                  = 0.5,
@@ -177,7 +179,8 @@ PL_15_AA = {
 		table_scale	= 0.2,
 		table_degree_values = 1,
 	--	Mach	  | 0.0		0.2		0.4		0.6		0.8		1.0		1.2		1.4		1.6		1.8		2.0		2.2		2.4		2.6		2.8		3.0		3.2		3.4		3.6		3.8		4.0	 	4.2		4.4		4.6		4.8		5.0 |
-		Cx0 	= {	0.429,	0.429,	0.429,	0.429,	0.439,	0.67,	0.82,	0.8164,	0.7729,	0.7263,	0.6838,	0.6471,	0.6135,	0.5829,	0.555,	0.5293,	0.5056,	0.4835,	0.4629,	0.4434,	0.4231,	0.4074,	0.3907,	0.3750,	0.360,	0.346  },
+		--Cx0 	= {	0.429,	0.429,	0.429,	0.429,	0.439,	0.67,	0.82,	0.8164,	0.7729,	0.7263,	0.6838,	0.6471,	0.6135,	0.5829,	0.555,	0.5293,	0.5056,	0.4835,	0.4629,	0.4434,	0.4231,	0.4074,	0.3907,	0.3750,	0.360,	0.346  },
+		Cx0 	= {	0.468,	0.468,	0.468,	0.468,	0.479,	0.751,	0.88,	0.8572,	0.8132,	0.7645,	0.7205,	0.6808,	0.6447,	0.6119,	0.582,	0.5545,	0.5292,	0.5057,	0.4838,	0.4633,	0.4439,	0.4256,	0.4083,	0.3921,	0.377,	0.364  },
 		CxB 	= {	0.021,	0.021,	0.021,	0.021,	0.021,	0.138,	0.153,	0.146,	0.1382,	0.1272,	0.1167,	0.1073,	0.0987,	0.0909,	0.0837,	0.077,	0.0708,	0.065,	0.0595,	0.0544,	0.0495,	0.0449,	0.0406,	0.0364,	0.0324,	0.0286 },
 		K1		= { 0.0025,	0.0025,	0.0025,	0.0025,	0.0025,	0.0024,	0.002,	 0.00172, 0.00151, 0.00135,0.00123, 0.00114, 0.00106, 0.00099,0.00094, 0.00088, 0.00084, 0.00079, 0.00074, 0.0007, 0.00066, 0.00062, 0.00058, 0.00055,0.00052, 0.0005  },
 		K2		= {-0.0024,-0.0024,-0.0024,-0.0024,-0.0024,-0.0024,-0.00206,-0.00186,-0.00168,-0.0015,-0.00134,-0.00118,-0.00104,-0.0009,-0.00078,-0.00066,-0.00056,-0.00046,-0.00038,-0.0003,-0.00024,-0.00018,-0.00014,-0.0001,-0.00008,-0.00006 },
@@ -220,10 +223,10 @@ PL_15_AA = {
 	WCSE = {
 	uplink_delay = 0.5,--0.5
 	update_period = 0.5, --0.5
-	delta_pos_max = 2532, --512
-	delta_vel_max = 1266, --256
+	--delta_pos_max = 2532, --512
+	--delta_vel_max = 1266, --256
 	ecm_burn_thru_rng = 35000,
-	quant_steps  = 240, --240
+	quant_steps  = 440, --240
 	},
 	
 	INS = {
