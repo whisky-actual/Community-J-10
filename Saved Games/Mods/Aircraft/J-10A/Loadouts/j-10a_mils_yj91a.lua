@@ -184,11 +184,11 @@ if use_ramjet_scheme then
 
     YJ_91A_ASM.autopilot = {
 	
-        glide_height                = 15.0,
+        glide_height                = 7.0,
         dont_climb_on_cruise_height = 0,
         vel_proj_div                = 6.0, --22
         default_glide_height        = 15,
-        pre_maneuver_glide_height   = 15,
+        pre_maneuver_glide_height   = 7,
         skim_glide_height           = 7,
         use_start_bar_height        = 1,    
         altim_vel_k                 = 4,     --5

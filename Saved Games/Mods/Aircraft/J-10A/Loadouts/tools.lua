@@ -4,6 +4,8 @@ tail_solid  = { 1.0, 1.0, 1.0, 1.0 };
 tail_solid1 = { 1.0, 1.0, 1.0, 0.8 };
 tail_liquid = { 0.9, 0.9, 0.9, 0.05 };
 
+eject_speed = 1.2
+
 function RocketPod(shape, element, count, pattern)
     local ret = {{ShapeName = shape, IsAdapter = true}}
 

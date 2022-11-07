@@ -98,6 +98,7 @@ FAB_250_DUAL_L = {
     },
     wsTypeOfWeapon = {4, 5, 9, 6},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(FAB_250_DUAL_L)
 
@@ -157,6 +158,7 @@ FAB_500_DUAL_L = {
     },
     wsTypeOfWeapon = {4, 5, 9, 7},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(FAB_500_DUAL_L)
 
@@ -218,6 +220,7 @@ RBK_250_PTAB25M_DUAL_L = {
     },
     wsTypeOfWeapon = {4, 5, 38, 18},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(RBK_250_PTAB25M_DUAL_L)
 
@@ -282,6 +285,7 @@ RBK_500_PTAB105_DUAL_L = {
     },
     wsTypeOfWeapon = {4, 5, 38, 20},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(RBK_500_PTAB105_DUAL_L)
 
@@ -325,6 +329,7 @@ JF17_MK_20 = {
         },
     }, -- end of Elements
     attribute = {4, 5, 38, 45},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_MK_20)
 
@@ -407,6 +412,7 @@ JF17_GBU_10 = {
     },
     attribute = {4, 5, 36, 36},
     Required  = {"DIS_WMD7"},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_GBU_10)
 
@@ -433,6 +439,7 @@ JF17_GBU_16 = {
     },
     attribute = {4, 5, 36, 39},
     Required  = {"DIS_WMD7"},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_GBU_16)
 
@@ -459,6 +466,7 @@ JF17_GBU_12 = {
     },
     attribute = {4, 5, 36, 38},
     Required  = {"DIS_WMD7"},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_GBU_12)
 
@@ -484,6 +492,7 @@ JF17_MK_82_DUAL_L = {
 
     wsTypeOfWeapon = {4, 5, 9, 31},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_MK_82_DUAL_L)
 
@@ -517,6 +526,7 @@ JF17_MK_82S_DUAL_L = {
 
     wsTypeOfWeapon = {4, 5, 9, 79},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_MK_82S_DUAL_L)
 
@@ -551,6 +561,7 @@ JF17_MK_20_DUAL_L = {
 
     wsTypeOfWeapon = {4, 5, 38, 45},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_MK_20_DUAL_L)
 
@@ -586,6 +597,7 @@ JF17_GBU_12_DUAL_L = {
     wsTypeOfWeapon = {4, 5, 36, 38},
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
     Required       = {"DIS_WMD7"},
+    ejectImpulse   = 140,
 }
 declare_loadout(JF17_GBU_12_DUAL_L)
 
@@ -671,6 +683,7 @@ declare_loadout(
             ShapeName = bomb_250_2_model,
         }, 
     },
+    ejectImpulse   = 140,
 }
 )
 
@@ -687,6 +700,7 @@ H6_250_2_N12 = {
 
     wsTypeOfWeapon = BOMB_250_2.wsTypeOfWeapon,
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(H6_250_2_N12)
 
@@ -703,6 +717,7 @@ H6_250_2_N24 = {
 
     wsTypeOfWeapon = BOMB_250_2.wsTypeOfWeapon,
     attribute      = {4, 5, 32, WSTYPE_PLACEHOLDER},
+    ejectImpulse   = 140,
 }
 declare_loadout(H6_250_2_N24)
 

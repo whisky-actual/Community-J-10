@@ -99,7 +99,7 @@ if use_agm88_scheme_sead then
 
     LD_10_ARM.controller = {
         boost_start = 0.0,
-        march_start = 1.0,
+        march_start = 6.5,
     }
 
     LD_10_ARM.boost = {

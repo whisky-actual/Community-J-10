@@ -457,6 +457,11 @@ J_10A = {
 
 			-- Guide Bombs
                 { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
+                { CLSID = "DIS_LS_6_250", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_250_DUAL_L", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100_DUAL_L", arg_value = 1.0, Type = 1 },
+				
                 { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 },  
                 { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, 
                 { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, 
@@ -502,7 +507,17 @@ J_10A = {
             },
             {
 				-- Guided Bombs
+				
+                { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
+                { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
+                { CLSID = 'DIS_KD-88_AI', arg_value = 1.0, Type = 1 },
+				
                 { CLSID = "DIS_LS_6_500", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_250", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_250_DUAL_L", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100_DUAL_L", arg_value = 1.0, Type = 1 },
+				
                 { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
@@ -606,10 +621,16 @@ J_10A = {
             },
             {
 				-- Guided Bombs
+				
+                { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
+                { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
+                { CLSID = 'DIS_KD-88_AI', arg_value = 1.0, Type = 1 },
+				
                 { CLSID = "DIS_LS_6_500", arg_value = 1.0, Type = 1 },
-                { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 },  --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
+                { CLSID = "DIS_LS_6_250", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_250_DUAL_R", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100_DUAL_R", arg_value = 1.0, Type = 1 },
 				
                 { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
                 { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
@@ -672,6 +693,12 @@ J_10A = {
 
 				-- Guided Bombs
                 { CLSID = "DIS_LS_6_500", arg_value = 0.5, Type = 1 },
+                { CLSID = "DIS_LS_6_250", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_250_DUAL_R", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100_DUAL_R", arg_value = 1.0, Type = 1 },
+				
+				
                 { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 },  --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}

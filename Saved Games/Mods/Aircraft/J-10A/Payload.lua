@@ -1,5 +1,6 @@
 tail_solid  = { 1, 1, 1, 1 };
 tail_liquid = { 0.9, 0.9, 0.9, 0.05 };
+eject_speed = 1.2
 
 -- utility
 dofile(current_mod_path .. '/Loadouts/tools.lua')
@@ -14,7 +15,7 @@ dofile(current_mod_path .. '/Loadouts/j-10a_bomb_250WCMD.lua')
 -- jsow
 dofile(current_mod_path .. '/Loadouts/j-10a_jsow_ls6.lua')
 dofile(current_mod_path .. '/Loadouts/j-10a_jsow_gb6.lua')
-dofile(current_mod_path .. '/Loadouts/j-10a_mils_gb6a.lua')
+--dofile(current_mod_path .. '/Loadouts/j-10a_mils_gb6a.lua')
 
 -- rock
 dofile(current_mod_path .. '/Loadouts/j-10a_rkt_brm1.lua')
@@ -35,6 +36,8 @@ dofile(current_mod_path .. '/Loadouts/j-10a_mils_pl15.lua')
 --dofile(current_mod_path .. '/Loadouts/j-10a_mils_akd.lua')
 --dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj12.lua')
 dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj91.lua')
+dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj91a.lua')
+dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj83kg.lua')
 --dofile(current_mod_path .. '/Loadouts/j-10a_mils_kd63.lua')
 --dofile(current_mod_path .. '/Loadouts/j-10a_mils_kd20.lua')
 
@@ -48,6 +51,9 @@ dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj91.lua')
 --dofile(current_mod_path .. '/Loadouts/j-10a_fuel_800.lua')
 --dofile(current_mod_path .. '/Loadouts/j-10a_fuel_1100.lua')
 dofile(current_mod_path .. '/Loadouts/j-10a_fuel_triple.lua')
+
+-- jdam
+dofile(current_mod_path .. '/Loadouts/j-10a_jdam_ls6.lua')
 
 --Other
 dofile('Scripts/Database/Weapons/warheads.lua')

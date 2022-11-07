@@ -169,7 +169,7 @@ GB6 =
     
     simple_seeker = {
         sensitivity = 0,
-        delay       = 0.0,
+        delay       = 2.5,
         FOV         = 0.6,
         maxW        = 500,
         opTime      = 9999,
@@ -216,7 +216,7 @@ GB6 =
     },
     
     autopilot = {
-        delay                       = 2,
+        delay                       = 2.5,
         K                           = 500,
         Ki                          = 0.00005,
         Kg                          = 10,
@@ -309,16 +309,17 @@ GB6 =
 declare_weapon(GB6)
 
 declare_loadout({
-    category        = CAT_MISSILES,
+    category        = CAT_BOMBS,
     CLSID           = 'DIS_GB6',
     attribute       = GB6.wsTypeOfWeapon,
     Count           = 1,
     Cx_pil          = 0.0024,
     Picture         = "gb6.png",
-    displayName     = _(gb6_name .. ' CBU Glide-Bomb'),
+    displayName     = _(gb6_name),
     Weight          = GB6.mass + pylon_mass,
     Elements        = {{ShapeName = "gb6"}},
-    ejectImpulse    = 140,
+    ejectImpulse    = eject_speed * GB6.mass,
+    ejectDirection  = {0, -1, 0},
 })
 
 
@@ -463,7 +464,7 @@ GB6_TSP =
     
     simple_seeker = {
         sensitivity = 0,
-        delay       = 0.0,
+        delay       = 2.5,
         FOV         = 0.6,
         maxW        = 500,
         opTime      = 9999,
@@ -515,7 +516,7 @@ GB6_TSP =
     },
     
     autopilot = {
-        delay                       = 2,
+        delay                       = 2.5,
         K                           = 500,
         Ki                          = 0.00005,
         Kg                          = 10,
@@ -696,16 +697,17 @@ GB6_TSP =
 declare_weapon(GB6_TSP)
 
 declare_loadout({
-    category        = CAT_MISSILES,
+    category        = CAT_BOMBS,
     CLSID           = 'DIS_GB6_TSP',
     attribute       = GB6_TSP.wsTypeOfWeapon,
     Count           = 1,
     Cx_pil          = 0.0024,
     Picture         = "gb6.png",
-    displayName     = _(gb6_name .. '-SFW Glide-Bomb'),
+    displayName     = _(gb6_name .. '-SFW'),
     Weight          = GB6_TSP.mass + pylon_mass,
     Elements        = {{ShapeName = "gb6"}},
-    ejectImpulse    = 140,
+    ejectImpulse    = eject_speed * GB6_TSP.mass,
+    ejectDirection  = {0, -1, 0},
 })
 
 
@@ -846,7 +848,7 @@ GB6_HE =
     
     simple_seeker = {
         sensitivity = 0,
-        delay       = 0.0,
+        delay       = 2.5,
         FOV         = 0.6,
         maxW        = 500,
         opTime      = 9999,
@@ -864,7 +866,7 @@ GB6_HE =
     },
     
     autopilot = {
-        delay                       = 2,
+        delay                       = 2.5,
         K                           = 500,
         Ki                          = 0.00005,
         Kg                          = 10,
@@ -895,7 +897,6 @@ GB6_HE =
 }
 
 declare_weapon(GB6_HE)
-
 declare_loadout({
     category         = CAT_MISSILES,
     CLSID            = 'DIS_GB6_HE',
@@ -906,6 +907,7 @@ declare_loadout({
     displayName      = _(gb6_name .. '-HE Glide-Bomb'),
     Weight           = GB6_HE.mass + pylon_mass,
     Elements         = {{ShapeName = "gb6"}},
-    ejectImpulse     = 140,
+    ejectImpulse     = eject_speed * GB6_HE.mass,
+    ejectDirection   = {0, -1, 0},
 })
 

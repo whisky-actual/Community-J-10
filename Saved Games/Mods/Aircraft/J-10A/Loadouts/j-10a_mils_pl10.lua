@@ -3,7 +3,7 @@ dofile('Scripts/Database/Weapons/warheads.lua')
 mount_vfs_texture_path (current_mod_path .. '/Textures/Weapons J-10')
 
 pl10_name  = 'PL-10E'
-pl10_model = 'J-10A_PL-10E'
+pl10_model = 'Su30_PL10E'
 pl10_mass  = 105.0
 
 PL_10_AA = {
@@ -41,7 +41,7 @@ PL_10_AA = {
     OmViz_max       = 3.14152,
     warhead         = enhanced_a2a_warhead(11.0, 160);
     warhead_air     = enhanced_a2a_warhead(11.0, 160);
-    exhaust         = { 0.7, 0.7, 0.7, 0.08 };
+    exhaust         = { 1.0, 1.0, 1.0, 0.8 };
     X_back          = -1.61,
     Y_back          = -0.089,
     Z_back          = 0.0,
@@ -91,8 +91,8 @@ PL_10_AA = {
         
         -- Engine data. Time, fuel flow, thrust.    
         --    t_statr        t_b        t_accel        t_march        t_inertial        t_break        t_end            -- Stage
-        -1.0,       -1.0,    8.5,          0.0,        0.0,            0.0,        1.0e9,         -- time of stage, sec
-        0.0,         0.0,    5.32,       0.0,        0.0,            0.0,        0.0,           -- fuel flow rate in second, kg/sec(секундный расход массы топлива кг/сек)
+        -1.0,       -1.0,    5.72,          0.0,        0.0,            0.0,        1.0e9,         -- time of stage, sec
+        0.0,         0.0,    6.18,       0.0,        0.0,            0.0,        0.0,           -- fuel flow rate in second, kg/sec(секундный расход массы топлива кг/сек)
         0.0,        0.0,    14000.0,    0.0,    0.0,            0.0,        0.0,           -- thrust, newtons
     
         1.0e9, -- таймер самоликвидации, сек

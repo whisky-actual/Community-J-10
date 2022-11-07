@@ -137,7 +137,7 @@ if cm802akg_use_scheme == 1 then
 
     CM_802AKG_AS.controller = {
         boost_start = 0.0,
-        march_start = 0.0,
+        march_start = 5.0,
     }
     
     CM_802AKG_AS.control_block = {
@@ -335,7 +335,7 @@ elseif cm802akg_use_scheme == 2 then
 
     CM_802AKG_AS.controller = {
         boost_start = 0.0,
-        march_start = 0.8,
+        march_start = 5.0,
     }
     
     CM_802AKG_AS.control_block = {
@@ -491,6 +491,7 @@ end
 
 declare_weapon(CM_802AKG_AS)
 --C_802AK_AS.shape_table_data.index = C_802AK_AS.wsTypeOfWeapon[4]
+
 --[[
 declare_loadout({
     category     = CAT_MISSILES,
@@ -516,10 +517,10 @@ declare_loadout({
 })]]
 
 
-------- CM802AKG for AI only -------
+------- CM-802AKG for AI only -------
 
 local cm802akg_ai_name  = 'CM-802AKG_AI'
-local cm802akg_ai_disp  = 'CM-802AKG for AI'
+local cm802akg_ai_disp  = 'CM-802AKG (AI Only)'
 
 CM802AKG_AI = {}
 copyTable(CM802AKG_AI, CM_802AKG_AS)
@@ -532,19 +533,27 @@ CM802AKG_AI.shape_table_data[1].name     = cm802akg_ai_name
 CM802AKG_AI.shape_table_data[1].username = cm802akg_ai_name
 CM802AKG_AI.shape_table_data[1].index    = WSTYPE_PLACEHOLDER
 
-if true then
+if cm802akg_use_scheme == 0 then
     CM802AKG_AI.Escort     = 0
     CM802AKG_AI.Head_Type  = 5 -- TV
-    CM802AKG_AI.scheme     = "AGM-84E"
+    CM802AKG_AI.scheme     = "sat_cruise_missile"
     CM802AKG_AI.class_name = "wAmmunitionAntiShip"
 
     CM802AKG_AI.controller = {
         boost_start = 0.0,
-        march_start = 0.0,
+        march_start = 5.0,
     }
     
     CM802AKG_AI.control_block = {
-        default_cruise_height = 1000.0,
+        seeker_activation_dist      = 20000,
+        default_cruise_height       = 200,
+        obj_sensor                  = 0,
+        can_update_target_pos       = 1,
+        turn_before_point_reach     = 1,
+        turn_hor_N                  = 0.8,
+        turn_max_calc_angle_deg     = 90,
+        turn_point_trigger_dist     = 100,
+        use_horiz_dist              = 1,
     }
 
     CM802AKG_AI.boost = { -- air launch - no booster
@@ -560,6 +569,14 @@ if true then
         smoke_transparency                   = 0.0,
         custom_smoke_dissipation_factor      = 0.0,                
     }
+
+    CM802AKG_AI.booster_animation = {
+        start_val = 0,
+    }
+    
+    CM802AKG_AI.play_booster_animation = {
+        val = 0,
+    }    
     
     CM802AKG_AI.march = {
         impulse           = 660,
@@ -569,7 +586,7 @@ if true then
         min_thrust        = -100,
         max_thrust        = 5000,
         thrust_Tau        = 0.0017,
-        
+
         nozzle_position                  = {{-2.566, -0.19, 0.0}},
         nozzle_orientationXYZ            = {{0.0, 0.0, 0.0}},
         tail_width                       = 0.5,
@@ -585,14 +602,6 @@ if true then
         start_effect_x_pow          = {1.0,   1.0,    1.0},
         start_effect_x_dist         = {1.1,   0.9,    0.0},
         start_effect_x_shift        = {0.15,  0.15,   0.2},
-    }
-
-    CM802AKG_AI.engine_control = {
-        default_speed   = 220,
-        K               = 350,
-        Kd              = 1.0,
-        Ki              = 0.001,
-        speed_delta     = 5,
     }
 
     CM802AKG_AI.fm = {
@@ -613,120 +622,77 @@ if true then
         Ma_x        = 3,
         Ma_z        = 3,
         Kw_x        = 0.01,
+        
+        addDeplSw           = 0.6,
+        no_wings_A_mlt      = 7,
+        wingsDeplProcTime   = 5,
+        wingsDeplDelay      = 1,
     }
     
     CM802AKG_AI.seeker = {
-        delay               = 0.0,
-        op_time             = 800,
-        activate_on_update  = 1,
-
-        FOV                 = math.rad(60),
-        max_w_LOS           = 0.06,
-        max_w_LOS_surf      = 0.03,
-
-        max_target_speed            = 33,
-        max_target_speed_rnd_coeff  = 10,
-
-        max_lock_dist       = 30000,
-    }
-    
-    CM802AKG_AI.ins = {
-        aim_sigma       = 350,
-        check_AI        = 1,
-        error_coeff     = 0.05,
+        coalition               = 2,
+        coalition_rnd_coeff     = 5.0,
+        can_update_target_pos   = 1,
     }
 
-    CM802AKG_AI.autopilot =
-    {
-        glide_height                = 1000.0,
-        dont_climb_on_cruise_height = 0,
-        vel_proj_div                = 6.0,
-        default_glide_height        = 1000.0,
-        pre_maneuver_glide_height   = 1000.0,
-        skim_glide_height           = 8,
-        use_start_bar_height        = 1,    
-        altim_vel_k                 = 4,    
-        
-        delay               = 1.0,
-        op_time             = 9999,
-        Kw                  = 1.6,
-        Ks                  = 2.0,
-        K                   = 1.7,
-        Kd                  = 0.0,
-        Ki                  = 16.0,
-        Kx                  = 0.04,
-        Kdx                 = 0.001,
-        w_limit             = math.rad(5),
-        fins_limit          = math.rad(35),
-        fins_limit_x        = math.rad(20),
-        rotated_WLOS_input  = 0,
-        conv_input          = 0,
-        PN_dist_data        = { 2000,   0,
-                                500,    0},
-                                
-        max_climb_angle     = math.rad(10),
-        max_dive_angle      = math.rad(-25),
-        max_climb_ang_hdiff = 200,
-        max_dive_ang_hdiff  = -500,
-        
-        Ksd                     = 0.0,
-        Ksi                     = 0.0,
-        integr_val_limit        = 0.5,
-        hor_err_limit           = 0.5,
-        max_climb_vel           = 200,
-        min_climb_vel           = 120,
-        min_climb_vel_factor    = 0,
-        max_climb_h             = 3000,
-        min_climb_h             = 10000,
-        min_climb_h_factor      = 0.5,
-        
-        inertial_km_error       = 4.0,      -- m for 1000m dist
-        glide_height_eq_error   = 2.0,      -- percent
-    }
-    
     CM802AKG_AI.final_autopilot = {
-        delay               = 1.0,
-        op_time             = 9999,
-        Kw                  = 1.0,
-        Ks                  = 5.0,
-        K                   = 5.4,
-        Kd                  = 0.0,
-        Ki                  = 0.0,
-        Kx                  = 0.0,
-        Kix                 = 0.0,
-        w_limit             = math.rad(15),
-        fins_limit          = math.rad(50),
-        rotated_WLOS_input  = 0,
-        conv_input          = 0,
-        PN_dist_data        = { 2000,   1,
-                                500,    1},
-                                
-        add_err_val             = 0,
-        add_err_vert            = 0,
-        add_out_val             = 0.1,
-        add_out_vert            = 1,
-        loft_angle              = math.rad(7),
-        loft_trig_angle         = math.rad(12),
-        K_loft_err              = 1,
-        loft_angle_vert         = 1,
-        loft_active_by_default  = 0,
+        delay               = 0,
+        K                   = 60,
+        Ki                  = 0,
+        Kg                  = 4,
+        finsLimit           = 0.8,
+        useJumpByDefault    = 0,
+        J_Power_K           = 1.5,
+        J_Diff_K            = 0.4,
+        J_Int_K             = 0,
+        J_Angle_K           = 0.18,
+        J_FinAngle_K        = 0.32,
+        J_Angle_W           = 0.8,
+        J_Trigger_Vert      = 1,
+        hKp_err             = 120,
+        hKp_err_croll       = 0.04,
+        hKd                 = 0.005,
+        max_roll            = 0.8,
     }
-    
-    CM802AKG_AI.triggers_control = {
-        action_wait_timer               = 5,    -- wait for dist functions n sen, then set default values
-        default_sensor_tg_dist          = 10000, -- turn on seeker and start horiz. correction if target is locked
-        default_final_maneuver_tg_dist  = 7000,
-        default_straight_nav_tg_dist    = 7000,
-        default_destruct_tg_dist        = 3000, -- if seeker still can not find a target explode warhead after reaching pred. target point + n. km
-        trigger_by_path                 = 1,
-        final_maneuver_trig_v_lim       = 3,
-        use_horiz_dist                  = 1,
-        pre_maneuver_glide_height       = 1000, -- triggers st nav instead of fin. maneuver if h>2*pre_maneuver_glide_height at fin. maneuver distance
-        min_cruise_height               = 1000,
-        min_cruise_height_trigger_sum   = 11000,
-        min_cruise_height_trigger_mlt   = 220/33,
+
+    CM802AKG_AI.cruise_autopilot = {
+        delay               = 1,
+        Kp_hor_err          = 240,
+        Kp_hor_err_croll    = 0.06,
+        Kd_hor              = 0,
+        Kp_ver              = 9,
+        Kii_ver             = 0.2,
+        Kd_ver              = 0,
+        Kp_eng              = 265,
+        Ki_eng              = 0.003,
+        Kd_eng              = 0,
+        Kp_ver_st1          = 0.009,
+        Kd_ver_st1          = 0.015,
+        Kp_ver_st2          = 0.00018,
+        Kd_ver_st2          = 0.00005,
+        
+        auto_terrain_following          = 1,
+        auto_terrain_following_height   = 50,
+        
+        alg_points_num          = 7,
+        alg_calc_time           = 1.5,
+        alg_vel_k               = 6,
+        alg_div_k               = 2,
+        alg_max_sin_climb       = 0.8,
+        alg_section_temp_points = 3,
+        alg_tmp_point_vel_k     = 1.5,
+        no_alg_vel_k            = 10,
+        
+        max_roll            = 0.8,
+        max_start_y_vel     = 35,
+        stab_vel            = 237.5,
+        finsLimit           = 0.8,
+        estimated_N_max     = 6,
+        eng_min_thrust      = -100,
+        eng_max_thrust      = 3000,
     }
 end
+
 declare_weapon(CM802AKG_AI)
 
 declare_loadout({
@@ -748,5 +714,6 @@ declare_loadout({
             }
         },
     }, -- end of Elements
-    ejectImpulse = 2000,
+    ejectImpulse   = eject_speed * cm802akg_mass,
+    ejectDirection = {0, -1, 0},
 })

@@ -143,7 +143,7 @@ C_802AK_AS = {
         sens_ref_dist               = 32000.0,
         ship_l_error_k              = 0.33,
         
-        min_detectable_rcs          = 1.0,
+        min_detectable_rcs          = 50.0,
         max_small_target_rcs        = 29999.999,
         min_large_target_rcs        = 60000.0,
     },
@@ -244,7 +244,7 @@ C_802AK_AS = {
 
     controller = {
         boost_start = 0,
-        march_start = 0,
+        march_start = 5.0,
     },
 
     boost = {    --    air launch - no booster
@@ -345,7 +345,8 @@ declare_loadout({
         },
     }, -- end of Elements
     --attribute = {4, 4, 8, WSTYPE_PLACEHOLDER, "Anti-Ship missiles"},
-    ejectImpulse = 2000,
+    ejectImpulse   = eject_speed * c802ak_mass,
+    ejectDirection = {0, -1, 0},
 })
 
 
@@ -388,7 +389,8 @@ declare_loadout({
             }
         },
     }, -- end of Elements
-    ejectImpulse = 140,
+    ejectImpulse   = eject_speed * yj83k_mass,
+    ejectDirection = {0, -1, 0},
 })
 
 declare_loadout({
@@ -415,7 +417,8 @@ declare_loadout({
         },
     }, -- end of Elements
     JettisonSubmunitionOnly = true,
-    ejectImpulse = 2000,
+    ejectImpulse   = eject_speed * yj83k_mass,
+    ejectDirection = {0, -1, 0},
 })
 
 

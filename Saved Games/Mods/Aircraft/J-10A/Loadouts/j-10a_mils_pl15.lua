@@ -1,6 +1,6 @@
 
 local pl15_name  = 'PL-15'
-local pl15_mass  = 210.0
+local pl15_mass  = 229.0
 local pl15_model = 'Su30_PL-15'
 local pylon_mass = 90.0
 local pylon_dual_mass = 160.0
@@ -63,13 +63,15 @@ PL_15_AA = {
             index    = WSTYPE_PLACEHOLDER,
         },
     },
-
+--[[
     PN_coeffs = { 3,                 -- Number of Entries
-                  15000.0, 1.00,
-                 -- 18000.0, 0.75,
+                  5000.0, 1.00,
+                  18000.0, 0.75,
                   25000.0, 0.50,     -- Less 5 km to target Pn = 1
                   40000.0, 0.25,     -- Between 15 and 5 km  to target, Pn smoothly changes from 0.4 to 1.0. Longer then 15 km Pn = 0.4.
-                },
+                },]]
+				
+	PN_gain = 4,
 				
    --[[ PN_coeffs = { 4,                 -- Number of Entries
                   15000.0, 1.00,
@@ -88,17 +90,17 @@ PL_15_AA = {
         boost_start = 0.5,
         --march_start = 7.8 + 17.3, --14.8
         --march_start = 7.8, 
-        march_start = 7.3 + 14.3, 
+        march_start = 10.5 + 16.0, 
        -- march_start = 7.3, 
 		
     },
 		gimbal = {
 			delay = 0,
-			max_tracking_rate = math.rad(450),
+			max_tracking_rate = math.rad(30),
 			op_time = 245,
-			pitch_max = math.rad(360),
-			tracking_gain = 0, -- 50 --400
-			yaw_max = math.rad(360)
+			pitch_max = math.rad(60),
+			tracking_gain = 50, -- 50 --400
+			yaw_max = math.rad(60)
 		},
 	
  --69.2
@@ -130,6 +132,7 @@ PL_15_AA = {
 
     },
 	]]
+	--[[
     boost = {
         impulse                             = 242,
         fuel_mass                           = 46.3+27.4,
@@ -147,6 +150,32 @@ PL_15_AA = {
         impulse                             = 236,
         fuel_mass                           = 22.9+9.6, --22.9
         work_time                           = 20.4+8.6, --20.4
+        nozzle_position                     = {{-1.72, -0.11, 0}},
+        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
+        nozzle_exit_area                    = 0.01535,
+        tail_width                          = 0.4,
+        smoke_color                         = {1.0, 1.0, 1.0},
+        smoke_transparency                  = 0.5,
+        custom_smoke_dissipation_factor     = 0.2,
+
+    },]]
+    boost = {
+        impulse                             = 242,
+        fuel_mass                           = 69.2,
+        work_time                           = 10.0,
+        nozzle_position                     = {{-1.72, -0.11, 0}},
+        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
+        nozzle_exit_area                    = 0.01535,
+        tail_width                          = 0.4,
+        smoke_color                         = {1.0, 1.0, 1.0},
+        smoke_transparency                  = 0.5,
+        custom_smoke_dissipation_factor     = 0.2,
+    },
+
+    march = {
+        impulse                             = 236,
+        fuel_mass                           = 20, --22.9
+        work_time                           = 15.0, --20.4
         nozzle_position                     = {{-1.72, -0.11, 0}},
         nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
         nozzle_exit_area                    = 0.01535,
@@ -201,7 +230,7 @@ PL_15_AA = {
         radius      = 7.0,
         arm_delay   = 1.6,
     },
-
+--[[
     seeker = {
         delay                       = 1.5,
         op_time                     = 220,
@@ -218,7 +247,7 @@ PL_15_AA = {
         rad_correction              = 1,
         active_radar_lock_dist      = 20000.0,
         active_dist_trig_by_default = 1,
-    },
+    },]]
 	
 	WCSE = {
 	uplink_delay = 0.5,--0.5
