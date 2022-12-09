@@ -27,7 +27,7 @@ PL_15_AA = {
     D_max           = 65000.0,
     D_min           = 1000.0,
     Head_Form       = 1,
-    Life_Time       = 120.0,
+    Life_Time       = 250.0,
     Nr_max          = 30,
     v_min           = 140.0,
     v_mid           = 1200.0,
@@ -36,19 +36,27 @@ PL_15_AA = {
     t_acc           = 6.0,
     t_marsh         = 4.0,
     Range_max       = 65000.0,
-    H_min_t         = 3.0,
-    Fi_start        = 0.5,
+    H_min_t         = -3.0,
+    Fi_start        = 0.780,
     Fi_rak          = 3.14152,
-    Fi_excort       = 1.05,
+    Fi_excort       = 1.0472,
     Fi_search       = 1.05,
-    OmViz_max       = 0.52,
-    exhaust         = tail_solid1;
-    X_back          = -1.74,
+    OmViz_max       = 0.6981,
+    exhaust         = {1.0, 1.0, 1.0, 0.2};
+    X_back          = -1.72,
     Y_back          = -0.11,
     Z_back          = 0.0,
     Reflection      = 0.045,
     KillDistance    = 11.0,
-	ccm_k0 = 0.0005,
+	loft   			= 1,
+    hoj    			= 1,
+    ccm_k0 			= 0.005,  -- Counter Countermeasures Probability Factor. Value = 0 - missile has absolutely resistance to countermeasures. Default = 1 (medium probability)
+    rad_correction 	= 1,
+    loft_factor 	= 4.5,
+	send_off_data	= 1,
+
+	active_radar_lock_dist	= 18*1852,--NM times multiplyer
+	go_active_by_default	= 1,
 
     warhead         = pl15_warhead,
     warhead_air     = pl15_warhead,
@@ -73,41 +81,41 @@ PL_15_AA = {
 				
 	PN_gain = 4,
 				
-   --[[ PN_coeffs = { 4,                 -- Number of Entries
-                  15000.0, 1.00,
-                  25000.0, 0.95,
-                  50000.0, 0.70,     -- Less 5 km to target Pn = 1
+    PN_coeffs = { 4,                 -- Number of Entries
+                  3500.0, 1.00,
+                  15000.0, 0.85,
+                  20000.0, 0.70,     -- Less 5 km to target Pn = 1
                   98000.0, 0.55,     -- Between 15 and 5 km  to target, Pn smoothly changes from 0.4 to 1.0. Longer then 15 km Pn = 0.4.
-                },]]
+                },
 
-    supersonic_A_coef_skew = 0.1, -- slope of the direct polarity factor of the polar on supersonic
-    nozzle_exit_area       = 0.025, -- the nozzle exit area
+    supersonic_A_coef_skew = 0.11, -- slope of the direct polarity factor of the polar on supersonic
+    nozzle_exit_area       = 0.015, -- the nozzle exit area
 
     class_name      = 'wAmmunitionSelfHoming',
     scheme          = 'aa_missile_amraam2',
+    --scheme          = 'aa_missile_amraam',
+    --scheme          = 'aa_missile_pl-15',
 
     controller = {
         boost_start = 0.5,
         --march_start = 7.8 + 17.3, --14.8
         --march_start = 7.8, 
-        march_start = 10.5 + 16.0, 
+        march_start = 7.8 + 15.0, 
        -- march_start = 7.3, 
 		
     },
 		gimbal = {
 			delay = 0,
-			max_tracking_rate = math.rad(30),
+			max_tracking_rate = math.rad(45),
 			op_time = 245,
 			pitch_max = math.rad(60),
 			tracking_gain = 50, -- 50 --400
 			yaw_max = math.rad(60)
 		},
 	
- --69.2
- --[[
     boost = {
-        impulse                             = 261,
-        fuel_mass                           = 46.1,
+        impulse                             = 242,
+        fuel_mass                           = 50.5,
         work_time                           = 7.3,
         nozzle_position                     = {{-1.72, -0.11, 0}},
         nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
@@ -119,63 +127,9 @@ PL_15_AA = {
     },
 
     march = {
-        impulse                             = 251,
-        fuel_mass                           = 23.1,
-        work_time                           = 22.0,
-        nozzle_position                     = {{-1.72, -0.11, 0}},
-        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.01535,
-        tail_width                          = 0.4,
-        smoke_color                         = {1.0, 1.0, 1.0},
-        smoke_transparency                  = 0.5,
-        custom_smoke_dissipation_factor     = 0.2,
-
-    },
-	]]
-	--[[
-    boost = {
-        impulse                             = 242,
-        fuel_mass                           = 46.3+27.4,
-        work_time                           = 6.8 + 2.9,
-        nozzle_position                     = {{-1.72, -0.11, 0}},
-        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.01535,
-        tail_width                          = 0.4,
-        smoke_color                         = {1.0, 1.0, 1.0},
-        smoke_transparency                  = 0.5,
-        custom_smoke_dissipation_factor     = 0.2,
-    },
-
-    march = {
         impulse                             = 236,
-        fuel_mass                           = 22.9+9.6, --22.9
-        work_time                           = 20.4+8.6, --20.4
-        nozzle_position                     = {{-1.72, -0.11, 0}},
-        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.01535,
-        tail_width                          = 0.4,
-        smoke_color                         = {1.0, 1.0, 1.0},
-        smoke_transparency                  = 0.5,
-        custom_smoke_dissipation_factor     = 0.2,
-
-    },]]
-    boost = {
-        impulse                             = 242,
-        fuel_mass                           = 69.2,
-        work_time                           = 10.0,
-        nozzle_position                     = {{-1.72, -0.11, 0}},
-        nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
-        nozzle_exit_area                    = 0.01535,
-        tail_width                          = 0.4,
-        smoke_color                         = {1.0, 1.0, 1.0},
-        smoke_transparency                  = 0.5,
-        custom_smoke_dissipation_factor     = 0.2,
-    },
-
-    march = {
-        impulse                             = 236,
-        fuel_mass                           = 20, --22.9
-        work_time                           = 15.0, --20.4
+        fuel_mass                           = 36.5, --22.9
+        work_time                           = 20.25, --20.4
         nozzle_position                     = {{-1.72, -0.11, 0}},
         nozzle_orientationXYZ               = {{0.0, 0.0, 0.0}},
         nozzle_exit_area                    = 0.01535,
@@ -230,14 +184,14 @@ PL_15_AA = {
         radius      = 7.0,
         arm_delay   = 1.6,
     },
---[[
+
     seeker = {
         delay                       = 1.5,
         op_time                     = 220,
-        FOV                         = math.rad(170),
-        max_w_LOS                   = math.rad(70),
+        FOV                         = math.rad(120),
+        max_w_LOS                   = math.rad(90),
         sens_near_dist              = 5,
-        sens_far_dist               = 350000,
+        sens_far_dist               = 80000,
         ccm_k0                      = 0.009,
         aim_sigma                   = 3,
         height_error_k              = 3,
@@ -245,9 +199,12 @@ PL_15_AA = {
         height_error_max_h          = 4.5,
         hoj                         = 1,
         rad_correction              = 1,
-        active_radar_lock_dist      = 20000.0,
+        active_radar_lock_dist      = 18000.0,
         active_dist_trig_by_default = 1,
-    },]]
+		send_off_data				= 1,
+		rad_correction_vis			= 1,
+    },
+	
 	
 	WCSE = {
 	uplink_delay = 0.5,--0.5
@@ -259,27 +216,31 @@ PL_15_AA = {
 	},
 	
 	INS = {
-	op_time = 220,
+	op_time 			= 220,
+	--dt 					= 0,
+	dlink_outdate_time	= 22,
 	},
 
 	sensor = {
         delay                       = 1.5,
         op_time                     = 220,
-        FOV                         = math.rad(40), --40
-        max_w_LOS                   = math.rad(80), --120
-        --sens_near_dist              = 5,
-        --sens_far_dist               = 100000,
+        FOV                         = math.rad(120), --40
+        max_w_LOS                   = math.rad(120), --120
+        sens_near_dist              = 100,
+        sens_far_dist               = 90000,
         ccm_k0                      = 0.005,--0.0005
         aim_sigma                   = 3,
         height_error_k              = 20,
         height_error_max_vel        = 50,
         height_error_max_h          = 300,
         hoj                         = 1,
-        --rad_correction              = 1,
-        active_radar_lock_dist      = 18000.0,
+        rad_correction              = 1,
+        active_radar_lock_dist      = 16000.0,
         active_dist_trig_by_default = 1,
-		lock_range_5sqm				= 25000.0,
-		unit_gate_size				= 1880;
+		lock_range_5sqm				= 35000.0,
+		unit_gate_size				= 0,
+		--doppler_bandwidth			= 1,
+        doppler_bandwith            = 4096,  -- To decrease the chances of loosing lock
 		 
 	},
 
@@ -294,9 +255,9 @@ PL_15_AA = {
 		Tc					= 0.06,
 		Kx					= 0.1,
 		Krx					= 2.0,
-		gload_limit			= 45.0,
-		fins_limit			= math.rad(24),--math.rad(18)
-		fins_limit_x		= math.rad(8),
+		gload_limit			= 35.0,
+		fins_limit			= math.rad(18),--math.rad(18)
+		fins_limit_x		= math.rad(5),
 		null_roll			= math.rad(45),
 		accel_coeffs		= { 0, 11.5,-1.2,-0.25, 24.0,
 								0.0248 * 0.75 * 0.0091 },
@@ -337,26 +298,26 @@ PL_15_AA = {
 		0.6	 , -- Cy_k1 планка Cy0 на сверхзвуке ( M >> 1)
 		1.2  , -- Cy_k2 крутизна спада(фронта) за волновым кризисом  
 						
-		0.2 , -- 7 Alfa_max  максимальный балансировачный угол, радианы
-		5.0, --угловая скорость создаваймая моментом газовых рулей
+		0.5 , -- 7 Alfa_max  максимальный балансировачный угол, радианы
+		0.0, --угловая скорость создаваймая моментом газовых рулей
 
         --    t_statr   t_b      t_accel  t_march   t_inertial   t_break  t_end
-        -1.0,   -1.0,       12,     25.0,      0.0,          0.0,      1.0e9,           -- time interval
-         0.0,    0.0,      10.0,     0.5,      0.0,          0.0,        0.0,           -- fuel flow rate in second kg/sec(секундный расход массы топлива кг/сек)
-         0.0,    0.0,   16325.0,  2800.0,      0.0,          0.0,        0.0,           -- thrust
+        -1.0,   7.3,       15.0,     20.25,      0.0,          0.0,      1.0e9,           -- time interval
+         0.0,    6.9,      0.0,     1.8,      0.0,          0.0,        0.0,           -- fuel flow rate in second kg/sec(секундный расход массы топлива кг/сек)
+         0.0,    16406.27,   0.0,  	4168.75,      0.0,          0.0,        0.0,           -- thrust
 
         1.0e9, -- таймер самоликвидации, сек  Self-destructive time, sec
-        1000.0, -- время работы энергосистемы, сек  Working time of power system, sec
+        220.0, -- время работы энергосистемы, сек  Working time of power system, sec
         0, -- абсолютная высота самоликвидации, м  Absolute height of self-destruction, M
         0.1, -- время задержки включения управления (маневр отлета, безопасности), сек  Connection delay time (shunting departure, safety), sec
         18000, -- дальность до цели в момент пуска, при превышении которой ракета выполняется маневр 'горка', м
-        18000, -- дальность до цели, при которой маневр 'горка' завершается и ракета переходит на чистую пропорциональную навигацию (должен быть больше или равен предыдущему параметру), м
+        9000, -- дальность до цели, при которой маневр 'горка' завершается и ракета переходит на чистую пропорциональную навигацию (должен быть больше или равен предыдущему параметру), м
         0.52,  -- синус угла возвышения траектории набора горки
-        30.0, -- продольное ускорения взведения взрывателя  Longitudinal acceleration of fuze arming
+        50.0, -- продольное ускорения взведения взрывателя  Longitudinal acceleration of fuze arming
         0.0, -- модуль скорости сообщаймый катапультным устройством, вышибным зарядом и тд
         1.19, -- характристика системы САУ-РАКЕТА,  коэф фильтра второго порядка K0
-        1.0, -- характристика системы САУ-РАКЕТА,  коэф фильтра второго порядка K1
-        2.0, -- характристика системы САУ-РАКЕТА,  полоса пропускания контура управления
+        2.0, -- характристика системы САУ-РАКЕТА,  коэф фильтра второго порядка K1
+        1.0, -- характристика системы САУ-РАКЕТА,  полоса пропускания контура управления
 						
         -- DLZ data. Use numbers below for your implemetation.
         21.0, -- производная дальности по скорости носителя на высоте 1км, ППС

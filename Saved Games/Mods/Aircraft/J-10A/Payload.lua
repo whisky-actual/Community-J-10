@@ -48,8 +48,8 @@ dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj83kg.lua')
 --dofile(current_mod_path .. '/Loadouts/pod_misc.lua')
 
 -- fuel
---dofile(current_mod_path .. '/Loadouts/j-10a_fuel_800.lua')
---dofile(current_mod_path .. '/Loadouts/j-10a_fuel_1100.lua')
+dofile(current_mod_path .. '/Loadouts/j-10a_fuel_800.lua')
+dofile(current_mod_path .. '/Loadouts/j-10a_fuel_1100.lua')
 dofile(current_mod_path .. '/Loadouts/j-10a_fuel_triple.lua')
 
 -- jdam

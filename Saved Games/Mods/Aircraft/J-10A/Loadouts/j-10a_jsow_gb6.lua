@@ -72,7 +72,7 @@ GB6 =
     X_back          = 0.0,
     Y_back          = 0.0,
     Z_back          = 0.0,
-    Reflection      = 0.1,
+    Reflection      = 0.05,
     KillDistance    = 0.0,
     
     LaunchDistData =
@@ -367,7 +367,7 @@ GB6_TSP =
     X_back          = 0.0,
     Y_back          = 0.0,
     Z_back          = 0.0,
-    Reflection      = 0.1,
+    Reflection      = 0.05,
     KillDistance    = 0.0,
     
     LaunchDistData =
@@ -753,7 +753,7 @@ GB6_HE =
     X_back          = 0.0,
     Y_back          = 0.0,
     Z_back          = 0.0,
-    Reflection      = 0.1,
+    Reflection      = 0.05,
     KillDistance    = 0.0,
     
     LaunchDistData =

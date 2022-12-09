@@ -67,5 +67,5 @@ dofile(current_mod_path .. '/Entries/Loadouts/pod_wmd7.lua')
 dofile(current_mod_path .. '/Entries/Loadouts/pod_misc.lua')
 
 -- fuel
-dofile(current_mod_path .. '/Entries/Loadouts/fuel_800.lua')
-dofile(current_mod_path .. '/Entries/Loadouts/fuel_1100.lua')
+--dofile(current_mod_path .. '/Entries/Loadouts/fuel_800.lua')
+--dofile(current_mod_path .. '/Entries/Loadouts/fuel_1100.lua')
