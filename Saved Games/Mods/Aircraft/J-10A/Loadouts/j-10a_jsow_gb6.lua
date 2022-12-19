@@ -898,7 +898,7 @@ GB6_HE =
 
 declare_weapon(GB6_HE)
 declare_loadout({
-    category         = CAT_MISSILES,
+    category         = CAT_BOMBS,
     CLSID            = 'DIS_GB6_HE',
     attribute        = GB6_HE.wsTypeOfWeapon,
     Count            = 1,

@@ -12,8 +12,8 @@ declare_loadout(
         CLSID       = "DIS_TANK1100",
         
         Weight_Empty = 75 + pylon_mass,
-        Weight = 1064 + pylon_mass + 733,
-        Capacity = 1064 + 733 - 75,
+        Weight = 1064 + pylon_mass,
+        Capacity = 1064 - 75,
         Cx_pil = 0.00148,--0.002197266, -- Ragnar: I've calculated it to be exactly this much // changed to F-5 tank Cx -- Teo// testing
         shape_table_data =
         {
@@ -47,8 +47,8 @@ declare_loadout(
         CLSID       = "DIS_TANK1100_EMPTY",
         
         Weight_Empty = 75 + pylon_mass,
-        Weight = 75 + pylon_mass + 733,
-        Capacity = 1064 + 733 - 75,
+        Weight = 75 + pylon_mass,
+        Capacity = 1064 - 75,
         Cx_pil = 0.00148,--0.002197266, -- Ragnar: I've calculated it to be exactly this much // changed to F-5 tank Cx -- Teo// testing
         shape_table_data =
         {

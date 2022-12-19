@@ -404,9 +404,9 @@ JF_17 = {
 
     Pylons = {
         -- LEFT WING
-        pylon(1, 0, -1.865, -0.776, -3.737,
+        pylon(1, 0, -1.056, -0.125, -4.40, -- -1.056, -0.125, -4.40, JEFF -- -1.865, -0.776, -3.737 10A 
             {
-                use_full_connector_position = true, connector = "str_pnt_001", arg = 308, arg_value = 0
+                use_full_connector_position = false, connector = "PYLON_1", arg = 308, arg_value = 0, 
             },
             {
 			-- IR AAM
@@ -414,7 +414,7 @@ JF_17 = {
 					---{ CLSID = "DIS_PL-8A", arg_value = 0.1, Cx_gain = 0.5,}, -- wing tip gain
 					--{ CLSID = "DIS_PL-10", arg_value = 0.1, Cx_gain = 0.5,}, -- wing tip gain
 
-                -- Smoke Generator pods
+                -- Smoke Generator pods 
                 { CLSID = 'DIS_SMOKE_GENERATOR_R'},
                 { CLSID = 'DIS_SMOKE_GENERATOR_G'},
                 { CLSID = 'DIS_SMOKE_GENERATOR_B'},
@@ -423,9 +423,9 @@ JF_17 = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O'},
             }
         ),
-        pylon(2, 0, -1.865, -0.74, -2.585,
+        pylon(2, 0, -0.300, -0.336, -2.85,-- -0.300, -0.336, -2.85, JEFF -- -1.865, -0.74, -2.585 10A 
             {
-                use_full_connector_position = true, connector = "str_pnt_002", arg = 309, arg_value = 0
+                use_full_connector_position = false, connector = "PYLON_2", arg = 309, arg_value = 0
             },
             {
 			-- IR AAM 
@@ -498,9 +498,9 @@ JF_17 = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 0.1},
             }
         ),
-        pylon(3, 0, -0.883, -0.74, -1.834,
+        pylon(3, 0, 0.000, -0.450, -1.70,-- 0.000, -0.450, -1.70, JEFF -- -0.883, -0.74, -1.834, 10A 
             {
-                use_full_connector_position = true, connector = "str_pnt_003", arg = 310, arg_value = 0
+                use_full_connector_position = false, connector = "PYLON_30", arg = 310, arg_value = 0
             },
             {
 				-- Guided Bombs
@@ -547,9 +547,9 @@ JF_17 = {
 
             }
         ),
-        pylon(4, 0, -0.765, -0.765, 0,
+        pylon(4, 0, 0.286, -0.886, 0.00,-- 0.286, -0.886, 0.00, JEFF -- -0.765, -0.765, 0 10A 
             {
-                use_full_connector_position = true, connector = "str_pnt_004", arg = 311, arg_value = 0
+                use_full_connector_position = false, connector = "PYLON_40", arg = 311, arg_value = 0
             },
             {
 				-- Tanks
@@ -612,9 +612,9 @@ JF_17 = {
             }
         ),
 	--]]			
-        pylon(5, 0, -0.883, -0.7, 1.834,
+        pylon(5, 0, 0.000, -0.450, 1.70,-- 0.000, -0.450, 1.70, JEFF -- -0.883, -0.7, 1.834, 10A 
             {
-                use_full_connector_position = true, connector = "str_pnt_005", arg = 312, arg_value = 0
+                use_full_connector_position = false, connector = "PYLON_50", arg = 312, arg_value = 0
             },
             {
 				-- Guided Bombs
@@ -644,7 +644,7 @@ JF_17 = {
                 { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK1100_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
 				-- Plus center tank
-                { CLSID = "DIS_TANK1500", arg_value = 1.0, required = {{station = 3,loadout = {"DIS_TANK1500"}}, {station = 9,loadout = {"DIS_CENTERTANK800"}}}}, 
+                --{ CLSID = "DIS_TANK1500", arg_value = 1.0, required = {{station = 3,loadout = {"DIS_TANK1500"}}, {station = 9,loadout = {"DIS_CENTERTANK800"}}}}, 
 
 			-- Unguided Bombs
                 --{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
@@ -662,9 +662,9 @@ JF_17 = {
                  { CLSID = "DIS_RKT_90_UG", arg_value = 1.0 },
             }
         ),
-        pylon(6, 0, -1.865, -0.74, 2.585,
+        pylon(6, 0, -0.300, -0.336, 2.85,-- -0.300, -0.336, 2.85, JEFF -- -1.865, -0.74, 2.585, 10A 
             {
-                use_full_connector_position = true, connector = "str_pnt_006", arg = 313, arg_value = 0
+                use_full_connector_position = false, connector = "PYLON_6", arg = 313, arg_value = 0
             },
             {
 			-- IR AAM
@@ -739,9 +739,9 @@ JF_17 = {
                 { CLSID = 'DIS_SMOKE_GENERATOR_O', arg_value = 0.1},
             }
         ),
-        pylon(7, 0,  -1.865, -0.776, 3.737,
+        pylon(7, 0,  -1.056, -0.125, 4.40,-- -1.056, -0.125, 4.40, JEFF -- -1.865, -0.776, 3.737, 10A 
             {
-                use_full_connector_position = true, connector = "str_pnt_007", arg = 314, arg_value = 0
+                use_full_connector_position = false, connector = "PYLON_7", arg = 314, arg_value = 0
             },
             {
 			-- IR AAM
@@ -788,22 +788,6 @@ JF_17 = {
         ),
     },
 	]]--
-    Tasks = {
-        aircraft_task(Intercept), -- 10
-        aircraft_task(CAP), -- 11
-        --aircraft_task(Nothing), -- 15
-        aircraft_task(AFAC), -- 16
-        aircraft_task(Reconnaissance), -- 17
-        aircraft_task(Escort), -- 18
-        aircraft_task(FighterSweep), -- 19
-        aircraft_task(SEAD), -- 29
-        aircraft_task(AntishipStrike), -- 30
-        aircraft_task(CAS), -- 31
-        aircraft_task(GroundAttack), -- 32
-        aircraft_task(PinpointStrike), -- 33
-        aircraft_task(RunwayAttack), -- 34
-    },
-
     Tasks = {
         aircraft_task(Intercept), -- 10
         aircraft_task(CAP), -- 11
@@ -942,26 +926,27 @@ JF_17 = {
 
     --
     Damage = {
-        [0]   = {critical_damage =    3, args = {82}},                                 -- NOSE_CENTER             /雷达罩
+        [0]   = {critical_damage =    3, args = {146}},                                 -- NOSE_CENTER             /雷达罩
         [1]   = {critical_damage =    3, args = {150}},                                -- NOSE_LEFT_SIDE          /机头左侧
         [2]   = {critical_damage =    3, args = {149}},                                -- NOSE_RIGHT_SIDE         /机头右侧
         [3]   = {critical_damage =    2, args = {65}},                                 -- COCKPIT                 /座舱盖区域
         [4]   = {critical_damage =    2, args = {298}},                                -- CABIN_LEFT_SIDE         /座舱左侧
-        [5]   = {critical_damage =    2, args = {301}},                                -- CABIN_RIGHT_SIDE        /座舱右侧
-        [6]   = {critical_damage =    3, args = {299}},                                -- CABIN_BOTTOM            /座舱底部
-        [7]   = {critical_damage =    2, args = {296}},                                -- GUN                     /机炮
+        [5]   = {critical_damage =    2, args = {299}},                                -- CABIN_RIGHT_SIDE        /座舱右侧
+        [6]   = {critical_damage =    3, args = {152}},                                -- CABIN_BOTTOM            /座舱底部
+        --[7]   = {critical_damage =    2, args = {296}},                                -- GUN                     /机炮
         [8]   = {critical_damage =    2, args = {265}},                                -- FRONT_GEAR_BOX          /前起落架舱
         [9]   = {critical_damage =    3, args = {154}},                                -- FUSELAGE_LEFT_SIDE      /机身左侧
         [10]  = {critical_damage =    3, args = {153}},                                -- FUSELAGE_RIGHT_SIDE     /机身右侧
-        [11]  = {critical_damage =  1.5, args = {271}},                                -- ENGINE                  /发动机喷口
-        [13]  = {critical_damage =    2, args = {166}},                                -- MTG_L_BOTTOM            /发动机左下侧蒙皮
-        [14]  = {critical_damage =    2, args = {160}},                                -- MTG_R_BOTTOM            /发动机右下侧蒙皮
+        [12]  = {critical_damage =    2, args = {160}},                                -- ENGINE                  /发动机喷口
+        [13]  = {critical_damage =    2, args = {152}},                                -- MTG_L_BOTTOM            /发动机左下侧蒙皮
+        [14]  = {critical_damage =    2, args = {152}},                                -- MTG_R_BOTTOM            /发动机右下侧蒙皮
         [15]  = {critical_damage =    2, args = {267}},                                -- LEFT_GEAR_BOX           /左主起落架舱盖
         [16]  = {critical_damage =    2, args = {266}},                                -- RIGHT_GEAR_BOX          /右主起落架舱盖
         [17]  = {critical_damage =    2, args = {168}},                                -- MTG_L                   /发动机左上侧蒙皮
         [18]  = {critical_damage =    2, args = {162}},                                -- MTG_R                   /发动机右上侧蒙皮
-        [19]  = {critical_damage =    1, args = {189}},                                -- AIR_BRAKE_L             /左下侧减速板
-        [20]  = {critical_damage =    1, args = {187}},                                -- AIR_BRAKE_R             /右下侧减速板
+        [19]  = {critical_damage =    1, args = {183}},                                -- AIR_BRAKE_L             /左下侧减速板
+        [20]  = {critical_damage =    1, args = {185}},                                -- AIR_BRAKE_R             /右下侧减速板
+		
         [21]  = {critical_damage =  1.5, args = {232},
                 droppable = true,  droppable_shape = "JF-17-oblomok-L-part"},          -- WING_L_PART_OUT         /左翼外侧前缘襟翼
         [22]  = {critical_damage =  1.5, args = {222},
@@ -988,23 +973,31 @@ JF_17 = {
                 droppable = true,  droppable_shape = "JF-17-oblomok-L-part"},          -- FLAP_L                  /左侧襟翼
         [38]  = {critical_damage =    2, args = {218},
                 droppable = true,  droppable_shape = "JF-17-oblomok-R-part"},          -- FLAP_R                  /右侧襟翼
+				
         [40]  = {critical_damage =    2, args = {241}, deps_cells = {53},
                 droppable = false},                                                    -- FIN_R_TOP               /垂尾顶部
         [42]  = {critical_damage =    3, args = {242}, deps_cells = {40},},            -- FIN_R_CENTER            /垂尾根部
+		
         [43]  = {critical_damage =    2, args = {246}},                                -- Line_KIL_L              /左侧腹鳍
         [44]  = {critical_damage =    2, args = {243}},                                -- Line_KIL_R              /右侧腹鳍
+		
         [49]  = {critical_damage =  1.5, args = {239}},                                -- ELEVATOR_L_OUT          /左侧平尾外侧
         [50]  = {critical_damage =  1.5, args = {237}},                                -- ELEVATOR_R_OUT          /右侧平尾外侧
         [51]  = {critical_damage =    2, args = {240}, deps_cells = {49}},             -- ELEVATOR_L_IN           /左侧平尾内侧
         [52]  = {critical_damage =    2, args = {238}, deps_cells = {50}},             -- ELEVATOR_R_IN           /右侧平尾内侧
+		
         [53]  = {critical_damage =    2, args = {247},},                               -- RUDDER                  /方向舵
+		
         [55]  = {critical_damage =    4, args = {155}, deps_cells = {42,58}},          -- TAIL                    /垂尾根部尾椎
         [56]  = {critical_damage =    3, args = {158}},                                -- TAIL_LEFT_SIDE          /发动机左侧尾椎
         [57]  = {critical_damage =    3, args = {157}},                                -- TAIL_RIGHT_SIDE         /发动机右侧尾椎
-        [58]  = {critical_damage =    1, args = {159}},                                -- TAIL_BOTTOM             /减速伞盖
+        [58]  = {critical_damage =    1, args = {156}},                                -- TAIL_BOTTOM             /减速伞盖
+		
         [59]  = {critical_damage =    3, args = {148}},                                -- NOSE_BOTTOM             /机头底部
+		
         [61]  = {critical_damage =    3, args = {303}},                                -- FUEL_TANK_LEFT_SIDE     /机背油箱处左侧蒙皮
         [62]  = {critical_damage =    3, args = {302}},                                -- FUEL_TANK_RIGHT_SIDE    /机背油箱处右侧蒙皮
+		
         [63]  = {critical_damage =    2, args = {147}},                                -- ROTOR                   /机头顶部
         [64]  = {critical_damage =    3, args = {227}},                                -- BLADE_1_IN              /左上侧进气道
         [65]  = {critical_damage =  1.5, args = {231}},                                -- BLADE_1_CENTER          /左侧边条
@@ -1013,12 +1006,17 @@ JF_17 = {
         [68]  = {critical_damage =  1.5, args = {221}},                                -- BLADE_2_CENTER          /右侧边条
         [69]  = {critical_damage =    3, args = {219}},                                -- BLADE_2_OUT             /右下侧进气道
         [71]  = {critical_damage =    3, args = {156}},                                -- BLADE_3_CENTER          /进气道处机腹
+		
         [82]  = {critical_damage =    3, args = {152}},                                -- FUSELAGE_BOTTOM         /机身底部
-        [83]  = {critical_damage =    2, args = {134}},                                -- WHEEL_F                 /前起落架
-        [84]  = {critical_damage =    3, args = {136}},                                -- WHEEL_L                 /左侧主起落架
-        [85]  = {critical_damage =    3, args = {135}},                                -- WHEEL_R                 /右侧主起落架
+		
+        [83]  = {critical_damage =    2, args = {135}},                                -- WHEEL_F                 /前起落架
+        [84]  = {critical_damage =    3, args = {137}},                                -- WHEEL_L                 /左侧主起落架
+        [85]  = {critical_damage =    3, args = {136}},                                -- WHEEL_R                 /右侧主起落架
+		
         [90]  = {critical_damage =    1},                                              -- PILOT
+		
         [99]  = {critical_damage =    2, args = {151}},                                -- FUSELAGE_TOP            /前部脊背
+		
         [100] = {critical_damage =    2, args = {300}},                                -- TAIL_TOP                /后部脊背
     },
 

@@ -56,7 +56,7 @@ JF17_FM =
 		[1] = self_ID,
 		[2] = bin_name,
     disable_built_in_oxygen_system = true,
-    center_of_mass    = { 0.25, -0.05, 0.0},
+    center_of_mass    = { 0.3, -0.05, 0.0},
 	moment_of_inertia	= {  12875.0, 85552.0, 75674.0, -1331.0},--Ix,Iy,Iz,Ixy			-- Ix(roll) = 9496, Iy(pitch) Ix(roll) = 9496, Iy(pitch) 
 	suspension			= {
 		{ -- NOSE WHEEL

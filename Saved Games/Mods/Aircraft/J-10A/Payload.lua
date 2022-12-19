@@ -38,7 +38,7 @@ dofile(current_mod_path .. '/Loadouts/j-10a_mils_pl15.lua')
 dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj91.lua')
 dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj91a.lua')
 dofile(current_mod_path .. '/Loadouts/j-10a_mils_yj83kg.lua')
---dofile(current_mod_path .. '/Loadouts/j-10a_mils_kd63.lua')
+dofile(current_mod_path .. '/Loadouts/j-10a_mils_kd88.lua')
 --dofile(current_mod_path .. '/Loadouts/j-10a_mils_kd20.lua')
 
 -- pod

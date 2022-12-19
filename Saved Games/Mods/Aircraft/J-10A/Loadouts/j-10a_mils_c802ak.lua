@@ -240,6 +240,8 @@ C_802AK_AS = {
         final_maneuver_trig_v_lim       = 3,
         use_horiz_dist                  = 1,
         pre_maneuver_glide_height       = 20,
+        
+        check_self_destruct_dist_with_no_target = 1,
     },
 
     controller = {

@@ -240,7 +240,7 @@ PL_15_AA = {
 		lock_range_5sqm				= 35000.0,
 		unit_gate_size				= 0,
 		--doppler_bandwidth			= 1,
-        doppler_bandwith            = 4096,  -- To decrease the chances of loosing lock
+        doppler_bandwith            = 12096,  -- To decrease the chances of loosing lock
 		 
 	},
 

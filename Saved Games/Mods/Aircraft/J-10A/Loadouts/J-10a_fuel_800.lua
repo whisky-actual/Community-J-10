@@ -12,8 +12,8 @@ declare_loadout(
         CLSID       = "DIS_TANK800",
         
         Weight_Empty = 45 + pylon_mass,
-        Weight = 730 + pylon_mass + 733,
-        Capacity = 730 + 733 - 45,
+        Weight = 730 + pylon_mass ,
+        Capacity = 730 - 45,
         Cx_pil = 0.0014, --0.002197266,
         shape_table_data =
         {

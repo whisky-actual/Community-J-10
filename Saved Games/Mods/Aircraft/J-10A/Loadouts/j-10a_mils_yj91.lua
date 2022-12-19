@@ -4,21 +4,9 @@ local ld10_mass = 600.0
 local pylon_mass = 90.0
 local pylon_dual_mass = 160.0
 
-local LD_10_warhead =
-{
-    mass                 = 87,
-    caliber              = 360,
-    expl_mass            = 87,
-    piercing_mass        = 7.2,
-    other_factors        = { 1.0, 1.0, 1.0 },
-    concrete_factors     = { 1.0, 1.0, 1.0 },
-    concrete_obj_factor  = 1.0,
-    obj_factors          = { 2.0, 1.0 },
-    cumulative_factor    = 2.0,
-    cumulative_thickness = 0.0,
-}
+local LD_10_warhead = predefined_warhead("X_31P")
 
-local use_agm88_scheme_sead = false
+local use_agm88_scheme_sead = true
 
 LD_10_ARM = {
     category        = CAT_MISSILES,
@@ -30,7 +18,7 @@ LD_10_ARM = {
 
     Escort          = 0,
     Head_Type       = 3,
-    sigma           = {10, 10, 10},
+    sigma           = {5, 5, 5},
     M               = ld10_mass,
     H_max           = 25000.0,
     H_min           = -1.0,
@@ -110,69 +98,67 @@ if use_agm88_scheme_sead then
 
     LD_10_ARM.controller = {
         boost_start = 0.5,
-        march_start = 1.5,
+        march_start = 2.5,
     }
 
     LD_10_ARM.boost = {
-        impulse                              = 242,
-        fuel_mass                            = 57.6,
-        work_time                            = 6.0,
-        nozzle_position                      = {{-2.1, 0, 0}},
+        impulse                              = 250,
+        fuel_mass                            = 93,
+        work_time                            = 2.0,
+		nozzle_position						= { { -2.15, -0.21, 0 } },
         nozzle_orientationXYZ                = {{0.0, 0.0, 0.0}},
-        tail_width                           = 0.4,
+        tail_width                           = 0.9,
         smoke_color                          = {0.9, 0.9, 0.9},
-        smoke_transparency                   = 0.1,
+        smoke_transparency                   = 0.8,
         custom_smoke_dissipation_factor      = 0.3,
     }
 
     LD_10_ARM.march = {
-        impulse                              = 236,
-        fuel_mass                            = 11.6,
-        work_time                            = 4.0,
-        nozzle_position                      = {{-1.74, -0.11, 0}},
+        impulse                              = 1070,
+        fuel_mass                            = 60,
+        work_time                            = 30.0,
+		effect_type 						= 1,
+		nozzle_position						= { { -2.15, -0.21, 0 } },
         nozzle_orientationXYZ                = {{0.0, 0.0, 0.0}},
-        tail_width                           = 0.3,
+        tail_width                           = 0.9,
         smoke_color                          = {0.6, 0.6, 0.6},
-        smoke_transparency                   = 0.8,
+        smoke_transparency                   = 0.05,
         custom_smoke_dissipation_factor      = 0.2,
     }
 
     LD_10_ARM.fm = {
-        mass                = ld10_mass,
-        caliber             = 0.203,
-        wind_sigma          = 0.0,
-        wind_time           = 0.0,
-        tail_first          = 1,
-        fins_part_val       = 0,
-        rotated_fins_inp    = 0,
-        delta_max           = math.rad(20),
-        L                   = 0.203,
-        S                   = 0.0324,
-        Ix                  = 1.5,
-        Iy                  = 190,
-        Iz                  = 190,
-
-        Mxd                 = 0.3 * 57.3,
-        Mxw                 = -44.5,
-
-        table_scale    = 0.2,
-        table_degree_values = 1,
-        --    Mach      | 0.0        0.2        0.4        0.6        0.8        1.0        1.2        1.4        1.6        1.8        2.0        2.2        2.4        2.6        2.8        3.0        3.2        3.4        3.6        3.8        4.0     |
-        Cx0 = {    0.4727,    0.4727,    0.4727,    0.4727,    0.4838,    0.7609,     0.8869,     0.86198,    0.81793,     0.76899,     0.72481,     0.68476,    0.64836,    0.61529,    0.58515,    0.55744,    0.53195,    0.50829,    0.48624,    0.46561,    0.4461,     0.42772,    0.41035,    0.3941,     0.37898,    0.366    },
-        CxB = {    0.021,     0.021,     0.021,     0.021,     0.021,     0.138,      0.153,      0.146,      0.1382,      0.1272,      0.1167,      0.1073,     0.0987,     0.0909,     0.0837,     0.077,      0.0708,     0.065,      0.0595,     0.0544,     0.0495,     0.0449,     0.0406,     0.0364,     0.0324,     0.0286    },
-        K1  = {    0.00264,   0.00264,   0.00264,   0.00264,   0.00264,   0.00264,    0.0022,     0.001873,   0.0016435,   0.0014752,   0.0013448,   0.0012436,  0.0011534,  0.0010742,  0.0010149,  0.0009484,  0.0009016,  0.0008476,  0.000795,   0.0007529,  0.0007122,  0.0006727,  0.0006343,  0.0006058,  0.0005781,  0.00056    },
-        K2  = {    -0.00257,  -0.00257,  -0.00257,  -0.00257,  -0.00257,  -0.00265,   -0.002274,  -0.002034,  -0.0018241,  -0.0016225,  -0.0014468,  -0.001275,  -0.0011248, -0.0009777, -0.0008514, -0.0007274, -0.0006236, -0.0005217, -0.0004393, -0.0003584, -0.0002968, -0.0002363, -0.0001949, -0.0001546, -0.0001335, -0.000114    },
-        Cya = {    0.3207,    0.3207,    0.3207,    0.3207,    0.3381,    0.4226,     0.4651,     0.5049,     0.5175,      0.5033,      0.4919,      0.4815,     0.4729,     0.4653,     0.4586,     0.4528,     0.4479,     0.444,      0.441,      0.4371,     0.4341,     0.4321,     0.43,       0.4271,     0.426,      0.424    },
-        Cza = {    0.3207,    0.3207,    0.3207,    0.3207,    0.3381,    0.4226,     0.4651,     0.5049,     0.5175,      0.5033,      0.4919,      0.4815,     0.4729,     0.4653,     0.4586,     0.4528,     0.4479,     0.444,      0.441,      0.4371,     0.4341,     0.4321,     0.43,       0.4271,     0.426,      0.424    },
-        Mya       = { -0.5,    -0.5},
-        Mza       = { -0.5,    -0.5},
-        Myw       = { -2.0,    -2.0},
-        Mzw       = { -2.0,    -2.0},
-        A1trim    = { 10.0,    10.0},
-        A2trim    = { 10.0,    10.0},
-
-        model_roll = math.rad(45),
-        fins_stall = 1,
+			A1trim = { 10, 10 },
+			A2trim = { 10, 10 },
+			Cx0 = { 0.468, 0.468, 0.468, 0.468, 0.479, 0.8261, 0.968, 0.9429, 0.8945, 0.8409, 0.7925, 0.7488, 0.7091, 0.673, 0.64, 0.6099, 0.5821, 0.5562, 0.5321, 0.5096, 0.4882, 0.4681, 0.4891, 0.5013, 0.5347, 0.5504, 0.5861, 0.6118 },
+			CxB = { 0.021, 0.021, 0.021, 0.021, 0.021, 0.138, 0.153, 0.146, 0.1382, 0.1272, 0.1167, 0.1073, 0.0987, 0.0909, 0.0837, 0.077, 0.0708, 0.065, 0.0595, 0.0544, 0.0495, 0.0449, 0.0406, 0.0364, 0.03, 0.02, 0.02, 0.01 },
+			Cya = { 1.14, 1.14, 1.14, 1.14, 1.14, 1.42, 1.46, 1.39, 1.32, 1.15, 1.06, 1, 0.94, 0.89, 0.83, 0.78, 0.73, 0.69, 0.65, 0.61, 0.57 },
+			Cza = { 0.318, 0.318, 0.318, 0.318, 0.336, 0.425, 0.467, 0.506, 0.518, 0.503, 0.491, 0.48, 0.471, 0.463, 0.456, 0.45, 0.445, 0.441, 0.438, 0.434, 0.431, 0.429, 0.427, 0.424, 0.423, 0.421 },
+			Ix = 13.1,
+			Iy = 331.45,
+			Iz = 331.45,
+			K1 = { 0.0056, 0.0056, 0.0056, 0.0056, 0.0056, 0.0056, 0.0056, 0.0056, 0.0052, 0.0048, 0.0045, 0.0041, 0.0037, 0.0036, 0.0034, 0.0032, 0.0031, 0.003, 0.0029, 0.0027, 0.0026, 0.0025, 0.0025, 0.0024, 0.0024, 0.0023, 0.0023, 0.0022 },
+			K2 = { 0.0055, 0.0055, 0.0055, 0.0055, 0.0055, 0.0055, 0.0055, 0.0055, 0.0051, 0.0047, 0.0043, 0.0037, 0.0031, 0.0032, 0.0033, 0.0035, 0.0036, 0.0037, 0.0038, 0.0039, 0.004, 0.0041, 0.0042, 0.0043, 0.0044, 0.0045, 0.0045, 0.0045 },
+			L = 0.47,
+			Mxd = 25,
+			Mxw = -55,
+			Mya = { -0.5, -0.5 },
+			Myw = { -2, -2 },
+			Mza = { -0.5, -0.5 },
+			Mzw = { -2, -2 },
+			S = 0.0543,
+			caliber = 0.410,
+			delta_max = 0.34906585039887,
+			draw_fins_conv = { 1.5707963267949, 1, 1 },
+			fins_part_val = 0,
+			fins_stall = 1,
+			mass = 600,
+			model_roll = 0,
+			rotated_fins_inp = 0,
+			table_degree_values = 1,
+			table_scale = 0.2,
+			tail_first = 1,
+			wind_sigma = 0,
+			wind_time = 0
     }
 
     LD_10_ARM.proximity_fuze = {
@@ -183,29 +169,54 @@ if use_agm88_scheme_sead then
     LD_10_ARM.seeker = {
         delay               = 2.4,
         op_time             = 240,
-        FOV                 = math.rad(60),
+        FOV                 = math.rad(120),
         max_w_LOS           = math.rad(20),
         sens_near_dist      = 100,
-        sens_far_dist       = 70000,
+        sens_far_dist       = 80000,
 
         keep_aim_time       = 5,
-        pos_memory_time     = 150,
-        err_correct_time    = 2.0,
+        pos_memory_time     = 350,
+        err_correct_time    = 1.0,
         calc_aim_dist       = 500000,
         blind_rad_val       = 0.1,
         aim_y_offset        = 2.5,
+        aim_sigma           = 4,
+
+        ang_err_val         = math.rad(0.08),
+        abs_err_val         = 2,
+        
+        lock_manual_target_types_only = 0,
+    }
+	--[[
+    LD_10_ARM.seeker = {
+        delay               = 2.4,
+        op_time             = 240,
+        FOV                 = math.rad(120),
+        max_w_LOS           = math.rad(20),
+        sens_near_dist      = 100,
+        sens_far_dist       = 40000,
+
+        keep_aim_time       = 250,
+        pos_memory_time     = 15,
+        err_correct_time    = 2.0,
+        calc_aim_dist       = 200000,
+        blind_rad_val       = 0.1,
+        aim_y_offset        = 0.5,
+        aim_sigma           = 2,
 
         ang_err_val         = math.rad(0.008),
         abs_err_val         = 2,
-    }
+        
+        lock_manual_target_types_only = 0,
+    }]]
 
     LD_10_ARM.autopilot = {
         delay                = 1.0,
         x_channel_delay      = 1.0,
         op_time              = 240,
-        Kconv                = 6.0,
+        Kconv                = 7.0,
         Knv                  = 0.0025,
-        Kd                   = 0.4,
+        Kd                   = 0.15,
         Ki                   = 0.01,
         Kout                 = 1.0,
         Kx                   = 0.04,
@@ -217,7 +228,7 @@ if use_agm88_scheme_sead then
         max_signal_Fi        = math.rad(12),
         rotate_fins_output   = 0,
         alg                  = 0,
-        PN_dist_data         = {15000,    0,
+        PN_dist_data         = {35000,    1,
                                  5000,    1},
         null_roll            = math.rad(45),
         
@@ -225,20 +236,20 @@ if use_agm88_scheme_sead then
 
         K_heading_hor                = 0.5,
         K_heading_ver                = 0.3,
-        K_loft                       = 3.3,
+        K_loft                       = 1,
         loft_active_by_default       = 1,
-        loft_min_trig_ang            = math.rad(5),
-        loft_trig_ang                = math.rad(20),
-        loft_trig_max_alt            = 3000,
-        loft_trig_change_min_dist    = 20000,
-        loft_trig_change_max_dist    = 35000,
+        loft_min_trig_ang            = math.rad(0.5),
+        loft_trig_ang                = math.rad(15),
+        loft_trig_max_alt            = 25,
+        loft_trig_change_min_dist    = 50000,
+        loft_trig_change_max_dist    = 120000,
         
-        loft_min_dist                = 5000,
-        loft_min_add_pitch           = math.rad(10),
-        loft_add_pitch               = math.rad(20),
+        loft_min_dist                = 40000,
+        loft_min_add_pitch           = math.rad(0),
+        loft_add_pitch               = math.rad(15),
         
-        min_horiz_time               = 3.0,
-        max_pitch_cmd                = math.rad(32),
+        min_horiz_time               = 1.0,
+        max_pitch_cmd                = math.rad(26),
     }
 
 else
@@ -315,23 +326,24 @@ else
 
     LD_10_ARM.seeker  = {
 			
-        delay               = 1.5,
+        delay               = 2.5,
         op_time             = 240,
-        FOV                 = math.rad(70),
-        max_w_LOS           = math.rad(30),
+        FOV                 = math.rad(120),
+        max_w_LOS           = math.rad(15),
         sens_near_dist      = 100,
-        sens_far_dist       = 70000,
+        sens_far_dist       = 2000000,
 
-        keep_aim_time       = 250,
+        keep_aim_time       = 4,
         pos_memory_time     = 250,
-        err_correct_time    = 1.0,
-        calc_aim_dist       = 500000,
+        err_correct_time    = 2.0,
+        calc_aim_dist       = 50000000,
         blind_rad_val       = 0.1,
         aim_y_offset        = 2.0,
 
         ang_err_val         = math.rad(0.0008),
         abs_err_val         = 1,
 		lock_manual_target_types_only = 0,
+		send_off_data		= 1,
     }
 
     LD_10_ARM.fuze_proximity = {
@@ -355,7 +367,7 @@ else
      --   delay            = 1.0,
 		
 			K = 50,
-			K_loft_err = 0,
+			K_loft_err = 1,
 			Kd = 0.1,
 			Ki = 0,
 			Kix = 0,
@@ -364,14 +376,14 @@ else
 			Kx = 0,
 			PN_dist_data = { 3000, 0.9, 2000, 1 },
 			add_err_val = 0.025,
-			conv_input = 1,
+			conv_input = 0,
 			delay = 1,
 			fins_limit = 0.61086523819802,
 			fins_q_div = 1,
 			loft_active_by_default = 1,
-			loft_angle = math.rad(25),
-			loft_trig_angle = math.rad(35),
-			loft_inp_func_add_val = math.rad(25),
+			loft_angle = math.rad(45),
+			loft_trig_angle = math.rad(0),
+			loft_inp_func_add_val = math.rad(40),
 			op_time = 200,
 			rotated_WLOS_input = 0,
 			w_limit = 0.17453292519943

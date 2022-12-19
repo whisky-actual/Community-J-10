@@ -187,10 +187,10 @@ J_10A = {
     mechanimations = mech_anime,
 
     -------------------------
-    M_empty                    = 5090,    -- JF-17 with pilot and nose load, kg --6586 --4840
-    M_nominal                  = 5090+2325.0,    -- JF-17 kg (Empty Plus Full Internal Fuel) --8339.0
-    M_max                      = 5090+4525+6600,   -- JF-17 kg (Maximum Take Off Weight)
-    M_fuel_max                 = 2325.0,    -- JF-17 kg (Internal Fuel Only)
+    M_empty                    = 5090.0,    -- JF-17 with pilot and nose load, kg --6586 --4840
+    M_nominal                  = 5090+4500,    -- JF-17 kg (Empty Plus Full Internal Fuel) --8339.0
+    M_max                      = 5190+4500+6600,   -- JF-17 kg (Maximum Take Off Weight)
+    M_fuel_max                 = 4500.0,    -- JF-17 kg (Internal Fuel Only)
     H_max                      = 18000,     -- JF-17 m  (Maximum Operational Ceiling)
     average_fuel_consumption   = 0.065,     --
     CAS_min                    = 58,        --

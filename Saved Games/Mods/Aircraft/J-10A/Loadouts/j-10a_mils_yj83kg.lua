@@ -142,7 +142,7 @@ YJ_83KG_AS = {
         --aim_sigma                   = 5.5, -- TODO
         ship_l_error_k              = 0.33,
         
-        min_detectable_rcs          = 1.0,
+        min_detectable_rcs          = 10.0,
         max_small_target_rcs        = 29999.999,
         min_large_target_rcs        = 60000.0,
     },
@@ -152,7 +152,7 @@ YJ_83KG_AS = {
         glide_height                = 15.0,
         dont_climb_on_cruise_height = 1,
         vel_proj_div                = 6.0,
-        default_glide_height        = 15,
+        default_glide_height        = 1524,
         pre_maneuver_glide_height   = 5,
         skim_glide_height           = 5,
         use_start_bar_height        = 1,    
@@ -162,7 +162,7 @@ YJ_83KG_AS = {
         delay                  = 1.0,
         op_time                = 9999,
         --Kw                     = 3.5,
-        Kw                     = 2.0,
+        Kw                     = 3.5,
         Ks                     = 0.9,
         K                      = 1.6,
         Kd                     = 0.0,
@@ -239,12 +239,12 @@ YJ_83KG_AS = {
         send_final_maneuver_by_default  = 0,
         final_maneuver_trig_v_lim       = 3,
         use_horiz_dist                  = 1,
-        pre_maneuver_glide_height       = 5,
+        pre_maneuver_glide_height       = 20,
     },
 
     controller = {
         boost_start = 0,
-        march_start = 0,
+        march_start = 5,
     },
 
     boost = {    --    air launch - no booster
