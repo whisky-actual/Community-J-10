@@ -246,3 +246,13 @@ fonts["radio_font_cursor"]  = {fontdescription["font_RADIO"], 10, materials["RAD
 
 -- Clock
 fonts["clock_font_def"]     = {fontdescription["font_CLOCK"], 10, materials["CLOCK_IND_DEF"]}
+
+-- Kneeboard 
+fonts["kneeboard_font_def"]  = {fontdescription["font_Kneeboard"], 10, {  0, 255,   0, 240}}
+fonts["kneeboard_font_g"]    = {fontdescription["font_Kneeboard"], 10, {  0, 255,   0, 150}}
+fonts["kneeboard_font_dg"]   = {fontdescription["font_Kneeboard"], 10, {  3,  67,  40, 240}}
+fonts["kneeboard_font_b"]    = {fontdescription["font_Kneeboard"], 10, {  0,   0, 255, 240}}
+fonts["kneeboard_font_w"]    = {fontdescription["font_Kneeboard"], 10, {255, 255, 255, 255}}
+fonts["kneeboard_font_wy"]   = {fontdescription["font_Kneeboard"], 10, {255, 255, 240, 240}}
+fonts["kneeboard_font_d"]    = {fontdescription["font_Kneeboard"], 10, {  0,   0,   0, 128}}
+fonts["kneeboard_font_r"]    = {fontdescription["font_Kneeboard"], 10, {255,   0,   0, 240}}
