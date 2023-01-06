@@ -1,6 +1,6 @@
 # J10-A Community Mod
 
-Hi all, here is a nice side project that we have been working on. Ever since we saw this FC3 MOD pop up on YouTube we wanted to take it to the next level. With the permission of the original author, @happy cavin, we took his work and adapted it for the wonderful JF-17 made by Deka Ironwork Simulations. We are taking the "early access" route with this mod and sharing it as-is. Work will continue and your help will be appreciated if you have any modding experience. 	
+With the permission of original author, @happy cavin, we took his FC3 J-10 mod and adapted it for wonderful JF-17 made by Deka Ironwork Simulations using it's cockpit and avionics. We also added several custom weapons from the PLAA, custom cockpit textures and other interesting features.. We are taking the "early access" route with this mod and sharing it as-is. Work will continue and your help will be appreciated if you have any modding experience. 	
 
 ## Contributing Developers
 Snowy Wolf, Yatsie, Whisky Actual
