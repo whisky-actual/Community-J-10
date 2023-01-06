@@ -3,7 +3,7 @@
 With the permission of original author, @happy cavin, we took his FC3 J-10 mod and adapted it for wonderful JF-17 made by Deka Ironwork Simulations using it's cockpit and avionics. We also added several custom weapons from the PLAA, custom cockpit textures and other interesting features.. We are taking the "early access" route with this mod and sharing it as-is. Work will continue and your help will be appreciated if you have any modding experience. 	
 
 ## Contributing Developers
-Snowy Wolf, Yatsie, Whisky Actual
+Cactus, Snowy Wolf, Yatsie, Whisky Actual
 
 ## Special Thanks
 Currenthill, Cdp Kobra, Freebird and the SU30 Team, Fatpsacepanda and JacobBadshot
