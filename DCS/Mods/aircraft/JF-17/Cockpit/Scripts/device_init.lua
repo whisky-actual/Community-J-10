@@ -115,7 +115,7 @@ indicators[#indicators + 1] = {"ccIndicator", script_path .. "ControlsIndicator/
 -- HMD
 --indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccHMD", script_path .. "HMD/Indicator/HMD_page_init.lua"}
 
-indicators[#indicators + 1] = {"ccIndicator", script_path .. "HMD/Indicator/HMD_init.lua"}
+--indicators[#indicators + 1] = {"ccIndicator", script_path .. "HMD/Indicator/HMD_init.lua"}
 -- HUD
 indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccHUD", script_path .. "HUD/Indicator/HUD_page_init.lua", devices.HUD, {{"CPT-HUD-CENTER"},{sx_l = 0,sy_l = 0,sz_l = 0,sh = 0,sw = 0}}}
 

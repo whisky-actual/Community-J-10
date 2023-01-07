@@ -186,9 +186,9 @@ JF_17 = {
 
     -------------------------
     M_empty                    = 5090.0,    -- JF-17 with pilot and nose load, kg --6586 --4840
-    M_nominal                  = 5090+4500,    -- JF-17 kg (Empty Plus Full Internal Fuel) --8339.0
-    M_max                      = 5190+4500+6600,   -- JF-17 kg (Maximum Take Off Weight)
-    M_fuel_max                 = 4500.0,    -- JF-17 kg (Internal Fuel Only)
+    M_nominal                  = 5090+2325,    -- JF-17 kg (Empty Plus Full Internal Fuel) --8339.0
+    M_max                      = 5190+2325+6600,   -- JF-17 kg (Maximum Take Off Weight)
+    M_fuel_max                 = 2325.0,    -- JF-17 kg (Internal Fuel Only)
     H_max                      = 18000,     -- JF-17 m  (Maximum Operational Ceiling)
     average_fuel_consumption   = 0.065,     --
     CAS_min                    = 58,        --
@@ -555,6 +555,7 @@ JF_17 = {
 				-- Tanks
                 { CLSID = "DIS_TANK800", arg_value =1.0, },
                 { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0, },
+                { CLSID = "DIS_INTERNAL_TANK", arg_value = 1.0, },
 
                -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
              --   { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
@@ -639,9 +640,9 @@ JF_17 = {
                -- { CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
 				-- Tanks
-                { CLSID = "DIS_TANK800", arg_value = 1.0, --[[required = {{station = 3,loadout = {"DIS_TANK800"}}}]]},  --, attach_point_position = {0, 0.325, 0}
+              --  { CLSID = "DIS_TANK800", arg_value = 1.0, --[[required = {{station = 3,loadout = {"DIS_TANK800"}}}]]},  --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK1100", arg_value = 1.0, --[[required = {{station = 3,loadout = {"DIS_TANK1100"}}}]]},  --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
+              --  { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK1100_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
 				-- Plus center tank
                 --{ CLSID = "DIS_TANK1500", arg_value = 1.0, required = {{station = 3,loadout = {"DIS_TANK1500"}}, {station = 9,loadout = {"DIS_CENTERTANK800"}}}}, 
@@ -766,6 +767,19 @@ JF_17 = {
                 { CLSID = '{Jeff}'},
             }
         ),
+	
+    pylon(9, 0, 0.286, -0.886, 0.00,-- 0.286, -0.886, 0.00, JEFF -- -0.765, -0.765, 0 10A 
+           {
+                DisplayName = "PODS" , use_full_connector_position = false, connector = "PYLON_40", arg = 311, arg_value = 0
+            },
+            {
+                { CLSID = "DIS_WMD7",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_WMD7"}},     {station = 6, loadout = {"DIS_WMD7"}},{station = 4, loadout = {"DIS_WMD7"}},{station = 4, loadout = {"DIS_TANK800"}},{station = 4, loadout = {"DIS_TANK800_EMPTY"}},{station = 4, loadout = {"DIS_GBU_10"}},{station = 4, loadout = {"DIS_GBU_16"}},{station = 4, loadout = {"DIS_AKG_DLPOD"}},{station = 4, loadout = {"DIS_SPJ_POD"}}} },
+				
+                { CLSID = "DIS_AKG_DLPOD",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_AKG_DLPOD"}},     {station = 6, loadout = {"DIS_AKG_DLPOD"}},{station = 4, loadout = {"DIS_WMD7"}},{station = 4, loadout = {"DIS_TANK800"}},{station = 4, loadout = {"DIS_TANK800_EMPTY"}},{station = 4, loadout = {"DIS_GBU_10"}},{station = 4, loadout = {"DIS_GBU_16"}},{station = 4, loadout = {"DIS_AKG_DLPOD"}},{station = 4, loadout = {"DIS_SPJ_POD"}}} },
+				
+                { CLSID = "DIS_SPJ_POD",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_SPJ_POD"}},     {station = 6, loadout = {"DIS_SPJ_POD"}},{station = 4, loadout = {"DIS_WMD7"}},{station = 4, loadout = {"DIS_TANK800"}},{station = 4, loadout = {"DIS_TANK800_EMPTY"}},{station = 4, loadout = {"DIS_GBU_10"}},{station = 4, loadout = {"DIS_GBU_16"}},{station = 4, loadout = {"DIS_AKG_DLPOD"}},{station = 4, loadout = {"DIS_SPJ_POD"}}} },
+			}
+			),
 	},
 	--[[
         pylon(9, 0, -0.765, -0.765, 0, -- this is the center line tank position
