@@ -525,7 +525,7 @@ JF_17 = {
                -- { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0,}, --, attach_point_position = {0, 0.325, 0}
                 { CLSID = "DIS_TANK1100_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
 				-- Plus center tank
-                { CLSID = "DIS_TANK1500", arg_value = 1.0, required = {{station = 5,loadout = {"DIS_TANK1500"}}, {station = 9,loadout = {"DIS_CENTERTANK800"}}}}, 
+                --{ CLSID = "DIS_TANK1500", arg_value = 1.0, required = {{station = 5,loadout = {"DIS_TANK1500"}}, {station = 9,loadout = {"DIS_CENTERTANK800"}}}}, 
 
 				-- Unguided Bombs
                 --{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
