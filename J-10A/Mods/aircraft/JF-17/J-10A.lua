@@ -770,7 +770,7 @@ JF_17 = {
 	
     pylon(9, 0, 0.286, -0.886, 0.00,-- 0.286, -0.886, 0.00, JEFF -- -0.765, -0.765, 0 10A 
            {
-                DisplayName = "PODS" , use_full_connector_position = false, connector = "PYLON_40", arg = 311, arg_value = 0
+                DisplayName = "PODS" , use_full_connector_position = false, connector = "PYLON_40"
             },
             {
                 { CLSID = "DIS_WMD7",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_WMD7"}},     {station = 6, loadout = {"DIS_WMD7"}},{station = 4, loadout = {"DIS_WMD7"}},{station = 4, loadout = {"DIS_TANK800"}},{station = 4, loadout = {"DIS_TANK800_EMPTY"}},{station = 4, loadout = {"DIS_GBU_10"}},{station = 4, loadout = {"DIS_GBU_16"}},{station = 4, loadout = {"DIS_AKG_DLPOD"}},{station = 4, loadout = {"DIS_SPJ_POD"}}} },
