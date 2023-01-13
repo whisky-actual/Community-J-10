@@ -3,7 +3,7 @@ local self_ID  = 'JF-17 by Deka Ironwork Simulations'
 local ac_name  = 'JF-17'
 local bin_name = 'JF-17_ASM'
 
-dofile(current_mod_path .. '/preload.lua')
+dofile(current_mod_path .. '/J-10A/preload.lua')
 
 declare_plugin(self_ID, {
     installed     = true,
@@ -11,7 +11,7 @@ declare_plugin(self_ID, {
     displayName   = _(ac_name),
     shortName     = ac_name,
     fileMenuName  = _(ac_name),
-    version       = "1.4.0",
+    version       = "1.4.4",
     state         = 'installed',
     developerName = _('J-10A Community Mod: https://github.com/whisky-actual/Community-J-10-A'),
     info          = _("J-10A Community Mod: THIS MATERIAL IS NOT MADE OR SUPPORTED BY EAGLE DYNAMICS SA"),
@@ -21,7 +21,7 @@ declare_plugin(self_ID, {
         [ac_name] = current_mod_path .. '/Input/JF-17',
     },
     Skins = {
-        { name = ac_name, dir = 'Skins/2' },
+        { name = ac_name, dir = '/J-10A/Skins/2' },
     },
     Missions = {
         { name = _(ac_name), dir = 'Missions', CLSID = '{JF-17 missions}', },
@@ -34,7 +34,7 @@ declare_plugin(self_ID, {
         {
             name   = _(ac_name),
             nameId = ac_name,
-            dir    = 'Options',
+            dir    = '/J-10A/Options',
             CLSID  = '{JF-17 options}',
             --AircraftSettingsFile = 'AircraftSettings.lua'
         },
@@ -42,22 +42,22 @@ declare_plugin(self_ID, {
     preload_resources = preload_files,
     infoWaitScreen = _('DCS : J-10A Community MOD'),
 })
-
----------------------------------------------------------------------------------------
-mount_vfs_model_path	(current_mod_path .. "/Shapes")
-mount_vfs_texture_path  (current_mod_path .. "/Theme")
-mount_vfs_texture_path  (current_mod_path .. "/ImagesGUI")
-mount_vfs_texture_path  (current_mod_path .. "/Textures/ExteriorTextures")
-mount_vfs_texture_path  (current_mod_path .. "/Textures/WeaponsTextures")
-mount_vfs_texture_path  (current_mod_path .. "/Textures/Liveries/")
-mount_vfs_liveries_path (current_mod_path .. "/Liveries")
-mount_vfs_model_path   (current_mod_path .. '/Cockpit/Shapes')
-mount_vfs_texture_path (current_mod_path .. '/Cockpit/Shapes/Textures')
-mount_vfs_texture_path (current_mod_path .. '/Cockpit/Textures/IndicationTextures')
-mount_vfs_liveries_path(current_mod_path .. '/Liveries')
-mount_vfs_texture_path (current_mod_path .. '/Skins/2/ME')
-
--- FM
+-------------------------------------------------------------------------------------
+mount_vfs_model_path	(current_mod_path .. '/J-10A/Shapes')
+mount_vfs_texture_path  (current_mod_path .. '/J-10A/ImagesGUI')
+mount_vfs_texture_path  (current_mod_path .. '/J-10A/Skins/2/ME')
+mount_vfs_texture_path  (current_mod_path .. '/J-10A/Textures/ExteriorTextures')
+mount_vfs_texture_path  (current_mod_path .. '/J-10A/Textures/WeaponsTextures')
+mount_vfs_texture_path  (current_mod_path .. '/J-10A/Textures/Liveries/')
+mount_vfs_liveries_path (current_mod_path .. '/J-10A/Liveries')
+mount_vfs_liveries_path (current_mod_path .. '/J-10A/Liveries/JF-17')
+mount_vfs_liveries_path (current_mod_path .. '/J-10A/Liveries/JF-17-CPT')
+mount_vfs_model_path    (current_mod_path .. '/Cockpit/Shapes')
+mount_vfs_texture_path  (current_mod_path .. '/Cockpit/Shapes/Textures')
+mount_vfs_texture_path  (current_mod_path .. '/Cockpit/Textures/IndicationTextures')
+-------------------------------------------------------------------------------------
+--J-10A FM
+-------------------------------------------------------------------------------------
 J10_FM = 
 {
 		[1] = self_ID,
@@ -171,26 +171,16 @@ J10_FM =
         },
     }
 }
----local cfg_path = current_mod_path .. '/FM/config.lua'
---dofile(cfg_path)
-
---JF17_FM[1]           = self_ID
---JF17_FM[2]           = bin_name
---JF17_FM.config_path  = cfg_path
---JF17_FM.user_options = ac_name
-
----------------------------------------------------------------------------------------
-
+-------------------------------------------------------------------------------------
 dofile(current_mod_path .. '/Views.lua')
-
 make_view_settings(ac_name, ViewSettings, SnapViews)
----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 make_flyable(ac_name, current_mod_path .. '/Cockpit/Scripts/', J10_FM, current_mod_path .. '/Comm/comm.lua')
-dofile(current_mod_path..'/J-10A.lua')
+dofile(current_mod_path..'/J-10A/J-10A.lua')
 -------------------------------------------------------------------------------------
---J-10A lua
+--J-10A Weapons lua
 -------------------------------------------------------------------------------------
-dofile(current_mod_path..'/Payload.lua')
-dofile(current_mod_path..'/Config.lua')
+dofile(current_mod_path..'/J-10A/Payload.lua')
+dofile(current_mod_path..'/J-10A/Config.lua')
 -------------------------------------------------------------------------------------
 plugin_done()

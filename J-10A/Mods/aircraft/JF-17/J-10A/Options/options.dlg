@@ -1,0 +1,3166 @@
+dialog = {
+    ["children"] = {
+        ["containerPlugin"] = {
+            ["children"] = {
+
+            -- 1st col
+                ["CPLabelLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20,
+                            ["y"] = 80,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$CPDICT",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["CPLocalListComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160,
+                            ["y"] = 80,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+                ["KYBDPITCHLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20,
+                            ["y"] = 120,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$KYBD_PITCH",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["KYBDPITCHComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160,
+                            ["y"] = 120,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+                ["VOICELOCALELabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20,
+                            ["y"] = 160,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$VOICE_LOCALE",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["VOICELOCALEComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160,
+                            ["y"] = 160,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+                ["DMAPTYPELabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20,
+                            ["y"] = 200,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$DMAP_TYPE",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["DMAPTYPEComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160,
+                            ["y"] = 200,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+            -- 2nd col
+                ["CPTEDMLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20+300,
+                            ["y"] = 80,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$CPTEDM",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["CPTModelComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160+300-20,
+                            ["y"] = 80,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+                ["GUNSIGHTLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20+300,
+                            ["y"] = 120,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$GUN_SIGHT",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["GUNSIGHTComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160+300-20,
+                            ["y"] = 120,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+                ["GUNLIMITLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20+300,
+                            ["y"] = 160,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$GUN_LIMITER",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["GUNLIMITComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160+300-20,
+                            ["y"] = 160,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+
+                ["MITLCTRLLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+50,
+                            ["x"] = 20+300,
+                            ["y"] = 200,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$MITL_CONTROL",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["MITLCTRLComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 130,
+                            ["x"] = 160+300-20,
+                            ["y"] = 200,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+                ["OESPTypeLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 40-40,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_TYPE",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["OESPCHRLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 140-40,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_CH_R",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["OESPCHILabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 240-40,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_CH_I",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["OESPCHNLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 340-40,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_CH_N",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["OESPCHBILabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 440-40-10,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_CH_BI",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+
+                ["OESPFLRLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 440+30+10,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_FL_R",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["OESPFLILabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 540+30+10,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_FL_I",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["OESPFLNLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 640+30+10,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_FL_N",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["OESPFLBILabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 375,
+                            ["x"] = 740+30,
+                            ["y"] = 320,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$OESP_FL_BI",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+
+                ["PROG01Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 20,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$PROG01",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG02Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 20,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$PROG02",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG03Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 20,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$PROG03",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG04Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 20,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$PROG04",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG05Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 20,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$PROG05",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+
+
+                -- TYPE
+                ["PROG01TYPEComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 120,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG02TYPEComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 120,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG03TYPEComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 120,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG04TYPEComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 120,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG05TYPEComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100,
+                            ["x"] = 120,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+
+
+                -- Chaff Repeat
+                ["PROG01CHRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 240,
+                            ["y"] = 350,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG01CHRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 240,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG02CHRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 240,
+                            ["y"] = 390,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG02CHRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 240,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG03CHRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 240,
+                            ["y"] = 430,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG03CHRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 240,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG04CHRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 240,
+                            ["y"] = 470,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG04CHRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 240,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG05CHRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 240,
+                            ["y"] = 510,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG05CHRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 240,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+
+                -- Chaff Interval
+                ["PROG01CHIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 50,
+                            ["x"] = 360,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG02CHIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 50,
+                            ["x"] = 360,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG03CHIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 50,
+                            ["x"] = 360,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG04CHIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 50,
+                            ["x"] = 360,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG05CHIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 50,
+                            ["x"] = 360,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+
+                -- Chaff Num
+                ["PROG01CHNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 440-10,
+                            ["y"] = 350,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG01CHNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 440-10,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG02CHNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 440-10,
+                            ["y"] = 390,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG02CHNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 440-10,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG03CHNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 440-10,
+                            ["y"] = 430,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG03CHNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 440-10,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG04CHNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 440-10,
+                            ["y"] = 470,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG04CHNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 440-10,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG05CHNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 440-10,
+                            ["y"] = 510,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG05CHNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 440-10,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+
+                -- Chaff Burst Interval
+                ["PROG01CHBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 560-10,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG02CHBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 560-10,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG03CHBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 560-10,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG04CHBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 560-10,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG05CHBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 560-10,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+
+
+
+                -- Flare Repeat
+                ["PROG01FLRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 580+40,
+                            ["y"] = 350,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG01FLRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 580+40,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG02FLRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 580+40,
+                            ["y"] = 390,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG02FLRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 580+40,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG03FLRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 580+40,
+                            ["y"] = 430,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG03FLRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 580+40,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG04FLRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 580+40,
+                            ["y"] = 470,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG04FLRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 580+40,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG05FLRWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 580+40,
+                            ["y"] = 510,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG05FLRSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 580+40,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+
+                -- Flare Interval
+                ["PROG01FLIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 730+10,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG02FLIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 730+10,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG03FLIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 730+10,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG04FLIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 730+10,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG05FLIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 730+10,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+
+
+                -- Flare Num
+                ["PROG01FLNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 780+30,
+                            ["y"] = 350,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG01FLNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 780+30,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG02FLNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 780+30,
+                            ["y"] = 390,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG02FLNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 780+30,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG03FLNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 780+30,
+                            ["y"] = 430,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG03FLNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 780+30,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG04FLNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 780+30,
+                            ["y"] = 470,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG04FLNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 780+30,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+                ["PROG05FLNWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 780+30,
+                            ["y"] = 510,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["PROG05FLNSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 780+30,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+                -- Flare Burst Interval
+                ["PROG01FLBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 930,
+                            ["y"] = 360,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG02FLBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 930,
+                            ["y"] = 400,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG03FLBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 930,
+                            ["y"] = 440,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG04FLBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 930,
+                            ["y"] = 480,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+                ["PROG05FLBIComboList"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 60-10,
+                            ["x"] = 930,
+                            ["y"] = 520,
+                        },
+                        ["enabled"] = true,
+                        ["tabOrder"] = 0,
+                        ["text"] = "Item1",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "comboListSkin_options",
+                        },
+                    },
+                    ["type"] = "ComboList",
+                },
+
+
+                -- chaff/flare prog
+
+
+                -- monitor slew rate
+                ["TDC_DEADZONE_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+30+20,
+                            ["x"] = 20+600-20,
+                            ["y"] = 40,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$txt_TDC_DEADZONE",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["HUD_TDC_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+30+20,
+                            ["x"] = 20+600-20,
+                            ["y"] = 80,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$txt_HUD_TDC",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["DLPOD_TDC_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+30+20,
+                            ["x"] = 20+600-20,
+                            ["y"] = 120,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$txt_DLPOD_TDC",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["WMD_TDC_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+30+20,
+                            ["x"] = 20+600-20,
+                            ["y"] = 160,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$txt_WMD_TDC",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["TVIR_TDC_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+30+20,
+                            ["x"] = 20+600-20,
+                            ["y"] = 200,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$txt_TVIR_TDC",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["RDR_TDC_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+30+20,
+                            ["x"] = 20+600-20,
+                            ["y"] = 240,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$txt_RDR_TDC",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["RDR_ELEV_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 160+30+20,
+                            ["x"] = 20+600-20,
+                            ["y"] = 280,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$txt_RDR_ELEV",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+
+
+                ["TDC_DEADZONEWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 260+600+30,
+                            ["y"] = 50,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["TDC_DEADZONESlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160+600+20+30,
+                            ["y"] = 40,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 0.01,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+                ["HUD_TDCWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 260+600+30,
+                            ["y"] = 90,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["HUD_TDCSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160+600+20+30,
+                            ["y"] = 80,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 0.1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+                ["DLPOD_TDCWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 260+600+30,
+                            ["y"] = 130,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["DLPOD_TDCSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160+600+20+30,
+                            ["y"] = 120,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 1,
+                        ["range"] = {
+                            ["max"] = 2.0,
+                            ["min"] = 0.2,
+                        },
+                        ["step"] = 0.1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+                ["WMD_TDCWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 260+600+30,
+                            ["y"] = 170,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["WMD_TDCSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160+600+20+30,
+                            ["y"] = 160,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 0.1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+                ["TVIR_TDCWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 260+600+30,
+                            ["y"] = 210,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["TVIR_TDCSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160+600+20+30,
+                            ["y"] = 200,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 0.1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+                ["RDR_TDCWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 260+600+30,
+                            ["y"] = 250,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["RDR_TDCSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160+600+20+30,
+                            ["y"] = 240,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 0.1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+                ["RDR_ELEVWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 260+600+30,
+                            ["y"] = 290,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["RDR_ELEVSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160+600+20+30,
+                            ["y"] = 280,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 0.1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+                -- chaff/flare bingo
+                ["ChaffBingoLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100+50,
+                            ["x"] = 20,
+                            ["y"] = 240,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$CHAFFB",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["FlareBingoLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 100+50,
+                            ["x"] = 20,
+                            ["y"] = 280,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$FLAREB",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+
+
+
+                ["CHAFFBINGOWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 240,
+                            ["y"] = 246,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["CHAFFBINGOSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160,
+                            ["y"] = 240,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+                ["FLAREBINGOWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 50,
+                            ["x"] = 240,
+                            ["y"] = 286,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["FLAREBINGOSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 160,
+                            ["y"] = 280,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = {
+                            ["max"] = 100,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+            -- bot
+                ["HiddenStickCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 18,
+                            ["w"] = 150,
+                            ["x"] = 20,
+                            ["y"] = 570,
+                        },
+                        ["enabled"] = true,
+                        ["state"] = false,
+                        ["tabOrder"] = 0,
+                        ["text"] = "$HIDDENSTICK",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "checkBoxSkin_options",
+                        },
+                    },
+                    ["type"] = "CheckBox",
+                },
+                ["TestingChgCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 18,
+                            ["w"] = 150,
+                            ["x"] = 20,
+                            ["y"] = 600,
+                        },
+                        ["enabled"] = true,
+                        ["state"] = false,
+                        ["tabOrder"] = 0,
+                        ["text"] = "$TESTINGCHG",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "checkBoxSkin_options",
+                        },
+                    },
+                    ["type"] = "CheckBox",
+                },
+                ["IcingOnCakeCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 18,
+                            ["w"] = 150,
+                            ["x"] = 180,
+                            ["y"] = 600,
+                        },
+                        ["enabled"] = true,
+                        ["state"] = false,
+                        ["tabOrder"] = 0,
+                        ["text"] = "$ICEONCAKE",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "checkBoxSkin_options",
+                        },
+                    },
+                    ["type"] = "CheckBox",
+                },
+                ["AntZoomInvCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 18,
+                            ["w"] = 150,
+                            ["x"] = 180,
+                            ["y"] = 570,
+                        },
+                        ["enabled"] = true,
+                        ["state"] = false,
+                        ["tabOrder"] = 0,
+                        ["text"] = "$ANTZOOMINV",
+                        ["tooltip"] = "$ANTZOOMINV_TIP",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "checkBoxSkin_options",
+                        },
+                    },
+                    ["type"] = "CheckBox",
+                },
+                ["RemoveProbeCheckbox"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 18,
+                            ["w"] = 150,
+                            ["x"] = 340,
+                            ["y"] = 570,
+                        },
+                        ["enabled"] = true,
+                        ["state"] = false,
+                        ["tabOrder"] = 0,
+                        ["text"] = "$REMOVEPROBE",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "checkBoxSkin_options",
+                        },
+                    },
+                    ["type"] = "CheckBox",
+                },
+
+                -- music slider
+                ["MUSICNUM_SLIDER_Label"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 25,
+                            ["w"] = 80+60,
+                            ["x"] = 360 + 160, --160,
+                            ["y"] = 570-3,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$MUSIC_NUM",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsCaptionSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["MUSICNUM_SLIDERWidget"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 15,
+                            ["w"] = 30,
+                            ["x"] = 450 + 160,
+                            ["y"] = 595+5,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "0",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsSliderValueSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+                ["MUSICNUM_SLIDERSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 30,
+                            ["w"] = 100,
+                            ["x"] = 360 + 160,
+                            ["y"] = 590+5,
+                        },
+                        ["enabled"] = true,
+                        ["pageStep"] = 1,
+                        ["range"] = {
+                            ["max"] = 30,
+                            ["min"] = 0,
+                        },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "",
+                        ["value"] = 0,
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "horzSliderSkin_options",
+                        },
+                    },
+                    ["type"] = "HorzSlider",
+                },
+
+
+                ["nameLabel"] = {
+                    ["params"] = {
+                        ["bounds"] = {
+                            ["h"] = 18,
+                            ["w"] = 375,
+                            ["x"] = 57,
+                            ["y"] = 42,
+                        },
+                        ["enabled"] = true,
+                        ["text"] = "$JF17",
+                        ["tooltip"] = "",
+                        ["visible"] = true,
+                        ["zindex"] = 0,
+                    },
+                    ["skin"] = {
+                        ["params"] = {
+                            ["name"] = "staticOptionsTitleSkin",
+                        },
+                    },
+                    ["type"] = "Static",
+                },
+            },
+            ["params"] = {
+                ["bounds"] = {
+                    ["h"] = 600,
+                    ["w"] = 1000,
+                    ["x"] = 0,
+                    ["y"] = 0,
+                },
+                ["enabled"] = true,
+                ["layout"] = {
+                },
+                ["text"] = "",
+                ["tooltip"] = "",
+                ["visible"] = true,
+                ["zindex"] = 2,
+            },
+            ["skin"] = {
+                ["params"] = {
+                    ["name"] = "panelSkin",
+                },
+            },
+            ["type"] = "Panel",
+        },
+    },
+    ["params"] = {
+        ["bounds"] = {
+            ["h"] = 851,
+            ["w"] = 1135,
+            ["x"] = 0,
+            ["y"] = 0,
+        },
+        ["clipResizeCursor"] = false,
+        ["draggable"] = true,
+        ["enabled"] = true,
+        ["hasCursor"] = true,
+        ["layout"] = {
+        },
+        ["lockFlow"] = false,
+        ["modal"] = false,
+        ["offscreen"] = false,
+        ["resizable"] = false,
+        ["text"] = "New dialog",
+        ["zOrder"] = 0,
+    },
+    ["skin"] = {
+        ["params"] = {
+            ["name"] = "windowSkin",
+        },
+    },
+    ["type"] = "Window",
+}

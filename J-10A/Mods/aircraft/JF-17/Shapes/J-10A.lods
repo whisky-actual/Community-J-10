@@ -1,8 +1,0 @@
-model = {
-	lods = {
-	
-{"J-10A.edm",50000.000000};	
-	
-	};
-	collision_shell = "J-10A-collision.edm";
-}

@@ -71,6 +71,7 @@ devices["HUD"]  = counter()
 devices["UFCP"] = counter()
 devices["MFCD"] = counter()
 devices["HMD"]  = counter()
+devices["HMDNew"]  = counter()
 
 devices["CLOCK"] = counter()
 

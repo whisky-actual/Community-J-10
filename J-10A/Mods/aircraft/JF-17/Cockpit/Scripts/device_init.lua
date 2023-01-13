@@ -100,6 +100,8 @@ creators[devices.NVG]             = {"DEKA_Device::JF_17::avNVG", script_path ..
 creators[devices.EFFECT]          = {"DEKA_Device::JF_17::avEffect", script_path .. "Effects/avEffect.lua", {}}
 
 creators[devices.HMD]  		   	   		= {"avLuaDevice"           ,LockOn_Options.script_path.."HMD/Device/HMD_Device.lua"}
+creators[devices.HMDNew]  		   	   	= {"avLuaDevice"           ,LockOn_Options.script_path.."HMD new/Device/HMD_Device.lua"}
+
 
 ----------------------------------------------------------------------------------------------------------------
 -- Indicators
@@ -115,7 +117,7 @@ indicators[#indicators + 1] = {"ccIndicator", script_path .. "ControlsIndicator/
 -- HMD
 --indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccHMD", script_path .. "HMD/Indicator/HMD_page_init.lua"}
 
---indicators[#indicators + 1] = {"ccIndicator", script_path .. "HMD/Indicator/HMD_init.lua"}
+indicators[#indicators + 1] = {"ccIndicator", script_path .. "HMD new/Indicator/HMD_init.lua"}
 -- HUD
 indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccHUD", script_path .. "HUD/Indicator/HUD_page_init.lua", devices.HUD, {{"CPT-HUD-CENTER"},{sx_l = 0,sy_l = 0,sz_l = 0,sh = 0,sw = 0}}}
 
