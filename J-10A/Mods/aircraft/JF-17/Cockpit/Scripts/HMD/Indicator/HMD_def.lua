@@ -2,8 +2,9 @@ dofile(LockOn_Options.common_script_path.."elements_defs.lua")
 dofile(LockOn_Options.common_script_path.."Fonts/symbols_locale.lua")
 dofile(LockOn_Options.common_script_path.."Fonts/fonts_cmn.lua")
 dofile(LockOn_Options.script_path.."materials.lua")
+dofile(LockOn_Options.script_path.."fonts.lua")
 
-local HUD_IND_TEX_PATH        = LockOn_Options.script_path .. "HMD New/"  
+local HUD_IND_TEX_PATH        = LockOn_Options.script_path .. "HMD/"  
 
 SetScale(FOV)
 
@@ -38,22 +39,109 @@ materials["BGCOLOR"]    = MakeMaterial(nil,{242, 235, 179,255})
 materials["MWHITE"]     = MakeMaterial(nil, materials["DBG_WHITE"])
 materials["BBLACK"]     = MakeMaterial(nil, materials["DBG_BLACK"])
 
+
 -------FONTS-------
-local IndicationFontPath = LockOn_Options.script_path.."Resources/fonts/"
+local IndicationFontPath = LockOn_Options.script_path.."HMD/"
 local BASE_COLOR  = {36,255,113,255}
 local GREEN 		= {0,255,0,255}
+
+
+materials["GREENCOLOR"]    = MakeMaterial(nil,GREEN)
  
 fontdescription = {}
 
 CMFD_X_PIXEL =  88
 CMFD_Y_PIXEL =  144
 
-local Gripen_Font = fonts["hud_font_g"]
+local Gripen_Font = 
+{
+    texture = IndicationFontPath.."Gripen_Font_HUD",
+    size        = {10, 10},
+    resolution  = {1440, 1440},
+    default     = {CMFD_X_PIXEL, CMFD_Y_PIXEL},
+    chars       = {
+        {32, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- space
+        {48, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 0
+        {49, CMFD_X_PIXEL*0.8, CMFD_Y_PIXEL}, -- 1
+        {50, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 2
+        {51, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 3
+        {52, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 4
+        {53, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 5
+        {54, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 6
+        {55, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 7
+        {56, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 8
+        {57, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 9
+
+        {64, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Alpha -> @
+
+        {65, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- A
+        {66, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- B
+        {67, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- C
+        {68, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- D
+        {69, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- E
+        {70, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- F
+        {71, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- G
+        {72, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- H
+        {73, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- I
+        {74, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- J
+        {75, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- K
+        {76, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- L
+        {77, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- M
+        {78, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- N
+        {79, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- O
+        {80, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- P
+        {81, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Q
+        {82, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- R
+        {83, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- S
+        {84, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- T
+        {85, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- U
+        {86, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- V
+        {87, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- W
+        {88, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- X
+        {89, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Y
+        {90, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Z
+         
+        {42, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- *
+        {43, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- +
+        {45, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- -
+        {47, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- /
+        {92, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- \
+        {40, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- (
+        {41, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- )
+        {91, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- [
+        {93, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ]
+        {123, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- {
+        {125, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- }
+        {60, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- <
+        {62, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- >
+        {61, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- =
+        {63, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ?
+        {124, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- |
+        {33, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- !
+        {35, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- #
+        {37, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- %
+        {94, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ^
+        {38, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- &
+        {96, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- o -- degree, change its ascii code to 96 ', original 248 (out of index)
+        {46, CMFD_X_PIXEL*0.65, CMFD_Y_PIXEL*0.65}, -- .
+        {58, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- :
+        {44, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ,
+        {126, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- cursor -> ~
+        {95, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- _
+        
+        {39, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- '
+        {34, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- "
+        --{32, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- [space]
+        
+        {127, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- delta, use last ascii code
+    }
+}
 
 
-Gripen_Font_green  	= fonts["hud_font_g"]
+--Gripen_Font_green  	= MakeFont(Gripen_Font, GREEN, "Gripen_Font_green")
+Gripen_Font_green  	= MakeFont(Gripen_Font, GREEN, fontdescription["font_HUD"] )
 
-
+--[[
 fonts = {}
 fonts["FONT_WHITE"]  = MakeFont({used_DXUnicodeFontData = "FUI/Fonts/font_arial_17"},materials["DBG_WHITE"],50,"test_font") --this is font object declaration. Mig-21 does not have fonts, therefore disabled.
 fonts["FONT_BLUE"]   = MakeFont({used_DXUnicodeFontData = "FUI/Fonts/font_arial_17"},materials["DBG_BLUE"],50,"test_font") --this is font object declaration. Mig-21 does not have fonts, therefore disabled.
@@ -62,7 +150,7 @@ fonts["FONT_GREEN"]  = MakeFont({used_DXUnicodeFontData = "FUI/Fonts/font_arial_
 fonts["FONT_BLACK"]  = MakeFont({used_DXUnicodeFontData = "FUI/Fonts/font_arial_17"}, materials["DBG_BLACK"],50,"test_font") 
 fonts["FONT_WHITE"]  = MakeFont({used_DXUnicodeFontData = "FUI/Fonts/font_arial_17"}, materials["DBG_WHITE"],50,"test_font") 
 
-fonts["Gripen_Font_green"]  = Gripen_Font_green
+fonts["Gripen_Font_green"]  = Gripen_Font_green]]
 
 
 --all vertices in files who include this file will be scaled in millyradians
@@ -467,9 +555,9 @@ end
 
 
 function create_line(PosX, PosY, lLenght, lwidth, parent, material, vertices)
-	vmaterial =  materials["MWHITE"]
+	vmaterial =  materials["GREENCOLOR"]
 	if material ~= nil then
-		vmaterial =  materials[material]
+		vmaterial =  materials["GREENCOLOR"]
 	end
 	vvertices = {{0, 0}, {lLenght,0}}
 	if material ~= nil then
@@ -492,7 +580,7 @@ function create_rect(xpos, ypos, bw, bh, Border, parent, material)
 	rec_parent.init_pos       	= {xpos, ypos}
 	rec_parent.parent_element	= parent.name
 	
-	local  rect_top_line 		= create_line(0 ,0 , bw * 2, Border, rec_parent, material)
+	local  rect_top_line 		= create_line(0 ,0 , bw * 2, Border, rec_parent, "GREENCOLOR")
 	rect_top_line.init_pos 		= {-bw,bh}
 	AddHMDElement(rect_top_line)
 
@@ -500,7 +588,7 @@ function create_rect(xpos, ypos, bw, bh, Border, parent, material)
 	rect_bottom_line.init_pos 	= {-bw, -bh}
 	AddHMDElement(rect_bottom_line)
 
-	local  rect_left_line 		= create_line(Border ,0 , Border, bh , rec_parent, material)
+	local  rect_left_line 		= create_line(Border ,0 , Border, bh , rec_parent, "GREENCOLOR")
 	rect_left_line.init_pos 	= {-bw +(Border ) - 0.005, 0}
 	AddHMDElement(rect_left_line)
 
@@ -587,9 +675,9 @@ function add_text_HMD(text, posx, posy, pparent, font_mat, stringdefs, valign)
 	if valign == nil then
 		valign = "CenterCenter"
 	end
-	vfont_mat = fonts["FONT_GREEN"]
+	vfont_mat = Gripen_Font_green
 	if font_mat ~= nil then
-		vfont_mat = fonts[font_mat]
+		vfont_mat = Gripen_Font_green
 	end
 	if stringdefs == nil then
 		stringdefs = HUD_strdefs_text
@@ -619,9 +707,9 @@ function add_text_HMD_param(posx, posy, element_parm, element_parm2, tformat, pp
 	if talignment == nil then
 		talignment = "CenterCenter"
 	end
-	vfont_mat = fonts["FONT_GREEN"]
+	vfont_mat = Gripen_Font_green
 	if font_mat ~= nil then
-		vfont_mat = fonts[font_mat]
+		vfont_mat = Gripen_Font_green
 	end	
 	if stringdefs == nil then
 		stringdefs = HUD_strdefs_text
@@ -660,9 +748,9 @@ function add_text_HMD2(text, posx, posy, pparent, font_mat, stringdefs, valign)
 	if valign == nil then
 		valign = "CenterCenter"
 	end
-	vfont_mat = fonts["FONT_GREEN"]
+	vfont_mat = Gripen_Font_green
 	if font_mat ~= nil then
-		vfont_mat = fonts[font_mat]
+		vfont_mat = Gripen_Font_green
 	end
 	if stringdefs == nil then
 		stringdefs = HUD_strdefs_text

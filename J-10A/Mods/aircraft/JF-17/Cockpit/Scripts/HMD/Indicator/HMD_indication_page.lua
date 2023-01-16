@@ -1,4 +1,4 @@
-dofile(LockOn_Options.script_path.."HMD New/Indicator/HMD_def.lua")
+dofile(LockOn_Options.script_path.."HMD/Indicator/HMD_def.lua")
 
 --[[
 "HUD_BRIGHTNESS"
@@ -11,10 +11,10 @@ local HUD_BASE 				= CreateElement "ceSimple"
 HUD_BASE.name  				= create_guid_string()
 HUD_BASE.init_pos			= {-0.08, 0, 1.5}									--{0, -1.345,0} -- 0,0.7,-1.5
 HUD_BASE.element_params     = {"MAINPOWER","HORIZONTAL_VIEW_HMD","VERTICAL_VIEW_HMD", "HMDTOGGLE"}          
-HUD_BASE.controllers        = {{"parameter_in_range" ,0,0.9,1.1},{"parameter_in_range" ,1, 23,360},{"parameter_in_range" ,2, -30,180}, {"parameter_in_range" ,3, 0.9,1.1} }
+HUD_BASE.controllers        = {{"parameter_in_range" ,0,0.9,1.1},{"parameter_in_range" ,1, 23,360},{"parameter_in_range" ,2, -30,220}, {"parameter_in_range" ,3, 0.9,1.1} }
 AddHMDElement(HUD_BASE)
 ----
---[[
+
 ---Landing mode indicator
 local landing_mode_ind 			 	= add_text_HMD("L", -0.0, -1.0, HUD_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
 landing_mode_ind.element_params  	= {"LANDING_MODE","CANNON_MODE"}
@@ -40,13 +40,6 @@ local lngt_mode_ind 				= add_text_HMD("LNGT", -0.0, -0.8, HUD_BASE , "hud_font_
 lngt_mode_ind.element_params  		= {"HUD_MODE","CANNON_MODE"}
 lngt_mode_ind.controllers     		= {{"parameter_in_range" ,0,5.9,6.1}, {"parameter_in_range" ,1,-0.1,0.1} }
 
-local lngt_mode_ind 				= add_text_HMD("GUN", -0.0, -0.8, HUD_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
-lngt_mode_ind.element_params  		= {"CANNON_MODE"}
-lngt_mode_ind.controllers     		= {{"parameter_in_range" ,0,0.1,1.1}, {"parameter_in_range" ,1,-0.1,0.1} }
-
-local hmd_mode_ind 					= add_text_HMD("HMD", -0.0, -0.8, HUD_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
-hmd_mode_ind.element_params  		= {"HUD_MODE","CANNON_MODE"}
-hmd_mode_ind.controllers     		= {{"parameter_in_range" ,0,7.9,8.1}, {"parameter_in_range" ,1,-0.1,0.1} }
 
 local Left_Side_Indication_base 			= CreateElement "ceSimple"
 Left_Side_Indication_base.name  			= create_guid_string()
@@ -55,21 +48,6 @@ Left_Side_Indication_base.parent_element	= HUD_BASE.name
 AddHMDElement(Left_Side_Indication_base)
 
 
---Auto throttle on/off indicator
-local Auto_throttle_ind 		  	= add_text_HMD("AT", -0.71, -0.04, Left_Side_Indication_base , "hud_font_g", HMD_strdefs_text, "CenterCenter")
-Auto_throttle_ind.element_params  	= {"AUTOTHROTTLE_ONOFF"}
-Auto_throttle_ind.controllers     	= {{"parameter_in_range" ,0,0.9,1.1} }
---Auto throttle mode 12 AoA
-
-local Auto_throttle_mode12 			 = add_text_HMD("12", -0.65, -0.04, Left_Side_Indication_base , "hud_font_g", HMD_strdefs_text, "CenterCenter")
-Auto_throttle_mode12.element_params  = {"AUTOTHROTTLE_MODE"}
-Auto_throttle_mode12.controllers     = {{"parameter_in_range" ,0,0.4,0.6} }
---Auto throttle mode 14 AoA
-
-local Auto_throttle_mode14 			 = add_text_HMD("14", -0.65, -0.04, Left_Side_Indication_base , "hud_font_g", HMD_strdefs_text, "CenterCenter")
-Auto_throttle_mode14.element_params  = {"AUTOTHROTTLE_MODE"}
-Auto_throttle_mode14.controllers     = {{"parameter_in_range" ,0,0.9,1.1} }
-]]
 --HMD Circle
 
 local AltimeterScaleArrow				= create_HMD_Circle(HMD_Circle, 0, 0, 2048, 2048, 0.8) 
@@ -82,14 +60,39 @@ AltimeterScaleArrow.controllers			= { {"opacity_using_parameter" ,0}  }
 AddHMDElement(AltimeterScaleArrow)
 
 --Indicators
+
+local G_indicator 	= add_text_HMD_param(-0.5, 0.1, "G_HMD","HUD_BRIGHTNESS", "%0.1f", Left_Side_Indication_base, HMD_strdefs_digit, nil)
 --[[
-local Alfa_indicator 	= add_text_HMD_param(-0.5, 0.1, "CUR_AOA","HUD_BRIGHTNESS", "%0.0f", Left_Side_Indication_base, HMD_strdefs_digit, "hud_font_g")
+local KIAS_box	= create_rect(-0.47, -0.0, 0.6, 0.2, 0.01, Left_Side_Indication_base, "DBG_GREEN")
+KIAS_box.element_params		= {"HUD_BRIGHTNESS"}
+KIAS_box.controllers			= { {"opacity_using_parameter" ,0}  }
+AddHMDElement(KIAS_box)]]
 
-local KIAS_indicator 	= add_text_HMD_param(-0.45, -0.1, "CURR_IAS","HUD_BRIGHTNESS", "%0.0f", Left_Side_Indication_base, HMD_strdefs_digit, "hud_font_g")
 
-local tester 	= add_text_HMD_param(0, -0.1, "DEBUGPARAM","HUD_BRIGHTNESS", "%0.6f", Left_Side_Indication_base, HMD_strdefs_digit, "Gripen_Font_green")]]
+local KIAS_indicator 	= add_text_HMD_param(-0.45, -0.1, "CURR_IAS","HUD_BRIGHTNESS", "%0.0f", Left_Side_Indication_base, HMD_strdefs_digit, nil)
+
+local Right_Side_Indication_base 			= CreateElement "ceSimple"
+Right_Side_Indication_base.name  			= create_guid_string()
+Right_Side_Indication_base.init_pos			= {0.033, -0.15,0}
+Right_Side_Indication_base.parent_element	= HUD_BASE.name
+AddHMDElement(Right_Side_Indication_base)
+
+local Altitude_indicator 	= add_text_HMD_param(0.45, -0.1, "ALTITUDE_HMD","HUD_BRIGHTNESS", "%0.0f", Right_Side_Indication_base, HMD_strdefs_digit, nil)
 
 
+local Bottom_Indication_base 			= CreateElement "ceSimple"
+Bottom_Indication_base.name  			= create_guid_string()
+Bottom_Indication_base.init_pos			= {0.00, 0.45,0}
+Bottom_Indication_base.parent_element	= HUD_BASE.name
+AddHMDElement(Bottom_Indication_base)
+
+
+local Heading_indicator 	= add_text_HMD_param(0.0, -0.1, "HEADING_HMD","HUD_BRIGHTNESS", "%0.0f", Bottom_Indication_base, HMD_strdefs_digit, nil)
+
+
+--local tester 	= add_text_HMD_param(0, -0.1, "DEBUGPARAM","HUD_BRIGHTNESS", "%0.6f", Left_Side_Indication_base, HMD_strdefs_digit, "Gripen_Font_green")
+
+--[[
 local TST_G		 = MakeMaterial(nil,{0,0,100,100})
 
 local AltimeterScaleMask 					= CreateElement "ceMeshPoly"		-- change shape 
@@ -118,20 +121,20 @@ AltimeterScaleArrow.h_clip_relation  	= h_clip_relations.DECREASE_IF_LEVEL
 AltimeterScaleArrow.level  		 		= HMD_DEFAULT_LEVEL + 1
 AltimeterScaleArrow.element_params		= {"HUD_BRIGHTNESS"}
 AltimeterScaleArrow.controllers			= { {"opacity_using_parameter" ,0}  }
-AddHMDElement2(AltimeterScaleArrow)
+AddHMDElement2(AltimeterScaleArrow)]]
 
 --ALTITUDE_MODE:set(1)		-- 1 = barometric, 2 = Radar 
 --[[
-local Altitude_mode_ind 					= add_text_HMD("77", 0.58, -0.50, HUD_BASE , "hud_font_g", HUD_pitch_digit, "CenterCenter")
+local Altitude_mode_ind 					= add_text_HMD("77", 0.58, -0.50, HUD_BASE , "Gripen_Font_green", HUD_pitch_digit, "CenterCenter")
 Altitude_mode_ind.element_params  			= {"ALTITUDE_MODE","RadarAltAvail"}
-Altitude_mode_ind.controllers     			= {{"parameter_in_range" ,0, 1.9, 2.1},{"parameter_in_range" ,1, 0.9, 1.1} }
+Altitude_mode_ind.controllers     			= {{"parameter_in_range" ,0, 1.9, 2.1},{"parameter_in_range" ,1, 0.9, 1.1} }]]
 
-
+--[[
 local ALTIMETER_BASE 				= CreateElement "ceSimple"
 ALTIMETER_BASE.name  				= create_guid_string()
 ALTIMETER_BASE.init_pos				= {-0.15, 0.782}
 ALTIMETER_BASE.parent_element		= HUD_BASE.name
-ALTIMETER_BASE.element_params     	= {"ALTITUDE_HUD"}             
+ALTIMETER_BASE.element_params     	= {"ALTITUDE_HMD"}             
 ALTIMETER_BASE.controllers        	= {{"move_up_down_using_parameter",0, -0.0001980675} }
 AddHMDElement(ALTIMETER_BASE)
 
@@ -168,7 +171,7 @@ for i = 0,810 do
 		AltLineShort.controllers				= { {"opacity_using_parameter" ,0}  }
 		AddHMDElement3(AltLineShort)
 		
-		counter = counter + 1
+		counter = counter + 3.2808399 -- change to feet
 		
 		if counter == 10 then
 			counter = 0
@@ -176,30 +179,29 @@ for i = 0,810 do
 		end
 		
 		hundreds = counter
-		
 		if Thousands < 1 then
 		
 			if hundreds == 0 then
-				local Ahundreds		= add_text_HMD2(hundreds, HundredsOffsetX - 0.075, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
+				local Ahundreds		= add_text_HMD2(hundreds, HundredsOffsetX - 0.075, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , nil, HMD_strdefs_text, "CenterCenter")
 			else 
-				local Ahundreds		= add_text_HMD2(hundreds .. "00", HundredsOffsetX - 0.05, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
+				local Ahundreds		= add_text_HMD2(hundreds .. "00", HundredsOffsetX - 0.05, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , nil, HMD_strdefs_text, "CenterCenter")
 			end
 			
 		elseif Thousands >= 1 and Thousands < 10 then
 		
-			local AThousands		= add_text_HMD2(Thousands, ThousandsOffsetX + 0.02, ThousandsOffsetY + i * AltTextOffset, ALTIMETER_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
+			local AThousands		= add_text_HMD2(Thousands, ThousandsOffsetX + 0.02, ThousandsOffsetY + i * AltTextOffset, ALTIMETER_BASE , nil, HMD_strdefs_text, "CenterCenter")
 			
-			local Ahundreds			= add_text_HMD2(hundreds .. "00", HundredsOffsetX, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , "hud_font_g", HUD_Heading_digit, "CenterCenter")
+			local Ahundreds			= add_text_HMD2(hundreds .. "00", HundredsOffsetX, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , nil, HUD_Heading_digit, "CenterCenter")
 
 		else
-			local AThousands		= add_text_HMD2(Thousands, ThousandsOffsetX , ThousandsOffsetY + i * AltTextOffset, ALTIMETER_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
+			local AThousands		= add_text_HMD2(Thousands, ThousandsOffsetX , ThousandsOffsetY + i * AltTextOffset, ALTIMETER_BASE , nil, HMD_strdefs_text, "CenterCenter")
 			
-			local Ahundreds			= add_text_HMD2(hundreds .. "00", HundredsOffsetX, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , "hud_font_g", HUD_Heading_digit, "CenterCenter")
+			local Ahundreds			= add_text_HMD2(hundreds .. "00", HundredsOffsetX, HundredsOffsetY+ i * AltTextOffset, ALTIMETER_BASE , nil, HUD_Heading_digit, "CenterCenter")
 
 		end
 
-end
-
+end]]
+--[[
 -- air to ground mode altimeter
 
 local A2G_Altitude_BASE 					= CreateElement "ceSimple"

@@ -18,6 +18,7 @@ local MainPower = get_param_handle("MAINPOWER")
 
 local HUD_BRIGHTNESS = get_param_handle("HUD_BRIGHTNESS")
 MainPower:set(1.0)
+local button_depress = false
 -------------------------------------------------------
 -- Initialization Functions	
 -------------------------------------------------------
@@ -35,7 +36,7 @@ function post_initialize()
     HORIZONTAL_VIEW_HMD:set(0)
     VERTICAL_VIEW_HMD:set(0)
     --HMD_LIGHT:set(1)
-    HMDTOGGLE:set(1)
+    HMDTOGGLE:set(0)
     CANNON_MODE:set(1)
 	MainPower:set(1.0)
 	HUD_BRIGHTNESS:set(1.0)
@@ -57,7 +58,7 @@ end]]
     if command == 2142 then
        -- print_message_to_user(value)
 
-       if VERTICAL_VIEW_HMD:get() < 60 then
+       if VERTICAL_VIEW_HMD:get() < 40 then
             HORIZONTAL_VIEW_HMD:set(math.abs(value))
        else
             HORIZONTAL_VIEW_HMD:set(25)
@@ -77,4 +78,38 @@ end]]
 
     end
 end 
+
+function update()
+	if get_cockpit_draw_argument_value(915) > 0.0 then
+		button_depress = true
+	else
+		--if clicked
+		if button_depress then
+			if HMDTOGGLE:get() == 0 then
+				HMDTOGGLE:set(1)
+				HMD_LIGHT:set(1) 
+			else
+				HMDTOGGLE:set(0)
+				HMD_LIGHT:set(0) 
+			end		
+		end
+		
+		button_depress = false
+	end 
+--[[
+	--get HMD toggle pos
+	if get_cockpit_draw_argument_value(264) > 0.5 then
+		HMDTOGGLE:set(1.0)
+	else
+		HMDTOGGLE:set(0.0)
+	end]]
+	
+	--get HMD brightness
+	if get_cockpit_draw_argument_value(729) > 0.0 then
+		HUD_BRIGHTNESS:set(get_cockpit_draw_argument_value(729))
+	else
+		HUD_BRIGHTNESS:set(0.0)
+	end
+	
+end
 need_to_be_closed = false

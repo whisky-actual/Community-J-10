@@ -7,7 +7,7 @@ purposes 	   	= {render_purpose.GENERAL}
 BASE    = 1 
 
 page_subsets  = {
-	[BASE]    		= LockOn_Options.script_path.."HMD New/Indicator/HMD_base_page.lua",   
+	[BASE]    		= LockOn_Options.script_path.."HMD/Indicator/HMD_base_page.lua",   
 }
 pages = {
 	{ BASE, }, 

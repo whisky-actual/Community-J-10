@@ -1,3 +1,5 @@
+dofile('Scripts/Database/Weapons/warheads.lua')
+
 tail_solid  = { 1, 1, 1, 1 };
 tail_liquid = { 0.9, 0.9, 0.9, 0.05 };
 eject_speed = 1.2
