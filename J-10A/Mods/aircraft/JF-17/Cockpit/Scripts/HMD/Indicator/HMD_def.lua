@@ -40,106 +40,131 @@ materials["MWHITE"]     = MakeMaterial(nil, materials["DBG_WHITE"])
 materials["BBLACK"]     = MakeMaterial(nil, materials["DBG_BLACK"])
 
 
--------FONTS-------
-local IndicationFontPath = LockOn_Options.script_path.."HMD/"
+-------FONTS--------- Global Macro
+local IndicationFontPath = LockOn_Options.script_path .. "../Textures/IndicationTextures/"
 local BASE_COLOR  = {36,255,113,255}
 local GREEN 		= {0,255,0,255}
 
 
 materials["GREENCOLOR"]    = MakeMaterial(nil,GREEN)
  
-fontdescription = {}
 
-CMFD_X_PIXEL =  88
-CMFD_Y_PIXEL =  144
+-- HUD
+HUD_X_PIXEL = 88 -- pi
+HUD_Y_PIXEL = 144
 
-local Gripen_Font = 
-{
-    texture = IndicationFontPath.."Gripen_Font_HUD",
+local Gripen_Font = {
+    texture     = IndicationFontPath .. "font_HUD.dds",
     size        = {10, 10},
     resolution  = {1440, 1440},
-    default     = {CMFD_X_PIXEL, CMFD_Y_PIXEL},
+    default     = {HUD_X_PIXEL, HUD_Y_PIXEL},
     chars       = {
-        {32, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- space
-        {48, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 0
-        {49, CMFD_X_PIXEL*0.8, CMFD_Y_PIXEL}, -- 1
-        {50, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 2
-        {51, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 3
-        {52, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 4
-        {53, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 5
-        {54, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 6
-        {55, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 7
-        {56, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 8
-        {57, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- 9
+        {32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- [space]
+        {48, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 0
+        {49, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 1
+        {50, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 2
+        {51, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 3
+        {52, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 4
+        {53, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 5
+        {54, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 6
+        {55, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 7
+        {56, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 8
+        {57, HUD_X_PIXEL, HUD_Y_PIXEL}, -- 9
 
-        {64, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Alpha -> @
+        {64, HUD_X_PIXEL, HUD_Y_PIXEL}, -- Alpha -> @
 
-        {65, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- A
-        {66, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- B
-        {67, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- C
-        {68, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- D
-        {69, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- E
-        {70, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- F
-        {71, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- G
-        {72, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- H
-        {73, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- I
-        {74, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- J
-        {75, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- K
-        {76, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- L
-        {77, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- M
-        {78, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- N
-        {79, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- O
-        {80, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- P
-        {81, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Q
-        {82, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- R
-        {83, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- S
-        {84, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- T
-        {85, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- U
-        {86, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- V
-        {87, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- W
-        {88, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- X
-        {89, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Y
-        {90, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- Z
-         
-        {42, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- *
-        {43, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- +
-        {45, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- -
-        {47, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- /
-        {92, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- \
-        {40, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- (
-        {41, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- )
-        {91, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- [
-        {93, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ]
-        {123, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- {
-        {125, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- }
-        {60, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- <
-        {62, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- >
-        {61, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- =
-        {63, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ?
-        {124, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- |
-        {33, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- !
-        {35, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- #
-        {37, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- %
-        {94, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ^
-        {38, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- &
-        {96, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- o -- degree, change its ascii code to 96 ', original 248 (out of index)
-        {46, CMFD_X_PIXEL*0.65, CMFD_Y_PIXEL*0.65}, -- .
-        {58, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- :
-        {44, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- ,
-        {126, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- cursor -> ~
-        {95, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- _
-        
-        {39, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- '
-        {34, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- "
-        --{32, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- [space]
-        
-        {127, CMFD_X_PIXEL, CMFD_Y_PIXEL}, -- delta, use last ascii code
+        -- upper
+        {65, HUD_X_PIXEL, HUD_Y_PIXEL}, -- A bold
+        {66, HUD_X_PIXEL, HUD_Y_PIXEL}, -- B bold
+        {67, HUD_X_PIXEL, HUD_Y_PIXEL}, -- C bold
+        {68, HUD_X_PIXEL, HUD_Y_PIXEL}, -- D bold
+        {69, HUD_X_PIXEL, HUD_Y_PIXEL}, -- E bold
+        {70, HUD_X_PIXEL, HUD_Y_PIXEL}, -- F bold
+        {71, HUD_X_PIXEL, HUD_Y_PIXEL}, -- G bold
+        {72, HUD_X_PIXEL, HUD_Y_PIXEL}, -- H bold
+        {73, HUD_X_PIXEL, HUD_Y_PIXEL}, -- I bold
+        {74, HUD_X_PIXEL, HUD_Y_PIXEL}, -- J bold
+        {75, HUD_X_PIXEL, HUD_Y_PIXEL}, -- K bold
+        {76, HUD_X_PIXEL, HUD_Y_PIXEL}, -- L bold
+        {77, HUD_X_PIXEL, HUD_Y_PIXEL}, -- M bold
+        {78, HUD_X_PIXEL, HUD_Y_PIXEL}, -- N bold
+        {79, HUD_X_PIXEL, HUD_Y_PIXEL}, -- O bold
+        {80, HUD_X_PIXEL, HUD_Y_PIXEL}, -- P bold
+        {81, HUD_X_PIXEL, HUD_Y_PIXEL}, -- Q bold
+        {82, HUD_X_PIXEL, HUD_Y_PIXEL}, -- R bold
+        {83, HUD_X_PIXEL, HUD_Y_PIXEL}, -- S bold
+        {84, HUD_X_PIXEL, HUD_Y_PIXEL}, -- T bold
+        {85, HUD_X_PIXEL, HUD_Y_PIXEL}, -- U bold
+        {86, HUD_X_PIXEL, HUD_Y_PIXEL}, -- V bold
+        {87, HUD_X_PIXEL, HUD_Y_PIXEL}, -- W bold
+        {88, HUD_X_PIXEL, HUD_Y_PIXEL}, -- X bold
+        {89, HUD_X_PIXEL, HUD_Y_PIXEL}, -- Y bold
+        {90, HUD_X_PIXEL, HUD_Y_PIXEL}, -- Z bold
+
+        -- normal replaced by lower case
+        --[[
+        {65+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- A -> a
+        {66+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- B
+        {67+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- C
+        {68+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- D
+        {69+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- E
+        {70+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- F
+        {71+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- G
+        {72+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- H
+        {73+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- I
+        {74+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- J
+        {75+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- K
+        {76+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- L
+        {77+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- M
+        {78+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- N
+        {79+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- O
+        {80+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- P
+        {81+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- Q
+        {82+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- R
+        {83+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- S
+        {84+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- T
+        {85+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- U
+        {86+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- V
+        {87+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- W
+        {88+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- X
+        {89+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- Y
+        {90+32, HUD_X_PIXEL, HUD_Y_PIXEL}, -- Z -> z
+        ]]
+
+        {42, HUD_X_PIXEL, HUD_Y_PIXEL}, -- *
+        {43, HUD_X_PIXEL, HUD_Y_PIXEL}, -- +
+        {45, HUD_X_PIXEL, HUD_Y_PIXEL}, -- -
+        {61, HUD_X_PIXEL, HUD_Y_PIXEL}, -- =
+        {47, HUD_X_PIXEL, HUD_Y_PIXEL}, -- /
+        {92, HUD_X_PIXEL, HUD_Y_PIXEL}, -- \
+        {40, HUD_X_PIXEL, HUD_Y_PIXEL}, -- (
+        {41, HUD_X_PIXEL, HUD_Y_PIXEL}, -- )
+        {91, HUD_X_PIXEL, HUD_Y_PIXEL}, -- [
+        {93, HUD_X_PIXEL, HUD_Y_PIXEL}, -- ]
+        {123, HUD_X_PIXEL, HUD_Y_PIXEL}, -- {
+        {125, HUD_X_PIXEL, HUD_Y_PIXEL}, -- }
+        {60, HUD_X_PIXEL, HUD_Y_PIXEL}, -- <
+        {62, HUD_X_PIXEL, HUD_Y_PIXEL}, -- >
+        {63, HUD_X_PIXEL, HUD_Y_PIXEL}, -- ?
+        {124, HUD_X_PIXEL, HUD_Y_PIXEL}, -- |
+        {33, HUD_X_PIXEL, HUD_Y_PIXEL}, -- !
+        {35, HUD_X_PIXEL, HUD_Y_PIXEL}, -- #
+        {37, HUD_X_PIXEL, HUD_Y_PIXEL}, -- %
+        {94, HUD_X_PIXEL, HUD_Y_PIXEL}, -- ^
+        {38, HUD_X_PIXEL, HUD_Y_PIXEL}, -- &
+        {96, HUD_X_PIXEL, HUD_Y_PIXEL}, -- o -- degree, change its ascii code to 96 ', original 248 (out of index)
+        {46, HUD_X_PIXEL, HUD_Y_PIXEL}, -- .
+        {58, HUD_X_PIXEL, HUD_Y_PIXEL}, -- :
+        {44, HUD_X_PIXEL, HUD_Y_PIXEL}, -- ,
+        {95, HUD_X_PIXEL, HUD_Y_PIXEL}, -- _
+
+        {127, HUD_X_PIXEL, HUD_Y_PIXEL}, -- delta, use last ascii code
     }
 }
 
 
---Gripen_Font_green  	= MakeFont(Gripen_Font, GREEN, "Gripen_Font_green")
-Gripen_Font_green  	= MakeFont(Gripen_Font, GREEN, fontdescription["font_HUD"] )
+Gripen_Font_green  	= MakeFont(Gripen_Font, GREEN, "Gripen_Font_green")
+--Gripen_Font_green  	= MakeFont(Gripen_Font, GREEN, fontdescription["font_HUD"] )
 
 --[[
 fonts = {}
@@ -772,4 +797,8 @@ function add_text_HMD2(text, posx, posy, pparent, font_mat, stringdefs, valign)
 	-------------------
 	return rec_parent
 end
-
+--[[
+function AddRWRElement(object)
+	
+    AddHMDElement(object)
+end]]

@@ -28,7 +28,7 @@ local bvr_mode_ind 			 		= add_text_HMD("BVR", -0.0, -0.8, HUD_BASE , "hud_font_
 bvr_mode_ind.element_params  		= {"HUD_MODE","CANNON_MODE"}
 bvr_mode_ind.controllers     		= {{"parameter_in_range" ,0,1.9,2.1}, {"parameter_in_range" ,1,-0.1,0.1} }
 	
-local vs_mode_ind 			 		= add_text_HMD("VS", -0.0, -0.8, HUD_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
+local vs_mode_ind 			 		= add_text_HMD("DOGF", -0.0, -0.8, HUD_BASE , "hud_font_g", HMD_strdefs_text, "CenterCenter")
 vs_mode_ind.element_params  		= {"HUD_MODE","CANNON_MODE"}
 vs_mode_ind.controllers     		= {{"parameter_in_range" ,0,2.9,3.1}, {"parameter_in_range" ,1,-0.1,0.1} }
 	
@@ -246,3 +246,4 @@ GCW_Arrow_R.parent_element			= GroundCollisionWarning.name
 GCW_Arrow_R.element_params			= {"HUD_BRIGHTNESS","PULLUPQUE", "PULLMORE"}
 GCW_Arrow_R.controllers				= { {"opacity_using_parameter" ,0},{"move_up_down_using_parameter",1, -0.000006}, {"parameter_in_range",2, -0.99,0.5}  }									
 AddHMDElement(GCW_Arrow_R)]]
+--dofile(LockOn_Options.script_path.."HMD/Indicator/HMD_RWR.lua")

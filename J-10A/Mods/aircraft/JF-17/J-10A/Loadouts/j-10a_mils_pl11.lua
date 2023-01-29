@@ -137,7 +137,7 @@ local AIM_7E =
 	
 	march = {
 		impulse								= 218,
-		fuel_mass							= 54,
+		fuel_mass							= 55,
 		work_time							= 3.5,
 		nozzle_position						= {{-1.9, 0, 0}},
 		nozzle_orientationXYZ				= {{0.0, 0.0, 0.0}},
@@ -192,7 +192,7 @@ local AIM_7E =
 	},
 	
 	seeker = {
-		delay					= 1.5,
+		delay					= 1.0,
 		op_time					= 75,
 		FOV						= math.rad(120),
 		max_w_LOS				= math.rad(20),
@@ -208,7 +208,7 @@ local AIM_7E =
 
 	autopilot = {
 		x_channel_delay		= 0.9,
-		delay				= 1.5,
+		delay				= 1.0,
 		op_time				= 75,
 		Kconv				= 4.0,
 		Knv					= 0.02,

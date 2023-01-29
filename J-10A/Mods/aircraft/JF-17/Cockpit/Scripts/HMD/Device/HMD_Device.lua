@@ -19,6 +19,7 @@ local MainPower = get_param_handle("MAINPOWER")
 local HUD_BRIGHTNESS = get_param_handle("HUD_BRIGHTNESS")
 MainPower:set(1.0)
 local button_depress = false
+local first_run = true
 -------------------------------------------------------
 -- Initialization Functions	
 -------------------------------------------------------
@@ -36,7 +37,7 @@ function post_initialize()
     HORIZONTAL_VIEW_HMD:set(0)
     VERTICAL_VIEW_HMD:set(0)
     --HMD_LIGHT:set(1)
-    HMDTOGGLE:set(0)
+    HMDTOGGLE:set(1)
     CANNON_MODE:set(1)
 	MainPower:set(1.0)
 	HUD_BRIGHTNESS:set(1.0)
@@ -80,15 +81,23 @@ end]]
 end 
 
 function update()
+	if first_run then
+		HMDTOGGLE:set(0)
+		first_run = false
+	end
+	--print_message_to_user(get_cockpit_draw_argument_value(915))
 	if get_cockpit_draw_argument_value(915) > 0.0 then
+		--print_message_to_user('Clicked')
 		button_depress = true
 	else
 		--if clicked
-		if button_depress then
+		if button_depress == true  then
 			if HMDTOGGLE:get() == 0 then
+				print_message_to_user('On')
 				HMDTOGGLE:set(1)
 				HMD_LIGHT:set(1) 
-			else
+			else	
+				print_message_to_user('Off')
 				HMDTOGGLE:set(0)
 				HMD_LIGHT:set(0) 
 			end		

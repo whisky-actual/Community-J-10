@@ -47,7 +47,6 @@ local G_HMD  = get_param_handle("G_HMD")
 local RAD_TO_DEGREE  = 57.29577951308233
 
 function post_initialize()
-    HORIZONTAL_VIEW_HMD:set(0)
     VERTICAL_VIEW_HMD:set(0)
 end
 

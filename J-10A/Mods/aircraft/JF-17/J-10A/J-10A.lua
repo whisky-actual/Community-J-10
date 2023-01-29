@@ -213,7 +213,7 @@ JF_17 = {
     tand_gear_max                            = 0.57, --2.1445, -- tangent on maximum yaw angle of front wheel, 65 degrees tan(64deg)
 
 	--nose_gear_pos                            = {3.752,	-1.9+wheel_touch_comp, 0.0},    -- nosegear coord==前轮
-	nose_gear_pos                            = {4.074,   -1.95, -0.000},    -- nosegear coord==前轮
+	nose_gear_pos                            = {4.074,   -1.98, -0.000},    -- nosegear coord==前轮
     nose_gear_wheel_diameter                 = 0.754,            -- in m
     nose_gear_amortizer_direct_stroke        = 0,              -- down from nose_gear_pos !!!
     nose_gear_amortizer_reversal_stroke      = -0.150293,                -- up

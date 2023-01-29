@@ -363,7 +363,7 @@ declare_loadout({
     wsTypeOfWeapon = LD_10_ARM.wsTypeOfWeapon,
     attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
     displayName    = _(ld10_name .. ' x 2'),
-    Cx_pil         = 0.000859765625 * 1.31,
+    Cx_pil         = 0.00150390623,
     Count          = 2,
     Weight         = 2 * ld10_mass + pylon_dual_mass,
     Elements       = {
@@ -381,7 +381,7 @@ declare_loadout({
     wsTypeOfWeapon = LD_10_ARM.wsTypeOfWeapon,
     attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
     displayName    = _(ld10_name .. ' x 2'),
-    Cx_pil         = 0.000859765625 * 1.31,
+    Cx_pil         = 0.00150390623,
     Count          = 2,
     Weight         = 2 * ld10_mass + pylon_dual_mass,
     Elements       = {
