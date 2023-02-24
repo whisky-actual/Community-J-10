@@ -22,7 +22,7 @@ PL_12_AA = {
     H_max           = 25000.0,
     H_min           = -1.0,
     Diam            = 203.0,
-    Cx_pil          = 2,
+    Cx_pil          = 2.2,
     D_max           = 65000.0,
     D_min           = 1000.0,
     Head_Form       = 1,
@@ -360,7 +360,7 @@ declare_loadout({
     Picture      = 'pl12.png',
     attribute    = PL_12_AA.wsTypeOfWeapon,
     displayName  = _(pl12_name),
-    Cx_pil       = 0.001959765625,
+    Cx_pil       = 0.00064453124,
     Count        = 1,
     Weight       = pl12_mass,
     Elements     = {

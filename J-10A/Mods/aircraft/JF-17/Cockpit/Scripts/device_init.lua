@@ -100,7 +100,7 @@ creators[devices.NVG]             = {"DEKA_Device::JF_17::avNVG", script_path ..
 creators[devices.EFFECT]          = {"DEKA_Device::JF_17::avEffect", script_path .. "Effects/avEffect.lua", {}}
 
 creators[devices.HMD]  		   	   		= {"avLuaDevice"           ,LockOn_Options.script_path.."HMD/Device/HMD_Device.lua"}
-creators[devices.HMDNew]  		   	   	= {"avLuaDevice"           ,LockOn_Options.script_path.."Other/Other_device.lua"}
+creators[devices.HMDNew]  		   	   	= {"avSimpleWeaponSystem"           ,LockOn_Options.script_path.."Other/Other_device.lua"}
 
 
 ----------------------------------------------------------------------------------------------------------------

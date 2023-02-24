@@ -1,5 +1,7 @@
 dofile(LockOn_Options.script_path.."command_defs.lua")
 dofile(LockOn_Options.script_path .. "devices.lua")
+dofile(LockOn_Options.script_path .. "Other/store_values.lua")
+--dofile(LockOn_Options.script_path .. "../../config.lua")
 dev = GetSelf()
 local update_time_step = 0.01 --update will be called 100 times per second
 make_default_activity(update_time_step)
@@ -17,7 +19,10 @@ local VERTICAL_VIEW_HMD = get_param_handle("VERTICAL_VIEW_HMD")
 
 local HMDTOGGLE = get_param_handle("HMDTOGGLE")
 --local HORIZONTAL_VIEW_HMD = get_param_handle("HORIZONTAL_VIEW_HMD")
+--get armament
 
+dev:listen_event("WeaponRearmComplete")
+dev:listen_event("UnlimitedWeaponStationRestore")
 
 --hud indicator params
 local CURR_IAS  = get_param_handle("CURR_IAS")	--Airspeed.
@@ -46,8 +51,23 @@ local G_HMD  = get_param_handle("G_HMD")
 
 local RAD_TO_DEGREE  = 57.29577951308233
 
+--loadout name list
+
+loadout_stations = {
+    get_param_handle("loadout_station_1"),
+    get_param_handle("loadout_station_2"),
+    get_param_handle("loadout_station_3"),
+    get_param_handle("loadout_station_4"),
+    get_param_handle("loadout_station_5"),
+    get_param_handle("loadout_station_6"),
+    get_param_handle("loadout_station_7"),
+    get_param_handle("loadout_station_8"),
+    get_param_handle("loadout_station_9"),
+}
+
 function post_initialize()
     VERTICAL_VIEW_HMD:set(0)
+	update_loadout_info()
 end
 
 
@@ -125,6 +145,29 @@ function update()
 	
 	
 	
+end
+
+
+-- if rearming occurs, update station info
+function CockpitEvent(event, val)
+    if event == "WeaponRearmComplete" or event == "UnlimitedWeaponStationRestore" then
+        update_loadout_info()
+    end
+end
+
+
+function update_loadout_info()
+    for i=1,7 do
+        local station = dev:get_station_info(i-1)
+        local name = "UNKNOWN"
+        local quantity = "-"
+		print_message_to_user(station)
+        if loadout_names[station.CLSID] ~= nil then
+            name = loadout_names[station.CLSID]
+        end
+        loadout_stations[i]:set(string.upper(name))
+		--print_message_to_user(name)
+    end
 end
 
 need_to_be_closed = false

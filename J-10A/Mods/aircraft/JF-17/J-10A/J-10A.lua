@@ -1,31 +1,223 @@
-declare_loadout(
-    {
-        category = CAT_PODS,
-        CLSID = "{Jeff}",
-        attribute = {wsType_Weapon, wsType_GContainer, 47, WSTYPE_PLACEHOLDER},
-        Picture = "L005.png",
-        displayName = _("Remove Drag"),
-        Weight = 0,
-        Cx_pil = -0.00348,
-        shape_table_data =
-        {
-            {
-                file = "",
-                life = 1,
-                fire = { 0, 1},
-                username = "Blank",
-                index = WSTYPE_PLACEHOLDER,
-            },
-        },
-        Elements =
-        {
-            {
-                Position = {0, 0, 0},
-                ShapeName = "",
-            },
-        },
-    }
+
+declare_weapon(
+	{
+		category				= CAT_SHELLS,
+		name					= "TYPE23_2_23x115_HEI_T",
+		user_name				= _("23mm HEI-T"),
+		model_name				= "tracer_bullet_red",
+		v0    					= 700,
+		Dv0   					= 0.0050,
+		Da0     				= 0.0007,
+		Da1     				= 0.0,
+		mass      				= 0.188,
+		round_mass 				= 0.343,	-- round + link
+		cartridge_mass			= 0.155,	-- cartriges are ejected
+		explosive				= 0.0152,
+		life_time				= 6.0,
+		caliber					= 23.0,
+		s						= 0.0,
+		j						= 0.0,
+		l						= 0.0,
+		charTime				= 0,
+		cx						= { 0.25, 0.3, 0.45, 0.65, 1.1 },
+		k1						= 2.3e-08,
+		tracer_off				= 5,
+		tracer_on				= 0.1,
+		scale_tracer			= 0.5,
+		scale_smoke				= 1.5,
+		smoke_tail_life_time	= 0.2,
+		cartridge				= 0,
+	}
 )
+
+declare_weapon(
+	{
+		category				= CAT_SHELLS,
+		name					= "TYPE23_2_23x115_HEI",
+		user_name				= _("23mm HEI"),
+		model_name				= "pula",
+		v0    					= 715,
+		Dv0   					= 0.0050,
+		Da0     				= 0.0007,
+		Da1     				= 0.0,
+		mass      				= 0.174,
+		round_mass 				= 0.329,	-- round + link
+		cartridge_mass			= 0.155,	-- cartriges are ejected
+		explosive				= 0.0178,
+		life_time				= 6.0,
+		caliber					= 23.0,
+		s						= 0.0,
+		j						= 0.0,
+		l						= 0.0,
+		charTime				= 0,
+		cx						= { 0.25, 0.3, 0.45, 0.65, 1.1 },
+		k1						= 2.3e-08,
+		tracer_off				= 5,
+		tracer_on				= 0.0,
+		scale_tracer			= 0.0,
+		scale_smoke				= 1.5,
+		smoke_tail_life_time	= 0.2,
+		cartridge				= 0,
+	}
+)
+
+declare_weapon(
+	{
+		category				= CAT_SHELLS,
+		name					= "TYPE23_2_23x115_HEI_M",
+		user_name				= _("23mm HEI-M"),
+		model_name				= "pula",
+		v0    					= 700,
+		Dv0   					= 0.0050,
+		Da0     				= 0.0007,
+		Da1     				= 0.0,
+		mass      				= 0.186,
+		round_mass 				= 0.341,	-- round + link
+		cartridge_mass			= 0.155,	-- cartriges are ejected
+		explosive				= 0.0192,
+		life_time				= 6.0,
+		caliber					= 23.0,
+		s						= 0.0,
+		j						= 0.0,
+		l						= 0.0,
+		charTime				= 0,
+		cx						= { 0.25, 0.3, 0.45, 0.65, 1.1 },
+		k1						= 2.3e-08,
+		tracer_off				= 5,
+		tracer_on				= 0.0,
+		scale_tracer			= 0.0,
+		scale_smoke				= 1.5,
+		smoke_tail_life_time	= 0.2,
+		cartridge				= 0,
+	}
+)
+
+declare_weapon(
+	{
+		category				= CAT_SHELLS,
+		name					= "TYPE23_2_23x115_API_TM",
+		user_name				= _("23mm API-TM"),
+		model_name				= "tracer_bullet_yellow",
+		v0    					= 690,
+		Dv0   					= 0.0050,
+		Da0     				= 0.0007,
+		Da1     				= 0.0,
+		mass      				= 0.190,
+		round_mass 				= 0.347,	-- round + link
+		cartridge_mass			= 0.157,	-- cartriges are ejected
+		explosive				= 0.0,
+		life_time				= 6.0,
+		caliber					= 23.0,
+		AP_cap_caliber			= 23.0,
+		s						= 0.0,
+		j						= 0.0,
+		l						= 0.0,
+		charTime				= 0,
+		cx						= { 0.25, 0.3, 0.45, 0.65, 1.1 },
+		k1						= 2.3e-08,
+		tracer_off				= 5,
+		tracer_on				= 0.1,
+		scale_tracer			= 0.5,
+		scale_smoke				= 1.5,
+		smoke_tail_life_time	= 0.2,
+		cartridge				= 0,
+	}
+)
+
+declare_weapon(
+	{
+		category				= CAT_SHELLS,
+		name					= "TYPE23_2_23x115_API",
+		user_name				= _("23mm API"),
+		model_name				= "pula",
+		v0    					= 715,
+		Dv0   					= 0.0050,
+		Da0     				= 0.0007,
+		Da1     				= 0.0,
+		mass      				= 0.174,
+		round_mass 				= 0.331,	-- round + link
+		cartridge_mass			= 0.157,	-- cartriges are ejected
+		explosive				= 0.0,
+		life_time				= 6.0,
+		caliber					= 23.0,
+		AP_cap_caliber			= 23.0,
+		s						= 0.0,
+		j						= 0.0,
+		l						= 0.0,
+		charTime				= 0,
+		cx						= { 0.25, 0.3, 0.45, 0.65, 1.1 },
+		k1						= 2.3e-08,
+		tracer_off				= 5,
+		tracer_on				= 0.0,
+		scale_tracer			= 0.0,
+		scale_smoke				= 1.5,
+		smoke_tail_life_time	= 0.2,
+		cartridge				= 0,
+	}
+)
+
+-- Guns definition
+function type23_3(tbl)
+
+	tbl.category 		= CAT_GUN_MOUNT 
+	tbl.name 	 		= "Type 23-3"
+	tbl.display_name	= "Type 23-3"
+	tbl.supply 	 		= 
+	{
+		mixes  = {
+					{3, 5, 1, 5, 2, 4},
+					{1},	-- HE-T
+					{4},	-- AP-T
+					{2},	-- HEI-M
+					{3},	-- HEI
+					{5},	-- API
+				}, 
+		shells = {
+					"TYPE23_2_23x115_HEI_T", 
+					"TYPE23_2_23x115_HEI_M",
+					"TYPE23_2_23x115_HEI",
+					"TYPE23_2_23x115_API_TM",
+					"TYPE23_2_23x115_API",
+				},
+		
+		count  = 260,
+	}
+	
+	if tbl.mixes then 
+	   tbl.supply.mixes =  tbl.mixes
+	   tbl.mixes	    = nil
+	end
+	tbl.gun				= 
+	{
+		max_burst_length = 25,
+		rates 			 = {3400},
+		recoil_coeff 	 = 0.91,
+		barrels_count 	 = 2,
+	}
+	if tbl.rates then 
+	   tbl.gun.rates    =  tbl.rates
+	   tbl.rates	    = nil
+	end	
+	tbl.ejector_pos 			= tbl.ejector_pos or {0.0, 0.0, 0.0}
+	tbl.ejector_dir 			= tbl.ejector_dir or {-2.0, -2.0, 0.0}
+	tbl.supply_position  		= tbl.supply_position or {0,  0, 0}
+	tbl.aft_gun_mount 			= false
+	tbl.effective_fire_distance = 1750
+	tbl.drop_cartridge 			= 204
+	tbl.muzzle_pos				= tbl.muzzle_pos or {0,0,0}	-- all position from connector
+	tbl.azimuth_initial 		= tbl.azimuth_initial or 0   
+	tbl.elevation_initial 		= tbl.elevation_initial or 0   
+	if  tbl.effects == nil then
+		tbl.effects = 
+		{
+			{ name = "FireEffect",		attenuation = 2, light_pos = { 0.5, 0.5, 0 }, light_time = 0.1, arg = tbl.effect_arg_number or 350 },
+			{ name = "HeatEffectExt",	shot_heat = 20.9, barrel_k = 7.6692, body_k = 16.3548 },
+			{ name = "SmokeEffect"}
+		}
+	end
+	
+	return declare_weapon(tbl)
+end
 -- WIP
 local function add_aircraft_prop()
     acprop = {
@@ -384,6 +576,14 @@ JF_17 = {
     },
 
     Guns = {
+		type23_3 ({ -- Left Barrel
+			muzzle_pos_connector   = "GUN_R",
+            supply_position        = {2.6, -0.4, 0.0},
+            drop_cartridge         = 204,
+            ejector_dir            = {2,-2,0},
+            ejector_pos_connector  = "GUN_EJECTOR_01",
+			}),
+			--[[
         gun_mount("GSh_23_2",
         {
             count = 250
@@ -395,12 +595,21 @@ JF_17 = {
             ejector_pos_connector  = "GUN_EJECTOR_01",
             ejector_dir            = {2,-2,0},
             -- elevation_initial = -1.50,
-        }),
+        }),]]
         --[[
         gun_mount("GSh_23_2", {count = 90}, {muzzle_pos_connector = "GUN_POINT_L",}),
         gun_mount("GSh_23_2", {count = 90}, {muzzle_pos_connector = "GUN_POINT_R",}),
         ]]
     },
+	
+	ammo_type ={
+	_("Combat mix"),
+	_("HEI-T"),
+	_("API-T"),
+	_("HEI-M"),
+	_("HEI"),
+	_("API"),
+	},
 
     Pylons = {
         -- LEFT WING
@@ -504,6 +713,7 @@ JF_17 = {
             },
             {
 				-- Guided Bombs
+                { CLSID = "DIS_SD-10", arg_value = 1.0 },
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
@@ -540,10 +750,12 @@ JF_17 = {
               --  { CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
+                { CLSID = "DIS_TYPE200_DUAL_L", arg_value = 0.5 },
 
                 -- rockets
                  { CLSID = "DIS_BRM1_90", arg_value = 1.0 },
                  { CLSID = "DIS_RKT_90_UG", arg_value = 1.0 },
+				 
 
             }
         ),
@@ -559,10 +771,14 @@ JF_17 = {
 
                -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
              --   { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
+                { CLSID = "J10_BOMB_250_3", arg_value = 1.0 }, -- 250-3
 
 				-- Guided Bombs
                 { CLSID = "DIS_GBU_10", arg_value =1.0 }, -- GBU-10
                 { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16 
+                { CLSID = "DIS_LS_6_500", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_250", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- 250-3
 
                 { CLSID = "DIS_WMD7",      arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_WMD7"}},     {station = 6, loadout = {"DIS_WMD7"}}} },
                 { CLSID = "DIS_AKG_DLPOD", arg_value = 1.0, forbidden = {{station = 2, loadout = {"DIS_AKG_DLPOD"}},{station = 6, loadout = {"DIS_AKG_DLPOD"}}} },
@@ -619,6 +835,7 @@ JF_17 = {
             },
             {
 				-- Guided Bombs
+                { CLSID = "DIS_SD-10", arg_value = 1.0 },
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
@@ -657,6 +874,7 @@ JF_17 = {
 
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
+                { CLSID = "DIS_TYPE200_DUAL_R", arg_value = 0.5 },
 
                 -- rockets
                  { CLSID = "DIS_BRM1_90", arg_value = 1.0 },
@@ -940,98 +1158,48 @@ JF_17 = {
 
     --
     Damage = {
-        [0]   = {critical_damage =    3, args = {146}},                                 -- NOSE_CENTER             /雷达罩
-        [1]   = {critical_damage =    3, args = {150}},                                -- NOSE_LEFT_SIDE          /机头左侧
-        [2]   = {critical_damage =    3, args = {149}},                                -- NOSE_RIGHT_SIDE         /机头右侧
-        [3]   = {critical_damage =    2, args = {65}},                                 -- COCKPIT                 /座舱盖区域
-        [4]   = {critical_damage =    2, args = {298}},                                -- CABIN_LEFT_SIDE         /座舱左侧
-        [5]   = {critical_damage =    2, args = {299}},                                -- CABIN_RIGHT_SIDE        /座舱右侧
-        [6]   = {critical_damage =    3, args = {152}},                                -- CABIN_BOTTOM            /座舱底部
-        --[7]   = {critical_damage =    2, args = {296}},                                -- GUN                     /机炮
-        [8]   = {critical_damage =    2, args = {265}},                                -- FRONT_GEAR_BOX          /前起落架舱
-        [9]   = {critical_damage =    3, args = {154}},                                -- FUSELAGE_LEFT_SIDE      /机身左侧
-        [10]  = {critical_damage =    3, args = {153}},                                -- FUSELAGE_RIGHT_SIDE     /机身右侧
-        [12]  = {critical_damage =    2, args = {160}},                                -- ENGINE                  /发动机喷口
-        [13]  = {critical_damage =    2, args = {152}},                                -- MTG_L_BOTTOM            /发动机左下侧蒙皮
-        [14]  = {critical_damage =    2, args = {152}},                                -- MTG_R_BOTTOM            /发动机右下侧蒙皮
-        [15]  = {critical_damage =    2, args = {267}},                                -- LEFT_GEAR_BOX           /左主起落架舱盖
-        [16]  = {critical_damage =    2, args = {266}},                                -- RIGHT_GEAR_BOX          /右主起落架舱盖
-        [17]  = {critical_damage =    2, args = {168}},                                -- MTG_L                   /发动机左上侧蒙皮
-        [18]  = {critical_damage =    2, args = {162}},                                -- MTG_R                   /发动机右上侧蒙皮
-        [19]  = {critical_damage =    1, args = {183}},                                -- AIR_BRAKE_L             /左下侧减速板
-        [20]  = {critical_damage =    1, args = {185}},                                -- AIR_BRAKE_R             /右下侧减速板
-		
-        [21]  = {critical_damage =  1.5, args = {232},
-                droppable = true,  droppable_shape = "JF-17-oblomok-L-part"},          -- WING_L_PART_OUT         /左翼外侧前缘襟翼
-        [22]  = {critical_damage =  1.5, args = {222},
-                droppable = true,  droppable_shape = "JF-17-oblomok-R-part"},          -- WING_R_PART_OUT         /右翼外侧前缘襟翼
-        [23]  = {critical_damage =    4, args = {223}, deps_cells = {21,25}},          -- WING_L_OUT              /左翼外侧
-        [24]  = {critical_damage =    4, args = {213}, deps_cells = {22,26}},          -- WING_R_OUT              /右翼外侧
-        [25]  = {critical_damage =    2, args = {226},
-                droppable = true,  droppable_shape = "JF-17-oblomok-L-part"},          -- AILERON_L               /左侧副翼
-        [26]  = {critical_damage =    2, args = {216},
-                droppable = true,  droppable_shape = "JF-17-oblomok-R-part"},          -- AILERON_R               /右侧副翼
-        [27]  = {critical_damage =    1, args = {185}},                                -- WING_L_PART_CENTER      /左上侧减速板
-        [28]  = {critical_damage =    1, args = {183}},                                -- WING_R_PART_CENTER      /右上侧减速板
-        [29]  = {critical_damage =    5, args = {224}, deps_cells = {23,33,37}},       -- WING_L_CENTER           /左翼中间
-        [30]  = {critical_damage =    5, args = {214}, deps_cells = {24,34,38}},       -- WING_R_CENTER           /右翼中间
-        [33]  = {critical_damage =  1.5, args = {230},
-                droppable = true,  droppable_shape = "JF-17-oblomok-L-part"},          -- WING_L_PART_IN          /左翼内侧前缘襟翼
-        [34]  = {critical_damage =  1.5, args = {220},
-                droppable = true,  droppable_shape = "JF-17-oblomok-R-part"},          -- WING_R_PART_IN          /右翼内侧前缘襟翼
-        [35]  = {critical_damage =    6, args = {225}, deps_cells = {29},
-                droppable = true,  droppable_shape = "JF-17-oblomok-wing-L"},          -- WING_L_IN               /左翼内侧
-        [36]  = {critical_damage =    6, args = {215}, deps_cells = {30},
-                droppable = true,  droppable_shape = "JF-17-oblomok-wing-R"},          -- WING_R_IN               /右翼内侧
-        [37]  = {critical_damage =    2, args = {228},
-                droppable = true,  droppable_shape = "JF-17-oblomok-L-part"},          -- FLAP_L                  /左侧襟翼
-        [38]  = {critical_damage =    2, args = {218},
-                droppable = true,  droppable_shape = "JF-17-oblomok-R-part"},          -- FLAP_R                  /右侧襟翼
-				
-        [40]  = {critical_damage =    2, args = {241}, deps_cells = {53},
-                droppable = false},                                                    -- FIN_R_TOP               /垂尾顶部
-        [42]  = {critical_damage =    3, args = {242}, deps_cells = {40},},            -- FIN_R_CENTER            /垂尾根部
-		
-        [43]  = {critical_damage =    2, args = {246}},                                -- Line_KIL_L              /左侧腹鳍
-        [44]  = {critical_damage =    2, args = {243}},                                -- Line_KIL_R              /右侧腹鳍
-		
-        [49]  = {critical_damage =  1.5, args = {239}},                                -- ELEVATOR_L_OUT          /左侧平尾外侧
-        [50]  = {critical_damage =  1.5, args = {237}},                                -- ELEVATOR_R_OUT          /右侧平尾外侧
-        [51]  = {critical_damage =    2, args = {240}, deps_cells = {49}},             -- ELEVATOR_L_IN           /左侧平尾内侧
-        [52]  = {critical_damage =    2, args = {238}, deps_cells = {50}},             -- ELEVATOR_R_IN           /右侧平尾内侧
-		
-        [53]  = {critical_damage =    2, args = {247},},                               -- RUDDER                  /方向舵
-		
-        [55]  = {critical_damage =    4, args = {155}, deps_cells = {42,58}},          -- TAIL                    /垂尾根部尾椎
-        [56]  = {critical_damage =    3, args = {158}},                                -- TAIL_LEFT_SIDE          /发动机左侧尾椎
-        [57]  = {critical_damage =    3, args = {157}},                                -- TAIL_RIGHT_SIDE         /发动机右侧尾椎
-        [58]  = {critical_damage =    1, args = {156}},                                -- TAIL_BOTTOM             /减速伞盖
-		
-        [59]  = {critical_damage =    3, args = {148}},                                -- NOSE_BOTTOM             /机头底部
-		
-        [61]  = {critical_damage =    3, args = {303}},                                -- FUEL_TANK_LEFT_SIDE     /机背油箱处左侧蒙皮
-        [62]  = {critical_damage =    3, args = {302}},                                -- FUEL_TANK_RIGHT_SIDE    /机背油箱处右侧蒙皮
-		
-        [63]  = {critical_damage =    2, args = {147}},                                -- ROTOR                   /机头顶部
-        [64]  = {critical_damage =    3, args = {227}},                                -- BLADE_1_IN              /左上侧进气道
-        [65]  = {critical_damage =  1.5, args = {231}},                                -- BLADE_1_CENTER          /左侧边条
-        [66]  = {critical_damage =    3, args = {229}},                                -- BLADE_1_OUT             /左下侧进气道
-        [67]  = {critical_damage =    3, args = {217}},                                -- BLADE_2_IN              /右上侧进气道
-        [68]  = {critical_damage =  1.5, args = {221}},                                -- BLADE_2_CENTER          /右侧边条
-        [69]  = {critical_damage =    3, args = {219}},                                -- BLADE_2_OUT             /右下侧进气道
-        [71]  = {critical_damage =    3, args = {156}},                                -- BLADE_3_CENTER          /进气道处机腹
-		
-        [82]  = {critical_damage =    3, args = {152}},                                -- FUSELAGE_BOTTOM         /机身底部
-		
-        [83]  = {critical_damage =    2, args = {135}},                                -- WHEEL_F                 /前起落架
-        [84]  = {critical_damage =    3, args = {137}},                                -- WHEEL_L                 /左侧主起落架
-        [85]  = {critical_damage =    3, args = {136}},                                -- WHEEL_R                 /右侧主起落架
-		
-        [90]  = {critical_damage =    1},                                              -- PILOT
-		
-        [99]  = {critical_damage =    2, args = {151}},                                -- FUSELAGE_TOP            /前部脊背
-		
-        [100] = {critical_damage =    2, args = {300}},                                -- TAIL_TOP                /后部脊背
+	[0]  = {critical_damage = 5,  args = {146}},--NOSE_CENTER
+	[1]  = {critical_damage = 3,  args = {296}},--NOSE_LEFT_SIDE
+	[2]  = {critical_damage = 3,  args = {297}},--NOSE_RIGHT_SIDE
+	[3]  = {critical_damage = 8,  args = {65}}, --CABINA
+	[4]  = {critical_damage = 2,  args = {298}},--CABIN_LEFT_SIDE
+	[5]  = {critical_damage = 2,  args = {301}},--CABIN_RIGHT_SIDE
+	[7]  = {critical_damage = 2,  args = {249}},--GUN
+	[8]  = {critical_damage = 3,  args = {265}},--FRONT_GEAR_BOX
+	[9]  = {critical_damage = 3,  args = {154}},--FUSELAGE_LEFT_SIDE
+	[10] = {critical_damage = 3,  args = {153}},--FUSELAGE_RIGHT_SIDE
+	[11] = {critical_damage = 1,  args = {167}},--ENGINE_L_IN
+	[12] = {critical_damage = 1,  args = {161}},--ENGINE_R_IN
+	[13] = {critical_damage = 2,  args = {169}},--MTG_L_BOTTOM
+	[14] = {critical_damage = 2,  args = {163}},--MTG_R_BOTTOM
+	[15] = {critical_damage = 2,  args = {267}},--LEFT_GEAR_BOX
+	[16] = {critical_damage = 2,  args = {266}},--RIGHT_GEAR_BOX
+	[17] = {critical_damage = 2,  args = {168}},--MTG_L  (ENGINE)
+	[18] = {critical_damage = 2,  args = {162}},--MTG_R  (ENGINE)
+	[20] = {critical_damage = 2,  args = {183}},--AIR_BRAKE_R
+	[23] = {critical_damage = 5,  args = {223}},--WING_L_OUT
+	[24] = {critical_damage = 5,  args = {213}},--WING_R_OUT
+	[25] = {critical_damage = 2,  args = {226}},--ELERON_L
+	[26] = {critical_damage = 2,  args = {216}},--ELERON_R
+	[29] = {critical_damage = 5,  args = {224}, deps_cells = {23, 25}},--WING_L_CENTER
+	[30] = {critical_damage = 5,  args = {214}, deps_cells = {24, 26}},--WING_R_CENTER
+	[35] = {critical_damage = 6,  args = {225}, deps_cells = {23, 29, 25, 37}},--WING_L_IN
+	[36] = {critical_damage = 6,  args = {215}, deps_cells = {24, 30, 26, 38}},--WING_R_IN
+	[37] = {critical_damage = 2,  args = {228}},--FLAP_L
+	[38] = {critical_damage = 2,  args = {218}},--FLAP_R
+	[39] = {critical_damage = 2,  args = {244}}, --FIN_L_TOP  
+	[40] = {critical_damage = 2,  args = {241}, deps_cells = {54}},--FIN_R_TOP
+	[43] = {critical_damage = 2,  args = {243}, deps_cells = {39, 53}},--FIN_L_BOTTOM
+	[44] = {critical_damage = 2,  args = {242}, deps_cells = {40, 54}},--FIN_R_BOTTOM
+	[51] = {critical_damage = 2,  args = {240}},--ELEVATOR_L
+	[52] = {critical_damage = 2,  args = {238}},--ELEVATOR_R
+	[53] = {critical_damage = 2,  args = {248}}, --RUDDER_L
+	[54] = {critical_damage = 2,  args = {247}},--RUDDER_R
+	[56] = {critical_damage = 2,  args = {158}},--TAIL_LEFT_SIDE
+	[57] = {critical_damage = 2,  args = {157}},--TAIL_RIGHT_SIDE
+	[59] = {critical_damage = 3,  args = {148}},--NOSE_BOTTOM
+	[61] = {critical_damage = 2,  args = {147}},--FUEL_TANK_F
+	[82] = {critical_damage = 2,  args = {152}},--FUSELAGE_BOTTOM
     },
 
     DamageParts =
