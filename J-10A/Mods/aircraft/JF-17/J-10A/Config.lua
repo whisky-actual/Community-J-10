@@ -23,10 +23,8 @@ missile = {}
 ---------------------------------------------------------------------------
  -- Select one value per missle type. Replace values in the quotation marks
 ---------------------------------------------------------------------------
-missile['BVRAAM'] 	= '11'
-missile['IRAAM'] 	= '8B'
-missile['ASM'] 		= '83K'
-------------------DO NOT CHANGE ANYTHING AFTER THIS LINE-------------------
-if is_entry then
-	dofile(current_mod_path .. '/J-10A/Loadouts/missile_config.lua')
-end
+missile['BVRAAM'] 	= '15'
+missile['IRAAM'] 	= '10'
+missile['ASM'] 		= '83KG'
+---------------------------------------------------------------------------
+dofile(current_mod_path .. '/J-10A/Loadouts/missile_config.lua')

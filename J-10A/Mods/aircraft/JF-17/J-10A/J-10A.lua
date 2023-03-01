@@ -712,8 +712,8 @@ JF_17 = {
                 use_full_connector_position = false, connector = "PYLON_30", arg = 310, arg_value = 0
             },
             {
+				{ CLSID = "DIS_SD-10", arg_value = 1.0 },
 				-- Guided Bombs
-                { CLSID = "DIS_SD-10", arg_value = 1.0 },
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
@@ -750,12 +750,10 @@ JF_17 = {
               --  { CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
-                { CLSID = "DIS_TYPE200_DUAL_L", arg_value = 0.5 },
-
+				{ CLSID = "DIS_TYPE200_DUAL_L", arg_value = 0.5 },
                 -- rockets
                  { CLSID = "DIS_BRM1_90", arg_value = 1.0 },
                  { CLSID = "DIS_RKT_90_UG", arg_value = 1.0 },
-				 
 
             }
         ),
@@ -771,7 +769,6 @@ JF_17 = {
 
                -- { CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
              --   { CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
-                { CLSID = "J10_BOMB_250_3", arg_value = 1.0 }, -- 250-3
 
 				-- Guided Bombs
                 { CLSID = "DIS_GBU_10", arg_value =1.0 }, -- GBU-10
@@ -834,8 +831,8 @@ JF_17 = {
                 use_full_connector_position = false, connector = "PYLON_50", arg = 312, arg_value = 0
             },
             {
+				{ CLSID = "DIS_SD-10", arg_value = 1.0 },
 				-- Guided Bombs
-                { CLSID = "DIS_SD-10", arg_value = 1.0 },
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
@@ -874,8 +871,7 @@ JF_17 = {
 
 
                 { CLSID = "DIS_TYPE200", arg_value = 1.0 },
-                { CLSID = "DIS_TYPE200_DUAL_R", arg_value = 0.5 },
-
+				{ CLSID = "DIS_TYPE200_DUAL_R", arg_value = 0.5 },
                 -- rockets
                  { CLSID = "DIS_BRM1_90", arg_value = 1.0 },
                  { CLSID = "DIS_RKT_90_UG", arg_value = 1.0 },
