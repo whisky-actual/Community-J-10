@@ -1,7 +1,7 @@
 
 local pl15_name  = 'PL-15'
 local pl15_mass  = 229.0
-local pl15_model = 'Su30_PL-15'
+local pl15_model = 'J-10A_PL-15'
 local pylon_mass = 90.0
 local pylon_dual_mass = 160.0
 
