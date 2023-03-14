@@ -1,6 +1,6 @@
 dofile(LockOn_Options.script_path.."command_defs.lua")
 dofile(LockOn_Options.script_path .. "devices.lua")
-dofile(LockOn_Options.script_path .. "Other/store_values.lua")
+--dofile(LockOn_Options.script_path .. "Other/store_values.lua")
 --dofile(LockOn_Options.script_path .. "../../config.lua")
 dev = GetSelf()
 local update_time_step = 0.01 --update will be called 100 times per second
@@ -161,12 +161,13 @@ function update_loadout_info()
         local station = dev:get_station_info(i-1)
         local name = "UNKNOWN"
         local quantity = "-"
+		--[[
 		print_message_to_user(station)
         if loadout_names[station.CLSID] ~= nil then
             name = loadout_names[station.CLSID]
-        end
+        end]]
         loadout_stations[i]:set(string.upper(name))
-		--print_message_to_user(name)
+		print_message_to_user(name)
     end
 end
 

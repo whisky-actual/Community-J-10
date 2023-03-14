@@ -181,6 +181,7 @@ dofile(current_mod_path..'/J-10A/J-10A.lua')
 --J-10A Weapons lua
 -------------------------------------------------------------------------------------
 dofile(current_mod_path..'/J-10A/Payload.lua')
+is_entry = true
 dofile(current_mod_path..'/J-10A/Config.lua')
 -------------------------------------------------------------------------------------
 plugin_done()
