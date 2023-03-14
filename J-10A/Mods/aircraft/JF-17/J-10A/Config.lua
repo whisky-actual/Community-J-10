@@ -28,6 +28,4 @@ missile['BVRAAM'] 	= '11'
 missile['IRAAM'] 	= '8A'
 missile['ASM'] 		= '83K'
 ------------------DO NOT CHANGE ANYTHING AFTER THIS LINE-------------------
-if is_entry then
 	dofile(current_mod_path .. '/J-10A/Loadouts/missile_config.lua')
-end
