@@ -77,18 +77,18 @@ J10_FM =
 			filter_yaw						= false,
 
 			amortizer_min_length						= 0.0,
-			amortizer_max_length						= 0.244,	-- (0.254 (strut stroke) * sin(70 deg)) = 0.239 + 0.0381 (wheel static axle)
-			amortizer_basic_length						= 0.244,	-- (0.254 (strut stroke) * sin(70 deg)) = 0.239 + 0.0381 (wheel static axle)
+			amortizer_max_length						= 0.45,	-- (0.254 (strut stroke) * sin(70 deg)) = 0.239 + 0.0381 (wheel static axle)
+			amortizer_basic_length						= 0.45,	-- (0.254 (strut stroke) * sin(70 deg)) = 0.239 + 0.0381 (wheel static axle)
 			amortizer_spring_force_factor				= 5200000,	-- force = spring_force_factor * pow(reduce_length, amortizer_spring_force_factor_rate
 			amortizer_spring_force_factor_rate			= 3,
 			amortizer_static_force						= 1000,
-			amortizer_reduce_length						= 0.05,
+			amortizer_reduce_length						= 0.40,
 			amortizer_direct_damper_force_factor		= 35000,
 			amortizer_back_damper_force_factor			= 15000,
 
 			anti_skid_installed							= false,
 
-			wheel_radius								= 0.42,	-- 18 / 2 (inch) 0.2286
+			wheel_radius								= 0.754,	-- 18 / 2 (inch) 0.2286
 			wheel_static_friction_factor				= 0.75,
 			wheel_side_friction_factor					= 0.45,
 			wheel_roll_friction_factor					= 0.05,
@@ -116,12 +116,12 @@ J10_FM =
             
             anti_skid_installed = true,
             amortizer_min_length                 = 0.0,
-            amortizer_max_length                 = 0.22,
-            amortizer_basic_length               = 0.23,
+            amortizer_max_length                 = 0.20,
+            amortizer_basic_length               = 0.20,
             amortizer_spring_force_factor        = 10000000,
             amortizer_spring_force_factor_rate   = 3.0,
             amortizer_static_force               = 65000.0,
-            amortizer_reduce_length              = 0.22,
+            amortizer_reduce_length              = 0.20,
             amortizer_direct_damper_force_factor = 40000.0,
             amortizer_back_damper_force_factor   = 20000.0,
             
@@ -133,7 +133,7 @@ J10_FM =
 
             arg_post             = 5,
             arg_amortizer        = 6,
-            arg_wheel_rotation   = 102,
+            arg_wheel_rotation   = 77,
             arg_wheel_yaw        = -1,
             collision_shell_name = 'WHEEL_L',
         },
@@ -149,12 +149,12 @@ J10_FM =
             
             anti_skid_installed = true,
             amortizer_min_length                 = 0.0,
-            amortizer_max_length                 = 0.22,
-            amortizer_basic_length               = 0.23,
+            amortizer_max_length                 = 0.20,
+            amortizer_basic_length               = 0.20,
             amortizer_spring_force_factor        = 10000000,
             amortizer_spring_force_factor_rate   = 3.0,
             amortizer_static_force               = 65000.0,
-            amortizer_reduce_length              = 0.22,
+            amortizer_reduce_length              = 0.20,
             amortizer_direct_damper_force_factor = 40000.0,
             amortizer_back_damper_force_factor   = 20000.0,
             
@@ -165,7 +165,7 @@ J10_FM =
 
             arg_post             = 3,
             arg_amortizer        = 4,
-            arg_wheel_rotation   = 103,
+            arg_wheel_rotation   = 77,
             arg_wheel_yaw        = -1,
             collision_shell_name = 'WHEEL_R',
         },
