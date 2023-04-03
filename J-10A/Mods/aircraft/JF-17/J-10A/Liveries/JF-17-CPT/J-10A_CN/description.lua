@@ -46,5 +46,17 @@ livery = {
 	{"Side_6",	NORMAL_MAP			,	"jf17_cpt_sp_6_normal", true};
 	{"Side_7",	NORMAL_MAP			,	"jf17_cpt_sp_7_normal", true};
 	{"Front_Clock",	NORMAL_MAP			,	"jf17_cpt_fp_clock_normal", true};
+
+	{"Stick_GRIP",	DIFFUSE			,	"jf17_cpt_stick_grip", false};
+	{"Stick_GRIP",	NORMAL_MAP			,	"jf17_cpt_stick_grip_normal", false};
+	{"Stick_GRIP",	ROUGHNESS_METALLIC 	,	"jf17_cpt_stick_grip_roughmet", false};
+	
+	{"Throttle_GRIP",	DIFFUSE			,	"jf17_cpt_throttle_grip", false};
+	{"Throttle_GRIP",	NORMAL_MAP			,	"jf17_cpt_throttle_grip_normal", false};
+	{"Throttle_GRIP",	ROUGHNESS_METALLIC			,	"jf17_cpt_throttle_grip_roughmet", false};
+	
+	{"JF17_CPT_Seat",	DIFFUSE			,	"jf17_cpt_seat", false};
+	{"JF17_CPT_Seat",	NORMAL_MAP			,	"jf17_cpt_seat_normal", false};
+	{"JF17_CPT_Seat",	ROUGHNESS_METALLIC			,	"jf17_cpt_seat_roughmet", false};
 }
 

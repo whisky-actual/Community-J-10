@@ -11,7 +11,7 @@ declare_plugin(self_ID, {
     displayName   = _(ac_name),
     shortName     = ac_name,
     fileMenuName  = _(ac_name),
-    version       = "1.4.4",
+    version       = "1.5.4",
     state         = 'installed',
     developerName = _('J-10A Community Mod: https://github.com/whisky-actual/Community-J-10-A'),
     info          = _("J-10A Community Mod: THIS MATERIAL IS NOT MADE OR SUPPORTED BY EAGLE DYNAMICS SA"),
