@@ -11,10 +11,16 @@ local sensor_data = get_base_data()
 dev:listen_command(2142) -- -162 to 162 degrees
 dev:listen_command(2143) -- -90 to 110
 dev:listen_command(click_cmds.PNT_915) --
-dev:listen_command(key_cmds.AAP_HMD) --
+dev:listen_command(key_cmds.AAP_HMD) -- 
+dev:listen_command(key_cmds.HOTAS_Stick_S1_Forward) -- DOG
+dev:listen_command(key_cmds.HOTAS_Stick_S1_Press) -- Return Prev Mode
+dev:listen_command(key_cmds.HOTAS_Throttle_T1_Center) -- NAV
+dev:listen_command(key_cmds.HOTAS_Throttle_T1_Forward) -- BVR
+dev:listen_command(key_cmds.HOTAS_Throttle_T1_Backward) -- AG
 
 
 local HORIZONTAL_POS_HMD = get_param_handle("HORIZONTAL_POS_HMD")
+local VERTICAL_POS_HMD = get_param_handle("VERTICAL_POS_HMD")
 local VERTICAL_VIEW_HMD = get_param_handle("VERTICAL_VIEW_HMD")
 
 local HMDTOGGLE = get_param_handle("HMDTOGGLE")
@@ -49,6 +55,17 @@ local VELVEC_HUD_Y  = get_param_handle("VELVEC_HUD_Y")
 
 local G_HMD  = get_param_handle("G_HMD")
 
+local DOG_Mod_HUD  = get_param_handle("DOG_Mod_HUD")
+
+
+--WeaponSystem-Params
+local ir_missile_lock_param 		= get_param_handle("WS_IR_MISSILE_LOCK")
+local ir_missile_lock_symbol_param	= get_param_handle("IR_MISSILE_LOCK_SYMBOL")
+local ir_missile_az_param 			= get_param_handle("WS_IR_MISSILE_TARGET_AZIMUTH")
+local ir_missile_el_param 			= get_param_handle("WS_IR_MISSILE_TARGET_ELEVATION")
+local ir_missile_des_az_param 		= get_param_handle("WS_IR_MISSILE_SEEKER_DESIRED_AZIMUTH")
+local ir_missile_des_el_param 		= get_param_handle("WS_IR_MISSILE_SEEKER_DESIRED_ELEVATION")
+
 local RAD_TO_DEGREE  = 57.29577951308233
 
 --loadout name list
@@ -67,6 +84,7 @@ loadout_stations = {
 
 function post_initialize()
     VERTICAL_VIEW_HMD:set(0)
+    DOG_Mod_HUD:set(0)
 	update_loadout_info()
 end
 
@@ -77,6 +95,21 @@ function SetCommand(command,value)
        -- print_message_to_user(value)
 		HORIZONTAL_POS_HMD:set(value)
     end
+
+    if command == 2143 then
+        --HEAD_TILT:set(value/90)
+        VERTICAL_VIEW_HMD:set(value)
+      -- print_message_to_user(VERTICAL_VIEW_HMD:get())
+    end
+	
+	
+	if command == key_cmds.HOTAS_Stick_S1_Forward then
+			DOG_Mod_HUD:set(1)
+			
+	elseif command == key_cmds.HOTAS_Stick_S1_Press or command == key_cmds.HOTAS_Throttle_T1_Center or command == key_cmds.HOTAS_Throttle_T1_Forward or command == key_cmds.HOTAS_Throttle_T1_Backward then
+			DOG_Mod_HUD:set(0)
+	
+	end
 end 
 
 function update()
@@ -144,6 +177,14 @@ function update()
 	--print_message_to_user(ALTITUDE_HUD:get())
 	
 	
+	-- ir missile Test
+	--[[
+	if HMDTOGGLE:get() == 1 then
+		ir_missile_des_az_param:set(HORIZONTAL_POS_HMD:get())
+		ir_missile_des_el_param:set(VERTICAL_VIEW_HMD:get())
+		print_message_to_user(ir_missile_lock_param:get())
+	end]]
+	
 	
 end
 
@@ -167,7 +208,7 @@ function update_loadout_info()
             name = loadout_names[station.CLSID]
         end]]
         loadout_stations[i]:set(string.upper(name))
-		print_message_to_user(name)
+		--print_message_to_user(name)
     end
 end
 

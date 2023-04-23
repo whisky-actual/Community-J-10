@@ -218,17 +218,18 @@ PL_15_AA = {
 	INS = {
 	op_time 			= 220,
 	--dt 					= 0,
-	dlink_outdate_time	= 22,
+	dlink_outdate_time	= 70,
 	},
 
 	sensor = {
         delay                       = 1.5,
         op_time                     = 220,
-        FOV                         = math.rad(120), --40
-        max_w_LOS                   = math.rad(120), --120
+        FOV                         = math.rad(40), --40
+        max_w_LOS                   = math.rad(90), --120
+		--[[
         sens_near_dist              = 100,
         sens_far_dist               = 90000,
-        ccm_k0                      = 0.01,--0.0005
+        ccm_k0                      = 0.005,--0.0005
         aim_sigma                   = 3,
         height_error_k              = 20,
         height_error_max_vel        = 50,
@@ -240,7 +241,16 @@ PL_15_AA = {
 		lock_range_5sqm				= 35000.0,
 		unit_gate_size				= 0,
 		--doppler_bandwidth			= 1,
-        doppler_bandwith            = 12096,  -- To decrease the chances of loosing lock
+        doppler_bandwith            = 14096,  -- To decrease the chances of loosing lock]]
+		sens_near_dist				= 100,
+		sens_far_dist				= 50000,
+		ccm_k0						= 0.009,
+		aim_sigma					= 3.5,
+		height_error_k				= 20,
+		height_error_max_vel		= 50,
+		height_error_max_h			= 300,
+		hoj							= 1,
+		lock_range_5sqm				= 35000.0,
 		 
 	},
 
