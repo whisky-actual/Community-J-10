@@ -645,6 +645,8 @@ JF_17 = {
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
                 { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
+                { CLSID = "DIS_PL-12", arg_value = 0.1 },
+                { CLSID = "DIS_PL-12_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, 
                -- { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
 			   --[[
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
@@ -713,6 +715,7 @@ JF_17 = {
             },
             {
 				{ CLSID = "DIS_SD-10", arg_value = 1.0 },
+                { CLSID = "DIS_PL-12", arg_value = 0.1 },
 				-- Guided Bombs
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
@@ -832,6 +835,7 @@ JF_17 = {
             },
             {
 				{ CLSID = "DIS_SD-10", arg_value = 1.0 },
+                { CLSID = "DIS_PL-12", arg_value = 0.1 },
 				-- Guided Bombs
 				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
@@ -891,6 +895,8 @@ JF_17 = {
 				
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
+                { CLSID = "DIS_PL-12", arg_value = 0.1 },
+                { CLSID = "DIS_PL-12_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
                 { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
                -- { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
 			   --[[

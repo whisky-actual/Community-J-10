@@ -523,7 +523,7 @@ JF_17 = {
     engines_nozzles = {
         [1] = {
             --pos                 = {-7.900, -0.375, 0.000}, -- nozzle coords
-            pos                 = {-6.929,	0.302,	0}, -- nozzle coords
+            pos                 = {-6.929,	-0.30,	0}, -- nozzle coords
             elevation           = 0, -- AFB cone elevation
             diameter            = 1.137, -- AFB cone diameter
             exhaust_length_ab   = 8.6, -- lenght in m
@@ -613,9 +613,9 @@ JF_17 = {
     AddPropAircraft = add_aircraft_prop(),
 
     -- Countermeasures
-    --[[Countermeasures = {
+    Countermeasures = {
         ECM = "AN/ALQ-135",
-    },]]
+    },
 
 	-- Countermeasures, 
 	passivCounterm = {
@@ -712,12 +712,15 @@ JF_17 = {
             {
 			-- IR AAM 
                 { CLSID = "DIS_PL-5EII", arg_value = 0.1 },
+                { CLSID = "DIS_IR_Missile_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.275, -0.0}}, --attach_point_position = {0, 0.525, -0.2}
 					--{ CLSID = "DIS_PL-8A", arg_value = 0.1, },
 					--{ CLSID = "DIS_PL-10", arg_value = 0.1, },
 						  
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
-                { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
+                { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.275, 0.0}}, --attach_point_position = {0, 0.525, -0.2}
+                { CLSID = "DIS_PL-12", arg_value = 0.1 },
+                { CLSID = "DIS_PL-12_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.275, 0.0}}, --attach_point_position = {0, 0.525, -0.2}
                -- { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, -0.2}}, --attach_point_position = {0, 0.525, -0.2}
 			   --[[
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,
@@ -786,48 +789,51 @@ JF_17 = {
             },
             {
 				-- Guided Bombs
-                { CLSID = "DIS_SD-10", arg_value = 1.0 },
+                { CLSID = "DIS_SD-10", arg_value = 0.1 },
 				
-                { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
-                { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
-                { CLSID = 'DIS_KD-88_AI', arg_value = 1.0, Type = 1 },
 				
-                { CLSID = "DIS_LS_6_500", arg_value = 1.0, Type = 1 },
-                { CLSID = "DIS_LS_6_250", arg_value = 1.0, Type = 1 },
+				{ CLSID = "DIS_PL-12", arg_value = 0.1,},
+				
+                { CLSID = "DIS_C-802AK", arg_value = 0.1, Type = 1 },
+                { CLSID = 'DIS_CM-802AKG', arg_value = 0.1, Type = 1 },
+                { CLSID = 'DIS_KD-88_AI', arg_value = 0.1, Type = 1 },
+				
+                { CLSID = "DIS_LS_6_500", arg_value = 0.1, Type = 1 },
+                { CLSID = "DIS_LS_6_250", arg_value = 0.1, Type = 1 },
                 { CLSID = "DIS_LS_6_250_DUAL_L", arg_value = 1.0, Type = 1 },
-                { CLSID = "DIS_LS_6_100", arg_value = 1.0, Type = 1 },
-                { CLSID = "DIS_LS_6_100_DUAL_L", arg_value = 1.0, Type = 1 },
+                { CLSID = "DIS_LS_6_100", arg_value = 0.1, Type = 1 },
+                { CLSID = "DIS_LS_6_100_DUAL_L", arg_value = 0.1, Type = 1 },
 				
-                { CLSID = "DIS_GB6", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_GB6_TSP", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_GB6_HE", arg_value = 1.0, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
+                { CLSID = "DIS_GB6", arg_value = 0.1, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
+                { CLSID = "DIS_GB6_TSP", arg_value = 0.1, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
+                { CLSID = "DIS_GB6_HE", arg_value = 0.1, Type = 1 }, --, attach_point_position = {0, 0.325, 0}
 
 				-- Tanks
                -- { CLSID = "DIS_TANK800 ", arg_value = 1.0, --[[required = {{station = 5,loadout = {"DIS_TANK800"}}}]] }, 
-                { CLSID = "DIS_TANK1100", arg_value = 1.0, }, 
+                { CLSID = "DIS_TANK1100", arg_value = 0.1, }, 
                -- { CLSID = "DIS_TANK800_EMPTY", arg_value = 1.0,}, --, attach_point_position = {0, 0.325, 0}
-                { CLSID = "DIS_TANK1100_EMPTY", arg_value = 1.0}, --, attach_point_position = {0, 0.325, 0}
+                { CLSID = "DIS_TANK1100_EMPTY", arg_value = 0.1}, --, attach_point_position = {0, 0.325, 0}
 				-- Plus center tank
                 --{ CLSID = "DIS_TANK1500", arg_value = 1.0, required = {{station = 5,loadout = {"DIS_TANK1500"}}, {station = 9,loadout = {"DIS_CENTERTANK800"}}}}, 
 
 				-- Unguided Bombs
                 --{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}", arg_value = 1.0 }, -- Mk-83
                 --{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}", arg_value = 1.0 }, -- Mk-84
-                { CLSID = "J10_BOMB_250_3", arg_value = 1.0 }, -- 250-3
-                { CLSID = "DIS_MER2_250_3_L",  arg_value = 1.0 }, -- 250-3 x2 
+                { CLSID = "J10_BOMB_250_3", arg_value = 0.1 }, -- 250-3
+                { CLSID = "DIS_MER2_250_3_L",  arg_value = 0.1 }, -- 250-3 x2 
 
-                { CLSID = "DIS_MK_20", arg_value = 1.0 }, -- Mk-20 Rockeye --DIS_MK_20
+                { CLSID = "DIS_MK_20", arg_value = 0.1 }, -- Mk-20 Rockeye --DIS_MK_20
 
-                { CLSID = "DIS_GBU_10", arg_value = 1.0 }, -- GBU-10
-                { CLSID = "DIS_GBU_16", arg_value = 1.0 }, -- GBU-16
+                { CLSID = "DIS_GBU_10", arg_value = 0.1 }, -- GBU-10
+                { CLSID = "DIS_GBU_16", arg_value = 0.1 }, -- GBU-16
               --  { CLSID = "DIS_GBU_12", arg_value = 1.0 }, -- GBU-12
 
-                { CLSID = "DIS_TYPE200", arg_value = 1.0 },
-                { CLSID = "DIS_TYPE200_DUAL_L", arg_value = 0.5 },
+                { CLSID = "DIS_TYPE200", arg_value = 0.1 },
+                { CLSID = "DIS_TYPE200_DUAL_L", arg_value = 0.1 },
 
                 -- rockets
-                 { CLSID = "DIS_BRM1_90", arg_value = 1.0 },
-                 { CLSID = "DIS_RKT_90_UG", arg_value = 1.0 },
+                 { CLSID = "DIS_BRM1_90", arg_value = 0.1 },
+                 { CLSID = "DIS_RKT_90_UG", arg_value = 0.1 },
 				 
 
             }
@@ -910,6 +916,9 @@ JF_17 = {
 				-- Guided Bombs
                 { CLSID = "DIS_SD-10", arg_value = 1.0 },
 				
+				
+				{ CLSID = "DIS_PL-12", arg_value = 0.1,},
+				
                 { CLSID = "DIS_C-802AK", arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_CM-802AKG', arg_value = 1.0, Type = 1 },
                 { CLSID = 'DIS_KD-88_AI', arg_value = 1.0, Type = 1 },
@@ -968,7 +977,10 @@ JF_17 = {
 				
 		-- BVRAAM
                 { CLSID = "DIS_SD-10", arg_value = 0.1 },
-                { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
+                { CLSID = "DIS_SD-10_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.275, 0.0}}, 
+                { CLSID = "DIS_PL-12", arg_value = 0.1 },
+                { CLSID = "DIS_PL-12_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.275, 0.0}}, 
+                { CLSID = "DIS_IR_Missile_DUAL_R", arg_value = -1,  attach_point_position = {0, 0.275, 0.0}}, --attach_point_position = {0, 0.525, -0.2}
                -- { CLSID = "DIS_SD-10_DUAL_L", arg_value = -1,  attach_point_position = {0, 0.525, 0.2}}, 
 			   --[[
 					{ CLSID = "DIS_PL-11", arg_value = 0.1,

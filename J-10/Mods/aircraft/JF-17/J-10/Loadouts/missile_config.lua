@@ -86,7 +86,7 @@ if variant ~= '11' then
 	end
 end
 
-J10_SD_10(missile['BVRAAM'])
+J10_SD_10(missile['BVRAAM SD-10'])
 
 
 -- DIS_PL-5EII
@@ -118,6 +118,7 @@ local function J10_PL_5EII(variant)
 			},
 		}, -- end of Elements
 	})
+	
 end
 
 J10_PL_5EII(missile['IRAAM'])
@@ -162,4 +163,77 @@ local function J10_C_802AK(variant)
 end
 
 J10_C_802AK(missile['ASM'])
+
+
+
+-- DIS_SD-10
+
+
+local function J10_PL_12(variant)
+	local var = missile_type[variant]
+	local var_mass = var.mass
+		
+	declare_loadout({
+		category    = CAT_AIR_TO_AIR,
+		CLSID       = 'DIS_PL-12', 
+		Picture     = 'pl12.png',
+		attribute   = var.wstype,
+		displayName = var.display_name,
+		Cx_pil      = 0.00064453124,
+		Count       = 1,
+		Weight      = var_mass + pylon_mass,
+		Elements    = {
+			[1] =
+			{
+				DrawArgs =
+				{
+					[1] = {1, 1},
+					[2] = {2, 1},
+				}, -- end of DrawArgs
+				Position  = {0, 0, 0},
+				ShapeName = var.shape,
+			},
+		}, -- end of Elements
+	})
+
+if variant ~= '11' then
+	declare_loadout({
+		category       = CAT_AIR_TO_AIR,
+		CLSID          = 'DIS_PL-12_DUAL_L',
+		Picture        = 'pl12.png',
+		wsTypeOfWeapon = var.wstype,
+		attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
+		displayName    = var.display_name .. ' x 2',
+		Cx_pil         = 0.00150390623,
+		Count          = 2,
+		Weight         = 2 * var_mass + pylon_dual_mass,
+		Elements       = {
+			{ ShapeName = 'JF-17_PF12_twin', IsAdapter = true, },
+			{ ShapeName = var.shape,        connector_name = 'dual_PF12L', },
+			{ ShapeName = var.shape,        connector_name = 'dual_PF12R', },
+		}, -- end of Elements
+		JettisonSubmunitionOnly = true,
+	})
+
+	declare_loadout({
+		category       = CAT_AIR_TO_AIR,
+		CLSID          = 'DIS_PL-12_DUAL_R',
+		Picture        = 'pl12.png',
+		wsTypeOfWeapon = var.wstype,
+		attribute      = {4,4,32,WSTYPE_PLACEHOLDER},
+		displayName    = var.display_name .. ' x 2',
+		Cx_pil         = 0.00150390623,
+		Count          = 2,
+		Weight         = 2 * var_mass + pylon_dual_mass,
+		Elements       = {
+			{ ShapeName = 'JF-17_PF12_twin', IsAdapter = true, },
+			{ ShapeName = var.shape,        connector_name = 'dual_PF12R', },
+			{ ShapeName = var.shape,        connector_name = 'dual_PF12L', },
+		}, -- end of Elements
+		JettisonSubmunitionOnly = true,
+	})
+	end
+end
+
+J10_PL_12(missile['BVRAAM PL-12'])
 
