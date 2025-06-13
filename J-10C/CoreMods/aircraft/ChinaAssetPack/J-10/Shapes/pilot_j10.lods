@@ -1,0 +1,7 @@
+model = {
+    lods = {
+        {"pilot_j11a_lod0.edm",100.000000},
+        {"pilot_j11a_lod1.edm",500.000000},
+        {"pilot_j11a_lod2.edm",5000.000000},
+    },
+}
