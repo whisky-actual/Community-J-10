@@ -30,7 +30,9 @@ creators = {}
 ----------------------------------------------------------------------------------------
 --JF-39
 ----------------------------------------------------------------------------------------
-creators[devices.JF39_Devices]	  = {"avLuaDevice"         	 ,script_path..	"J-39/JF39_Devices.lua", {}}}
+creators[devices.JF39_Devices]	  = {"avLuaDevice"         	 ,script_path..	"JF-39/JF39_Devices.lua", {}}
+--creators[devices.JF39_HUD]		  = {"avLuaDevice"           ,script_path..	"JF-39/HUD_Temp/Device/HUD Device.lua", {}}
+--creators[devices.JF39_LCP]		  = {"avLuaDevice"           ,script_path..	"JF-39/LCP/Device/LCP_Device.lua", {}}
 ----------------------------------------------------------------------------------------
 creators[devices.ELECTRIC_SYSTEM] = {"DEKA_Device::JF_17::avPowerSystem", script_path .. "PowerSystem/avPowerSystem.lua", {}}
 creators[devices.AAP]             = {"DEKA_Device::JF_17::avAAP",         script_path .. "PowerSystem/avAAP.lua", {}}
@@ -68,10 +70,10 @@ creators[devices.SNS]             = {"DEKA_Device::JF_17::avSNS_Receiver", scrip
 creators[devices.MLS]             = {"DEKA_Device::JF_17::avMLS",          script_path .. "Nav/avMLS.lua", {}}
 creators[devices.TACAN]           = {"DEKA_Device::JF_17::avTCN",          script_path .. "Nav/avTCN.lua", {}}
 
-creators[devices.INTERCOM]        = {"DEKA_Device::JF_17::avRadioINT",   script_path .. "Radio/avRadioINT.lua", {}}
-creators[devices.COMM1]           = {"DEKA_Device::JF_17::avRadioComm1", script_path .. "Radio/avRadioComm1.lua", {}}
-creators[devices.COMM2]           = {"DEKA_Device::JF_17::avRadioComm2", script_path .. "Radio/avRadioComm2.lua", {}}
-creators[devices.DATALINK]        = {"DEKA_Device::JF_17::avDataLink",   script_path .. "Radio/avDataLink.lua", {}}
+creators[devices.INTERCOM]        = {"DEKA_Device::JF_17::avRadioINT",   script_path .. "JF-39/Radio/avRadioINT.lua", {}}
+creators[devices.COMM1]           = {"DEKA_Device::JF_17::avRadioComm1", script_path .. "JF-39/Radio/avRadioComm1.lua", {}}
+creators[devices.COMM2]           = {"DEKA_Device::JF_17::avRadioComm2", script_path .. "JF-39/Radio/avRadioComm2.lua", {}}
+creators[devices.DATALINK]        = {"DEKA_Device::JF_17::avDataLink",   script_path .. "JF-39/Radio/avDataLink.lua", {}}
 
 creators[devices.CNI]             = {"DEKA_Device::JF_17::avCNI",       script_path .. "Avionics/avCNI.lua", {}}
 creators[devices.ACP]             = {"DEKA_Device::JF_17::avACP",       script_path .. "Avionics/avACP.lua", {}}
@@ -92,7 +94,7 @@ creators[devices.MISC]            = {"DEKA_Device::JF_17::avMISC", script_path .
 creators[devices.CLOCK]           = {"DEKA_Device::JF_17::avClock", script_path .. "Clock/avClock.lua", {}}
 
 -- CONTROL_INDICATOR
-creators[devices.CTRL_IND]        = {"avLuaDevice", script_path .. "ControlsIndicator/ctrl_indicator_data.lua", {}}--Whisky.Actual
+creators[devices.CTRL_IND]        = {"avLuaDevice", script_path .. "JF-39/ControlsIndicator/ctrl_indicator_data.lua", {}}--Whisky.Actual
 creators[devices.MACRO]           = {"DEKA_Device::JF_17::avMacro", LockOn_Options.common_script_path .. "Macro_handler.lua", {}}
 
 --creators[devices.NVG]             = {"avNightVisionGoggles", script_path .. "HELMET/NVG.lua", {}}
@@ -113,7 +115,7 @@ indicators = {}
 indicators[#indicators + 1] = {"DEKA_Device::Common::ccDebugWin", script_path .. "DebugWindow/DebugWindow_page_init.lua"}
 
 -- throttle/rudder/pitch/bank/brake/flaps/gears
-indicators[#indicators + 1] = {"ccIndicator", script_path .. "ControlsIndicator/Indicator/ctrl_indicator_page_init.lua"}
+indicators[#indicators + 1] = {"ccIndicator", script_path .. "JF-39/ControlsIndicator/Indicator/ctrl_indicator_page_init.lua"}
 
 -- HUD
 --indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccHUD", script_path .. "HUD/Indicator/HUD_page_init.lua", devices.HUD, {{"CPT-HUD-CENTER"},{sx_l = 0,sy_l = 0,sz_l = 0,sh = 0,sw = 0}}}
@@ -125,7 +127,7 @@ indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccUFCP", script_path .. "UFC
 indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccUFCP", script_path .. "UFCP/UFCP_init_4.lua", devices.UFCP, {{"CPT-UFCP-4-CENTER","CPT-UFCP-4-DOWN","CPT-UFCP-4-RIGHT"}}}
 
 -- RCB
-indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccRadio",script_path .. "Radio/Indicator/RADIO_init.lua", devices.INTERCOM, {{"CPT-RADIO-CENTER","CPT-RADIO-DOWN","CPT-RADIO-RIGHT"}}}
+indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccRadio",script_path .. "JF-39/Radio/Indicator/RADIO_init.lua", devices.INTERCOM, {{"CPT-RADIO-CENTER","CPT-RADIO-DOWN","CPT-RADIO-RIGHT"}}}
 
 tv_map_render_id ={1, 2, 3, 4};
 --indicators[#indicators + 1] = {"ccXXX", script_path , Linked avDevice, { {"CENTER","DOWN","RIGHT"},{}, tv_map_render_id[x]} }
@@ -142,8 +144,15 @@ indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccClock", script_path .. "Cl
 ----------------------------------------------------------------------------------------
 --JF-39
 ----------------------------------------------------------------------------------------
+-- JF39_HUD
+--indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccHUD", script_path .. "JF-39/HUD_Temp/Indicator/JF39_HUD_init.lua", devices.HUD, {{"CPT-HUD-CENTER"},{sx_l = 0,sy_l = 0.02,sz_l = 0,sh = 0,sw = 0}}}
+
+-- New JF17_HUD
+indicators[#indicators + 1] = {"DEKA_Device::JF_17::ccHUD", script_path .. "JF-39/HUD/Indicator/HUD_page_init.lua", devices.HUD, {{"CPT-HUD-CENTER"},{sx_l = 0,sy_l = 0,sz_l = 0,sh = 0,sw = 0}}}
+
 -- JF39_HMD
-indicators[#indicators + 6] = {"DEKA_Device::JF_17::ccHUD", script_path .. "/JF-39/HMD/Indicator/HMD_page_init.lua", devices.HMD, {{"JAS39-HUD-CENTER"},{sx_l = 0,sy_l = -0.0,sz_l = 0,sh = 0,sw = 0}}}
+indicators[#indicators + 6] = {"DEKA_Device::JF_17::ccHUD", script_path .. "/JF-39/HMD/Indicator/HMD_page_init.lua", devices.HMD, {{"CPT-HUD-CENTER"},{sx_l =0.0,sy_l =  0.1,sz_l = 0,sh = 0,sw = 0}}}
+
 
 kneeboard_implementation = "DEKA_Device::JF_17::ccKneeBrdExt"
 dofile(LockOn_Options.common_script_path .. "KNEEBOARD/declare_kneeboard_device.lua")

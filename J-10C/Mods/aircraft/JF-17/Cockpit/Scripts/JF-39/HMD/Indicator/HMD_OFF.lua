@@ -1,0 +1,1 @@
+dofile(LockOn_Options.script_path .. "JF-39/HMD/Indicator/HMD_def.lua")
