@@ -959,25 +959,40 @@ JF_17 = {
 				{ CLSID = "{A4BCC903-06C8-47bb-9937-A30FEDB4E746}", attach_point_position = {0.0, 0.0, 0.0}, arg = 314, arg_value = 1.0 },
             }
         ),
-		--[[
-        -- RECON PYLON --> LDP
-        pylon(8, 0, 0, 0, 0,
+        pylon(8, 1, 2.4, -0.536, -0.60,
             {
-                arg = 314,
-                arg_value = 0,
-                DisplayName = "LDP",
-                use_full_connector_position = true,
-                connector = "LDP",
+                use_full_connector_position = true, connector = "str_pnt_008"
             },
             {
---				=== Pods ===
-                { CLSID = "DIS_WMD7", arg_value = 0.5 },
 
---				=== Remove pylon ===		
-				{ CLSID = "<CLEAN>", arg_value = 1},
+                { CLSID = "DIS_WMD7",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, -0.1, 0} },
+                { CLSID = "DIS_AKG_DLPOD",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, -0.08, 0} },
+                { CLSID = "DIS_SPJ_POD",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, 0.11, 0} },			
             }
         ),
-        ]]--
+        pylon(9, 1, 2.4, -0.536,  0.60,
+            {
+                use_full_connector_position = true, connector = "str_pnt_009"
+            },
+            {
+
+                { CLSID = "DIS_WMD7",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, -0.1, 0} },
+                { CLSID = "DIS_AKG_DLPOD",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, -0.08, 0} },
+                { CLSID = "DIS_SPJ_POD",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, 0.11, 0} },					
+            }
+        ),			
+		pylon(10, 1, 2.4, -0.12, -0.60, {use_full_connector_position = false, connector = "Pylon10", droppable_shape = "J-10C_GDJ-II19R"},
+		{
+			  
+		{CLSID	= "{J-10C_GDJ-II19R}",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, -0.08, 0} }, 
+		
+		}),
+		pylon(11, 1, 2.4, -0.12,  0.60, {use_full_connector_position = false, connector = "Pylon11", droppable_shape = "J-10C_GDJ-II19L"},
+		{
+			  
+		{CLSID	= "{J-10C_GDJ-II19L}",arg_value = 0.35, arg_value = 0.25, attach_point_position = {-0.10, -0.08, 0} }, 
+		
+		}),	
     },
 ----------------------------------------------------------------------------------------
 -- Tasks

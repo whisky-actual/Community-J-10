@@ -2,6 +2,7 @@ livery = {
 
 	
 	{"JITI",	DIFFUSE			,	"jiti_diffuse", false};
+	{"ZUOCANG",	DIFFUSE			,	"zuocang_diffuse", false};	
 	{"J-10C_PILOT_HELMET",	DIFFUSE			,	"j-10c_pilot_helmet2", false};
 	{"J-10C_PILOT_CLOTH",	DIFFUSE			,	"j-10c_pilot_cloth", false};
 	
