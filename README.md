@@ -1,9 +1,9 @@
 # J10-A Community Mod
 
-With the permission of original author, @happy cavin, we took his FC3 J-10 mod and adapted it for wonderful JF-17 made by Deka Ironwork Simulations using it's cockpit and avionics. We also added several custom weapons from the PLAA, custom cockpit textures and other interesting features.. We are taking the "early access" route with this mod and sharing it as-is. Work will continue and your help will be appreciated if you have any modding experience. 	
+With the permission of the original author, @happy cavin, we took his FC3 J-10 mod and adapted it for the wonderful JF-17 made by Deka Ironwork Simulations, using its cockpit and avionics. We also added several custom weapons from the PLAA, custom cockpit textures and other interesting features.. We are taking the "early access" route with this mod and sharing it as-is. Work will continue, and your help will be appreciated if you have any modding experience. 	
 
 ## Contributing Developers
-Cactus, Snowy Wolf, Yatsie, Whisky Actual
+Cactus, MACH3DS, Snowy Wolf, Sun54, Yamato 大和, Yatsie, Unis431fos, Whisky Actual
 
 ## Special Thanks
 Currenthill, Cdp Kobra, Freebird and the SU30 Team, Fatpsacepanda and JacobBadshot
@@ -15,7 +15,7 @@ Currenthill, Cdp Kobra, Freebird and the SU30 Team, Fatpsacepanda and JacobBadsh
  - Leading edges
  - Flaps
 - New cockpit textures to match the J10A
-- New Hud graphics to match what is seen in public videos
+- New HUD graphics to match what is seen in public videos
 - New night lights mode for NVG-based public pictures
 - WIP mandarin cockpit (see options menu)
 - FM modification using a special pod to have a different feel from the base JF-17
@@ -42,7 +42,7 @@ The preferred method will be to use OVGME or any other mod management software.
 1) Download the mod and extract it to your desktop.
 2) Make backups of your CoreMods AND Mods folders in your main DCS install.
 3) Drop the content of the CoreMods AND Mods in your main DCS install; override the files.
-4) To remove the mod you will need to delete the CoreMods and Mods folders and replace them with your backups.
+4) To remove the mod, you will need to delete the CoreMods and Mods folders and replace them with your backups.
 
 ## Frequently Asked Questions	
 - **Q: Do you need JF-17 to use the module?
